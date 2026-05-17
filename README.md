@@ -1102,7 +1102,9 @@ more information
 | [yanwenzhe519-ctrl](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yanwenzhe519-ctrl.md) | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Cecelia-file](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Cecelia-file.md) | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kotarou5106](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kotarou5106.md) | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [liw531911-star](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liw531911-star.md) | | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
