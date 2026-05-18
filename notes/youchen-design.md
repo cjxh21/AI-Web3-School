@@ -27,6 +27,6 @@ AI x Web3 School
 
 4.參與AI 时代的 Web3 架构能力
 
-5**.**參與Co-learning
+5\*\*.\*\*參與Co-learning
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
