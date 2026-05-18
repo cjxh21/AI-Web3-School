@@ -520,7 +520,7 @@ more information
 | [clintonguo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/clintonguo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cmin71717-wq](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cmin71717-wq.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xxximitl](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xxximitl.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [xss925175263](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xss925175263.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [xss925175263](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xss925175263.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [only4sim](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/only4sim.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xxloveslife](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xxloveslife.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ElysiaRealme](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ElysiaRealme.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
