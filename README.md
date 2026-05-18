@@ -240,7 +240,7 @@ more information
 | [0xE1337](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/0xE1337.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Susie-beep](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Susie-beep.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ARZER-TW](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ARZER-TW.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [gaollg](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gaollg.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [gaollg](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gaollg.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Marina-asui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Marina-asui.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ttbzx](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ttbzx.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [DrC-Web3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DrC-Web3.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -476,7 +476,7 @@ more information
 | [321335801-cloud](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/321335801-cloud.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JingyuSui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JingyuSui.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sb6629](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sb6629.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [xiqing21](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiqing21.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [xiqing21](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiqing21.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xiaohong320](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiaohong320.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [DukeDeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DukeDeng.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZqJiu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZqJiu.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
