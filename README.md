@@ -750,7 +750,7 @@ more information
 | [lml152](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lml152.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Mars-1129](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Mars-1129.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sherryxiao0](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sherryxiao0.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [tiyadegure](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tiyadegure.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [tiyadegure](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tiyadegure.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shun12306](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shun12306.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yolanda000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yolanda000.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zblingling](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zblingling.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1040,7 +1040,7 @@ more information
 | [Perseverance-wzy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Perseverance-wzy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Oppenseagull](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Oppenseagull.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [merlin-ecde](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/merlin-ecde.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [88rising-bot](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/88rising-bot.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [88rising-bot](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/88rising-bot.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Arvo-in-coding](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Arvo-in-coding.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [0xBrick-Li](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/0xBrick-Li.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lpppy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lpppy.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1214,6 +1214,7 @@ more information
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
