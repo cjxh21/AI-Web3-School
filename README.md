@@ -704,7 +704,7 @@ more information
 | [Iris-1128](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Iris-1128.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Pinkowo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Pinkowo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kola-official](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kola-official.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [gnihTehT](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gnihTehT.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [gnihTehT](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gnihTehT.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jiajia-11](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jiajia-11.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Jarvisyy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Jarvisyy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [puppet25k](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/puppet25k.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
