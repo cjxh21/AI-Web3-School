@@ -978,7 +978,7 @@ more information
 | [sebvzwx](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sebvzwx.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [SJW1111011](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SJW1111011.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Carl040814](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Carl040814.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [gma409314](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gma409314.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [gma409314](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gma409314.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shintemy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shintemy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ai-Tide](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ai-Tide.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nebofeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nebofeng.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
