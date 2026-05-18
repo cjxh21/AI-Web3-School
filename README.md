@@ -417,7 +417,7 @@ more information
 | [Fenizzz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Fenizzz.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Qinsir7](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qinsir7.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Monay69](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Monay69.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [yenlingpeng95-cmd](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yenlingpeng95-cmd.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [yenlingpeng95-cmd](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yenlingpeng95-cmd.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Pluto417-Qing](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Pluto417-Qing.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [star-start](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/star-start.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [B20190103103](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/B20190103103.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
