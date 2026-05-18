@@ -958,7 +958,7 @@ more information
 | [wen92330-source](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wen92330-source.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xiuyuan7777](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiuyuan7777.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hhhGloriamiaomiaomiao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hhhGloriamiaomiaomiao.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [iluvjaecott](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/iluvjaecott.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [iluvjaecott](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/iluvjaecott.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bbbkawaii](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bbbkawaii.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [pokemon426](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/pokemon426.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [I-am-not-Terry](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/I-am-not-Terry.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
