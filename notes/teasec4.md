@@ -17,6 +17,8 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/teasec4/images/2026-05-18-1779102667495-image.png)
+参加了开营仪式，了解了课程任务和后续 Hackathon 安排。
+
+下一步是完成 Week1 的学习任务。
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
