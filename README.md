@@ -364,7 +364,7 @@ more information
 | [13585863982](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/13585863982.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qiuqiu068](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiuqiu068.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [agnesjiang1314](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/agnesjiang1314.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [wangchengln](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wangchengln.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [wangchengln](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wangchengln.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [withxat](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/withxat.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [alice-star123818](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/alice-star123818.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [fujingjing00](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fujingjing00.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1214,6 +1214,7 @@ more information
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
