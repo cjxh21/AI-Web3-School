@@ -316,7 +316,7 @@ more information
 | [rangeegnar](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/rangeegnar.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [brentonqin](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/brentonqin.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [puhuiin](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/puhuiin.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [XGe711](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/XGe711.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [XGe711](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/XGe711.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [mmzzli](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mmzzli.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Calciux](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Calciux.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Crimson798](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Crimson798.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -545,7 +545,7 @@ more information
 | [BlockheadLeo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BlockheadLeo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Mani678](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Mani678.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [gabbycommit](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gabbycommit.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [wusrichard](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wusrichard.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [wusrichard](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wusrichard.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kcalll](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kcalll.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lingke-H](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lingke-H.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hy3917-code](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hy3917-code.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -596,7 +596,7 @@ more information
 | [Sunny20260315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Sunny20260315.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sharonshen0707](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sharonshen0707.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zane199109](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zane199109.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [enolaxu0418](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/enolaxu0418.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [enolaxu0418](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/enolaxu0418.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [mile202206](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mile202206.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [KUOLEYA](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/KUOLEYA.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [317232](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/317232.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -779,7 +779,7 @@ more information
 | [fox896](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fox896.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [a279679426](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/a279679426.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZLP2005](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZLP2005.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zouw0174-code](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zouw0174-code.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zouw0174-code](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zouw0174-code.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ttungx](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ttungx.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Augustas11](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Augustas11.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kkkxi10](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kkkxi10.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -830,10 +830,10 @@ more information
 | [nqn537](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nqn537.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [alexfanzong](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/alexfanzong.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [willy77990](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/willy77990.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Hua-lar](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Hua-lar.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Hua-lar](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Hua-lar.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Creator613](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Creator613.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wayneelliotte](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wayneelliotte.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [CyberAngel0226](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CyberAngel0226.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [CyberAngel0226](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CyberAngel0226.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xxxmingyue](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xxxmingyue.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liji3597](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liji3597.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lsk132](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lsk132.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
