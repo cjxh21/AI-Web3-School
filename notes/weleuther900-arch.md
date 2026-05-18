@@ -17,7 +17,7 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-## 2025.5.18
+## 2026.5.18
 
 1.  了解本周任务，开始学习 AI 模块 A  
     1.1 大语言模型 LLM  
