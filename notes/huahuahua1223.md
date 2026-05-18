@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+发现有一个 WCB 平台的agent api可以用，这样就大大解决了不在 agent 完成的任务，它不知道同步的问题，good
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 # 了解 Hermes Agent 和不同类型的 Agent
 
 今天主要了解了 **Hermes Agent**，也顺便对比了一下 **Claude Code** 和 **Claude Cowork**。
