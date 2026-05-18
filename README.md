@@ -982,7 +982,7 @@ more information
 | [shintemy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shintemy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ai-Tide](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ai-Tide.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nebofeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nebofeng.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [lebronboy500](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lebronboy500.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [lebronboy500](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lebronboy500.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [7metachain](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/7metachain.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Chanlawrence-free](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chanlawrence-free.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Berry666666](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Berry666666.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
