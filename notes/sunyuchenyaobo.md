@@ -10,7 +10,8 @@ timezone: UTC+8
 
 ## Self-introduction
 
-AI x Web3 School
+AI x Web3 School   大三独立创业者 自媒体 web3 
+AI agent
 
 ## Notes
 
