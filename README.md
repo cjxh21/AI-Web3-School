@@ -922,7 +922,7 @@ more information
 | [maxzhangg](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/maxzhangg.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [PeaSea-21](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/PeaSea-21.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liangzhongkai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liangzhongkai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [ElowenSource](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ElowenSource.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [ElowenSource](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ElowenSource.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LastHopeOfGPNU](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LastHopeOfGPNU.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [silver-bullet0210](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/silver-bullet0210.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eillen110](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eillen110.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
