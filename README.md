@@ -966,7 +966,7 @@ more information
 | [DennisYung](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DennisYung.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [AkiGAMONG](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/AkiGAMONG.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Misa-Gen](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Misa-Gen.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [cocononut9](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cocononut9.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [cocononut9](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cocononut9.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zhutianyu688-gif](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhutianyu688-gif.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lxzhenxi1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lxzhenxi1.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jonasChan778](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jonasChan778.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1214,6 +1214,7 @@ more information
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
