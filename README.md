@@ -607,7 +607,7 @@ more information
 | [wh149](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wh149.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JessicaLin2000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JessicaLin2000.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yuna4905](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuna4905.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [BareerahBenjamin](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BareerahBenjamin.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [BareerahBenjamin](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BareerahBenjamin.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cheng-gs](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cheng-gs.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ki4uki](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ki4uki.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bym12138](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bym12138.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1134,7 +1134,7 @@ more information
 | [snp9528](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/snp9528.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ashlyngu-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ashlyngu-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yilai6969](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yilai6969.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [SeeMoon357](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SeeMoon357.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [SeeMoon357](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SeeMoon357.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [teresawang0405](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/teresawang0405.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [rose20040801-oss](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/rose20040801-oss.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [New-zy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/New-zy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
