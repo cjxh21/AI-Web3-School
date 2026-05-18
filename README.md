@@ -1118,7 +1118,7 @@ more information
 | [fearless-java](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fearless-java.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lychunchun](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lychunchun.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [seaseovo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/seaseovo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [2302017276a-ops](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/2302017276a-ops.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [2302017276a-ops](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/2302017276a-ops.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yathyuan-sketch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yathyuan-sketch.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lazybones3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lazybones3.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Heemale](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Heemale.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1212,6 +1212,7 @@ more information
 | [CharlieChan-hi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CharlieChan-hi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
