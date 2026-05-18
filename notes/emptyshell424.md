@@ -21,21 +21,16 @@ AI x Web3 School
   
 **Plan**  
   
+\- 学习 Handbook  
 \- 20:00 Hermes 从 0 到 1 讲座  
-\- AI Coding 练习  
-\- AI 下乡计划回放  
+\- 做 AI idea / 做 portfolio  
   
-
-> 探索多智能体协作的第一天。
-
-  
-_Todo Vibe._  
-  
-\---
+_Step by step._
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
