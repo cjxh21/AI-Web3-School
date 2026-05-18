@@ -273,7 +273,7 @@ more information
 | [francieliu009-hue](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/francieliu009-hue.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wkarry450-max](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wkarry450-max.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xiefeixian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiefeixian.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [gitgdut](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gitgdut.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [gitgdut](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gitgdut.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xzzlks](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xzzlks.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Aerdax](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Aerdax.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZanyK4502](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZanyK4502.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
