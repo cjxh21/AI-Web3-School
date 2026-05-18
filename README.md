@@ -928,7 +928,7 @@ more information
 | [Eillen110](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eillen110.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yuqiaowu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuqiaowu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [1304545](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1304545.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [sansuixiaopihai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sansuixiaopihai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [sansuixiaopihai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sansuixiaopihai.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qiubeccc](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiubeccc.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yiqizheng1717](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yiqizheng1717.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Teddy070509](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Teddy070509.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1207,6 +1207,7 @@ more information
 | [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cainiao0924.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
