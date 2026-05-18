@@ -10,7 +10,7 @@ timezone: UTC+8
 
 ## Self-introduction
 
-AI x Web3 School
+AI Builder Sam @AI x Web3 School
 
 ## Notes
 
