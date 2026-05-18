@@ -17,19 +17,8 @@ AI Builder Sam @AI x Web3 School
 <!-- Content_START -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-（先列框架  
-github链接
+github笔记项目
 
-AI × Web3 学习路径：
-
-实践任务：
-
-项目方向：
-
-关键信息：
-
-问题：
-
-下一步行动
+链接[https://github.com/SomenW/AI-x-Web3-School-LXDAO](https://github.com/SomenW/AI-x-Web3-School-LXDAO)
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
