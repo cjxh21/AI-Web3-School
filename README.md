@@ -1005,7 +1005,7 @@ more information
 | [San-Y108](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/San-Y108.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zzzth9810-a11y](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zzzth9810-a11y.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [vahi0](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vahi0.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Friendlyfirefly](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Friendlyfirefly.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Friendlyfirefly](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Friendlyfirefly.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Thiago610](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Thiago610.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Wea1her](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Wea1her.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [chubai0669-byte](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chubai0669-byte.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
