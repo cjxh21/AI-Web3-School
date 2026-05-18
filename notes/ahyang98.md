@@ -15,6 +15,10 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+之前已经在用claude code写代码，分析代码库了，
 
-
+刚才在安装hermes，配置了deepseek，对接了微信，刚调通了，可惜错过了打卡时间了。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
 <!-- Content_END -->
