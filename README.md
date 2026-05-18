@@ -440,7 +440,7 @@ more information
 | [BTCYR](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BTCYR.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [djdjdj2948439](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/djdjdj2948439.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [18511449925](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/18511449925.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Wwangjinghan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Wwangjinghan.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Wwangjinghan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Wwangjinghan.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [alishamclaughlingejof-tech](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/alishamclaughlingejof-tech.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [L-Macy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/L-Macy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [msmao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/msmao.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
