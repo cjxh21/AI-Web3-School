@@ -21,11 +21,16 @@ AI x Web3 School
 
 今天学习了Hermes，总体来说和我在用的openclaw差不多，打算还是和龙虾一样部署在旧手机上。
 
-在此之前，先使用openclaw进行辅助学习
+在此之前，先使用openclaw进行辅助学习，正好进行对比观察。
+
+今天还额外学习了一下密码学的第一课，对称加密，是昨天上课的 TC 老师推荐的 Lyndell 老师的课，大致了解了流程，对key 的概念更具象化了一些。
+
+![QQ_1779202281601.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/gnihTehT/images/2026-05-19-1779202324964-QQ_1779202281601.png)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ### **笔记 | AI 时代，Web3 开发者需要具备的基础知识和架构能力**
 
