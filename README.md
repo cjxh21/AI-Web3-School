@@ -281,7 +281,7 @@ more information
 | [junfennie162-sketch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/junfennie162-sketch.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [TNT326](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/TNT326.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dexhunter](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dexhunter.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [isethan18](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/isethan18.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [isethan18](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/isethan18.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [glorialuo59-cmyk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/glorialuo59-cmyk.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zoeyz3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zoeyz3.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liqiu9667-bot](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liqiu9667-bot.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
