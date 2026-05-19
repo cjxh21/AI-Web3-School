@@ -610,7 +610,7 @@ more information
 | [BareerahBenjamin](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BareerahBenjamin.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cheng-gs](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cheng-gs.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ki4uki](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ki4uki.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [bym12138](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bym12138.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [bym12138](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bym12138.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LIU-JUNRU](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LIU-JUNRU.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Flashhana1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flashhana1.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Fuyew1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Fuyew1.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -777,7 +777,7 @@ more information
 | [Gooloobaby](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Gooloobaby.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [alkaid0520](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/alkaid0520.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [fox896](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fox896.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [a279679426](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/a279679426.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [a279679426](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/a279679426.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZLP2005](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZLP2005.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zouw0174-code](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zouw0174-code.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ttungx](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ttungx.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1004,7 +1004,7 @@ more information
 | [FinalSunFlower](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/FinalSunFlower.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [San-Y108](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/San-Y108.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zzzth9810-a11y](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zzzth9810-a11y.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [vahi0](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vahi0.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [vahi0](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vahi0.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Friendlyfirefly](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Friendlyfirefly.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Thiago610](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Thiago610.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Wea1her](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Wea1her.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1226,6 +1226,7 @@ more information
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
