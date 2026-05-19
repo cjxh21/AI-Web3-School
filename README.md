@@ -241,7 +241,7 @@ more information
 | [Susie-beep](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Susie-beep.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ARZER-TW](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ARZER-TW.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [gaollg](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gaollg.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Marina-asui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Marina-asui.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Marina-asui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Marina-asui.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ttbzx](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ttbzx.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [DrC-Web3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DrC-Web3.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [berylinureye](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/berylinureye.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
