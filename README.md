@@ -298,7 +298,7 @@ more information
 | [Xena016](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Xena016.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [daidaidawang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/daidaidawang.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Astris233](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Astris233.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Chunfield](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chunfield.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Chunfield](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chunfield.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [QAQDFAFD](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/QAQDFAFD.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JonathanQUANLEE](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JonathanQUANLEE.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [adrianelo0107](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/adrianelo0107.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1227,6 +1227,7 @@ more information
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
