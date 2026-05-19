@@ -625,7 +625,7 @@ more information
 | [JessieWangJieqi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JessieWangJieqi.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jenny-52hz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jenny-52hz.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Qian-1026](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qian-1026.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [luna-670](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/luna-670.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [luna-670](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/luna-670.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qiutudou66](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiutudou66.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [newfish-cmyk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/newfish-cmyk.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [vitalebob](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vitalebob.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1225,6 +1225,7 @@ more information
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
