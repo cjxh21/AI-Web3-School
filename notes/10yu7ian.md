@@ -15,8 +15,14 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今天的目标是配置 Hermes。看文档发现这个工具在 Windows 下支持不太成熟，推荐用 Linux 环境，所以需要先装 WSL 和 Ubuntu。我先把 WSL 装好了，Ubuntu 还没装完，还卡在下载中。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 今天成功使用上cc+建好github仓库+ 参加第一场co-learning和分享会。
 
  一、环境与仓库
