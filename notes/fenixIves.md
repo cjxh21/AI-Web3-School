@@ -15,8 +15,368 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+# Hermes Agent Mac 云环境完整部署笔记
+
+**适用场景**：需要24/7不间断运行、多设备远程访问、运行大模型的用户。本文从Mac端视角出发，覆盖从云服务器选购到生产级部署的全流程，所有命令均可直接复制执行。
+
+## 一、前置准备
+
+### 1.1 云服务器选型（2026年性价比推荐）
+
+| 配置等级 | 推荐规格 | 月成本（约） | 可运行模型 | 适用场景 |
+| 入门级 | 2核4GB CPU（Ubuntu 24.04） | ¥30-50 | 云端API + Hermes 3 7B Q3 | 消息网关、简单工具调用 |
+| 进阶级 | 4核8GB CPU | ¥80-120 | Hermes 3 13B Q4 | 本地模型+代码解释器 |
+| 旗舰级 | 8核16GB CPU / T4 16GB GPU | ¥200-500 | Hermes 3 34B Q4 / 70B Q4 | 复杂任务、多并发 |
+
+**推荐云厂商**：
+
+-   国内用户：腾讯云轻量应用服务器（有Hermes官方一键镜像）、阿里云ECS
+    
+-   国际用户：DigitalOcean、Hetzner、Vultr
+    
+
+**操作系统**：**Ubuntu 24.04 LTS**（官方唯一推荐，兼容性最好）
+
+### 1.2 Mac端准备：SSH连接工具
+
+Mac自带SSH客户端，无需额外安装。推荐配置SSH密钥登录（比密码安全100倍）：
+
+```
+# 生成SSH密钥（如果没有）
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+# 将公钥复制到云服务器（替换为你的服务器IP）
+ssh-copy-id root@your_server_ip
+```
+
+现在可以直接免密码登录服务器：
+
+```
+ssh root@your_server_ip
+```
+
+## 二、云服务器基础环境配置
+
+登录云服务器后，先执行系统更新和基础依赖安装：
+
+```
+# 更新系统
+apt update && apt upgrade -y
+
+# 安装必备依赖
+apt install -y git curl wget nano
+
+# 配置swap分区（4GB以下内存必做，防止OOM崩溃）
+fallocate -l 4G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
+
+# 验证swap配置
+free -h
+```
+
+## 三、Hermes Agent 云环境安装
+
+### 3.1 官方一键安装（推荐）
+
+和本地安装完全相同，官方脚本会自动适配Linux环境：
+
+```
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+```
+
+**安装完成后重载环境**：
+
+```
+source ~/.bashrc
+```
+
+**验证安装**：
+
+```
+hermes version
+# 输出示例：hermes-agent 0.9.3
+```
+
+### 3.2 模型配置（二选一）
+
+方案A：云端API（入门级服务器首选）
+
+适合CPU配置较低的服务器，响应速度快，无需本地算力：
+
+```
+hermes model
+```
+
+在交互式菜单中选择：
+
+-   OpenAI（GPT-4o）
+    
+-   Anthropic（Claude 3.5 Sonnet）
+    
+-   DeepSeek
+    
+-   阿里云百炼（国内用户推荐）
+    
+-   OpenRouter（200+模型可选）
+    
+
+输入对应的API Key即可完成配置。
+
+方案B：本地Ollama模型（进阶级服务器）
+
+如果服务器内存≥8GB，可以完全离线运行本地模型：
+
+```
+# 安装Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# 下载Hermes 3模型
+ollama pull nousresearch/hermes3:13b-q4_K_M
+
+# 配置Hermes使用本地模型
+hermes model
+# 选择Ollama，输入模型名称：nousresearch/hermes3:13b-q4_K_M
+```
+
+## 四、云环境核心配置：24/7不间断运行
+
+这是云部署和本地部署最大的区别。Hermes官方提供了内置的systemd服务安装命令，无需手动编写配置文件。
+
+### 4.1 安装并启动系统服务
+
+```
+# 安装systemd用户服务（推荐，无需root权限）
+hermes gateway install
+
+# 启用并立即启动服务
+systemctl --user enable --now hermes-gateway
+
+# 启用用户服务持久化（SSH退出后仍保持运行）
+sudo loginctl enable-linger $USER
+```
+
+### 4.2 服务管理命令
+
+```
+# 查看服务状态
+systemctl --user status hermes-gateway
+
+# 查看实时日志（排查问题必备）
+journalctl --user -u hermes-gateway -f
+
+# 重启服务
+systemctl --user restart hermes-gateway
+
+# 停止服务
+systemctl --user stop hermes-gateway
+
+# 卸载服务
+hermes gateway uninstall
+```
+
+## 五、网络与安全配置（关键步骤）
+
+### 5.1 云平台安全组配置
+
+必须在云服务器控制台的安全组中开放以下端口：
+
+| 端口 | 用途 | 协议 | 来源IP |
+| 22 | SSH远程登录 | TCP | 你的Mac公网IP（推荐）或0.0.0.0/0 |
+| 80 | HTTP | TCP | 0.0.0.0/0 |
+| 443 | HTTPS | TCP | 0.0.0.0/0 |
+| 8080 | Hermes Dashboard（临时） | TCP | 你的Mac公网IP |
+
+**安全提示**：不要将22端口和8080端口开放给0.0.0.0/0，只允许你的Mac IP访问。
+
+### 5.2 配置Nginx反向代理与HTTPS
+
+为了安全地从公网访问Hermes Dashboard，需要配置Nginx反向代理和Let's Encrypt免费SSL证书：
+
+```
+# 安装Nginx和Certbot
+apt install -y nginx certbot python3-certbot-nginx
+```
+
+创建Nginx配置文件：
+
+```
+nano /etc/nginx/sites-available/hermes
+```
+
+粘贴以下内容（替换`hermes.yourdomain.com`为你的域名）：
+
+```
+server {
+    listen 80;
+    server_name hermes.yourdomain.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+启用配置并申请SSL证书：
+
+```
+# 启用站点
+ln -s /etc/nginx/sites-available/hermes /etc/nginx/sites-enabled/
+
+# 验证Nginx配置
+nginx -t
+
+# 重启Nginx
+systemctl restart nginx
+
+# 申请并自动配置SSL证书
+certbot --nginx -d hermes.yourdomain.com
+```
+
+现在你可以通过`https://hermes.yourdomain.com`安全地访问Hermes Dashboard了。
+
+## 六、从Mac端访问云Hermes
+
+### 6.1 浏览器访问Dashboard
+
+直接打开`https://hermes.yourdomain.com`，使用你在初始化时设置的账号密码登录。
+
+### 6.2 Mac本地终端连接云Hermes
+
+你可以在Mac本地安装Hermes客户端，然后配置连接到云服务器上的Hermes服务：
+
+```
+# 在Mac本地安装Hermes客户端
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+
+# 配置连接到云服务器
+hermes config set api_endpoint https://hermes.yourdomain.com/v1
+hermes config set api_key your_api_key
+```
+
+现在你可以直接在Mac本地终端使用`hermes chat`命令，所有请求都会发送到云服务器上的Hermes Agent。
+
+### 6.3 配置消息平台接入
+
+Hermes支持接入Telegram、Discord、Slack、微信等消息平台，让你可以通过手机随时与你的AI助手对话：
+
+```
+# 交互式配置消息平台
+hermes gateway setup
+```
+
+按照提示完成对应平台的Bot Token配置即可。
+
+## 七、进阶：Docker容器化部署
+
+如果你更喜欢容器化部署方式，可以使用官方Docker镜像：
+
+```
+# 创建数据目录
+mkdir -p ~/.hermes
+
+# 启动Hermes容器
+docker run -d \
+  --name hermes-agent \
+  --restart always \
+  -p 8080:8080 \
+  -v ~/.hermes:/home/user/.hermes \
+  nousresearch/hermes-agent:latest
+```
+
+## 八、维护与更新
+
+### 8.1 更新Hermes Agent
+
+```
+# 停止服务
+systemctl --user stop hermes-gateway
+
+# 更新
+hermes update
+
+# 重启服务
+systemctl --user start hermes-gateway
+```
+
+### 8.2 备份数据
+
+所有Hermes配置和数据都存储在`~/.hermes`目录下，定期备份即可：
+
+```
+# 创建备份
+tar -czf hermes-backup-$(date +%F).tar.gz ~/.hermes
+
+# 恢复备份
+tar -xzf hermes-backup-2026-05-19.tar.gz -C ~/
+```
+
+## 九、常见问题与排错
+
+### 9.1 无法访问Dashboard
+
+1.  检查云服务器安全组是否开放了80和443端口
+    
+2.  检查Nginx服务是否运行：`systemctl status nginx`
+    
+3.  检查Hermes服务是否运行：`systemctl --user status hermes-gateway`
+    
+4.  查看日志：`journalctl --user -u hermes-gateway -f`
+    
+
+### 9.2 模型下载慢
+
+使用Hugging Face国内镜像：
+
+```
+export HF_ENDPOINT=https://hf-mirror.com
+ollama pull nousresearch/hermes3:13b-q4_K_M
+```
+
+### 9.3 内存不足
+
+-   使用更小量化级别的模型（Q3\_K\_M代替Q4\_K\_M）
+    
+-   增加swap分区大小
+    
+-   升级服务器配置
+    
+
+### 9.4 安全注意事项
+
+-   永远不要在公网上直接暴露8080端口，必须通过HTTPS反向代理访问
+    
+-   禁用`shell_execution`工具或严格限制其权限
+    
+-   定期更新系统和Hermes Agent
+    
+-   使用强密码和SSH密钥登录
+    
+
+## 十、成本优化建议
+
+1.  **入门级用户**：使用2核4GB服务器+云端API，月成本约¥30
+    
+2.  **本地模型用户**：选择夜间和周末按需运行GPU服务器，可节省70%成本
+    
+3.  **团队使用**：使用单台服务器部署多用户实例，分摊成本
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 # Hermes Agent Mac 可复刻安装笔记
 
 **本文针对 macOS 13 Ventura 及以上系统**，完美支持 Apple Silicon（M1/M2/M3/M4）和 Intel 芯片，提供两种安装方案：**一键安装（新手首选）** 和 **源码安装（开发者推荐）**，并包含所有实用操作技巧和学习路径。
@@ -449,6 +809,7 @@ uv pip install -e .
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 # **TC老师Web3+AI时代开发者能力分享会详细总结**
 
