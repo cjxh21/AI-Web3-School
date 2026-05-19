@@ -17,25 +17,18 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
-打卡草稿（直接复制到 WCB）
-
-\> 📖 今日学习：Handbook Prompt 章节（最小路径）
-
-\>
+📖 今日学习：Handbook Prompt 章节（最小路径）
 
 \> 学了 Instruction 四段写法（任务目标/可用输入/禁止行为/输出格式）和 Structured Output 的设计原则（输出变成可机器校验的字段，不做散文解析）。核心认知：Prompt 是软约束，真正的安全边界由 code 层的 schema 校验 + guard 规则 + human approval 承担。
 
-\>
-
 \> 💻 实践：写了一个交易风险摘要 prompt，跑了 3 组测试（普通转账 → low risk / 无限授权 → high risk / 目标地址不匹配 → high risk），建立了 Prompt + Structured Output + Guard 三层配合的心智模型。
-
-\>
 
 \> 📁 experiments/transaction\_risk\_[prompt.py](http://prompt.py)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 📝 打卡草稿：
 
