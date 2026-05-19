@@ -1212,7 +1212,7 @@ more information
 | [CharlieChan-hi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CharlieChan-hi.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [888myqueen888-maker](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/888myqueen888-maker.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [oncesylvia](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/oncesylvia.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [this-scientist](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/this-scientist.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1227,6 +1227,7 @@ more information
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
