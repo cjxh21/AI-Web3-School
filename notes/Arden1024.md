@@ -16,8 +16,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+0519筆記  
+  
+透過Hermes指定一个“大脑”，也就是大语言模型。  
+Hermes Agent支持众多主流模型，包括**OpenAI、Anthropic Claude。**  
+  
+**學習如何通过一行命令指定提供商和模型來為我工作。**
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 5/18學習日誌  
   
 主要針對安全性進行講解，錢包有多簽(合約錢包)、AA錢包。  
