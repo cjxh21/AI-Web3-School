@@ -15,8 +15,156 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+\# 2026-05-19 学习日志
+
+\## 留给自己的作业
+
+如果 Hermes Agent 帮你完成了一个"自动整理邮件"的任务，它在背后经历了哪几个步骤？它下次再做类似任务时，会有什么不同？  
+
+\- 第一次：用 LLM 决定调用什么工具 → 调用邮件 API → 返回结果 → 判断"这个流程有用 → 生成 [SKILL.md](http://SKILL.md) 描述步骤、入参、典型陷阱"
+
+\- 第二次：检索到 skill → 直接按 skill 步骤执行 → 完成后自问"这次有没有更好的写法" → 增量更新 skill
+
+\- 关键差异：从"每次让 LLM 重新推理工具序列"变成"读已有 skill + 必要时小幅改写"，token 成本和延迟都下降。  
+
+\## 今日主题
+
+\*\***模型上下文协议（MCP）**\*\* —— \[Handbook 章节\]([https://aiweb3.school/zh/handbook/ai/mcp/](https://aiweb3.school/zh/handbook/ai/mcp/))
+
+\## Agent 整理的精炼摘要（看完 Handbook 后用自己的话再写一遍）
+
+\*\***一句话**\*\*：MCP 把"模型 ↔ 外部工具/数据/上下文"的连接标准化成协议，让工具接入变得可描述、可发现、可限制。
+
+\*\***第一性原理**\*\*：模型不应该直接拥有世界，应该通过明确协议访问被授权的上下文和工具。
+
+\*\***4 个知识节点**\*\*：
+
+| 节点 | 它是谁 | 设计要点 |
+
+|—|—|—|
+
+| \*\***Server**\*\* | 提供能力的一侧（暴露 resources / tools / prompts） | 边界：只读 vs 副作用、schema 清晰、错误明确、需否授权、审计日志 |
+
+| \*\***Client**\*\* | 连接模型和 server（IDE / Agent runtime / 聊天客户端） | 发现能力 → 传给模型 → 用户确认 → 权限提示 → 会话隔离 |
+
+| \*\***Tool Schema**\*\* | 描述工具名 / 用途 / 参数 / 返回 / 约束 | 不只是字段类型：何时用、参数含义、必填、是否改外部状态、失败返回什么 |
+
+| \*\***Permission**\*\* | 最容易被低估 | 区分：只读/写、会话/长期、需否确认、敏感访问、可撤销、可审计 |
+
+\*\***AI × Web3 中的位置**\*\*：
+
+\- ✅ MCP 可作为 Agent 接链上工具的接口层：读区块浏览器、查合约文档、调 RPC、生成交易草稿
+
+\- ❌ MCP \*\***不是**\*\*钱包安全方案 —— 最终权限和执行边界归 Web3 账户系统
+
+\- 稳的设计 = MCP（工具发现/调用格式）+ Web3 账户系统（最终权限/执行边界）
+
+\## 我用自己的话复述（读完 Handbook 后填）
+
+\- \*\***Server**\*\*：提供能力的一侧。暴露 resources / tools / prompts 给 Client，用 schema 描述。设计要点是边界 —— 哪些暴露、哪些只读、哪些有副作用、错误怎么返回、要不要授权。
+
+\- _自我纠错_：第一次把"tools"错答成"协议"；漏了 schema 这个关键词。
+
+\- \*\***Client**\*\*：夹在模型和 Server 中间的"外壳层"，本身不思考也不执行业务。例：Claude Code / Cursor / ChatGPT Desktop（Claude 这个模型本身\*\***不是**\*\* Client）。
+
+\- 3 步搬运：①从 Server 拉工具清单 ②把清单递给模型 ③双向中转模型的调用请求和 Server 的返回。
+
+\- 4 件用户那一面的事（容易漏）：用户确认、权限提示、会话隔离、工具调用展示 —— 因为模型看不见屏幕，必须 Client 代劳。
+
+\- _自我纠错_：把模型和 Client 混了；以为 Client 指挥工具（其实工具属于 Server，调谁由模型决定）；完全漏掉用户那一面的 4 件事。
+
+\- \*\***Tool Schema**\*\*：工具的"说明书" —— 描述名字、用途、参数、返回、约束。\*\***模型唯一看得见的工具就是 schema 本身**\*\*：它读不到 Server 代码、运行时风险、副作用、用法约定，全靠 schema 文本来决定调不调、怎么调。所以 schema 不是 Server 的实现细节，是 \*\***Model ↔ Tool 之间的接口契约**\*\*，是 prompt engineering 和 API design 的交集。schema 模糊 → 模型用错误参数填空。
+
+\- _自我纠错_：知道 schema 重要，但"模型只能读 schema"这点没立刻想到 —— 是为什么 schema 这么关键的根。
+
+\- \*\***Permission**\*\*：权限边界，控制 AI 能做什么、不能做什么。Handbook 把它列为"最容易被低估"的问题 —— 因为 MCP 让工具一接就跑，方便≠安全。读 doc 和发转账风险完全不同，必须拆 \*\***6 个维度**\*\*：①只读 vs 写入 ②会话授权 vs 长期授权 ③是否需用户确认 ④是否敏感访问 ⑤是否有外部副作用 ⑥是否可撤销 / 可审计。
+
+\- _自我纠错_：6 个维度只想出 3 个（只读/确认/敏感），漏了"会话 vs 长期"“副作用”“可撤销可审计” —— 但这三条恰恰是今天 audit Notion server 时直接看到反面教材的（env token 长期、协议层无确认、默认无审计）。说明今天的 audit 没和 Permission 节点形成回路。
+
+\- \*\***第一性原理（我的话）**\*\*：MCP 就像\*\***带白名单和权限标签的 USB**\*\*。
+
+\- \*\***标准化半**\*\*：没有 USB 之前每个设备都要定制接口；有了 USB 之后任何合规设备插上就用。MCP 对 AI 生态做的就是 USB 对硬件生态做的事 —— 标准化 Client ↔ Server 接口，避免 N×M 适配。
+
+\- \*\***授权半（普通 USB 不覆盖）**\*\*：MCP 默认\*\***禁止**\*\* —— 模型不能直接拥有世界，必须 schema 显式描述、permission 显式授权才看得到工具。普通 USB 是 plug-and-play，MCP 是 plug-and-审批。
+
+\- _自我纠错_：USB 比喻刚开始只抓到"标准化"那半，漏了"授权 / 受限"那半 —— 这恰恰是 Handbook 原句两段并列的下半段。
+
+\## 我的卡点
+
+\- 读 Handbook + 做 audit 时\*\***实时没卡**\*\* —— 但闭卷复述时暴露 5 个错点（见复述节"自我纠错"行）。
+
+\- 元观察：\*\***不卡 ≠ 懂**\*\*。读的时候顺，是因为我把"看着合理"当成"理解了"。明天起读 Handbook 旁边开个 scratchpad，凡是"嗯？……哦"的地方都先记一笔，别让它无痕过去。
+
+\## 今日最小实验：拆 Notion 官方 MCP server 的 `query-data-source` schema
+
+\> 不写代码，纯 audit。产物：\[experiments/mcp-notion-audit/[README.md](http://README.md)\](…/experiments/mcp-notion-audit/[README.md](http://README.md))
+
+\*\***意外发现** #1\*\***：Notion 不是手写每个 tool，而是把 REST API 的 OpenAPI v3 spec（66KB）丢给** `MCPProxy` **自动转 MCP Tool。22 个工具几乎零成本派生。**
+
+\*\***意外发现** #2\*\***：proxy.ts 有专门的** `deserializeParams` **函数，注释指向 \[issue** #176\]([https://github.com/makenotion/notion-mcp-server/issues/176](https://github.com/makenotion/notion-mcp-server/issues/176)) —— Claude Code / Cursor 会把递归 schema 双重序列化。这是真实工程坑。
+
+\*\***Handbook 四维度对照**\*\*：
+
+| 维度 | Notion `query-data-source` 实际 |
+
+|—|—|
+
+| name | ✅ 干净的 `query-data-source` |
+
+| description | ⚠️ 偏弱 —— 没说"何时用 vs `retrieve-a-data-source`"、没说有无副作用 |
+
+| inputSchema | ✅ 大部分清晰；⚠️ filter 是递归 schema，body 整体无 required（空 body 即全量读取） |
+
+| 副作用 / 权限 | ❌ OpenAPI `security:[]` 假装无 auth，实际靠 HttpClient 注入 env token —— 长期、不可会话隔离、无审计、协议层无确认 |
+
+\*\***最大启发**\*\*：MCP 不能假装权限是协议层的事。Notion README 自己警告"暴露给 LLM 有非零风险"。\*\***只读和写入应分 server，或加 capability flag。**\*\*
+
+\## Follow-up
+
+\- \[ \] \*\***AI × Web3 联想**\*\*：Notion MCP 把 OpenAPI auto-derive 成工具的模式 —— Web3 RPC / 合约 ABI 是不是也能自动派生成 MCP tool？这对应 Handbook Bridge 的 \[Web3 Tool Use\]([https://aiweb3.school/zh/handbook/bridge/web3-tool-use/](https://aiweb3.school/zh/handbook/bridge/web3-tool-use/)) 章节，是 Hackathon Dev Tooling 赛道的候选方向。
+
+\- \[ \] 把"只读 vs 写入分 server"做成真实最小例子（对应 Handbook MCP 章节最小实践 A 方案），下次实验。
+
+\- \[ \] 看一下 Notion \*\***Remote MCP**\*\*（OAuth）vs \*\***Local**\*\*（env token）两种授权模型的对比 —— OAuth 路线是不是 Handbook \*\***Permission**\*\* 章节里"会话授权"的标准答案？
+
+\## Handbook / 课程反馈
+
+\- \[ \]
+
+\## 打卡草稿（粘到 [intensivecolearn.ing](http://intensivecolearn.ing) Check-in 表单的 Markdown）
+
+\`\`\`markdown
+
+\*\***MCP（模型上下文协议）—— 拆 Notion 官方 MCP server**\*\*
+
+今天读 Handbook 的 MCP 章节，第一性原理一句话总结：模型不应该直接拥有世界，应该通过明确协议访问被授权的上下文和工具。MCP 把这层标准化成 Server / Client / Tool Schema / Permission 四个节点。
+
+为了不停留在概念，找了 \[makenotion/notion-mcp-server\]([https://github.com/makenotion/notion-mcp-server](https://github.com/makenotion/notion-mcp-server)) 拆 `query-data-source` 这个 tool。两个意外：
+
+1\. \*\***OpenAPI → MCP 自动派生**\*\*：Notion 不手写每个 tool，把 REST API 的 OpenAPI v3 spec 丢给 `MCPProxy` 类自动转成 22 个 MCP Tool。Web3 那边的 RPC / 合约 ABI 同理可派生 —— 这是 Dev Tooling 方向的一个明显切入点。
+
+2\. \*\***协议** `security:[]` **假装无 auth，实际靠 HttpClient 注入 env token**\*\*。是长期授权、不可会话隔离、协议层无确认、默认无审计 —— Handbook Permission 节里说"权限要在协议外也成立"，这里就是反面教材。
+
+把四维度（name / description / inputSchema / 副作用）扣到 `query-data-source` 上发现：description 没说"何时用 vs `retrieve-a-data-source`"，body schema 也没声明 required —— 空 body 即全量读取。Notion README 自己警告"暴露给 LLM 有非零风险"。
+
+\*\***给自己的 checklist**\*\*：以后写 MCP server 必须把"副作用 / 是否需要用户确认"放进 description，只读和写入要分 server 或加 capability flag，每次调用要写审计日志。
+
+完整 audit：[https://github.com/HeliosLz/ai-web3-school-cohort-0/blob/master/experiments/mcp-notion-audit/README.md](https://github.com/HeliosLz/ai-web3-school-cohort-0/blob/master/experiments/mcp-notion-audit/README.md)
+
+\*\***今日复盘**\*\*：闭卷复述 Server / Client / Tool Schema / Permission / 第一性原理 5 个概念，暴露 5 个错点 —— 其中 Permission 那 6 维度漏的 3 个（会话 vs 长期、副作用、可撤销/可审计）恰好是今天 audit Notion server 时亲眼看见反面教材的。读 Handbook 时实时没卡，但闭卷暴露了 gap。元教训：“不卡 ≠ 懂”；明天起读 Handbook 旁边开 scratchpad，记任何"嗯？……哦"的瞬间。
+
+\`\`\`
+
+\- 提交位置：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School 详情页 → 左侧 “Check-in” 按钮
+
+\- 提交后回填提交时间 / 截图：
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 **Hermes 从 0 到 1 教程**  
   
 它最大的特点是**内置学习循环**：**每次完成任务后，它会自动从经验中提炼出可复用的 Skill，存入持久记忆，下次遇到类似任务时会自动改进和调用。**
