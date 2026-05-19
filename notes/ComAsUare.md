@@ -15,8 +15,130 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+[https://github.com/ComAsUare/ai-web3-school-cohort-0](https://github.com/ComAsUare/ai-web3-school-cohort-0)
+
+```markdown
+# Daily Note | 每日学习笔记
+
+## Date | 日期: 2026-05-19
+
+### 📅 Today's Plan | 今日计划
+- [x] AI × Web3 School Learning Agent 初始化
+- [x] GitHub 学习仓库搭建完成
+- [x] 学习计划按 Handbook 四大模块重构
+- [x] Profile 完善（学习时间、方向、风格）
+- [x] Handbook feedback 流程搭建
+- [x] 参与 AI Agent 直播分享
+- [x] Hermes 代理安装完成，可通过 Telegram 安排每日计划、定时发送
+- [ ] 阅读 Handbook 概览页 + LLM 章节（Module 1 启动）
+- [ ] 设置 Python AI 开发环境
+- [ ] 提交首次 WCB 打卡
+
+### ✅ Completion Status | 完成情况
+- [x] GitHub CLI 已认证，仓库已 push
+- [x] `ai-web3-school-cohort-0` public repo 就绪
+- [x] 目录结构完整：daily, tasks, experiments, handbook-feedback, hackathon, submissions
+- [x] 模板已就位：daily-note, task-note, feedback TEMPLATE
+- [x] 学习计划按 Handbook 四大模块重构，含三档路径
+- [ ] 首次学习 session（待开始）
+- [ ] WCB 打卡提交（待手动提交）
+
+### 📖 Learning Content | 学习内容
+## agent直播课程
+主要了解内容：
+# 不同ai工具分类：代码工具，cli工具，agent工具，hermes的区别
+# hermes agent主要特点： 跨平台 开源 终端运行，消息网关。1）多模型 2）工具调用 3）cron 定时任务 4) meory 记忆 5)消息网关 6)记忆skills
+# hermes完整配置流程，包括白名单，唤醒词等等。
+
+## handbook概览页
+
+
+#### Topic | 主题: Agent 初始化 → Handbook 结构对齐
+
+**今日关键成果**:
+
+1. **Learning Agent 角色明确**: 本 Agent 定位为 AI × Web3 School 的个人学习助手
+   - 不替代学习，而是规划、整理、打卡、反馈
+   - 每日早晨/晚上提醒，生成打卡草稿
+   - 沉淀学习产物到 public repo
+
+2. **Handbook 四大模块理解**:
+   - Module 1: AI 基础（11 章节）— LLM→Prompt→Agent→MCP→...
+   - Module 2: Web3 基础（9 章节）— Network→Wallet→Smart Contract→AA
+   - Module 3: Bridge（12 章节）— Chain-aware Context→Agent Wallet→Verifiable AI
+   - Module 4: 前沿探索（6 赛道）— Agentic Commerce→Wallet/Permission→...
+
+3. **学习路径设计**:
+   - 当前阶段：Module 1 AI 基础，最小路径 LLM→Prompt→Agent（3-4 天）
+   - 下一阶段：Module 3 Bridge 核心交叉（Agent 开发重点）
+   - 每一步有三档路径供按精力选择
+
+### 💡 Insights & Reflections | 收获与思考
+
+**What I Learned | 今日收获**:
+- AI × Web3 不是简单 buzzword 拼接，而是多层面交叉：上下文→工具调用→权限→支付→验证
+- Handbook 的结构设计很巧妙：AI 侧 + Web3 侧 → Bridge → Tracks，从补齐基础到交叉到项目
+- 作为 AI 新手 + Web3 中级 + 独立开发者，最优路线是「补齐 AI 基础 → 快速穿越 Bridge 核心 → 动手做 Agent 原型」
+- 三档路径能很好适配精力起伏：状态好走挑战路径，累了走最小路径保证每天有产出
+
+### 🎯 Tomorrow's Plan | 明日计划
+- [ ] 阅读 Handbook LLM 章节（Module 1 #1）
+- [ ] 阅读 Handbook Prompt 章节（Module 1 #2）
+- [ ] 第一个 AI 实验：动手调几次 prompt 看模型行为
+- [ ] 设置 Python 开发环境（venv + openai + jupyter + python-dotenv）
+- [ ] WCB 平台提交首次打卡
+
+### 📊 Statistics | 学习统计
+- **Study Time | 学习时长**: 1.5h (setup + plan)
+- **Coding Time | 编码时长**: 0h
+- **Completion Rate | 完成度**: ~70% (初始化完成，待学习 session)
+
+### 🔗 Resources | 相关资源
+- [AI × Web3 School Handbook](https://aiweb3.school/zh/handbook/)
+- [WCB Course Page](https://web3career.build/zh/programs/AI-Web3-School)
+- [WCB Learning](https://web3career.build/zh/programs/AI-Web3-School#tab=learning)
+- [WCB Agent API](https://web3career.build/llms.txt)
+- [GitHub Repo](https://github.com/ComAsUare/ai-web3-school-cohort-0)
+- [Learning Agent Prompt](https://aiweb3.school/learning-agent.zh.txt)
+
+### 📝 Check-in Draft | 打卡草稿
+
+**Day 0: AI × Web3 School 学习初始化完成 🚀**
+
+今天完成了全部学习环境搭建：
+
+✅ 配置 Learning Agent 并确认学员画像
+   - AI：新手 · Web3：中级 · 编程：独立开发
+   - 方向：AI Agent 开发 + 智能合约集成
+   - 节奏：早晨主力学习 1-2h，晚上复盘
+
+✅ 创建 public 学习仓库：https://github.com/ComAsUare/ai-web3-school-cohort-0
+
+✅ 按 Handbook 四大模块重构学习计划
+   - Module 1: AI 基础（当前阶段，LLM→Prompt→Agent 最小路径）
+   - Module 2: Web3 基础（复习重点：钱包、合约、账户抽象）
+   - Module 3: AI × Web3 Bridge（核心交叉目标）
+   - Module 4: 前沿探索（Agentic Commerce / Wallet Permission）
+
+✅ 建立 Handbook feedback 流程，学习中的问题直接沉淀到 repo 反馈
+
+下一步：从 Handbook LLM 章节开始，打好 AI 基础！
+
+**Check-in Link | 打卡链接**: [手动提交后填写]
+→ 打卡入口: https://web3career.build/zh/programs/AI-Web3-School#tab=learning
+
+---
+
+**Mood | 心情**: 😊 (Setup done, ready to learn!)
+**Energy | 精力**: ⭐⭐⭐⭐ (4/5)
+```
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 1、参与AI 时代的 Web3 架构能力直播学习。
 
 新增了解知识：
