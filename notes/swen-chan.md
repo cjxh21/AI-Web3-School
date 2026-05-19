@@ -18,10 +18,13 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
+
+然后跟着做做任务 收集问题
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 酷酷回答大家问题中，守住第一波沉淀学员  
   
