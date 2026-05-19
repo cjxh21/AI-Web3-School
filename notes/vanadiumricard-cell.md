@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+![641306ec4490e14b6c9cabd8b5ee527c.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-19-1779200416860-641306ec4490e14b6c9cabd8b5ee527c.jpg)
+
+##成功安装Hermes
+
+#短期任务（明天上课前）配置消息网关（微信），用Hermes辅助完成一项工作
+
+#中期任务：学习操作系统，计算机网络，如果今天的安装Hermes是一项项目，这就是这个项目驱动我，让我认为自己需要学习的
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 \# 📖 Web3 初步认识：支付逻辑与底层架构学习笔记
 
 \---
