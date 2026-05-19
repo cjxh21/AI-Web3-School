@@ -182,7 +182,7 @@ more information
 | [lightqqqq](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lightqqqq.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [mint1186870278-lgtm](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mint1186870278-lgtm.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Mr47hsy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Mr47hsy.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [USDHGwang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/USDHGwang.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [USDHGwang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/USDHGwang.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xinwangvincent-cloud](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xinwangvincent-cloud.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [havieera](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/havieera.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GJ1-bot](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/GJ1-bot.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1226,6 +1226,7 @@ more information
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
