@@ -916,7 +916,7 @@ more information
 | [mawenyuan854-blip](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mawenyuan854-blip.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [vkpatva](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vkpatva.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tsl7711](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tsl7711.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [hankligoing](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hankligoing.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [hankligoing](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hankligoing.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tuerman](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tuerman.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [fan128168](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fan128168.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [maxzhangg](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/maxzhangg.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1226,6 +1226,7 @@ more information
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
