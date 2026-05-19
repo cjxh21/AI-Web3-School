@@ -15,8 +15,121 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+# AI Agent 学习笔记
+
+今天参加了 Draken 老师关于 AI Agent 的学习分享，对 Agent 的发展逻辑、工具生态以及 Hermes Agent 的实际使用方式有了更系统的理解。
+
+过去我对 AI 的认知更多停留在“聊天机器人”阶段，例如 ChatGPT、Gemini、DeepSeek 这类产品，本质上还是以问答交互为核心。但这次学习让我意识到，AI 正在从“回答问题”转向“执行任务”。
+
+Agent 的核心并不只是会聊天，而是具备：
+
+1.  理解任务目标
+    
+2.  调用外部工具
+    
+3.  观察执行结果
+    
+4.  自动修复与继续执行
+    
+
+这一整套闭环能力。
+
+例如，一个 Agent 在收到“帮我完成开发任务”的指令后，不只是生成代码，而是会进一步调用终端、文件系统、API、浏览器等工具，真正参与任务执行。这和传统 Chatbot 已经有明显区别。
+
+这次还系统了解了当前 AI Agent 的工具生态，大致可以分为：
+
+-   聊天型 AI（ChatGPT、Gemini、DeepSeek）
+    
+-   AI 编程助手（Cursor、GitHub Copilot、Antigravity）
+    
+-   终端型 Agent（Codex CLI、Claude Code）
+    
+-   模型聚合平台（OpenRouter、ModelScope）
+    
+-   通用 Agent 底座（Hermes Agent、OpenClaw）
+    
+
+其中我比较感兴趣的是 Hermes Agent 这一类“通用 Agent 框架”。
+
+它的特点包括：
+
+-   支持多模型接入
+    
+-   支持工具调用
+    
+-   支持长期记忆
+    
+-   支持技能（Skill）沉淀
+    
+-   可接入微信、Telegram、飞书等消息平台
+    
+
+我感觉它更像一个“AI 操作系统”，而不仅仅是聊天工具。
+
+另外一个比较有启发的点，是关于“Skill 沉淀”的概念。
+
+如果一个任务经常重复执行，Agent 可以把流程固化为技能，之后自动复用。这其实已经有点接近“个人自动化工作流”的方向了。
+
+技术实践方面，也学习了 Hermes Agent 的部署思路：
+
+-   Windows 推荐使用 WSL
+    
+-   使用 Quick Setup 完成初始化
+    
+-   配置模型 Provider、API Key、消息网关
+    
+-   对接微信 / Telegram 等平台
+    
+
+同时也了解到：
+
+-   命令行开发更适合使用 Codex CLI、Claude Code
+    
+-   高度定制化 Agent 框架对新手有一定门槛
+    
+-   Agent 权限控制非常重要，危险命令最好单次授权
+    
+
+目前我对 AI Agent 的理解，已经从“AI 会聊天”，逐渐转向：
+
+> AI 是一种可调用工具、可执行任务、可沉淀工作流的新型操作层。
+
+后续希望继续深入学习：
+
+-   Agent Workflow
+    
+-   Tool Calling
+    
+-   MCP
+    
+-   Memory System
+    
+-   Multi-Agent 协作
+    
+-   AI IDE / Terminal Agent
+    
+-   本地模型接入
+    
+-   自动化工作流编排
+    
+
+接下来计划尝试：
+
+1.  在 WSL 环境部署 Hermes Agent
+    
+2.  配置 Model API 与消息平台
+    
+3.  尝试构建自己的第一个自动化 Agent 工作流
+    
+
+整体来说，这次学习让我对 AI Agent 的整体生态有了比较清晰的认知，也开始真正理解“AI 帮人做事”意味着什么。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 # AI 时代 Web3 开发研讨会记录
 
 AI 时代 Web3 开发者需要具备的基础知识和架构能力，用Web3支付系统举例说明，穿插安全设计考量，最后分享开发者核心技能。
