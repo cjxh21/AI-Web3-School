@@ -326,7 +326,7 @@ more information
 | [Terence2026](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Terence2026.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [mooncake-17](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mooncake-17.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [CookiePsychology](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CookiePsychology.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Toby1009](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Toby1009.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Toby1009](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Toby1009.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [YangLuChen-D](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YangLuChen-D.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Free-EntropyMXZ](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Free-EntropyMXZ.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Bill306](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Bill306.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1225,6 +1225,7 @@ more information
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
