@@ -17,13 +17,19 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
-# 5.19号  
+5.19
 
-补一下前一天5月18号晚上8点TC老师上课重点分析过的架构知识：
+这次的实习计划明显强度上好很多了，周一三五是Co-Learning答疑日，大家可以有更多的时间自己思考实践并且把问题集合起来统一问，那么这个效果将会好很多啦～
+
+Hermes优点就是如果人不在电脑面前，照样能通过MCP连接Claude Code进行编程，当然具体实践我还没做过，如果是做产品的话，通过Typeless输出意见就能够打磨产品的完整的雏形，那就会更加有利于效率，如果真的能够实现无人看管，有个AI可以替我鞭策其他Agent在我睡觉的期间一直劳作就好了  
+补一下昨天TC老师分享的内容：[https://notebooklm.google.com/notebook/4adabfb8-0bf4-414d-bb95-e39df90017f4](https://notebooklm.google.com/notebook/4adabfb8-0bf4-414d-bb95-e39df90017f4) (需要可自行查看)下面补几张图，小白也能看懂版，可以和链接里的内容一起食用，效果更佳
+
+![8d45e3dfda2f42567f65c4486129db3b.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Karynam2/images/2026-05-19-1779206298607-8d45e3dfda2f42567f65c4486129db3b.png)![d1a5f76e3cf8b8f216de0ea469142e9f.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Karynam2/images/2026-05-19-1779206312201-d1a5f76e3cf8b8f216de0ea469142e9f.png)![9587ec58df30c6341a771c49bbe4a660.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Karynam2/images/2026-05-19-1779206323347-9587ec58df30c6341a771c49bbe4a660.png)![544de734f6608eb899f7c5258bf10b05.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Karynam2/images/2026-05-19-1779206332648-544de734f6608eb899f7c5258bf10b05.png)![1830aa34ef1e48a007fd6c325cfcdcd1.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Karynam2/images/2026-05-19-1779206344234-1830aa34ef1e48a007fd6c325cfcdcd1.png)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 5.18  
 重新回到了LXDAO和ETHPanda的怀抱，倍感亲切，同样的今天依旧是干货满满的两次分享  
