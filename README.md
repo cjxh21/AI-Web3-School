@@ -1175,7 +1175,7 @@ more information
 | [pandajc](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/pandajc.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qingfengzxr](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qingfengzxr.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [CubePlus1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CubePlus1.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [tymineros-glitch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tymineros-glitch.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [tymineros-glitch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tymineros-glitch.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yedeyu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yedeyu.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Beckham2yyy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Beckham2yyy.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [doinb-dotcom](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/doinb-dotcom.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1225,6 +1225,7 @@ more information
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
