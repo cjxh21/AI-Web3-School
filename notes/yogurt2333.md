@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+\## 📋 5月19日学习总结
+
+\### ✅ 已完成
+
+\# 事项 备注
+
+1️⃣ **安装 MetaMask** 手机/浏览器装好，搞定地址 0xED38…a5
+
+2️⃣ **切换到 Sepolia 测试网** 找到了测试网络切过去
+
+3️⃣ **领到测试币** 各 faucet 都挡了（要主网余额），找社群老哥薅到了 🧑‍🤝‍🧑
+
+4️⃣ **🔑 发人生第一笔链上交易** 转了 0.1 ETH 给小伙伴，nonce=0（第一笔处女秀）
+
+5️⃣ **用 RPC 查交易** 拿到了完整的交易原始数据
+
+6️⃣ **学了一堆概念** TxHash / Nonce / Gas / EIP-1559 / Base Fee vs Tip / Burn
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 📅 今天（Day 1）我干了什么
 
 时间段 做的事 状态
