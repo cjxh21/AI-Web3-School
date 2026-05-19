@@ -528,7 +528,7 @@ more information
 | [ColaKing-Cn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ColaKing-Cn.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Rainwggw](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Rainwggw.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Amiiraa18](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Amiiraa18.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [chxii](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chxii.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [chxii](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chxii.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GabrielLi1473](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/GabrielLi1473.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ray-wz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ray-wz.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [fish0107](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fish0107.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
