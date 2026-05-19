@@ -379,7 +379,7 @@ more information
 | [jiezi77706](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jiezi77706.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [claire0613](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/claire0613.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ACodingChuan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ACodingChuan.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [LierMi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LierMi.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [LierMi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LierMi.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [aikingdom68](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/aikingdom68.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lechemo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lechemo.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Fengqinnn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Fengqinnn.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -432,7 +432,7 @@ more information
 | [Chichuzxy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chichuzxy.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [peanuut98](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/peanuut98.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Bowenzeng-6](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Bowenzeng-6.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [drinkingmorewater](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/drinkingmorewater.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [drinkingmorewater](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/drinkingmorewater.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yuansir](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuansir.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [St-Raf](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/St-Raf.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [YUu-8](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YUu-8.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -741,7 +741,7 @@ more information
 | [FAEINYU](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/FAEINYU.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [helenediu-dotcom](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/helenediu-dotcom.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cicitutu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cicitutu.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [fridachen1127](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fridachen1127.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [fridachen1127](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fridachen1127.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Donzhu2020](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Donzhu2020.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dylan070620](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dylan070620.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [gangcaiyoule](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gangcaiyoule.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1228,6 +1228,7 @@ more information
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [paranoiaws](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/paranoiaws.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
