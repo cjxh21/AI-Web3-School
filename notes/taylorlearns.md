@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今天学习了prompt，context 还有network。
+
+Web3相关的内容确实是更复杂，需要更多的时间理解，但是知识充满脑部的感觉确实非常好，虽然需要从非常基础的概念理解开始，但总体还是非常兴奋的，希望我作为一个完全的Web3小白，在学习的过程中可以发现更多Web3跟AI相结合的机会，挖掘在黑客松里面项目的点！
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 昨天完成了Hermes的Onboarding，装在WSL里面的学习小助手，赐予了他我家小猫的名字
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/taylorlearns/images/2026-05-18-1779082056096-image.png)
