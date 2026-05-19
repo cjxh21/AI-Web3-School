@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+AI工具生态图谱有
+
+聊天型AI，AI编程助手，终端型AI比如open claw，codex，claude code等等，模型平台，通用agent AI
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 GLM specializes in coding and agentic tasks。现在的AI（比如GLM、GPT等）越来越擅长：写代码 + 自动执行任务（Agent）
 
 核心培养路径
