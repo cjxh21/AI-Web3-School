@@ -331,7 +331,7 @@ more information
 | [Free-EntropyMXZ](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Free-EntropyMXZ.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Bill306](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Bill306.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ytianspob](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ytianspob.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [DrakenZeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DrakenZeng.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [DrakenZeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DrakenZeng.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [karolinawalborn-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/karolinawalborn-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JintolChan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JintolChan.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [banshaobao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/banshaobao.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -779,7 +779,7 @@ more information
 | [fox896](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fox896.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [a279679426](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/a279679426.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZLP2005](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZLP2005.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zouw0174-code](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zouw0174-code.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zouw0174-code](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zouw0174-code.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ttungx](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ttungx.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Augustas11](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Augustas11.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kkkxi10](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kkkxi10.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1227,6 +1227,7 @@ more information
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
