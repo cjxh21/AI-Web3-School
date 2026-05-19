@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今天我回看了「AI Agent 入门 —— Hermes 从 0 到 1」。
+
+1\. 从视频中了解到配置微信作为 Hermes 消息网关的步骤和方法；之前自己安装 Hermes 时主要使用的是 Telegram。
+
+2\. 多消息网关的意义不只是多一个聊天入口，而是可以让 Hermes 更自然地进入日常学习、任务提醒和路径管理流程。
+
+3\. Hermes 可以作为 AI × Web3 学习路径 / Hackathon 项目的长期辅助学习助手，用来帮助拆解任务、整理资料、记录复盘和推进项目。
+
+我的下一步行动是：
+
+\- 充分利用 Hermes 作为辅助学习助手，多尝试每日复盘、任务拆解、定时提醒、资料整理和学习仓库维护等功能。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 今天我完成了 AI × Web3 School 第一天的学习记录与 Week 1「搭建 learning agent」的起步。学习画像：AI 有基础、Web3 熟悉、能独立开发，目标方向是 Hackathon 项目，每天投入约 1-2 小时。
 
 今天主要完成了：
