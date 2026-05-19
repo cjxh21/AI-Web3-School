@@ -462,7 +462,7 @@ more information
 | [jishukuangzi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jishukuangzi.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [goku9906](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goku9906.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lililiu-6](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lililiu-6.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [puxunucovulo41-lab](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/puxunucovulo41-lab.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [puxunucovulo41-lab](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/puxunucovulo41-lab.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [200102108limengsong](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/200102108limengsong.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LuckyKuang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LuckyKuang.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [irinaguo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/irinaguo.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
