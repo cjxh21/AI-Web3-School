@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+# **Web3 運行原理筆記**
+
+1.  **Web3 是新一代網路架構**  
+    建立在區塊鏈上，強調「去中心化」與使用者擁有自己的資料與資產。
+    
+2.  **區塊鏈（Blockchain）是公開帳本**  
+    所有交易都會被記錄、驗證，且難以被竄改。
+    
+3.  **區塊（Block）會串成鏈（Chain）**  
+    每個區塊都包含前一個區塊資訊，因此形成 Blockchain。
+    
+4.  **Hash 讓資料具有不可竄改性**  
+    資料只要改動，Hash 就會改變，因此能快速發現異常。
+    
+5.  **Smart Contract（智能合約）是自動執行程式**  
+    鏈上執行的程式，可在特定條件成立時自動完成交易，不需中介機構。
+    
+6.  **Wallet（錢包）是 Web3 身份核心**  
+    用來管理加密資產、登入 DApp 與驗證身份。
+    
+7.  **Gas Fee 是區塊鏈手續費**  
+    使用區塊鏈功能（轉帳、Mint NFT 等）都需要支付 Gas。
+    
+8.  **DApp 是去中心化應用程式**  
+    應用程式直接與區塊鏈互動，而非依賴單一公司伺服器。
+    
+9.  **Token 是 Web3 的經濟基礎**  
+    可作為支付工具、治理投票、會員資格或數位資產。
+    
+10.  **Web3 核心精神是 Ownership（所有權）**  
+     使用者真正擁有自己的帳號、資產與數位身份。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ## 今日進度
 
 **Large Language Models explained briefly:** [https://www.youtube.com/watch?v=LPZh9BOjkQs](https://www.youtube.com/watch?v=LPZh9BOjkQs)
@@ -57,6 +93,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 # 自我評估
