@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+一个主流AI Agent系统中通常包含：
+
+-   **感知（Perception）模块**：获取外部环境信息，接收多模态输入（文本、图像、传感器数据），例如GPT-4o可端到端处理视觉与语音。
+    
+-   **决策（Planning）模块**：基于LLM/AIGC大模型进行思考、规划、决策，通过思维链（CoT）、思维树（ToT）等技术拆解复杂目标，并基于反馈持续优化策略。
+    
+-   **行动（Action）模块**：调用工具（API、数据库、搜索引擎、机器人肢体等）去完成任务。
+    
+-   **记忆（Memory）模块**：记忆模块又可以分为短期记忆和长期记忆。短期记忆依赖大模型的上下文窗口（如128K tokens）存储数据和知识，用于优化任务效果。长期记忆则通过向量数据库+RAG实现历史经验存储与检索。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今天在本机安装了hermes， 接入deepseek，渠道段使用了tg，
 
 学习内容：
@@ -38,6 +52,7 @@ Function Calling的流程可以分为：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 对照着[LLM API 调用入门](https://www.youtube.com/watch?v=mnJJPltybBM)（视频）：边看边跟着写 API 调用
 
