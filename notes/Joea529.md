@@ -40,6 +40,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
 💡 对照手册学完 4 个知识节点：
@@ -63,6 +64,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 📚 AI × Web3 School Day 1 — 大语言模型（LLM）
