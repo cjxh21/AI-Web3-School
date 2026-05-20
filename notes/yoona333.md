@@ -15,8 +15,34 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+**Day 3｜AI 基础概念整理与内容沉淀**
+
+今天主要完成了 AI 基础概念的整理和内容沉淀。
+
+我把 LLM、Prompt、Context Window、Workflow、Agent、Tool Use、AI Coding、Guardrails、Tracing、Human-in-the-loop 这 10 个概念重新梳理了一遍。不是只整理定义，而是尝试用初学者也能听懂的方式说明：它们是什么、有什么用、容易误解的边界在哪里。
+
+今天最大的收获是，我更清楚地区分了普通聊天 AI、workflow 和 Agent 的不同。普通 AI 更像是“问一句答一句”，workflow 是把任务拆成稳定流程，而 Agent 则是在目标、上下文、工具和反馈之间持续推进任务的系统。
+
+我也意识到，在 AI × Web3 场景里，Agent 不能只追求自动化。因为一旦涉及钱包、签名、权限、支付、合约调用和链上记录，就必须同时考虑 Guardrails、Tracing 和 Human-in-the-loop。AI 可以帮助提高效率，但关键操作必须可追踪、可确认、可复盘。
+
+今日完成内容：
+
+1\. 整理了 10 个 AI 基础概念的文字版说明；
+
+2\. 将概念改写成适合公众号阅读的表达；
+
+3\. 生成了一张 AI Agent 工作流知识海报；
+
+4\. 梳理了后续写公众号文章时可复用的提示词模板；
+
+5\. 明确了后续学习方向：不只是会用 AI，而是理解如何把 Agent、workflow、tool use、钱包、签名、权限和链上验证组合成一个可运行、可验证、可复盘的系统。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 **Day 2｜AI Agent 入门：Hermes 从 0 到 1 学习心得**
 
 今天学习了 Hermes Agent 的入门使用，最大的感受是：Agent 不只是一个“聊天工具”，更像是一个可以陪我一起管理学习过程的工作流助手。
@@ -30,6 +56,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 Day 1｜AI x Web3 School 开营打卡
 
