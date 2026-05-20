@@ -15,8 +15,33 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今天观看了「Web3 运行原理」X 直播课程，重新温故了一遍 Web3 的基础概念和运行原理，也有了新的理解。布老师提到 Web3 是密码学、经济学、社会学三门学科的交集：密码学提供可验证的账户、签名和共识基础；经济学解释 Token、Gas 和激励机制；社会学对应协作、治理和信任关系的重构。
+
+这和我的 Hackathon 项目 AgentScoope Wallet 也有关：Agent 要参与链上执行，不能只关注技术调用，还要同时考虑权限、激励、风险、治理和用户信任边界。
+
+今天完成 / 推进的是：
+
+1.  观看「Web3 运行原理」X 直播课程，补齐 Web3 运行模型理解。
+    
+2.  复习 Agent Wallet 与 Agent Workflow，关注 Agent 链上权限边界、Policy / Guard、Simulation 和撤销机制。
+    
+3.  推进 Hackathon 项目 AgentScoope Wallet，已建立 `experiments/agent-wallet/` 实验目录，并写出 README / config 示例 / demo 路径。
+    
+
+今天的目标产出是：
+
+-   一份每日学习计划：`daily/2026-05-20.md`
+    
+-   一个 Hackathon 实验目录草稿：`experiments/agent-wallet/`
+    
+-   为后续 Sepolia Safe + 受限权限模块实验打基础。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今天我回看了「AI Agent 入门 —— Hermes 从 0 到 1」。
 
 1\. 从视频中了解到配置微信作为 Hermes 消息网关的步骤和方法；之前自己安装 Hermes 时主要使用的是 Telegram。
@@ -32,6 +57,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 今天我完成了 AI × Web3 School 第一天的学习记录与 Week 1「搭建 learning agent」的起步。学习画像：AI 有基础、Web3 熟悉、能独立开发，目标方向是 Hackathon 项目，每天投入约 1-2 小时。
 
