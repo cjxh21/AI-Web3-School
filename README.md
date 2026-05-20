@@ -383,7 +383,7 @@ more information
 | [aikingdom68](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/aikingdom68.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lechemo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lechemo.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Fengqinnn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Fengqinnn.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [azolonev-debug](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/azolonev-debug.md) | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [azolonev-debug](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/azolonev-debug.md) | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [toby528](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/toby528.md) | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tuk-a1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tuk-a1.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tobaizhizhi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tobaizhizhi.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1231,6 +1231,7 @@ more information
 | [zyh523](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zyh523.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
