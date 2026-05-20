@@ -15,13 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+[https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flygreenbaby.md#%E5%89%8D%E8%A8%80](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flygreenbaby.md#%E5%89%8D%E8%A8%80)  
+  
+像大佬学习
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-19-1779199360711-image.png)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 2026.5.17
 
