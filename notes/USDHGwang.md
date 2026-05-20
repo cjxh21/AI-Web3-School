@@ -17,8 +17,6 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
-\# AI x Web3 School - Day 1 進度
-
 \## 今天做了什麼
 
 為 cohort 接下來 12 週搭建了一套個人知識管理系統。具體做了：
@@ -87,6 +85,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -107,6 +106,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ### 過去的痛點：自學的局限
