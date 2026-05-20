@@ -15,8 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+📚 AI × Web3 School Day 2 — 提示词（Prompt）
+
+💡 3 个核心理解：
+
+1.  Prompt 是软约束，不是安全边界——真正的安全必须交给代码、权限、校验和审计
+    
+2.  2\. 指令分层要清楚：系统规则、开发者规则、用户目标、检索内容不能混在一起
+    
+3.  3\. Prompt Injection 在 Agent 场景尤其危险，应对方案是标记不可信数据 + 参数校验 + allowlist + human approval
+    
+
+🎯 最大收获：Prompt 的价值不是让模型更自信，而是让模型在合适的时候停下来
+
+❓ instruction 的「禁止行为」和代码层权限校验如何划分边界？
+
+🔗 [https://github.com/Joea529/ai-web3-school-cohort-0](https://github.com/Joea529/ai-web3-school-cohort-0)
+
+📖 https://aiweb3.school/zh/handbook/
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
 💡 对照手册学完 4 个知识节点：
@@ -40,6 +63,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 📚 AI × Web3 School Day 1 — 大语言模型（LLM）
 
