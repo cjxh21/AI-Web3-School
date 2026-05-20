@@ -17,97 +17,80 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
-\### 今日课程：web 3 运行原理
+```
+### 今日课程：web 3 运行原理
+- 一笔交易怎么走：签名 传播 排队 排序 出块/证明 可查询
+  - 私钥：类似银行账号的密码，授权各种操作（注：私钥无法更改）
 
-\- 一笔交易怎么走：签名 传播 排队 排序 出块/证明 可查询
+    <img width="322" height="130" alt="image" src="https://github.com/user-attachments/assets/3ccf8a18-3c9a-4bc2-a658-88da0e41d9d3" />
 
-\- 私钥：类似银行账号的密码，授权各种操作（注：私钥无法更改）
+  - 助记词：一对多派生，帮助备份私钥
+  - 地址：由私钥产生，类似银行账号
 
-<img width="322" height="130" alt="image" src="[https://github.com/user-attachments/assets/3ccf8a18-3c9a-4bc2-a658-88da0e41d9d3](https://github.com/user-attachments/assets/3ccf8a18-3c9a-4bc2-a658-88da0e41d9d3)" />
+    <img width="377" height="186" alt="image" src="https://github.com/user-attachments/assets/2df6487a-6808-40a6-a732-7f7261cc5493" />  
 
-\- 助记词：一对多派生，帮助备份私钥
+资产不在钱包里，而是在网上，区块链里。因此一个银行账号不能跨行管理其他银行的资产，但web3可以，只要有私钥。  
+- 交易与签名
+  - 交易：
+    
+    <img width="214" height="112" alt="image" src="https://github.com/user-attachments/assets/a60c743a-1223-4042-ba03-0fb6af0cdd0f" />
 
-\- 地址：由私钥产生，类似银行账号
+    <img width="273" height="129" alt="image" src="https://github.com/user-attachments/assets/56571f6a-9b29-49de-a16c-1a10d32a9834" />
 
-<img width="377" height="186" alt="image" src="[https://github.com/user-attachments/assets/2df6487a-6808-40a6-a732-7f7261cc5493](https://github.com/user-attachments/assets/2df6487a-6808-40a6-a732-7f7261cc5493)" />
+    由私钥生成签名、广播，告知所有人交易执行(调用RPC，许多接收方会接收到请求：1.原始信息 2.生成的地址（谁发的信息） 3.由信息生成的签名；接收方会反推谁签的，验证地址是否相同，确定是私钥拥有人操作的）)
+    - gas fee(手续费)：
+       
+      <img width="353" height="93" alt="image" src="https://github.com/user-attachments/assets/ddf1be7a-dfe7-4503-8f30-5591374d13c0" />
 
-资产不在钱包里，而是在网上，区块链里。因此一个银行账号不能跨行管理其他银行的资产，但web3可以，只要有私钥。
+- 区块链怎么运行
+  
+  <img width="370" height="171" alt="image" src="https://github.com/user-attachments/assets/407f7ed7-7390-4e78-8fa6-3ea5ded65b35" />
 
-\- 交易与签名
+  - builder排序：对交易进行排序，钱多，小费多的靠前。
+  - validator：鉴证这个块是真实的 没有伪造
+    *刚出的块会引用上一个块，刚出容易被攻击，不一定会很稳定，需要大约12min，确认块安全稳定，代表交易被执行。
 
-\- 交易：
+    <img width="379" height="163" alt="image" src="https://github.com/user-attachments/assets/72843ddf-0a31-47f4-a09c-b60ad94153bd" />
 
-<img width="214" height="112" alt="image" src="[https://github.com/user-attachments/assets/a60c743a-1223-4042-ba03-0fb6af0cdd0f](https://github.com/user-attachments/assets/a60c743a-1223-4042-ba03-0fb6af0cdd0f)" />
+- 钱包、RPC、节点、网络：如何链接
+  
+  <img width="297" height="139" alt="image" src="https://github.com/user-attachments/assets/372a4502-f799-498b-a0fa-319623036f6b" />
 
-<img width="273" height="129" alt="image" src="[https://github.com/user-attachments/assets/56571f6a-9b29-49de-a16c-1a10d32a9834](https://github.com/user-attachments/assets/56571f6a-9b29-49de-a16c-1a10d32a9834)" />
+<img width="257" height="131" alt="image" src="https://github.com/user-attachments/assets/76c3b620-4073-4359-a4bb-de76fa711702" />  
 
-由私钥生成签名、广播，告知所有人交易执行(调用RPC，许多接收方会接收到请求：1.原始信息 2.生成的地址（谁发的信息） 3.由信息生成的签名；接收方会反推谁签的，验证地址是否相同，确定是私钥拥有人操作的）)
+<img width="287" height="134" alt="image" src="https://github.com/user-attachments/assets/615218c1-b9b0-4316-ae91-7a1f99b37683" />  
 
-\- gas fee(手续费)：
+* **\* 连接：Web3 讲课 × Context 章节**：今天其实学的是同一件事的两面——讲课讲了「交易怎么在链上跑」（签名 → 广播 → 排序 → 出块 → 确认），Context 讲的是「模型做判断前需要看到什么」。如果未来要做一个 AI Agent 帮你判断「这笔交易能不能签」，它需要的 Context 恰好就是交易流程里的每一个环节：chain ID、from、to、value、data、gas、当前区块高度、simulation 结果。Context 章节教的是怎么把这些信息分层喂给模型（哪些是事实层、哪些是外部参考、哪些必须实时查），Web3 讲课教的是这些信息在链上是怎么产生和传播的。*
 
-<img width="353" height="93" alt="image" src="[https://github.com/user-attachments/assets/ddf1be7a-dfe7-4503-8f30-5591374d13c0](https://github.com/user-attachments/assets/ddf1be7a-dfe7-4503-8f30-5591374d13c0)" />
+### Context：模型的上下文
+#### 第一性原理：为了提高模型提取信息的真实性，要：
+  - 可信来源要显式标注：系统状态、用户输入、检索文档、工具结果要分区放置。
+  - 上下文要可刷新：状态、配置、权限、价格、版本和任务进度不能长期缓存后继续使用。
+  - 记忆要可撤销：用户偏好和历史任务可以提升体验，但不能变成隐藏权限或永久身份假设。
+- context window：模型一次请求能处理的最大上下文范围，越长的上下文越容易让ai抓不住重点无法精准提取关键有用信息，因此要这样：“在实际产品里，context window 应该配合检索、摘要和结构化数据使用。关键状态直接给，长文档按需取，低可信内容隔离标注。”
 
-\- 区块链怎么运行
+    结构化数据： 这里就用到JSON 等格式。把散乱的信息变成规范的结构，AI 读起来才不容易抓错重点。
 
-<img width="370" height="171" alt="image" src="[https://github.com/user-attachments/assets/407f7ed7-7390-4e78-8fa6-3ea5ded65b35](https://github.com/user-attachments/assets/407f7ed7-7390-4e78-8fa6-3ea5ded65b35)" />
+    摘要： 如果上下文实在太长，系统会在后台先调动一个小模型，把次要内容总结成几句话，再喂给主模型。
 
-\- builder排序：对交易进行排序，钱多，小费多的靠前。
+    关键状态直接给：有些信息是决定整个对话走向的“绝对前提”。比如当前对话的时间、软件当前处于什么界面、用户的核心操作指令等。这些信息字数不多，但极其重要，所以必须作为最高优先级的系统信息，直接放进窗口里，确保 AI 随时带着这些前提在工作。
 
-\- validator：鉴证这个块是真实的 没有伪造
+    长文档按需取：如果面对一本 500 页的说明书，系统会先把它切成几百个小块存起来。当用户提问时，系统先用传统的搜索技术找出最相关的两三块，然后只把这“按需取”出来的部分扔进 Context Window 让 AI 去读。这就是现在非常火的 RAG（检索增强生成）技术。
 
-\*刚出的块会引用上一个块，刚出容易被攻击，不一定会很稳定，需要大约12min，确认块安全稳定，代表交易被执行。
-
-<img width="379" height="163" alt="image" src="[https://github.com/user-attachments/assets/72843ddf-0a31-47f4-a09c-b60ad94153bd](https://github.com/user-attachments/assets/72843ddf-0a31-47f4-a09c-b60ad94153bd)" />
-
-\- 钱包、RPC、节点、网络：如何链接
-
-<img width="297" height="139" alt="image" src="[https://github.com/user-attachments/assets/372a4502-f799-498b-a0fa-319623036f6b](https://github.com/user-attachments/assets/372a4502-f799-498b-a0fa-319623036f6b)" />
-
-<img width="257" height="131" alt="image" src="[https://github.com/user-attachments/assets/76c3b620-4073-4359-a4bb-de76fa711702](https://github.com/user-attachments/assets/76c3b620-4073-4359-a4bb-de76fa711702)" />
-
-<img width="287" height="134" alt="image" src="[https://github.com/user-attachments/assets/615218c1-b9b0-4316-ae91-7a1f99b37683](https://github.com/user-attachments/assets/615218c1-b9b0-4316-ae91-7a1f99b37683)" />
-
-\* \*\*\\\* 连接：Web3 讲课 × Context 章节\*\*：今天其实学的是同一件事的两面——讲课讲了「交易怎么在链上跑」（签名 → 广播 → 排序 → 出块 → 确认），Context 讲的是「模型做判断前需要看到什么」。如果未来要做一个 AI Agent 帮你判断「这笔交易能不能签」，它需要的 Context 恰好就是交易流程里的每一个环节：chain ID、from、to、value、data、gas、当前区块高度、simulation 结果。Context 章节教的是怎么把这些信息分层喂给模型（哪些是事实层、哪些是外部参考、哪些必须实时查），Web3 讲课教的是这些信息在链上是怎么产生和传播的。\*
-
-\### Context：模型的上下文
-
-\#### 第一性原理：为了提高模型提取信息的真实性，要：
-
-\- 可信来源要显式标注：系统状态、用户输入、检索文档、工具结果要分区放置。
-
-\- 上下文要可刷新：状态、配置、权限、价格、版本和任务进度不能长期缓存后继续使用。
-
-\- 记忆要可撤销：用户偏好和历史任务可以提升体验，但不能变成隐藏权限或永久身份假设。
-
-\- context window：模型一次请求能处理的最大上下文范围，越长的上下文越容易让ai抓不住重点无法精准提取关键有用信息，因此要这样：“在实际产品里，context window 应该配合检索、摘要和结构化数据使用。关键状态直接给，长文档按需取，低可信内容隔离标注。”
-
-结构化数据： 这里就用到JSON 等格式。把散乱的信息变成规范的结构，AI 读起来才不容易抓错重点。
-
-摘要： 如果上下文实在太长，系统会在后台先调动一个小模型，把次要内容总结成几句话，再喂给主模型。
-
-关键状态直接给：有些信息是决定整个对话走向的“绝对前提”。比如当前对话的时间、软件当前处于什么界面、用户的核心操作指令等。这些信息字数不多，但极其重要，所以必须作为最高优先级的系统信息，直接放进窗口里，确保 AI 随时带着这些前提在工作。
-
-长文档按需取：如果面对一本 500 页的说明书，系统会先把它切成几百个小块存起来。当用户提问时，系统先用传统的搜索技术找出最相关的两三块，然后只把这“按需取”出来的部分扔进 Context Window 让 AI 去读。这就是现在非常火的 RAG（检索增强生成）技术。
-
-低可信内容隔离标注：为了防“幻觉”和安全问题。就例如Transformer 擅长组合解释，但没有事实裁决权。如果输入给 AI 的数据里，有一部分是网上的匿名帖子或者不可靠的搜索结果。可以要求在代码层面，用明确的标签把这段内容包起来（比如 <unverified>这里是网友评论</unverified>），并告诉 AI：“这部分内容仅供参考，不要盲目相信”。这样能防止 AI 被错误信息带偏。
-
-\- context engineering: 设计上下文，尽量让交给模型的文本信息最高效的能由ai处理，规定哪些是可信数据源，哪些是外部信息，上一次结果如何等。
-
-\- memory：跨请求保留的信息，可提前设置，方便每次使用，但隐患是可能现在需求与memory冲突，会造成问题。因此”所有涉及身份、权限、资产或外部副作用的记忆，都必须重新绑定当前会话和当前授权。”
-
-\- \*\*\\\* Web3 场景\*\*：如果 Agent 记住了我的私钥/常用地址/高 gas 偏好，下次自动用了——这就是 Memory 越界变成安全漏洞。所有涉及身份和资产的 Memory 每次都得重新确认，不能靠”上次你同意了”就跳过。
-
-\- knowledge base：模型可检索的外部知识库，需要维护来保证正确，知识的新鲜。
-
-\- \*\*\\\* Knowledge Base vs Memory 的区别\*\*：Memory 存的是「用户偏好/历史行为」（比如我的常用地址、偏好语言），可撤销；Knowledge Base 存的是「外部文档/协议规范」（比如以太坊黄皮书、Solidity 文档），需要维护版本号和更新时间。两者都会进入 Context，但来源和治理方式不同——前者是"你上次怎么用的"，后者是"官方怎么规定的"。
-
-\#### 在AI web3中的位置
-
+    低可信内容隔离标注：为了防“幻觉”和安全问题。就例如Transformer 擅长组合解释，但没有事实裁决权。如果输入给 AI 的数据里，有一部分是网上的匿名帖子或者不可靠的搜索结果。可以要求在代码层面，用明确的标签把这段内容包起来（比如 <unverified>这里是网友评论</unverified>），并告诉 AI：“这部分内容仅供参考，不要盲目相信”。这样能防止 AI 被错误信息带偏。
+- context engineering: 设计上下文，尽量让交给模型的文本信息最高效的能由ai处理，规定哪些是可信数据源，哪些是外部信息，上一次结果如何等。
+- memory：跨请求保留的信息，可提前设置，方便每次使用，但隐患是可能现在需求与memory冲突，会造成问题。因此”所有涉及身份、权限、资产或外部副作用的记忆，都必须重新绑定当前会话和当前授权。”
+  - **\* Web3 场景**：如果 Agent 记住了我的私钥/常用地址/高 gas 偏好，下次自动用了——这就是 Memory 越界变成安全漏洞。所有涉及身份和资产的 Memory 每次都得重新确认，不能靠”上次你同意了”就跳过。
+- knowledge base：模型可检索的外部知识库，需要维护来保证正确，知识的新鲜。
+  - **\* Knowledge Base vs Memory 的区别**：Memory 存的是「用户偏好/历史行为」（比如我的常用地址、偏好语言），可撤销；Knowledge Base 存的是「外部文档/协议规范」（比如以太坊黄皮书、Solidity 文档），需要维护版本号和更新时间。两者都会进入 Context，但来源和治理方式不同——前者是"你上次怎么用的"，后者是"官方怎么规定的"。
+#### 在AI web3中的位置
 context 决定模型看到的是用户幻想、过期文档，还是可验证的链上事实。
+```
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 **首先记录一下经过乱七八糟error终于成功接入tg的claude code:**
 
@@ -224,6 +207,7 @@ context 决定模型看到的是用户幻想、过期文档，还是可验证的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 [https://www.notion.so/AI-web3-3647977eeab480d1b0e5fbf128bfa11e?source=copy\_link](https://www.notion.so/AI-web3-3647977eeab480d1b0e5fbf128bfa11e?source=copy_link)
