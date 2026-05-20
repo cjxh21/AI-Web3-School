@@ -15,8 +15,805 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+````markdown
+# AI Agent 入門：Hermes 從 0 到 1 詳細整理
+
+> 《AI Agent 入门——Hermes 从 0 到 1》   
+
+---
+
+## 1. 核心主題
+
+這場由 LXDAO 舉辦的分享會，主要在介紹：
+
+> AI Agent 是什麼、它和一般聊天 AI 有什麼不同，以及 Hermes Agent 如何作為一個個人助理，幫助使用者完成日常任務、資料整理、文件處理與自動化工作。
+
+ 分享中強調，早期的 AI，像剛問世時的 ChatGPT，比較像是「智慧化搜尋引擎」或「聊天機器人」。你問問題，它回答你；但現代 AI Agent 已經不只是回答，而是可以進一步「執行任務」。
+
+也就是說：
+
+> 一般 AI 偏向「回答問題」；AI Agent 偏向「完成任務」。
+
+Hermes Agent 就是這類工具的一種。它可以連接大模型、本機工具、記憶檔案、技能模板，讓 AI 變成一個更接近「數位管家」或「任務助理」的角色。
+
+---
+
+## 2. AI 的演進：從聊天機器人到 AI Agent
+
+早期使用 ChatGPT 時，使用者通常是這樣操作：
+
+1. 使用者輸入問題
+2. AI 回答
+3. 使用者自己複製、整理、執行
+4. 如果結果不對，再重新提問
+
+這種模式本質上仍然是「問答」。
+
+但 AI Agent 的模式更像是：
+
+1. 使用者給出任務目標
+2. Agent 理解任務
+3. Agent 規劃步驟
+4. Agent 呼叫工具
+5. Agent 觀察工具結果
+6. 如果出錯，Agent 嘗試修正
+7. 直到完成任務或遇到停止條件
+
+這就是 Agent 的基本運作迴圈。
+
+---
+
+## 3. AI Agent 的核心運作迴圈
+
+ Agent 不是單純產生文字，它的關鍵是會形成一個「執行任務的迴圈」。
+
+可以簡化成：
+
+```text
+Prompt
+→ 理解任務
+→ 呼叫工具
+→ 觀察結果
+→ 判斷是否成功
+→ 若失敗則修正
+→ 完成任務
+```
+
+例如你要求 Agent：
+
+```text
+請幫我整理期末專題資料夾，檢查報告缺少哪些章節，並產生一份 project_status.md。
+```
+
+Agent 可能會做：
+
+1. 讀取資料夾結構
+2. 找到 README、report、notes、results
+3. 檢查報告章節是否完整
+4. 讀取實驗紀錄
+5. 整理目前完成狀態
+6. 建立 `project_status.md`
+7. 回報任務完成狀態
+
+所以 Agent 和聊天 AI 最大差別在於：
+
+> 聊天 AI 主要是「回答」；Agent 可以「讀、看、做、改、檢查」。
+
+---
+
+## 4. AI 工具的五大生態陣營
+
+目前市場上的 AI 工具大致分成五大類。
+
+| 類別 | 代表工具 | 特色 |
+|---|---|---|
+| 聊天型 AI | ChatGPT、Claude | 適合問答、解釋、文字生成 |
+| AI 程式碼編輯器 | Cursor、GitHub Copilot | 適合寫程式、重構、補全程式碼 |
+| 終端機 / CLI 型工具 | Cline 等 | 適合在文字環境中和專案互動 |
+| 模型聚合平台 | OpenRouter | 整合多家模型 API，方便開發者串接 |
+| 通用 Base Agent | Hermes Agent、小龍蝦等 | 連接大模型與本機工具，適合日常助理與自動化任務 |
+
+這裡最重要的是分清楚：
+
+> 不同 AI 工具不是誰完全取代誰，而是適合的任務不同。
+
+例如：
+
+- 想聊天、問概念：用 ChatGPT / Claude
+- 想重度寫程式：用 Cursor / Copilot / Cline
+- 想整合多個模型 API：用 OpenRouter
+- 想做日常助理、整理資料、接通訊軟體：用 Hermes Agent
+
+---
+
+## 5. Hermes Agent 是什麼？
+
+Hermes Agent 可以理解成：
+
+> 一個可以連接大模型、本機工具、記憶系統與任務技能的通用 AI 助理。
+
+它不像普通聊天 AI 只能回答你。它可以在你允許的範圍內：
+
+- 讀取檔案
+- 整理資料
+- 產生 Markdown 文件
+- 連接通訊軟體
+- 記住長期偏好
+- 呼叫特定技能
+- 協助建立日常自動化流程
+
+因此它更像是一個常駐在你電腦或伺服器上的「數位管家」。
+
+你可以透過手機、Telegram、WeChat 或其他通訊入口呼叫它，讓它幫你做資料整理、新聞摘要、任務追蹤、文件處理等工作。
+
+---
+
+## 6. Hermes 的兩個核心優勢
+
+### 6.1 長期記憶持久化 Memory
+
+一般聊天 AI 很容易遇到一個問題：
+
+> 對話關掉、網頁重新開啟、上下文太長之後，AI 可能就忘記前面說過什麼。
+
+Hermes 的其中一個特色是，它可以把重要記憶寫入獨立的 `memory.md` 檔案。
+
+這代表它可以長期保存：
+
+- 使用者偏好
+- 常用任務格式
+- 常見工作流程
+- 專案習慣
+- 指令風格
+- 不希望它做的事情
+
+例如你可以讓 Hermes 記住：
+
+```text
+我希望所有課程報告整理都使用 Markdown 格式。
+我希望最後都要給我 Completed / Missing / Next Steps 三個區塊。
+不要自動刪除檔案。
+不要自己亂補不存在的實驗結果。
+```
+
+之後你再要求它整理類似任務時，它就比較能按照你的習慣工作。
+
+---
+
+### 6.2 技能模板化 Skills
+
+Hermes 的另一個重要能力是 Skills。
+
+Skill 可以理解成：
+
+> 一份標準化的任務操作手冊。
+
+它會定義 Agent 在某一類任務中應該扮演什麼角色、可以做什麼、不能做什麼、輸出格式是什麼。
+
+例如你可以建立一個「課程筆記整理 Skill」：
+
+```text
+角色：課程筆記整理助手
+任務：整理課堂筆記、補上章節標題、產生摘要
+限制：不能改動原始筆記，只能新增 summary.md
+輸出：重點整理、名詞解釋、考試可能重點
+```
+
+之後你只要說：
+
+```text
+請用課程筆記整理 Skill 幫我整理今天的深度學習筆記。
+```
+
+Hermes 就可以套用固定流程，而不是每次都重新理解任務。
+
+所以 Skills 的價值在於：
+
+> 把重複任務變成標準流程，讓 Agent 的行為更穩定、更可控。
+
+---
+
+## 7. 實務設定與進階應用技巧
+
+影片中也展示了 Hermes 的實務設定，包含 Windows WSL2、通訊軟體串接、群組隔離、喚醒詞與安全授權。
+
+---
+
+### 7.1 Windows WSL2 環境
+
+在 Windows 中使用 WSL2，也就是 Ubuntu 子系統，來安裝和配置 Hermes。
+
+這樣做的好處是：
+
+- Windows 使用者也能使用 Linux 工具鏈
+- 適合執行開發者工具
+- 可以讓 Hermes 存取本地資料夾
+- 方便部署常駐服務
+
+可以把 WSL2 理解成：
+
+> 在 Windows 裡開一個 Linux 工作環境，讓 Hermes 能用比較接近伺服器的方式運作。
+
+---
+
+### 7.2 串接 WeChat / Telegram
+
+Hermes 可以部署在一台保持開機的電腦或伺服器上，並串接通訊軟體，例如 WeChat 或 Telegram。
+
+這樣你出門在外時，也能用手機傳訊息給 Agent。
+
+例如：
+
+```text
+小黑幫我整理今天 AI 新聞，產生 5 點摘要。
+```
+
+或：
+
+```text
+小黑幫我查看 notes 資料夾，把今天新增的筆記整理成 summary.md。
+```
+
+這種設計讓 Hermes 更像個人助理，而不是只能在電腦前使用的工具。
+
+---
+
+### 7.3 群組與話題隔離
+
+展示了他會把不同用途分到不同群組，例如：
+
+- General
+- Code
+- News
+- Research
+- Personal Task
+
+不同群組可以有不同上下文與記憶，避免不同任務互相干擾。
+
+例如：
+
+- Code 群組：專門討論程式與錯誤修復
+- News 群組：專門整理新聞摘要
+- Research 群組：專門整理論文與筆記
+- General 群組：處理一般日常任務
+
+這樣可以避免一個問題：
+
+> 寫程式的上下文，不應該影響新聞整理；新聞整理的語氣，也不應該影響課程報告。
+
+所以群組隔離的目的就是：
+
+> 讓不同任務有不同記憶與不同工作模式。
+
+---
+
+### 7.4 設定喚醒詞
+
+如果 Hermes 被放在通訊群組裡，不能讓它看到每句話都反應。
+
+因此可以設定喚醒詞，例如：
+
+```text
+小黑幫我
+```
+
+只有當訊息中出現這個喚醒詞時，Agent 才開始處理任務。
+
+這樣可以避免：
+
+- 群組閒聊被誤認為任務
+- Agent 過度回應
+- 不必要的資源消耗
+- 隱私與安全問題
+
+例如：
+
+```text
+今天這篇文章蠻有趣的
+```
+
+Agent 不應該反應。
+
+但如果是：
+
+```text
+小黑幫我整理這篇文章成 5 個重點
+```
+
+Agent 才需要開始工作。
+
+---
+
+### 7.5 高風險指令要單次授權
+
+特別提到，當 Agent 要執行高風險指令時，應該設定成「單次授權」。
+
+高風險指令可能包含：
+
+- 修改系統檔案
+- 刪除檔案
+- 移動大量資料
+- 安裝套件
+- 執行未知腳本
+- 修改設定檔
+- 存取敏感資訊
+
+這類操作不應該讓 Agent 自動執行。
+
+比較安全的做法是：
+
+```text
+Agent 先提出它要執行的指令
+使用者確認
+Agent 才執行
+```
+
+例如：
+
+```text
+Hermes 想執行：rm -rf old_notes/
+是否允許？
+```
+
+這種指令就一定要人工確認，不能讓 Agent 自動執行。
+
+---
+
+## 8. Hermes 不建議拿來做重度寫程式
+
+在分享中也提到，如果目標是重度開發專案，Hermes 不一定是最佳選擇。
+
+更適合重度寫程式的工具是：
+
+- Cursor
+- GitHub Copilot
+- Cline
+- Claude Code 類工具
+
+Hermes 比較適合：
+
+- 日常任務整理
+- 個人助理
+- 通訊軟體入口
+- 資料摘要
+- 文件管理
+- 輕量自動化
+- 記憶與 Skill 工作流
+
+簡單說：
+
+> 寫大型程式專案，用 Cursor / Cline 類工具更適合；做日常助理與資料整理，Hermes 更適合。
+
+---
+
+## 9. 新範例：用 Hermes 整理課程期末專題
+
+以下用一個新的非交易範例說明 Hermes 可以怎麼用。
+
+假設你有一門課叫做：
+
+> Introduction to Deep Learning
+
+你的期末專題資料夾長這樣：
+
+```text
+final_project/
+├── README.md
+├── notes/
+│   ├── paper_notes.md
+│   ├── experiment_notes.md
+│   └── meeting_notes.md
+├── report/
+│   ├── introduction.md
+│   ├── methodology.md
+│   ├── experiments.md
+│   └── conclusion.md
+├── src/
+│   ├── train.py
+│   ├── model.py
+│   └── dataset.py
+└── results/
+    ├── run1_log.txt
+    └── run2_log.txt
+```
+
+你希望 Hermes 幫你做：
+
+> 檢查期末報告是否完整，整理目前缺少的內容，並產生一份專題進度摘要。
+
+這時候不要只說：
+
+```text
+幫我整理期末專題。
+```
+
+因為這太模糊了。
+
+比較好的說法是：
+
+```text
+請只讀取 final_project 資料夾中的 README.md、notes/、report/、results/。
+不要修改任何程式碼。
+請檢查 report/ 裡面的四個章節是否完整：
+- introduction.md
+- methodology.md
+- experiments.md
+- conclusion.md
+
+最後產生一份 project_status.md，內容包含：
+1. 目前已完成的部分
+2. 缺少的內容
+3. 實驗結果摘要
+4. 下一步建議
+```
+
+這樣 Hermes 才知道：
+
+- 要讀哪裡
+- 不能碰哪裡
+- 要檢查什麼
+- 要輸出什麼
+- 最後成果長什麼樣子
+
+---
+
+## 10. 完整 Hermes Prompt 範例
+
+下面是一個可以直接貼給 Hermes 的範例。
+
+```text
+cd /home/user/final_project
+
+Task:
+你是我的課程期末專題整理助手。
+請檢查目前期末專題報告與實驗紀錄是否完整，並產生一份專題狀態摘要。
+
+Scope:
+本任務只做文件整理與狀態檢查。
+不要修改任何 Python 程式碼。
+不要重新訓練模型。
+不要執行長時間實驗。
+不要刪除任何檔案。
+
+Allowed read files:
+- README.md
+- notes/paper_notes.md
+- notes/experiment_notes.md
+- notes/meeting_notes.md
+- report/introduction.md
+- report/methodology.md
+- report/experiments.md
+- report/conclusion.md
+- results/run1_log.txt
+- results/run2_log.txt
+
+Allowed write files:
+- project_status.md
+
+Forbidden:
+- Do not read .env
+- Do not read API keys, tokens, credentials, or private config files
+- Do not modify files inside src/
+- Do not run training commands
+- Do not delete or rename files
+- Do not invent experiment results
+- Do not claim the model is good unless the result logs support it
+
+Stop conditions:
+Stop immediately if:
+- Any required file is missing
+- Any file appears to contain secrets or credentials
+- Experiment logs are empty or unreadable
+- The task requires modifying code
+- The task requires running new experiments
+
+Required checks:
+1. Check whether the report has four sections:
+   - Introduction
+   - Methodology
+   - Experiments
+   - Conclusion
+
+2. Check whether each section has enough content:
+   - Introduction should explain background and motivation
+   - Methodology should explain model, dataset, and training setup
+   - Experiments should summarize runs and results
+   - Conclusion should summarize findings and limitations
+
+3. Check experiment logs:
+   - Identify available runs
+   - Summarize accuracy/loss if present
+   - Do not invent missing metrics
+
+4. Create project_status.md with:
+   - Current status
+   - Completed parts
+   - Missing or weak parts
+   - Experiment summary
+   - Recommended next steps
+
+Output:
+After finishing, print this final status table:
+
+| # | Item | Status |
+|---|------|--------|
+| 1 | File check | COMPLETE / FAILED |
+| 2 | Report completeness check | COMPLETE / FAILED |
+| 3 | Experiment log summary | COMPLETE / FAILED |
+| 4 | project_status.md created | YES / NO |
+
+Final status:
+PROJECT_STATUS_REVIEW_COMPLETE
+```
+
+---
+
+## 11. 這個 Prompt 的設計重點
+
+### 11.1 明確指定工作目錄
+
+```text
+cd /home/user/final_project
+```
+
+讓 Hermes 知道要在哪個資料夾工作。
+
+---
+
+### 11.2 任務範圍清楚
+
+```text
+本任務只做文件整理與狀態檢查。
+不要修改任何 Python 程式碼。
+不要重新訓練模型。
+```
+
+這可以避免 Hermes 自己去改程式或跑實驗。
+
+---
+
+### 11.3 可讀檔案受限制
+
+```text
+Allowed read files:
+- README.md
+- notes/
+- report/
+- results/
+```
+
+這代表 Hermes 只能看和專題整理有關的資料。
+
+---
+
+### 11.4 可修改檔案受限制
+
+```text
+Allowed write files:
+- project_status.md
+```
+
+這代表 Hermes 只能建立或修改這份狀態報告。
+
+---
+
+### 11.5 禁止事項明確
+
+```text
+Do not read .env
+Do not modify files inside src/
+Do not run training commands
+Do not invent experiment results
+```
+
+這些規則可以降低風險。
+
+---
+
+### 11.6 有停止條件
+
+```text
+Stop immediately if any required file is missing.
+```
+
+如果資料不完整，Hermes 不應該自己亂猜，而是應該停下來回報。
+
+---
+
+### 11.7 有固定輸出格式
+
+```text
+Final status:
+PROJECT_STATUS_REVIEW_COMPLETE
+```
+
+這樣你之後可以很快判斷任務是否完成。
+
+---
+
+## 12. Hermes 適合的任務
+
+Hermes 很適合做「有明確邊界」的任務。
+
+| 任務 | 適合原因 |
+|---|---|
+| 整理 Markdown 筆記 | 文件範圍清楚 |
+| 檢查作業架構 | 可以用固定規則判斷 |
+| 產生 README | 輸出格式明確 |
+| 檢查報告缺漏 | 可以根據章節檢查 |
+| 整理會議紀錄 | 只需要讀寫文件 |
+| 每日新聞摘要 | 適合固定格式整理 |
+| 任務追蹤 | 可以和記憶、群組、Skill 結合 |
+| 輕量自動化 | 可透過通訊軟體觸發 |
+
+---
+
+## 13. Hermes 不適合直接做的任務
+
+Hermes 雖然方便，但不代表所有任務都適合交給它。
+
+| 不建議任務 | 原因 |
+|---|---|
+| 自動亂改整個專案 | 風險高，難以 review |
+| 一次修改大量核心程式 | 很難追蹤錯誤來源 |
+| 自動刪除檔案 | 容易造成資料損失 |
+| 讀取帳密或 API key | 有安全風險 |
+| 自動提交正式作業 | 需要人工確認 |
+| 自動執行高風險系統指令 | 可能破壞環境 |
+| 完全相信 AI 的專業判斷 | AI 可能幻覺或誤判 |
+
+安全使用 Hermes 的關鍵是：
+
+> 讓它先做低風險、可檢查、可回滾的工作。
+
+---
+
+## 14. 新手使用 Hermes 的建議流程
+
+如果是第一次使用 Hermes，可以照這個順序：
+
+```text
+Read-only check
+→ Summary report
+→ Markdown-only patch
+→ Small controlled edit
+→ Limited test
+→ Final verification
+```
+
+### 第一步：只讀不改
+
+先讓 Hermes 看檔案、整理狀態，不要修改東西。
+
+### 第二步：產生摘要
+
+讓它輸出目前完成什麼、缺少什麼、下一步做什麼。
+
+### 第三步：只改文件
+
+確認它理解沒問題後，再允許它改 Markdown 文件。
+
+### 第四步：小範圍改動
+
+如果真的需要修改內容，只開放一兩個指定檔案。
+
+### 第五步：跑有限測試
+
+只允許它跑指定測試，不要讓它跑所有昂貴或危險指令。
+
+### 第六步：最後驗證
+
+讓它重新檢查自己改過的內容，確認結果一致。
+
+---
+
+## 15. Q&A 補充：關於量化交易的應用
+
+影片 Q&A 中，有觀眾詢問 Hermes 是否能用在量化交易，例如自動產生策略或交易訊號。
+
+回答重點是：
+
+> 不建議完全依賴 AI 自動產生交易策略。
+
+原因包括：
+
+1. AI 可能產生幻覺，亂湊指標或策略邏輯。
+2. AI 能搜尋到的策略多半是公開且同質化的內容。
+3. 公開策略不一定有實際市場優勢。
+4. 如果讓 AI 直接做交易決策，風險很高。
+
+比較合理的定位是：
+
+> 把 Hermes 當成「輔助助手」，而不是「決策者」。
+
+也就是說，它可以幫忙：
+
+- 整理資料
+- 記錄觀察
+- 生成分析報告
+- 監控指定條件
+- 根據人工規則提醒使用者
+
+但不應該讓它：
+
+- 自動下單
+- 自動判斷一定會賺錢
+- 自動生成未驗證策略並投入使用
+- 取代人的風險管理
+
+這個觀念其實可以套用到所有高風險領域：
+
+> Agent 適合輔助整理、提醒、檢查；不適合在沒有審核的情況下做高風險決策。
+
+---
+
+## 16. 最簡短 Hermes 任務模板
+
+以後可以用這個模板快速寫 Hermes 任務：
+
+```text
+cd /path/to/project
+
+Task:
+[這次要做什麼]
+
+Scope:
+[這次只做什麼，不做什麼]
+
+Allowed read files:
+[可以讀哪些檔案]
+
+Allowed write files:
+[可以改哪些檔案；沒有就寫 NONE]
+
+Forbidden:
+- Do not read secrets
+- Do not modify unrelated files
+- Do not run unapproved commands
+- Do not invent results
+
+Stop conditions:
+- Stop if required files are missing
+- Stop if scope becomes unclear
+- Stop if secrets are found
+
+Output:
+[要求最後輸出格式]
+
+Final status:
+[固定狀態碼]
+```
+
+---
+
+## 17. 最終總結
+
+這場分享的核心可以整理成一句話：
+
+> Hermes Agent 的價值，不是讓 AI 取代你做所有決策，而是讓 AI 在明確規則與安全邊界內，幫你完成重複、繁瑣、可標準化的任務。
+
+最重要的觀念有三個：
+
+1. **Agent 不是聊天機器人，而是任務執行器。**
+2. **Memory 和 Skills 讓 Agent 可以長期累積使用者習慣與標準流程。**
+3. **安全邊界、喚醒詞、單次授權與任務範圍，是使用 Agent 時最重要的控制機制。**
+
+適合的使用方式是：
+
+```text
+人負責決策
+Agent 負責整理、執行、檢查與回報
+```
+
+這樣 Hermes 才能真正成為一個安全、穩定、實用的個人 AI 助理。
+````
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 \# AI 時代：Web3 開發者需要更扎實的基礎知識與架構能力  
   
   
@@ -782,6 +1579,7 @@ Web3 開發包含：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 觀看了 Week 1｜前置准备｜参加开营仪式，期待明天hermes安裝的教學，希望可以在這裡學到很多東西
 <!-- DAILY_CHECKIN_2026-05-18_END -->
