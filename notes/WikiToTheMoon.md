@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+**📅 2026.5.20 学习打卡**
+
+今天的内容是 AI 工具生态介绍与 OPS Agent 安装实操。
+
+工具分类部分梳理了当前 AI 产品的五大阵营：聊天型 AI（ChatGPT、DeepSeek、Gemini）、AI 编程助手（Cursor、Copilot）、终端型 Agent（Claude Code、Codex）、模型平台（Openrouter、魔搭社区）、以及通用助手底座（Open Claw、Hermes Agent）。其中通用助手底座这类工具的核心价值在于：它不只是聊天机器人，而是连接了大模型、本地工具、记忆系统和消息平台的综合底座，更接近一个小型 Jarvis。
+
+Hermes Agent 被重点介绍：它支持多模型接入、工具调用，核心亮点是 memory 记忆机制和 skills 技能模板。Skills 本质上是模板化的工作流，定义了 Agent 的角色、行为边界和能力范围，适合固定任务的流程化处理。对小白来说，它通过微信、飞书等消息平台交互，上手门槛低于需要终端操作的工具。
+
+实操部分演示了在 Windows WSL（Ubuntu 环境）下安装 Hermes Agent 的流程：从 GitHub 搜索仓库，执行一键安装指令，脚本会自动配置 Node 和 Python 环境及相关依赖。
+
+工具选对了，效率才能真正提上来。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ### **5.19 学习笔记：Web3 支付安全深度探讨**
 
 **一、 安全观：贯穿全生命周期的防护**
@@ -94,6 +110,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ### **AI x Web3 School 第一期开营仪式学习笔记**
 
