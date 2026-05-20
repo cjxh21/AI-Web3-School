@@ -576,7 +576,7 @@ more information
 | [Jack-S520](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Jack-S520.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [panzhc](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/panzhc.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [WinnieYang88](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/WinnieYang88.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zuochengzhangzju-byte](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zuochengzhangzju-byte.md) | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zuochengzhangzju-byte](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zuochengzhangzju-byte.md) | ⭕️ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Yuntwo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Yuntwo.md) | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Pluck321](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Pluck321.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [AntonyLang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/AntonyLang.md) | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
