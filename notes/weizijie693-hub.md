@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+Private Key 私钥:
+
+一句话解释:私钥是控制钱包资产和链上身份的核心凭证，谁掌握私钥，谁就能控制这个钱包
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今天完成了 AI x Web3 School Learning Agent 工作流的配置记录，同时从零到一构建了一个概念学习工具，并做了迭代。
 
 1\. 提交设置记录
@@ -64,6 +72,7 @@ AI 做的事：生成概念内容初稿、CLI 框架、网页版 HTML/CSS/JS、R
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 今天私下去了解了一下web3 network基础
 
