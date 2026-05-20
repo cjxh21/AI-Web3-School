@@ -755,7 +755,7 @@ more information
 | [yolanda000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yolanda000.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zblingling](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zblingling.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [livia314630-design](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/livia314630-design.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [respect-778](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/respect-778.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [respect-778](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/respect-778.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yanchengsi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yanchengsi.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [pwp041](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/pwp041.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sun97956](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sun97956.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
