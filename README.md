@@ -939,7 +939,7 @@ more information
 | [LSHFGJ](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LSHFGJ.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [086635](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/086635.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [XiaoHai67890](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/XiaoHai67890.md) | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [roy328line](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/roy328line.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [roy328line](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/roy328line.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [huawanrr](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/huawanrr.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [AgnesT](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/AgnesT.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yoona333](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yoona333.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
