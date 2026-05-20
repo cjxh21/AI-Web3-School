@@ -15,8 +15,48 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今天参加 / 跟进了 Week 1 的「Web3 运行原理」分享，并完成了 Sepolia 测试网实操。
+
+课程部分主要复习了钱包、私钥和个人主权、交易与签名、区块链网络运行、智能合约、协议升级和 Web3 边界。我目前的理解是：Web3 运行原理不是单独理解钱包或合约，而是要把「私钥控制账户 -> 签名表达意图 -> 交易广播到网络 -> 节点验证和共识 -> 区块浏览器验证结果」串成一条完整链路。
+
+实操部分：
+
+1\. 切换 / 使用 Ethereum Sepolia testnet。
+
+2\. 通过 Google Cloud Web3 Faucet 领取 0.05 Sepolia ETH。
+
+3\. 在 Sepolia 区块浏览器确认 faucet 入账交易成功。
+
+4\. 从 MetaMask 的 Account 1 主动发送 0.005 Sepolia ETH 到另一个测试账号 testTWO。
+
+5\. 在区块浏览器中找到主动发送交易结果，并记录 transaction hash、status、block、Gas 和交易费用。
+
+主动发送交易记录：
+
+Transaction hash: 0xa9974b63b7bc3299545cfdd60e3282aff0deaa37e1a0cd7fac2c62ce6576655a
+
+Status: Success
+
+Block: 10886306
+
+Value: 0.005 ETH
+
+Transaction fee: 0.00005251673091 ETH
+
+Gas price: 2.50079671 Gwei
+
+通过这次练习，我完成了「切换到指定测试网 / 领取测试币 / 主动发送一笔测试交易 / 在区块浏览器中找到交易结果 / 记录交易哈希、状态、Gas、区块高度」这一组任务。本次操作仅发生在 Sepolia testnet，不涉及真实主网资金。
+
+Repo:
+
+[https://github.com/yangyuwen-bri/aiweb3-learning-journal](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今天围绕 Week 1 的 AI Agent / Hermes 主题，整理了自己对 prompt、workflow 和 agent 的初步理解，并把它和我的 AI x Web3 School 学习仓库连接起来。
 
 今日完成：
@@ -53,6 +93,7 @@ Demo:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今天完成了 Week 1 任务 2：创建个人 GitHub repo 作为 AI × Web3 School 学习工作区。
