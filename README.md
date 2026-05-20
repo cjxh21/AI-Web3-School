@@ -904,7 +904,7 @@ more information
 | [midi-zhuanjia](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/midi-zhuanjia.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shuyuTol](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shuyuTol.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Thomas-Novato](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Thomas-Novato.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [yaoayao0110](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yaoayao0110.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [yaoayao0110](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yaoayao0110.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blockpanda](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blockpanda.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nanakodesuu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nanakodesuu.md) | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zym89861-wq](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zym89861-wq.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
