@@ -15,8 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今日最大收获：AI × Web3 概念对照
+
+| AI 概念 | Web3 对应 | 关键差异 |
+
+| API Key | 私钥 | 私钥泄露不可重置，资产永久丢失 |
+
+| RAG 向量检索 | The Graph | 都是给系统注入外部信息的索引机制 |
+
+| MCP 协议 | RPC 协议 | 都是"系统↔工具"的标准通信接口 |
+
+| Guardrails | 访问控制 | 都是限制系统行为的边界机制 |
+
+| AI 幻觉 | 合约 Bug | 都必须验证，不能盲目信任 |
+
+\---
+
+\## 实操任务
+
+\- 测试钱包创建（MetaMask + Sepolia）
+
+\- Sepolia 测试交易
+
+\- SimpleStorage 合约部署（Remix）
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 阅读 Handbook AI 板块 8 个章节，系统建立 AI 基础认知框架。
 
 **核心收获：**
@@ -43,6 +71,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 今天从零完成 Hermes Agent 完整部署，Hermes Agent → GLM/[Z.ai](http://Z.ai) API → Telegram + 微信。
 
