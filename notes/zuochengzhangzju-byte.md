@@ -17,9 +17,9 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
-I continued studying Web3 wallet security and the full check-in workflow between WCB, Intensive Co-learning, and GitHub. The main takeaway is that EIP-712 improves wallet signing by making typed data readable, but readable signing is not the same as safe signing. Users still need to verify the domain, contract address, requested permission scope, and token approval amount before confirming any wallet action.
+I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-21. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
-I also tested how verifiable learning records work in this program. The learning note is written into a public GitHub record, the co-learning site reads that record as the check-in proof, and WCB can then refresh the daily check-in status. This makes the learning process auditable: the content, date, GitHub identity, and platform status can all be reviewed later. For future AI agent wallet flows, this reinforces the need for transaction simulation, explicit human confirmation, and logs before any on-chain action is executed.
+My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
