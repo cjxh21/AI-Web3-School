@@ -15,8 +15,416 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+# 學習總結 — AI × Web3 Learning Journey
+
+昨天你其實已經跨過了一個很重要的階段：
+
+> 從「AI 使用者」開始進入「AI-native system builder」的思維。
+
+你學的不是單一技術。
+
+而是：
+
+```text
+AI Agent Architecture 的核心世界觀
+```
+
+* * *
+
+# 1\. Prompt
+
+你理解了：
+
+# Prompt 不只是問題
+
+而是：
+
+```text
+控制 AI 行為的方法
+```
+
+好的 prompt 會定義：
+
+-   role
+    
+-   task
+    
+-   format
+    
+-   constraints
+    
+-   evaluation angle
+    
+
+你也開始理解：
+
+```text
+Spark reviewer system 本質上是 prompt system
+```
+
+* * *
+
+# 2\. Context
+
+你理解了：
+
+# LLM 本身不知道你的世界
+
+所以：
+
+```text
+Context = AI 當下能看到的世界
+```
+
+包括：
+
+-   retrieved documents
+    
+-   database content
+    
+-   conversation history
+    
+-   user profile
+    
+-   memory
+    
+
+你也理解：
+
+```text
+Prompt 決定方向
+Context 決定品質
+```
+
+* * *
+
+# 3\. RAG
+
+你學到：
+
+# RAG = Retrieval-Augmented Generation
+
+本質：
+
+```text
+先找資料
+再生成回答
+```
+
+而且：
+
+RAG 的真正核心不是 vector DB。
+
+而是：
+
+# Dynamic Context Injection
+
+即：
+
+```text
+按問題動態給 AI 最相關資料
+```
+
+你也理解：
+
+```text
+Spark Database 很適合 RAG architecture
+```
+
+因為：
+
+-   proposals 很多
+    
+-   history 很多
+    
+-   evidence 很多
+    
+-   constantly changing
+    
+
+* * *
+
+# 4\. Embeddings
+
+你開始理解：
+
+# Embedding = 意思座標
+
+不是 keyword matching。
+
+而是：
+
+# semantic similarity
+
+意思接近的內容：
+
+在 vector space 裡會靠近。
+
+這是：
+
+RAG semantic search 的核心。
+
+* * *
+
+# 5\. Agent
+
+昨天最大突破之一：
+
+# LLM ≠ Agent
+
+你理解：
+
+# Agent = LLM + Context + Memory + Tools + Actions
+
+真正 Agent：
+
+不是 chatbot。
+
+而是：
+
+# AI-native workflow system
+
+* * *
+
+# 6\. Database vs Memory
+
+這是昨天最重要的理解之一。
+
+你開始清楚：
+
+* * *
+
+# Database
+
+保存：
+
+```text
+raw history
+```
+
+例如：
+
+-   proposals
+    
+-   GitHub exports
+    
+-   funding records
+    
+
+* * *
+
+# Memory
+
+保存：
+
+```text
+long-term understanding
+```
+
+例如：
+
+```text
+這個團隊長期 execution 穩定
+```
+
+* * *
+
+你也理解：
+
+# 沒有 history，就沒有 memory
+
+所以：
+
+目前 priority 應該是：
+
+```text
+擴大 canonical database
+```
+
+尤其：
+
+加入 GG23 DeSci projects。
+
+* * *
+
+# 7\. RAG vs Memory
+
+你學到：
+
+* * *
+
+# RAG
+
+解決：
+
+```text
+AI 不知道資料在哪
+```
+
+本質：
+
+```text
+retrieval
+```
+
+* * *
+
+# Memory
+
+解決：
+
+```text
+AI 不知道甚麼重要
+```
+
+本質：
+
+```text
+persistent understanding
+```
+
+* * *
+
+超重要一句：
+
+# RAG 提供知識
+
+# Memory 提供判斷
+
+* * *
+
+# 8\. Tool Use（昨天後半最重要）
+
+你開始理解：
+
+# AI 真正變成 Agent
+
+是從：
+
+```text
+能使用工具
+```
+
+開始。
+
+* * *
+
+你理解：
+
+# Tool = AI 可調用的能力
+
+例如：
+
+-   GitHub search
+    
+-   database lookup
+    
+-   wallet verification
+    
+-   report generation
+    
+
+* * *
+
+你也理解：
+
+真正 Agent：
+
+不是：
+
+```text
+單次回答
+```
+
+而是：
+
+# multi-step workflow
+
+例如：
+
+```text
+question
+→ retrieval
+→ verification
+→ analysis
+→ memory
+→ report
+```
+
+* * *
+
+# 9\. Spark System 的真正定位（超重要）
+
+昨天你其實已經慢慢開始看見：
+
+# Spark 不只是 database
+
+而是：
+
+# AI-native DeSci Infrastructure
+
+未來可能包括：
+
+* * *
+
+## Canonical Archive
+
+保存 raw reality。
+
+* * *
+
+## RAG Layer
+
+動態 retrieval。
+
+* * *
+
+## Analysis Layer
+
+review / risk / summaries。
+
+* * *
+
+## Memory Layer
+
+長期 ecosystem understanding。
+
+* * *
+
+## Agent Layer
+
+workflow + tools + actions。
+
+* * *
+
+# 10\. 你昨天真正建立的能力
+
+你其實開始建立的是：
+
+# AI System Thinking
+
+不是：
+
+```text
+怎樣問 ChatGPT
+```
+
+而是：
+
+```text
+怎樣設計 AI-native knowledge systems
+```
+
+這是完全不同層次。
+
+* * *
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -111,6 +519,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 今天聽了第一堂，補全了對錢包的認識、AA抽象錢包以及底層錢包的基礎知識點。tc 老師的講解很清楚。
 
