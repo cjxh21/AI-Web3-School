@@ -1057,7 +1057,7 @@ more information
 | [annecn037](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/annecn037.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Xiaonan2020](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Xiaonan2020.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [TangSong-st](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/TangSong-st.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [JadeTwinkle](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JadeTwinkle.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [JadeTwinkle](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JadeTwinkle.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [beautifulrem](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/beautifulrem.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ci-yang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ci-yang.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dl4987638](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dl4987638.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1204,7 +1204,7 @@ more information
 | [chenfu216](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chenfu216.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [RanX557](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/RanX557.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [MAX-A99](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/MAX-A99.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cainiao0924.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [daisycheng2004](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/daisycheng2004.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zhangbobo123](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhangbobo123.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
