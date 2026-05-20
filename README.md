@@ -1118,7 +1118,7 @@ more information
 | [fearless-java](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/fearless-java.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lychunchun](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lychunchun.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [seaseovo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/seaseovo.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [2302017276a-ops](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/2302017276a-ops.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [2302017276a-ops](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/2302017276a-ops.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yathyuan-sketch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yathyuan-sketch.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lazybones3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lazybones3.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Heemale](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Heemale.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
