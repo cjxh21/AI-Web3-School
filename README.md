@@ -187,7 +187,7 @@ more information
 | [havieera](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/havieera.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [GJ1-bot](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/GJ1-bot.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [StariverKang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/StariverKang.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Taino23](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Taino23.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Taino23](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Taino23.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [weizijie693-hub](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/weizijie693-hub.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [9526xu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/9526xu.md) | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Kathy0758](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Kathy0758.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
