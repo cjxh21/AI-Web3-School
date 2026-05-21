@@ -15,8 +15,193 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+## 今天终于装上了。。。
+
+## 一、前期准备
+
+1.  电脑开启**CPU虚拟化**（任务管理器-性能-CPU查看已启用）
+    
+2.  D盘新建文件夹：`D:\\\\WSL`
+    
+3.  关闭电脑360/管家，避免拦截权限
+    
+
+* * *
+
+# 第一步：管理员PowerShell开启WSL2功能
+
+这是windows安装WSL官方文档，装完了才发现。
+
+[Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+1.  右键开始菜单 → **Windows终端(管理员)** / PowerShell管理员
+    
+2.  依次执行两行命令
+    
+
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+1.  **立刻重启电脑**（不重启必报错）
+    
+
+## 第二步：安装WSL2内核+设定默认WSL2
+
+1.  浏览器搜索下载：`wsl_update_x64.msi` 微软官方内核包，双击安装（安装文件关联有问题的，在powershell里运行这个
+    
+
+```python
+
+msiexec /i "D:\\WSL\\wsl_update_x64.msi"
+```
+
+再PowerShell执行
+
+```powershell
+wsl --set-default-version 2
+```
+
+## 第三步：**手动把 Ubuntu 22.04 安装到 D 盘**
+
+在**管理员 PowerShell** 中依次执行：
+
+```powershell
+# 1. 创建 Ubuntu 存放目录（全在D盘）
+mkdir D:\\\\WSL\\\\Ubuntu
+
+# 2. 导入系统到D盘（注意文件名和你下载的一致）
+wsl --import Ubuntu D:\\\\WSL\\\\Ubuntu D:\\\\WSL\\\\ubuntu-22.04-root.tar.gz
+```
+
+> 如果提示文件不是 .tar.gz 而是 .tar.xz，请把文件名改成对应的一致。
+
+1.  检查是否成功：
+    
+
+```powershell
+wsl -l -v
+```
+
+看到 **Ubuntu** 显示 **版本 2** 就成功了！
+
+## 第四步：**进入 WSL 并创建普通用户**
+
+```python
+# 进入Ubuntu
+wsl -d Ubuntu-22.04
+```
+
+进入后执行以下命令（**一次性复制粘贴**）：
+
+```python
+NEW_USER=royce（记得换成你的用户名）
+useradd -m -s /bin/bash $NEW_USER
+passwd $NEW_USER
+usermod -aG sudo $NEW_USER
+tee /etc/wsl.conf > /dev/null << EOF
+[user]
+default=$NEW_USER
+EOF
+exit（这是退出
+```
+
+退出后重新进入：
+
+```powershell
+wsl -d Ubuntu-22.04
+```
+
+* * *
+
+### **第五步：WSL 内部国内加速**
+
+```bash
+# 换阿里云源-一行一行粘贴-WSL粘贴ctrl+v不行 鼠标右键粘贴就行
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo sed -i 's|archive.ubuntu.com|mirrors.aliyun.com|g' /etc/apt/sources.list
+sudo sed -i 's|security.ubuntu.com|mirrors.aliyun.com|g' /etc/apt/sources.list
+
+sudo apt update && sudo apt upgrade -y
+
+```
+
+* * *
+
+```python
+# 安装Git
+sudo apt install -y git
+git config --global user.name "你的名字"
+git config --global user.email "你的邮箱@qq.com"
+```
+
+## 安装可选方法1
+
+用**ghproxy镜像代理**执行官方安装脚本
+
+```bash
+curl -fsSL <https://mirror.ghproxy.com/https://raw.githubusercontent.com/NousResearch/HermesAgent/main/install.sh> | bash
+```
+
+等待自动安装：uv、Python、Node、Playwright全套依赖 **Playwright下载浏览器慢是正常现象，千万别终止！**
+
+## 作者用的此方法2（安装比较快 需要魔法记得开TUN模式
+
+```python
+ curl -fsSL <https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh> | bash
+```
+
+安装完后出现界面
+
+![image.png](attachment:e86e7586-1de6-412b-85ec-77ed66277b37:image.png)
+
+## 第六步：安装完后生效配置
+
+```bash
+source ~/.bashrc
+```
+
+## 第七步：找到你需要配置API的官方文档查看如何接入
+
+选择模型厂商
+
+1.  粘贴你的API Key
+    
+2.  填写代理接口BaseURL
+    
+3.  接入成功后出现图标
+    
+
+![image.png](attachment:bc664810-15c0-4b1f-85e3-9c1db0761009:image.png)
+
+# 那么日常如何进入
+
+Powershell执行
+
+```python
+hermes
+# 或
+~/.local/bin/hermes
+```
+
+### **第八步：如果你想省 Token 优化**
+
+进入对话后输入：
+
+```
+/config delegation.orchestrator_enabled false
+/config agent.max_turns 30
+```
+
+以后想切换轻量模型就输入：`/model 模型名`
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ### 一、LangChain 是什么
 
 LangChain 不是一个大模型，而是一个**专为构建大语言模型（LLM）应用设计的 Python/JavaScript 框架**。你可以把它理解成“大模型应用的乐高积木”——它把调用大模型、处理数据、管理对话、连接外部工具（数据库/API）等功能拆分成标准化的组件，让你不用从零写代码，就能快速搭建复杂的 LLM 应用（比如智能问答机器人、文档分析工具、AI 助手等）。
@@ -321,6 +506,7 @@ print("最终回答：", response["output"])
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 # 以太坊账户（Accounts）笔记
 
 ## 一、账户概述
@@ -418,6 +604,7 @@ print("最终回答：", response["output"])
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ## 一、前期准备
