@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+1.  智能合約複習、錢包知識學習。缺少AI輔助解釋交易內容、可視化簽名的步驟。
+    
+2.  每日接收非常多Web3的News，設計使用AI Agent整理每日訂閱內容 -> summary post-> 銜接各種premium post的機制
+    
+3.  參與今日分享會，新增Web3xAI Bridge知識閱讀。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 1.  將handbook內容製作[學習卡](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/terms.json)，並加入至learning bot的功能，可以在聊天機器人中做隨機的test。
     
 2.  完成學習handbook中AI和Web3基礎的解釋。
@@ -29,6 +39,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 將AIxWeb3School HandBook內容加入學習bot的學習資源，並產生一[每日重點整理。](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/handbook.md)
 
@@ -73,6 +84,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
