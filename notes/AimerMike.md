@@ -15,8 +15,59 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+RAG means the model does not rely only on what it already “knows”. The system retrieves relevant documents, snippets, records, or chain data, then gives that context to the model so it can answer with evidence.
+
+The basic flow:
+
+1.  User asks a question.
+    
+2.  System rewrites or embeds the query.
+    
+3.  Retriever finds relevant sources.
+    
+4.  Context is inserted into the prompt.
+    
+5.  LLM generates an answer.
+    
+6.  The answer includes citations, uncertainty, and source boundaries.
+    
+
+Why it matters:
+
+-   LLMs can produce fluent but unsupported claims.
+    
+-   Web3 data changes quickly: contracts, governance proposals, bridge status, token metadata, and exploit reports can all become stale.
+    
+-   A Web3 agent should distinguish current fetched evidence from model memory.
+    
+
+Common RAG sources in AI x Web3:
+
+-   Protocol docs
+    
+-   Contract source code and ABIs
+    
+-   Block explorer pages
+    
+-   Governance forum posts
+    
+-   Audit reports
+    
+-   RPC or indexer data
+    
+-   Wallet transaction history
+    
+-   Internal product docs
+    
+
+RAG is not magic. It can still fail if retrieval finds the wrong source, misses a critical source, includes stale content, or stuffs too much context into the prompt. Good RAG design includes source ranking, metadata filters, recency checks, chunk quality, and answer constraints.
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 Prompt design is safety design. In Web3, context quality and permission boundaries decide whether an AI agent is just helpful or dangerously overconfident.
 
 ```markdown
@@ -40,6 +91,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 | 角色 | 擅长领域 | 短板 | 使用边界 |
 | --- | --- | --- | --- |
 | LLM 大语言模型 | 解读释义、内容总结、对比分析、方案规划 | 无上下文无法获取实时信息，无法保证内容绝对真实 | 必须主动说明信息不确定点与信息来源局限 |
@@ -58,6 +110,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
