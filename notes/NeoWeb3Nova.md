@@ -42,8 +42,8 @@ AI x Web3 School
 >     
 
 使用AI agent快速落地了一个交叉实现：  
-❯ 以“用户点击投票按钮”为例，完整链路通常是：  
-  
+❯ 以“用户点击投票按钮”为例，完整链路通常是：
+
 前端读取钱包地址和当前网络。  
 前端根据 ABI 编码 vote(proposalId) 调用数据。  
 钱包展示交易信息，让用户确认签名。  
@@ -54,7 +54,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 索引器读取 event，更新历史记录或看板。  
 根据上面的需求，开发一个webui页面来演示整个流程，要可以完全展示，比如需要钱包，需要在测试网上完整测试。
 
-![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372404071-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372431929-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372447514-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372456170-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372404071-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372431929-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372447514-image.png)![屏幕截图 2026-05-21 220556.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372749427-_____2026-05-21_220556.png)
 
 > 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-21.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-21.md)
 
@@ -63,6 +63,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
@@ -92,6 +93,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 > 今日完成 Week 1 完整任务拆解，正式启动 Web3 测试网实践模块。
@@ -132,6 +134,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
