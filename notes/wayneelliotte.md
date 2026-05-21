@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天抽空在学ai的东西
+
+问了ai关于hermes的机制，包括经验沉淀的原理，怎么使用以及建自己的数据库分开主题
+
+了解了什么是CLI和GUI，我跟tg bot聊天是GUI，我并不习惯于CLI命令行的方式，后续有需要学习
+
+了解embedding嵌入是什么，大致就是向量化不同的词，在空间中计算距离来表示关系远近。
+
+如果把图片和文本映射到一起就是多模态CLIP
+
+了解了神经网络，从CNN卷积神经网络用于图像识别等、RNN循环神经网络用于语音识别等、到transformer极大的提高了训练效率
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 1.we3钱包的交易原理，身份到授权到传播到排序到执行和确认
 
 2.gas fee防止免费资源占用
@@ -33,11 +49,13 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 今天在让codex自动把aiweb3 school的平台api接进我的hermes里面，看下来还是不太会用，我的面板是配置面板，聊天还得进tg机器人。再研究研究
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 LLM的机制、训练和架构
