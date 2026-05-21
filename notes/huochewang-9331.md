@@ -15,8 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天完成了 AI 共学打卡系统的自动化流程调试。
+
+主要进展：
+
+1\. 学习并理解了 GitHub 仓库、项目、文件上传与 Vercel 部署的基础逻辑
+
+2\. 成功创建并上传项目仓库，并完成网页部署
+
+3\. 调试了 Edge + PowerShell 自动化方案，理解了 WSL、CDP 与浏览器控制之间的关系
+
+4\. 发现当前问题主要出现在 WSL 直连 Edge CDP 不稳定，因此后续决定改用 Windows PowerShell 视觉执行流
+
+5\. 明确了“AI 执行 + 人类监督 + 失败恢复”的协作模式
+
+今天最大的收获：
+
+以前我对代码、环境、部署几乎没有概念，但今天开始真正理解：
+
+“AI 不是替代人，而是放大人的执行力。”
+
+下一阶段目标：
+
+继续完善自动化打卡系统，并尝试接入实时数据监控与 AI 决策流。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今天主要完成了：
 
 \- AI Agent 与 Edge CDP 的连接
@@ -48,6 +76,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 \# Web3 School - 学习日志
 
@@ -106,6 +135,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
