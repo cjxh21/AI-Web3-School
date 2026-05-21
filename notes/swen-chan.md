@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天准备做个api设置的文档，分享给大家
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 首先是基本概念界定
 
 1.LLM 提供智能能力；
@@ -60,6 +66,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
 
 然后跟着做做任务 收集问题
@@ -67,6 +74,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
