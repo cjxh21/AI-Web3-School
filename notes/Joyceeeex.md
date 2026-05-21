@@ -30,6 +30,7 @@ AI x Web3 School
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 第三天，了解了hermes，参加了晚上的co-learning
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -37,11 +38,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 Learning **AI Agent 入门 —— Hermes 从 0 到 1**
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
