@@ -17,17 +17,23 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
-今日事情很多 明天要学习了
+-   阅读手册总览，了解四部分地图：AI 基础、Web3 基础、AI x Web3 Bridge、前沿探索。
+    
+-   写下自己当前最强和最弱的基础区域。
+    
+-   为明天的学习提出了一个问题。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 补齐学习者画像，阅读第一个选定的 Handbook 章节，并把一个不清楚的概念转化成 feedback 或小实验
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
