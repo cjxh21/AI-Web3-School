@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今晚八点Elon 老师 讲解的AI in Web 3 application
+
+这是刚需 也是大方向
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 Web 3的运行原理
 
 敬爱的布老师主讲的
@@ -28,6 +36,7 @@ Web 3的运行原理
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 为什么用爱马仕
 
 因为更beginner friendly
@@ -35,6 +44,7 @@ Web 3的运行原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
