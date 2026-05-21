@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天我整理了 2026-05-21 AI 与 Web3 结合方向分享会笔记。最大的收获是，AI x Web3 不是单向叠加，而是双向关系：Web3 可以为 AI 提供更开放的算力、数据和激励网络，AI 也可以帮助 Web3 在钱包安全、链上数据理解和语义化交互上变得更可用。
+
+另外，我也记录了一个自己主动寻找和分析外部参考后形成的黑客松候选方向：围绕 AI 钱包签名安全，探索 AI 如何在用户确认前帮助理解风险。这个方向和课程主题有关联，但不是课程直接给出的题目。考虑到 idea 还在早期，我只保留低信息量公开版本，不展开具体产品细节。public repo 是学习证明，不等于把所有想法都公开。
+
+今日笔记：
+
+[**https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-21.md**](https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-21.md)
+
+Today I organized the 2026-05-21 class note on AI and Web3 mutual enablement. My main takeaway is that AI x Web3 is not a one-way combination. Web3 can provide more open compute, data, and incentive networks for AI, while AI can make Web3 more usable through wallet safety, onchain data understanding, and semantic interaction.
+
+I also recorded a Hackathon candidate direction formed through my own external reference search and analysis: AI wallet signing safety, or how AI can help users understand risk before approval. This direction is related to the class themes, but it was not directly assigned by the class. Since the idea is still early, the public version stays low-detail and does not expose concrete product details. A public repo is proof of learning, not a place to expose every idea.
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今天我整理了 2026-05-20 Web3 运行原理分享会笔记，从第一性原理复盘了一笔交易如何从钱包签名开始，经过 RPC、mempool、builder、validator、出块和确认，最终成为链上状态。
 
 最大的收获是：Web3 不是几个孤立概念，而是一条从私钥到 finality 的完整系统链路。钱包负责控制签名，交易表达用户意图，gas 定价链上资源，RPC 连接用户和网络，智能合约承载公开规则，协议升级则依赖技术实现和社会共识共同完成。
@@ -32,6 +48,7 @@ The biggest takeaway is that Web3 is not a set of isolated concepts. It is a ful
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 今天我继续维护 AI x Web3 School Cohort 0 学习仓库，并整理部署了两份学习资料：ZK trading system fireside chat 笔记，以及 2026-05-19 晚间课程《AI 工具科普 + Hermes Agent 安装与配置分享会》的课程笔记。
@@ -57,6 +74,7 @@ Another important takeaway is that the direction of Qy Knowledge Hub became clea
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
