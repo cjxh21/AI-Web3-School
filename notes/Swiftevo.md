@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 # 學習總結 — AI × Web3 Learning Journey
 
 昨天你其實已經跨過了一個很重要的階段：
@@ -425,6 +431,7 @@ workflow + tools + actions。
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -519,6 +526,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今天聽了第一堂，補全了對錢包的認識、AA抽象錢包以及底層錢包的基礎知識點。tc 老師的講解很清楚。
