@@ -15,14 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+1.观看**AI 在 Web3 的应用，了解AI在web3可以有哪些应用，在使用的时候应该注意什么**  
+**2.运用ai辅助安装wsl2环境，研究api**
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 1.观看**AI 时代，Web3 开发者需要具备的基础知识和架构能力回放**  
 **2.了解Natural Language Processing and Large Language Models，以及transformer的原理**
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 了解大语言模型
 
