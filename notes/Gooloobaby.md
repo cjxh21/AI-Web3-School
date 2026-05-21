@@ -25,11 +25,13 @@ AI x Web3 School
 
 
 
+
 先打卡
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -48,11 +50,13 @@ AI x Web3 School
 
 
 
+
 今天，花了很长时间把Hermes下载了。明天开始将模型接入就可以让Hermes帮我规划学习了。已经搞明白了Hermes其实就是学习助手（对于训练营来说）。具体coding我还是打算放到CodeX上。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
