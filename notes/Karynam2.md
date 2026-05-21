@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+# 5.22
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 # 5月21号
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ### 5.20学习日
 
@@ -36,6 +43,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 5.19
 
 这次的实习计划明显强度上好很多了，周一三五是Co-Learning答疑日，大家可以有更多的时间自己思考实践并且把问题集合起来统一问，那么这个效果将会好很多啦～
@@ -48,6 +56,7 @@ Hermes优点就是如果人不在电脑面前，照样能通过MCP连接Claude C
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
