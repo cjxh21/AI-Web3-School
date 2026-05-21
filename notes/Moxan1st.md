@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+Week1Day4
+
+一会开直播开始学，dbq AI X Web3 School
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 Week1Day3
 
 讲道理今天应该开始学了，但是鼓捣直播鼓捣了一天。
@@ -25,6 +33,7 @@ Week1Day3
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 Week1 Day2
 
 今天去毕业答辩了，顺利通过捏
@@ -32,6 +41,7 @@ Week1 Day2
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 Week 1 Day 1
