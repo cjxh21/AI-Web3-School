@@ -28,6 +28,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 # **Day 001**
 
 ## **今天目标**
@@ -81,6 +82,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
