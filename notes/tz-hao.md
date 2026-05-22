@@ -15,8 +15,22 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+**1\. Web3 Tool Use（学完）**  
+\- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
+\- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
+\- 核心认知：Web3 工具比普通 API 调用高一个风险量级，工具设计本质是「模型能力 vs 确定性边界」的权衡  
+  
+**2\. Agent Workflow（开篇）**  
+\- Task Graph：把目标拆成节点+依赖，每步定义输入/输出/权限/失败处理  
+\- State Machine：Agent 要知道自己在哪个状态，交易 pending 时不"失忆"  
+\- Human-in-the-loop：只读自动、小额放行、高风险必确认、越权直接拒
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 核心收获：  
 1\. Web3 工具必须**读写分离**——读链和写链是不同工具、不同权限，不能混在一个"万能 RPC"里  
 2\. 写交易前需要完整的 7 步检查链：chain id → 合约 → ABI → value → gas → simulation → policy  
@@ -27,6 +41,7 @@ timezone: UTC+8
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -34,11 +49,13 @@ timezone: UTC+8
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
