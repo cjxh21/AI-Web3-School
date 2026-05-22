@@ -15,8 +15,262 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+\## Today’s Goal
+
+\- 学习账户抽象（Account Abstraction, AA）的基本概念。
+
+\- 理解 ERC-4337 如何在不修改以太坊共识层的前提下实现账户抽象。
+
+\- 梳理账户抽象对钱包体验、权限控制和交易流程的影响。
+
+\## Learning Materials
+
+\- Handbook:
+
+\- WCB Learning:
+
+\- EIP-4337: [https://eips.ethereum.org/EIPS/eip-4337](https://eips.ethereum.org/EIPS/eip-4337)
+
+\- Ethereum Account Abstraction: [https://ethereum.org/roadmap/account-abstraction/](https://ethereum.org/roadmap/account-abstraction/)
+
+\## Notes
+
+\### Account Abstraction
+
+\- 今天的主要进展是了解了账户抽象这个概念，包括 ERC-4337。
+
+\- 账户抽象的核心目标，是让账户本身拥有更灵活的验证和执行逻辑，而不是只能依赖传统 EOA 的固定规则。
+
+\- 传统 EOA 的限制包括：
+
+\- 账户由私钥直接控制，签名规则比较固定。
+
+\- 用户通常必须持有原生 ETH 才能支付 Gas。
+
+\- 多签、社交恢复、批量交易、限额控制等高级能力需要额外钱包或合约支持。
+
+\- 账户抽象希望把账户变成更可编程的智能账户（Smart Contract Account），让“账户如何验证一笔操作”可以由合约代码定义。
+
+\- 从用户体验看，账户抽象可以支持更接近 Web2 的体验，例如：
+
+\- 社交恢复或多设备恢复。
+
+\- 批量执行多个操作。
+
+\- 使用 ERC-20 或由第三方代付 Gas。
+
+\- 设置每日限额、白名单、会话密钥等权限规则。
+
+\### EOA vs Smart Contract Account
+
+\- EOA（Externally Owned Account）：
+
+\- 由私钥控制。
+
+\- 可以主动发起交易。
+
+\- 验证逻辑由协议规则固定，主要是检查签名、nonce、余额和 Gas。
+
+\- Smart Contract Account：
+
+\- 由合约代码控制。
+
+\- 可以自定义验证逻辑，例如多签、社交恢复、不同签名算法、权限分级。
+
+\- 不能像 EOA 一样天然发起底层交易，通常需要一套额外机制来触发执行。
+
+\- 账户抽象要解决的问题，就是让智能合约账户也能成为用户的主要账户，而不是只作为 EOA 背后的附属工具。
+
+\### ERC-4337 Mental Model
+
+\- ERC-4337 的重要特点是：不需要修改以太坊共识层协议。
+
+\- 它没有直接新增一种底层交易类型，而是在协议之上引入一套新的交易处理流程。
+
+\- ERC-4337 中，用户不直接发送普通交易，而是创建一个 `UserOperation`。
+
+\- `UserOperation` 可以理解为“用户希望智能账户执行的操作描述”，它不是以太坊底层交易，但会被打包进一笔真实链上交易里执行。
+
+\- 整体流程可以简单理解为：
+
+\- 用户的钱包生成 `UserOperation`。
+
+\- `UserOperation` 被发送到专门的 mempool。
+
+\- Bundler 收集多个 `UserOperation`。
+
+\- Bundler 调用 EntryPoint 合约的 `handleOps`。
+
+\- EntryPoint 调用各个智能账户进行验证和执行。
+
+\- 成功后，智能账户状态或链上资产发生变化。
+
+\### ERC-4337 Core Components
+
+\- UserOperation：
+
+\- 描述用户想让智能账户执行什么操作。
+
+\- 包含 sender、nonce、callData、gas 相关字段、signature 等信息。
+
+\- 它的签名如何验证，不由协议固定，而由智能账户合约逻辑定义。
+
+\- Bundler：
+
+\- 负责收集 UserOperations，并把它们打包成普通以太坊交易提交到链上。
+
+\- 可以理解为 ERC-4337 流程里的打包者。
+
+\- EntryPoint：
+
+\- ERC-4337 的核心入口合约。
+
+\- 负责统一处理 UserOperations，包括验证、执行、费用处理等流程。
+
+\- 智能账户通常需要信任特定 EntryPoint，并检查调用者是否为可信 EntryPoint。
+
+\- Smart Contract Account：
+
+\- 用户真正使用的智能账户。
+
+\- 需要实现验证逻辑，例如检查签名、nonce、权限和资金。
+
+\- 可以把账户规则写成代码，而不是依赖固定 EOA 行为。
+
+\- Paymaster：
+
+\- 可以代替用户支付 Gas。
+
+\- 这让“用户没有 ETH 也能发起操作”成为可能，例如由 dApp、项目方或第三方服务赞助 Gas。
+
+\- Factory：
+
+\- 用于创建新的智能账户。
+
+\- 可以支持用户第一次使用时再部署账户，实现更顺滑的 onboarding。
+
+\### Common AA Methods and Capabilities
+
+\- Smart Account：
+
+\- Smart Account 是账户抽象里用户真正使用的账户形态，通常由智能合约实现。
+
+\- 它把传统 EOA 的固定验证规则，替换成可编程的验证逻辑。
+
+\- 例如一个 Smart Account 可以规定：大额转账必须多签，小额操作可以单签，某些 dApp 只能在指定额度内调用。
+
+\- 它解决的核心问题是：账户不再只是“一个私钥”，而是可以承载权限、恢复、安全策略和执行规则的合约账户。
+
+\- Bundler：
+
+\- Bundler 负责收集 UserOperations，并把它们打包成一笔普通链上交易提交给 EntryPoint。
+
+\- 它类似 ERC-4337 流程里的交易中继和打包角色，但不应该被理解成用户必须信任的托管方。
+
+\- Bundler 需要先模拟和检查 UserOperation，确认它有机会成功执行并支付费用，再提交到链上。
+
+\- 它解决的核心问题是：智能账户不能像 EOA 一样直接发起底层交易，所以需要有人把 UserOperation 包装成真实交易。
+
+\- Paymaster：
+
+\- Paymaster 是 ERC-4337 里负责 Gas 抽象的重要角色。
+
+\- 它可以替用户支付 Gas，也可以要求用户用 ERC-20、积分、订阅或其他业务规则间接覆盖费用。
+
+\- 对用户来说，Paymaster 可以降低新用户使用门槛，不必一开始就持有 ETH。
+
+\- 对 dApp 来说，Paymaster 可以实现 sponsored transaction，例如项目方为 onboarding、签到、低成本交互补贴 Gas。
+
+\- 风险在于：Paymaster 本身有资金和规则，需要控制滥用、刷交易、恶意调用和业务亏损。
+
+\- Session Key：
+
+\- Session Key 是账户抽象中常见的权限设计方法，不是 ERC-4337 的核心合约组件。
+
+\- 它的思路是：用户用主账户授权一个临时 key，让这个 key 在限定时间、限定范围、限定额度内代替用户执行操作。
+
+\- 例如游戏、交易、社交应用里，用户可以授权一个 session key 在 1 小时内执行某些低风险操作，不必每一步都弹钱包签名。
+
+\- Session Key 的关键是权限边界必须清楚：能调用哪些合约、能执行哪些方法、额度是多少、什么时候过期、能否撤销。
+
+\- 它解决的核心问题是：减少频繁签名带来的体验摩擦，同时不把主私钥或完整账户权限暴露给应用。
+
+\### Why ERC-4337 Matters
+
+\- ERC-4337 把验证和执行拆开，使智能账户能够先验证 UserOperation 是否有效，再执行真实操作。
+
+\- 它让账户权限逻辑可以更灵活，例如：
+
+\- 多签验证。
+
+\- 社交恢复。
+
+\- 会话密钥。
+
+\- 交易限额。
+
+\- 白名单应用。
+
+\- 自定义签名算法。
+
+\- 它也把 Gas 支付抽象出来，让用户不一定必须直接持有 ETH 才能完成链上交互。
+
+\- 从钱包角度看，ERC-4337 可以把钱包从“私钥签名工具”推进到“可编程账户系统”。
+
+\- 从开发者角度看，ERC-4337 让账户本身变成业务逻辑和权限设计的一部分。
+
+\### Security and Permission Notes
+
+\- 账户抽象提高了灵活性，但也让账户逻辑更复杂。
+
+\- 智能账户必须正确验证：
+
+\- 调用者是否是可信 EntryPoint。
+
+\- UserOperation 的签名是否有效。
+
+\- nonce 是否正确，避免重放。
+
+\- 执行的 callData 是否符合账户权限规则。
+
+\- Paymaster 或第三方代付是否引入额外信任边界。
+
+\- AA 钱包的安全重点不只是保护私钥，还包括保护账户合约逻辑、恢复机制、权限配置和代付规则。
+
+\- 账户抽象不是“消除安全问题”，而是把安全边界从单一私钥扩展到一套可编程权限系统。
+
+\### Questions and Initial Answers
+
+\- Q：账户抽象是不是等于智能合约钱包？
+
+\- A：不完全等同。智能合约钱包是实现账户抽象的重要载体；账户抽象是更大的目标，即让账户验证、权限和执行逻辑可编程。
+
+\- Q：ERC-4337 是否修改了以太坊底层共识？
+
+\- A：不修改。ERC-4337 通过 UserOperation、Bundler、EntryPoint 等高层机制实现账户抽象，底层仍然通过普通以太坊交易上链。
+
+\- Q：Paymaster 的意义是什么？
+
+\- A：Paymaster 可以替用户支付 Gas，支持 Gas sponsorship、用其他资产支付费用或由 dApp 赞助新用户操作。
+
+\- Q：账户抽象和昨天学习的权限有什么关系？
+
+\- A：账户抽象把权限控制进一步前移到账户层。传统 EOA 主要依赖私钥控制，而智能账户可以把多签、限额、白名单、恢复机制等规则直接写进账户逻辑里。
+
+\### Main Takeaways
+
+\- 今天主要理解了账户抽象的方向：让账户从固定私钥控制模型，升级为可编程的智能账户模型。
+
+\- ERC-4337 是实现账户抽象的重要方案，它通过 UserOperation、Bundler、EntryPoint、Paymaster 等组件，在不修改共识层的情况下实现更灵活的钱包和账户体验。
+
+\- AA 的价值不只是“免 Gas”或“社交恢复”，更核心的是让账户权限、验证和执行规则可以被代码定义。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ## **Today’s Goal**
 
 -   学习以太坊开发相关工具链：Remix、Hardhat、Foundry、OpenZeppelin、viem。
@@ -191,6 +445,7 @@ AI x Web3 School
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 \## Today’s Goal
 
 \- 学习 Web3 相关的密码学、钱包、智能合约和 ETH 合约基础知识。
@@ -310,6 +565,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 \#### 1. 区块链和交易
