@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天主要完成了 AI 基础、Context Engineering、RAG、Agent 与 Agent Wallet 相关内容的学习。上午重点学习了 Embedding、Transformer、Attention、Context Window 与 Context Engineering 的区别，进一步理解了模型如何将文本转化为向量，并通过上下文管理提升回答质量。RAG 部分重点梳理了文档切分、metadata、section\_path、向量检索和 Top-K 召回等流程，认识到检索增强不是简单塞资料，而是要通过结构化信息让模型拿到更准确、可信的内容。
+
+Agent 部分学习了 Plan、Reflection、Multi-Agent 等架构，也了解了 LangChain、LangGraph、OpenAI Agents SDK、MCP 等框架和协议。通过 “交易解释器” 和 “DAO 提案研究 Agent” 两个最小实践，进一步理解了 Agent 的设计重点：只读优先、来源标注、权限分级、simulation 预检查，尤其是在 Web3 场景中，安全和授权比自动执行更重要。
+
+晚上参加了 19:00 的 Co-learning 和 20:00 的 Week 1 例会。Co-learning 主要讲解了 Week 1 的任务拆解、proof 整理和 prompt 对齐方法，让我意识到提交 proof 不能只放链接，而要逐条对应 proofPrompt 检查。例会展示了优秀同学的笔记和 proof 模板，包括截图分类、任务拆分、证据单独对应等做法，对我后续整理作业很有参考价值。
+
+今天最大的收获是对 Context Engineering 和 Agent 安全边界有了更清晰的认识。上下文不是越多越好，而是要分清指令层、任务层、事实层、知识层和记忆层。接下来准备完成合约部署、EOA 与多签对比，把 Week 1 收尾做好，并开始准备 Week 2 的项目实战和 Hackathon 选题。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 \## 一、普通人其实并不在意 Web3、隐私、去中心化
 
 \* 大部分普通人连银行理财产品都搞不清楚
@@ -267,11 +279,13 @@ AI 自动完成。
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 AI agent 入门
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 本次分享聚焦Web3支付系统的安全设计与AI工具的正确使用。主要结论：**AI并未降低系统复杂度，反而对开发者的架构能力和基础知识提出更高要求**；**Web3本质上是倾向方向的不同，而非全新技术**；**安全必须源于设计并贯穿项目全生命周期**。在支付场景中，区块链的定位类似于传统银行机构，通过算法和透明代码解决信任问题。
