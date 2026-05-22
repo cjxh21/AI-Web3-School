@@ -15,8 +15,57 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+# **2026-05-22**
+
+> Week 1 · Day 6 · 周五
+
+## **今天做了什么**
+
+-   持续打磨 Hermes Agent（DigitalOcean 服务器上跑的那套）的配置与行为
+    
+-   仓库基建一波：Cursor MCP 接入 + `.gitignore` 最小版 + 新建 `extras/` 加餐模块（web3 / ai / crossover）+ README cascade 同步
+    
+-   B 站某条 Web3 视频复盘，补齐若干基础概念
+    
+-   白天大部分时间被学校占满：上课 + 体育课
+    
+-   晚上三连直播：[Z.AI](http://Z.AI)（白天）→ Co-learning ｜任务推进与答疑（19:00）→ Week 1 例会（20:00，只听未上麦）
+    
+
+## **产出与检验**
+
+> 今天笔记没动 pre-study 主线，重点在基建 + 复盘 + 例会输入。
+
+| 产出 | 状态 | 备注 |
+| --- | --- | --- |
+| Hermes Agent 配置调教 | ✅ | DigitalOcean 服务器侧持续打磨 |
+| Cursor MCP 接入 + .gitignore | ✅ | commit fc36833 |
+| extras/ 加餐模块骨架 | ✅ | commit c79aa5d · 三主题：web3 / ai / crossover |
+| README cascade 同步 | ✅ | commit 0985195 · 目录树补 extras + 修正预习状态标记 |
+| B 站 Web3 视频复盘 | ✅ | 基础概念补齐（视频条目暂未沉淀到 extras/web3/） |
+| Z.AI 实时参加 | ✅ | +20 学分 |
+| Co-learning 实时参加 | ✅ | +20 学分（无回放） |
+| Week 1 例会实时参加 | ✅ | +20 学分（未上麦，+5 学分分享任务未领） |
+
+## **收获 / 卡点**
+
+-   仓库结构的"溢出空间"终于补齐：`extras/` 给课程外的 B 站 / 博客 / 推特碎片一个归属地，不再散落在浏览器收藏夹
+    
+-   三场直播一晚连轴下来，例会上没主动上麦（错过 +5 学分的「例会分享」任务）—— 后续 Week 2 类似机会可以提前准备 5 分钟的口播
+    
+-   Hermes Agent 在服务器侧的"调教"感觉像 prompt 工程 + 长任务可观测性的混合体，越往后越需要把"候选答案"变成"可被代码验证的对象"
+    
+
+## **明天打算**
+
+-   Week 1 收尾日（5/23）：实时参加 Open Agentic Economy + Co-learning，整理本周 Proof-of-Work Pack
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 # **2026-05-21**
 
 > Week 1 · Day 5 · 周四 , 直达 Github Repo: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-21](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-21)
@@ -62,6 +111,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 Github 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-20](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-20)
 
@@ -173,6 +223,7 @@ Github 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/ma
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 Github repo 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-19](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-19)
 
 # **2026-05-19**
@@ -226,6 +277,7 @@ Github repo 直达地址: [https://github.com/Aafff623/web3career-study-track/tr
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
