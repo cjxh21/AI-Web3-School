@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+Week1Day5  
+终于开始学了  
+今日目标：制定学习计划，配置学习助理，学习前两天的分享内容。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 Week1Day4
 
 一会开直播开始学，dbq AI X Web3 School
@@ -24,6 +32,7 @@ Week1Day4
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 Week1Day3
 
@@ -34,6 +43,7 @@ Week1Day3
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 Week1 Day2
 
 今天去毕业答辩了，顺利通过捏
@@ -41,6 +51,7 @@ Week1 Day2
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
