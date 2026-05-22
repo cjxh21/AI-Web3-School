@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天我参加了 Week 1 例会，听取了同学们的学习方法分享和主持人推荐的优秀笔记示例。最大的感受是，公开记录学习过程、持续输出 Proof-of-Work，是 AI × Web3 School 中非常重要的一部分。
+
+白天我继续研究 Hackathon 项目 AgentScoope Wallet，重点探索 Safe Wallet 的模块机制和合约实现。在尝试把项目中的白名单 Policy 迁移到 Safe Module Guard 时，发现 Sepolia 测试网上的 Safe 版本仍是 1.4.1，而 setModuleGuard 是 Safe 1.5.0 才支持的功能，因此当前无法直接使用 Module Guard 实现这部分逻辑。
+
+这个问题让我意识到，Web3 项目设计不仅要理解协议文档和架构思路，还要确认目标网络上实际部署的合约版本和可用接口。下一步我会调整 AgentScoope Wallet 的实现路径，优先探索在自定义 Safe Module 内部完成白名单和额度限制校验，先做出一个可验证的最小 Demo。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 今天参加了「AI 下乡计划｜AI 在 Web3 的应用」的视频课程。
 
 我的关键收获是：
@@ -34,6 +44,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 今天观看了「Web3 运行原理」X 直播课程，重新温故了一遍 Web3 的基础概念和运行原理，也有了新的理解。布老师提到 Web3 是密码学、经济学、社会学三门学科的交集：密码学提供可验证的账户、签名和共识基础；经济学解释 Token、Gas 和激励机制；社会学对应协作、治理和信任关系的重构。
 
@@ -61,6 +72,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天我回看了「AI Agent 入门 —— Hermes 从 0 到 1」。
 
 1\. 从视频中了解到配置微信作为 Hermes 消息网关的步骤和方法；之前自己安装 Hermes 时主要使用的是 Telegram。
@@ -76,6 +88,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
