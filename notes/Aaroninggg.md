@@ -15,8 +15,504 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+# Microsoft AI Agents for Beginners
+
+> 微软官方出品的 AI Agent 入门课程，10+ 节课，65k+ stars。从概念到代码，覆盖 Agent 设计的完整知识体系。  
+> 使用 Microsoft Agent Framework (MAF) + Azure AI Foundry 作为实践平台。
+
+* * *
+
+## 📑 课程索引
+
+| # | 课程 | 核心问题 |
+| --- | --- | --- |
+| 00 | Course Setup | 环境搭建 |
+| 01 | 1 Intro to AI Agents | AI Agent 到底是什么？什么时候用？ |
+| 02 | 2 Agentic Frameworks | 用什么框架来构建 Agent？ |
+| 03 | 3 Agentic Design Patterns | 设计 Agent 要遵循什么原则？ |
+| 04 | 4 Tool Use | Agent 怎么调用外部工具做事？ |
+| 05 | 5 Agentic RAG | RAG + Agent 循环怎么结合？ |
+| 06 | 6 Building Trustworthy Agents | 怎么构建安全可信的 Agent？ |
+| 07 | 7 Planning Design | Agent 怎么拆解复杂任务？ |
+| 08 | 8 Multi-Agent | 多个 Agent 怎么协作？ |
+| 09 | 9 Metacognition | Agent 怎么「自我反思」？ |
+| 10 | 10 AI Agents in Production | 上线 Agent 要考虑什么？ |
+| 11 | 11 Agentic Protocols | MCP / A2A / NLWeb 是什么？ |
+| 12 | 12 Context Engineering | 上下文工程 vs Prompt 工程 |
+| 13 | 13 Agent Memory | Agent 的记忆怎么设计？ |
+| 14 | Microsoft Agent Framework | MAF 框架详解 |
+| 15 | Browser Use (CUA) | 计算机使用 Agent |
+| 18 | Securing AI Agents | 用加密收据保护 Agent 审计 |
+
+* * *
+
+## 1\. Intro to AI Agents
+
+### 核心结论
+
+> **AI Agent 是让 LLM 真正「做事」的系统 — 通过赋予工具和知识，让模型不只是回答问题，而是能执行动作。**
+
+### Agent 五大组件
+
+| 组件 | 作用 | 类比 |
+| --- | --- | --- |
+| LLM（大脑） | 理解自然语言、推理上下文、把模糊请求变成具体计划 | 大脑 |
+| Sensors（感知） | 读取环境状态（查酒店空房、机票价格） | 眼睛 |
+| Actuators（执行） | 执行动作（订房、发确认、取消预订） | 手 |
+| Tools（工具） | 搜索数据库、调 API、发消息 — 取决于环境和开发者配置 | 工具箱 |
+| Memory（记忆） | 短期（当前对话）+ 长期（用户偏好、历史交互） | 记忆 |
+
+### Agent 七种类型
+
+| 类型 | 特点 | 旅行 Agent 例子 |
+| --- | --- | --- |
+| Simple Reflex | 硬编码规则，无记忆无规划 | 看到投诉邮件 → 转给客服 |
+| Model-Based Reflex | 维护世界模型，随变化更新 | 跟踪历史票价，标记异常涨价 |
+| Goal-Based | 有目标，逐步推理达成路径 | 从当前位置规划完整行程 |
+| Utility-Based | 不只找解，找最优解 | 权衡成本 vs 舒适度 |
+| Learning | 从反馈中学习改进 | 根据用户评价调整推荐 |
+| Hierarchical | 高层拆任务，委派给子 Agent | 取消行程 → 拆为取消机票/酒店/租车 |
+| Multi-Agent | 多 Agent 协作或竞争 | 酒店/机票/娱乐分头处理 |
+
+### 什么时候用 Agent？
+
+✅ **应该用 Agent 的场景：**
+
+-   **开放式问题** — 解决步骤无法预先编程，需要 LLM 动态找路径
+    
+-   **多步骤流程** — 跨多个回合使用工具，不是单次查询
+    
+-   **持续改进** — 希望系统根据反馈和环境信号越变越好
+    
+
+❌ **不应该用 Agent 的场景：**
+
+-   单次问答就能搞定的事
+    
+-   不需要外部工具或动作的纯文本生成
+    
+
+### 我的理解
+
+> 这七种 Agent 类型可以和 Day 1 学的四层架构对应：Simple Reflex ≈ 无编排层，Goal-Based / Utility-Based ≈ 编排层 + 安全层，Multi-Agent ≈ 编排层的进化版。微软的框架区分比 Day 1 更细，但从实用角度，大部分实际场景用的是 Goal-Based + Tool Use 的组合。
+
+* * *
+
+## 2\. Agentic Frameworks
+
+### 核心结论
+
+> **Agent 框架提供预制组件和抽象，让开发者专注业务逻辑，而不是每次从头造轮子。**
+
+### 框架解决什么问题？
+
+-   工具接入和编排
+    
+-   可观测性（Agent 在做什么？出错了怎么调试？）
+    
+-   多 Agent 协作
+    
+
+### 微软生态
+
+| 工具 | 定位 |
+| --- | --- |
+| Microsoft Agent Framework (MAF) | 统一框架，支持顺序/并发/群聊编排 |
+| Azure AI Foundry Agent Service | 托管平台，支持 OpenAI/Mistral/Meta 等模型 |
+
+### 我的理解
+
+> 框架选择的核心不是功能对比，而是你需要在哪个生态里干活。框架帮你搞定基础设施（工具接入、观测、编排），你的精力应该放在 Agent 的业务逻辑和安全边界上。
+
+* * *
+
+## 3\. Agentic Design Patterns
+
+### 核心结论
+
+> **设计 Agent 不是设计架构，而是设计用户体验。三个核心原则：透明 (Transparency)、可控 (Control)、一致 (Consistency)。**
+
+### 三大设计原则
+
+| 原则 | 含义 | 实践 |
+| --- | --- | --- |
+| Transparency | 让用户知道这是 AI Agent | Hello 消息、示例提示、清楚标注能力边界 |
+| Control | 用户能修改 Agent 行为 | 可调整详细程度、写作风格、查看/删除历史 |
+| Consistency | 交互模式统一可预测 | 标准图标（纸夹=上传文件）、一致的操作逻辑 |
+
+### Agent 应该做什么？
+
+-   扩展人类能力（头脑风暴、问题解决、自动化）
+    
+-   填补知识空白（快速了解新领域、翻译）
+    
+-   支持协作（按个人偏好的方式工作）
+    
+-   让我们成为更好的自己（生活教练、情绪调节）
+    
+
+* * *
+
+## 4\. Tool Use
+
+### 核心结论
+
+> **Tool Use 是从「会回答」到「能做事」的分水岭。LLM 返回的是工具调用请求，不是最终答案 — Agent 系统负责执行工具并把结果喂回给模型。**
+
+### Tool Use 工作流
+
+```
+用户请求 → LLM 选择工具+参数 → Agent 执行工具 → 结果返回 LLM → 生成最终回答
+```
+
+### 关键细节
+
+-   LLM 返回 `tool_call`（函数名 + 参数），**不是**最终答案
+    
+-   工具定义用 JSON Schema：函数名、描述、参数类型和必填项
+    
+-   `tool_choice: "auto"` 让模型自己决定用不用工具
+    
+
+### 与 Day 1 的呼应
+
+> Day 1 学了「Tool Use 是分水岭，能调用工具的 Agent 风险也升级」。这节课补充了具体实现：函数 Schema 定义、tool\_call 返回格式、「LLM 返回工具请求 → 系统执行 → 喂回结果」的循环。
+
+* * *
+
+## 5\. Agentic RAG
+
+### 核心结论
+
+> **Agentic RAG ≠ 静态的「检索→回答」。它是 LLM 自主规划下一步 + 迭代调用工具的循环：评估结果 → 优化查询 → 调用新工具 → 循环直到满意。**
+
+### 对比
+
+|   | 传统 RAG | Agentic RAG |
+| --- | --- | --- |
+| 流程 | 检索 → 生成（一次） | 检索 → 评估 → 优化 → 再检索（循环） |
+| 决策 | 预设检索策略 | LLM 动态决定下一步 |
+| 适用 | 简单问答 | 复杂数据库交互、长工作流 |
+| 纠错 | 无 | 自我纠错、处理异常查询 |
+
+### 核心模式：Maker-Checker
+
+> 迭代循环：LLM 调用工具 → 获取结果 → 检查质量 → 决定是结束还是再调一轮。
+
+* * *
+
+## 6\. Building Trustworthy Agents
+
+### 核心结论
+
+> **Agent 的安全不只是「别做坏事」，而是「做对了该做的事」。三层防御：System Message 框架 → 安全措施 → 隐私保护。**
+
+### System Message 三步法
+
+1.  **Meta System Message** — 让 LLM 生成 Agent 的 system prompt 模板
+    
+2.  **Basic Prompt** — 定义 Agent 的角色、任务、职责
+    
+3.  **LLM 优化** — 用 meta prompt 优化 basic prompt，产出结构化的 system message
+    
+
+### 安全与隐私
+
+-   识别和缓解 Agent 风险
+    
+-   数据访问权限管理
+    
+-   用户隐私保护（不只是合规，是体验质量）
+    
+
+### 我的理解
+
+> 这和 Day 1 的 Prompt Injection 五层防护一脉相承。微软补充了 System Message 框架的具体操作：不是手写 system prompt，而是用 LLM 生成+优化 system prompt。这是一个「用 AI 管理 AI」的思路。
+
+* * *
+
+## 7\. Planning Design
+
+### 核心结论
+
+> **复杂任务不能一步完成。Planning = 定义总目标 → 拆解子任务 → 分配工具 → 评估结果 → 迭代改进。**
+
+### Planning 流程
+
+```
+总目标 → 拆解子任务 → 编排工具 → 评估结果 → 迭代
+```
+
+### 关键技术
+
+| 技术 | 作用 |
+| --- | --- |
+| Structured Output | 让 Agent 输出机器可读的 JSON（含 main_task + subtasks 列表） |
+| Event-Driven | 处理动态任务和意外输入 |
+| Agent Registry | 维护可用 Agent 列表及各自工具，路由子任务 |
+
+### 例子：旅行规划
+
+```json
+{
+  "main_task": "Plan family trip from Singapore to Melbourne",
+  "subtasks": [
+    {"assigned_agent": "flight_booking", "task_details": "Book round-trip flights"},
+    {"assigned_agent": "hotel_booking", "task_details": "Find family-friendly hotels"}
+  ]
+}
+```
+
+* * *
+
+## 8\. Multi-Agent
+
+### 核心结论
+
+> **Multi-Agent 是多 Agent 协作完成共同目标的模式。不是任何时候都需要 — 当单一 Agent 的复杂度超过阈值时才拆。**
+
+### 什么时候用 Multi-Agent？
+
+-   任务涉及不同领域需要不同「专家」
+    
+-   任务天然可并行
+    
+-   需要竞争/博弈机制（如竞价）
+    
+
+### 三种协作模式
+
+| 模式 | 描述 | 场景 |
+| --- | --- | --- |
+| Group Chat | 多 Agent 群聊通信 | 团队协作、客服 |
+| Hand-off | Agent 之间交接任务 | 工作流自动化 |
+| Collaborative Filtering | 多 Agent 各有所长，协作推荐 | 股票分析（行业/技术/基本面） |
+
+### 我的理解
+
+> Multi-Agent 不是银弹。每增加一个 Agent，就增加通信开销和不可预测性。Day 1 的 Hierarchical Agents 其实就是 Hand-off 模式的变体。关键问题是：增加 Agent 带来的收益是否超过复杂度成本？
+
+* * *
+
+## 9\. Metacognition
+
+### 核心结论
+
+> **Metacognition = 「思考关于思考」。Agent 不只是执行任务，还要监控、评估、调整自己的行为策略。**
+
+### 四大能力
+
+| 能力 | 含义 | 例子 |
+| --- | --- | --- |
+| Self-Reflection | 评估自己的表现 | 「上次推荐错了，因为过度依赖历史偏好」 |
+| Adaptability | 根据经验调整策略 | 用户说过不喜欢拥挤 → 以后避开热门景点 |
+| Error Correction | 自主发现并修正错误 | 推荐了满房酒店 → 下次先检查可用性 |
+| Resource Management | 优化时间/算力 | 缓存常用的航班查询 |
+
+### 真 Metacognition vs 假 Metacognition
+
+> **真 metacognition**：Agent 明确推理自己的推理过程。  
+> 例子：「我优先推荐了便宜航班，因为…我可能漏掉了直飞选项，让我重新检查。」
+> 
+> **假 metacognition**：只是加了反馈循环，没有真正的自我审视。
+
+### Agent 三要素
+
+| 要素 | 含义 |
+| --- | --- |
+| Persona | Agent 的个性和交互风格 |
+| Tools | 能执行的能力和功能 |
+| Skills | 拥有的知识和专长 |
+
+### 我的理解
+
+> Metacognition 是 Agent 从「工具」进化到「同事」的分界线。一个会自我反思的 Agent 不只是执行指令，而是能说「我觉得我上次的做法有问题，这次换个方式」。这和 Day 1 的核心心法一致：「AI 只能开脑洞，不能下定论」— 但加上 metacognition，Agent 至少可以自己质疑自己的开脑洞。
+
+* * *
+
+## 10\. AI Agents in Production
+
+### 核心结论
+
+> **Agent 从原型到生产的关键：可观测性 (Observability) 和系统性评估 (Evaluation)。黑盒 Agent 不可维护。**
+
+### 核心概念
+
+| 概念 | 含义 |
+| --- | --- |
+| Trace | 一个完整 Agent 任务的全流程（如处理一个用户查询） |
+| Span | Trace 中的单个步骤（如一次 LLM 调用、一次工具调用） |
+| Observability | 用 Langfuse / Microsoft Foundry 可视化 Traces 和 Spans |
+| Evaluation | 系统评估 Agent 的输出质量和行为正确性 |
+
+### 关注点
+
+-   性能优化
+    
+-   成本控制
+    
+-   系统性评估指标
+    
+-   Agent 行为可解释性
+    
+
+* * *
+
+## 11\. Agentic Protocols (MCP / A2A / NLWeb)
+
+### 核心结论
+
+> **三个协议解决三个不同层面的标准化问题。**
+
+| 协议 | 全称 | 解决的问题 |
+| --- | --- | --- |
+| MCP | Model Context Protocol | LLM 怎么统一接入外部工具和数据？ |
+| A2A | Agent-to-Agent | 不同 Agent 之间怎么通信协作？ |
+| NLWeb | Natural Language Web | 网站怎么用自然语言暴露接口给 Agent？ |
+
+### MCP 核心价值
+
+> 提供「通用适配器」：不同数据源和工具通过统一标准被 Agent 调用，而不是每种工具写一个桥接代码。
+
+* * *
+
+## 12\. Context Engineering
+
+### 核心结论
+
+> **Context Engineering ≠ Prompt Engineering。Prompt 告诉模型「怎么做」，Context 决定模型「依据什么做」。Context Engineering 的核心是信息治理。**
+
+### 四大策略
+
+| 策略 | 含义 |
+| --- | --- |
+| Write | 写清楚上下文，标注来源可信度 |
+| Select | 选择放什么进上下文窗口 |
+| Compress | 压缩冗余信息，保留关键信号 |
+| Isolate | 隔离不同类型信息（指令/事实/知识/记忆） |
+
+### 四种 Context 失败模式
+
+| 失败模式 | 症状 |
+| --- | --- |
+| Poisoning | 外部内容被当成系统指令 |
+| Distraction | 无关信息太多，关键信息被淹没 |
+| Confusion | 来源不清，模型引用了过期信息 |
+| Clash | 矛盾信息共存，模型无法判断优先 |
+
+### 与 Day 1 的呼应
+
+> 这节完美呼应了 Day 1 的 Context 五层模型（指令/任务/事实/知识/记忆）。微软的补充在于：不只讲「分什么层」，还讲了「怎么分」— Write/Select/Compress/Isolate 是操作层面，四种失败模式是诊断工具。
+
+* * *
+
+## 13\. Agent Memory
+
+### 核心结论
+
+> **Memory 是 Agent 自我改进的基础。没有记忆，Agent 每次都从零开始。**
+
+### 记忆类型
+
+| 类型 | 含义 | 存储方式 |
+| --- | --- | --- |
+| Short-term | 当前会话上下文 | 上下文窗口 |
+| Long-term | 跨会话的用户偏好和历史 | Mem0 / Azure AI Search / Cognee |
+| Structured Memory | 知识图谱形式的结构化记忆 | Cognee（自动构建 KG + 向量检索） |
+
+### Memory ≠ 授权
+
+> 和 Day 1 一致的结论：Memory 提升体验，但不能替代实时授权。涉及身份、权限、资产的记忆必须重新确认。
+
+* * *
+
+## 15\. Browser Use (CUA)
+
+### 核心结论
+
+> **Computer Use Agent 像人一样操作浏览器：打开页面、查看内容、点击操作。适用于 API 无法覆盖的场景。**
+
+### 技术栈
+
+-   **Browser-Use** — AI 驱动的浏览器导航
+    
+-   **Playwright + CDP** — 浏览器控制和生命周期管理
+    
+-   **Azure OpenAI Vision** — 视觉理解页面内容
+    
+-   **Pydantic** — 结构化提取页面数据
+    
+
+### 三种模式
+
+| 模式 | 适用场景 |
+| --- | --- |
+| Agent-first | 页面结构不可预测，需要 AI 决策每一步 |
+| Actor-first | 操作流程可预测，用固定脚本 |
+| Hybrid | 部分可预测 + 部分需要 AI 决策 |
+
+* * *
+
+## 18\. Securing AI Agents
+
+### 核心结论
+
+> **加密收据 (Cryptographic Receipts) 为 Agent 的每一次工具调用提供不可篡改的审计追踪。**
+
+### 加密收据能证明什么？
+
+| 能证明 | 不能证明 |
+| --- | --- |
+| ✅ 谁发起了动作（归属） | ❌ 动作本身是否正确 |
+| ✅ 内容未被篡改（完整性） | ❌ 策略本身是否合理 |
+| ✅ 调用顺序（时间链） |   |
+
+### 核心技术
+
+-   **Ed25519 签名** — 对规范 JSON 做签名
+    
+-   **离线验证** — 只需公钥即可验证
+    
+-   **Hash Chain** — 链式收据，删除/重排任何一条都会断裂
+    
+
+* * *
+
+## 🎯 课程核心心法
+
+> **Agent 不只是问答，是能感知、思考、执行、反思的循环系统。每一层（工具、规划、上下文、记忆、安全）都需要独立设计和治理。Agent 框架帮你处理基础设施，但安全边界和业务逻辑必须你自己定义。**
+
+* * *
+
+## 🔗 与 Day 1 知识体系的关联
+
+| Day 1 概念 | 本课程对应章节 | 补充了什么 |
+| --- | --- | --- |
+| LLM 基础原理 | Lesson 1, 9 | Agent 类型学 + Metacognition |
+| Prompt Engineering | Lesson 6, 7, 12 | System Message 框架 + Planning 设计 + Context Engineering |
+| Context Engineering | Lesson 12 | Write/Select/Compress/Isolate 操作策略 |
+| AI Agent | Lesson 1, 3, 4, 7, 8, 9 | 完整 Agent 设计知识体系 |
+| Memory & Knowledge Base | Lesson 5, 13 | Agentic RAG + Memory 实现方案 |
+| AI x Web3 四层架构 | Lesson 6, 18 | 安全层深化（Trustworthy + 加密收据） |
+
+* * *
+
+## 📚 学习资源
+
+-   课程仓库：[https://github.com/microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners)
+    
+-   Microsoft Agent Framework：[https://aka.ms/ai-agents-beginners/agent-framework](https://aka.ms/ai-agents-beginners/agent-framework)
+    
+-   Azure AI Foundry：[https://aka.ms/ai-agents-beginners/ai-foundry](https://aka.ms/ai-agents-beginners/ai-foundry)
+    
+-   Discord 社区：[https://aka.ms/ai-agents/discord](https://aka.ms/ai-agents/discord)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 # 📋 Day 1 结构化整理版（索引 + 分层重构）
 
 > 整理时间：2026-05-21  
@@ -615,6 +1111,7 @@ Memory 包含
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 今日学习：2026年05月20日16:43:42，最小实践还没做，留在周六去搞
 
 # LLM
@@ -1077,6 +1574,7 @@ Context 分层之后，系统才更容易做三件事：
 
 
 
+
 不得不说，AI做的任务比自己做的任务列表好多了
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aaroninggg/images/2026-05-19-1779178251564-image.png)
@@ -1084,6 +1582,7 @@ Context 分层之后，系统才更容易做三件事：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
