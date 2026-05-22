@@ -15,8 +15,105 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+### OpenClaw 接入 Discord 完整流程 🦞
+
+* * *
+
+一、Discord Developer Portal 设置
+
+1.  创建应用 + Bot，获取 **Bot Token**
+    
+2.  开启 **Message Content Intent** 和 **Server Members Intent**
+    
+3.  OAuth2 生成邀请链接，把机器人拉入 Server
+    
+
+* * *
+
+二、获取三个 ID
+
+-   **Bot Token** — Developer Portal → Bot → Reset Token
+    
+-   **Server ID** — 右键服务器图标 → 复制服务器 ID
+    
+-   **User ID** — 右键自己头像 → 复制用户 ID
+    
+
+* * *
+
+三、配置 OpenClaw
+
+bash
+
+```bash
+node scripts/run-node.mjs config set channels.discord.token 你的BOT_TOKEN
+node scripts/run-node.mjs config set channels.discord.enabled true
+```
+
+编辑 `~/.openclaw/openclaw.json`，在 discord 部分加入：
+
+json
+
+```json
+"guilds": {
+  "你的ServerID": {
+    "requireMention": true
+  }
+}
+```
+
+* * *
+
+四、设置代理并启动网关
+
+bash
+
+```bash
+export http_proxy=http://127.0.0.1:7890
+export https_proxy=http://127.0.0.1:7890
+node scripts/run-node.mjs gateway
+```
+
+* * *
+
+五、配对
+
+1.  私信机器人，获取配对码
+    
+2.  运行：
+    
+
+bash
+
+```bash
+node scripts/run-node.mjs pairing approve discord 配对码
+```
+
+* * *
+
+日常启动（永久保存代理）
+
+bash
+
+```bash
+echo 'export http_proxy=http://127.0.0.1:7890' >> ~/.bashrc
+echo 'export https_proxy=http://127.0.0.1:7890' >> ~/.bashrc
+```
+
+之后每次只需：
+
+bash
+
+```bash
+cd ~/openclaw && node scripts/run-node.mjs gateway
+```
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ### **笔记 | AI 下乡计划｜AI 在 Web3 的应用**
 
 如果AI只是聊天，Web3不是必需品，但当AI开始租算力、买数据、调用APl、发起交易、管理资产、和其他agent协作时，它就需要一个能被授权、能付款、能记录、能追责的经济层。
@@ -38,6 +135,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 **笔记 | Web3 运行原理**
@@ -95,6 +193,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 
 
+
 **笔记 | AI Agent 入门：Hermes 从 0 到 1**
 
 今天学习了Hermes，总体来说和我在用的openclaw差不多，打算还是和龙虾一样部署在旧手机上。
@@ -108,6 +207,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
