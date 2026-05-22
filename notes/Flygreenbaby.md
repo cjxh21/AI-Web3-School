@@ -15,8 +15,102 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+\# Daily Note: 2026-05-22
+
+\## 📋 今日计划
+
+\### 最小路径
+
+\- \[x\] 仓库结构初始化（profile / learning-plan / templates / 4个新目录）
+
+\- \[x\] README 更新（重要链接 + 隐私提醒 + 目录说明）
+
+\- \[x\] AI 基础收官：Evaluation 评估
+
+\- \[x\] AI 基础收官：Fine-tuning 微调
+
+\- \[x\] AI 基础收官：Inference 推理服务
+
+\- \[x\] 新建 Prompt ⑥（每日打卡草稿生成）
+
+\### 推荐路径
+
+\- \[x\] Prompt ②~④ 执行（logs / prompts / README）
+
+\- \[x\] WCB 平台活动日历拉取
+
+\---
+
+\## 📚 学习摘要
+
+\### 核心概念
+
+| 主题 | 要点 |
+
+|------|------|
+
+| Evaluation | Harness + Golden Set + Regression 三件套让 AI 行为可重复测量、可持续改进 |
+
+| Fine-tuning | 不是第一步——先穷尽 prompt/eval，确认问题稳定后再用高质量数据训练 |
+
+| Inference | API/Local/量化/Serving 四层权衡；链上动作不可逆必须留审计记录 |
+
+\### 疑问
+
+\- LLM-as-Judge 的跨模型偏见如何检测？
+
+\- 量化模型在 Agent tool calling 场景的退化有多大？
+
+\- 链上场景推理审计记录应该到什么粒度？
+
+\---
+
+\## ✅ 打卡草稿
+
+**今日进度**：
+
+\- 已完成：仓库初始化（4目录+5文件）、Evaluation、Fine-tuning、Inference 三篇学习笔记、Prompt ⑥ 新建
+
+\- 进行中：打卡流程收尾（④ README ⑤ push）
+
+\- 阻塞项：无
+
+**关键收获**：
+
+\> Week 1 AI 基础 11 篇全部完成。最大收获是建立了"先 eval 再改、先 prompt 再 FT、先约束再部署"的工程思维链。同时补齐了学习仓库结构，六个 Prompt 覆盖完整学习闭环。
+
+**打卡链接**：\[提交后填入\]
+
+\---
+
+\## 🔗 参考资料
+
+\- Handbook：Evaluation / Fine-tuning / Inference
+
+\- WCB 活动：Week 1 例会（今日）
+
+\- 笔记：notes/week1/[day5-evaluation.md](http://day5-evaluation.md) / [day5-fine-tuning.md](http://day5-fine-tuning.md) / [day5-inference.md](http://day5-inference.md)
+
+\- 日志：logs/[day5-evaluation-fine-tuning-inference-qa.md](http://day5-evaluation-fine-tuning-inference-qa.md)
+
+\---
+
+\## 📝 明日备忘
+
+\- Week 2 启动：Web3 基础第 1 篇 Network
+
+\- WCB 讲座：Open Agentic Economy (5/23)
+
+\---
+
+_AI x Web3 School Day 5 课程完成 — 由 Hermes AI（模型：deepseek-v4-pro）在 2026-05-22 生成_
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 \# Day 4: rag + agent + frameworks + vibe-coding + mcp — AI 基础学习笔记
 
 **生成日期**: 2026-05-21
@@ -3368,6 +3462,7 @@ _AI x Web3 School Day 4 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 📝 今日学习笔记预览 (Day 3)
 
 \# Day 3 学习笔记：Prompt Engineering & Context Engineering
@@ -3525,6 +3620,7 @@ _学习笔记结束_
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -3913,6 +4009,7 @@ NaN.  ✅ 校验靠 Schema（JSON Schema、Pydantic 等）
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
