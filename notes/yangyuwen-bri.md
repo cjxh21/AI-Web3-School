@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天主要做 Week 1 收尾和 proof-of-work 打包。我回顾了目前已经完成并提交的任务：GitHub 学习仓库、课程工具准备、Learning Agent Setup、Sepolia 测试网交易，以及 5.20 Web3 运行原理相关记录。
+
+今天也继续整理 AI Concept Coach 这个 AI 可交互学习产物。它不是普通聊天框，而是一个概念复述训练器：用户输入 AI 概念困惑，glm-5.1 生成结构化解释和自测问题；用户再用自己的话复述，模型反馈复述质量并生成修正版学习笔记。
+
+晚上的 Co-learning 和 Week 1 例会，我会重点确认：AI Concept Coach 是否适合作为 AI 可交互学习产物提交；Week 1 Proof-of-Work Pack 应该如何组织；以及 Week 2 开始前我还缺哪些基础能力。
+
+Repo:
+
+[https://github.com/yangyuwen-bri/aiweb3-learning-journal](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 今天完成了两个方向的学习和产出。
 
 第一，我把 Week 1 的 AI 可交互学习产物重新定位为 AI Concept Coach，不是做一个普通聊天框，而是做一个 AI 概念复述训练器。它的流程是：用户输入一个 AI 概念困惑，工具调用 glm-5.1 生成结构化解释、自测问题和笔记草稿；然后用户必须用自己的话复述，工具再对复述进行评分和反馈，帮助学习者从“看懂”走到“能讲清楚”。这个工具已经通过本地 Node 后端接入阿里云百炼 / DashScope 的 glm-5.1，API key 不进入前端或公开仓库。
@@ -42,6 +56,7 @@ Repo:
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 今天参加 / 跟进了 Week 1 的「Web3 运行原理」分享，并完成了 Sepolia 测试网实操。
 
@@ -84,6 +99,7 @@ Repo:
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天围绕 Week 1 的 AI Agent / Hermes 主题，整理了自己对 prompt、workflow 和 agent 的初步理解，并把它和我的 AI x Web3 School 学习仓库连接起来。
 
 今日完成：
@@ -120,6 +136,7 @@ Demo:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
