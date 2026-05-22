@@ -47,11 +47,12 @@ AI x Web3 School
 > 
 > #AIWeb3School #Web3Basics #Week1Done #Day5
 
-![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459536428-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459787246-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459536428-image.png)![屏幕截图 2026-05-22 222250.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459849668-_____2026-05-22_222250.png)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 > 今日推进模块 C 最小交叉实验原型，同时确认模块 B 链上实践完成度。
 
@@ -106,6 +107,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -134,6 +136,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -180,6 +183,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
