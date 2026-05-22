@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天听了小伙伴的分享，感觉大家学的很认真，也很深入，自己可能真的是年龄大了，感觉接受新知识的速度变慢了，有一个小伙伴还研究出了大模型额度的bug，虽然我没有试过，但是卡bug这种事情听起来就很厉害，我目前像用agent做ppt，加了最近很火的skill ppt master，感觉还行，问题也有，输入模板的话问题比较多，没办法生成一个差不多的ppt，自己搭建的agent工作流反而套模板可以，但是自由发挥的话不太行，我在想把两者结合一下，看看效果
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ![293bb186989279fc63b5f651730819fa.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vitalebob/images/2026-05-21-1779372675009-293bb186989279fc63b5f651730819fa.jpg)
 
 每次老师上课的时间我都在路上，也是醉了，老师提到现在有抵押算力的玩法，利用用户的额度来支撑AI的问答和工作，收益再按token用量分配，感觉有点像pow，ai吸引了大量的矿工，再加上BTC挖矿收益下降，甚至赔本的可能，web3的行情也不好，反正好像ai现在是一个能重启web3的工具，我们需要利用好AI，像老师说的，可以用agent连接钱包，设置它可支配的额度，自动完成交易，不知道目前实际是否可以操作，但是我相信以后肯定越来越完善，ai会像智能手机一样普及，而年轻人可能是接受最快和最深的群体，希望自己还年轻
@@ -24,6 +30,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ![20f296725bad6f7021b5dffef4f5af56.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vitalebob/images/2026-05-20-1779282888809-20f296725bad6f7021b5dffef4f5af56.jpg)
 
@@ -34,11 +41,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天学习AI，hermes，接触过openclaw，听说hermes是openclaw的增强版，具有自我学习的能力，我用cursor部署了hermes，导入学习计划，感觉现在的ai真的很强大，自己探索的程度还是很低，以前只停留在对话，现在利用agent可以完成很多事情，我觉得是一个必备的技能，学习如何使用AI agent，希望学到更多知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
