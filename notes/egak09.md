@@ -17,8 +17,7 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
-将目前为止关于agent的所有工作汇合成了笔记，并上传到了GitHub，  
-链接：[https://github.com/egak09/hermes-skills/tree/master/AI-Web3-School](https://github.com/egak09/hermes-skills/tree/master/AI-Web3-School)
+将目前为止关于agent的所有工作汇合成了笔记，并上传到了GitHub
 
 ## **🗺️ 课程路线图**
 
@@ -62,12 +61,220 @@ AI x Web3 School
 
 * * *
 
+# **01 · AI Agents — 自主智能体框架**
+
+> 从零到一构建和运作 AI Agent 系统的完整实操笔记
+
+* * *
+
+## **📋 本模块文章**
+
+| # | 标题 | 核心内容 |
+| --- | --- | --- |
+| 1 | Hermes Agent 核心架构 | Agent Loop、Tool Calling、Context Management |
+| 2 | Skills 系统：Agent 的过程记忆 | SKILL.md 格式、自动加载、curator 生命周期 |
+| 3 | Cron 自动化 | 定时任务、脚本链、内容引擎 |
+| 4 | 多 Agent 协作 | delegate_task、子进程、tmux 编排 |
+
+## **🎯 学完你能**
+
+-   理解 AI Agent 的核心运行循环（LLM → Tool Call → Result → loop）
+    
+-   用 Skills 系统让 Agent 积累领域知识
+    
+-   搭建定时自动化管线（数据采集 → LLM 加工 → 推送）
+    
+-   并行多个 Agent 协同完成复杂任务
+    
+
+* * *
+
+### **我的真实环境**
+
+-   **Agent 框架**: Hermes Agent (Nous Research 开源)
+    
+-   **模型**: DeepSeek V4 Pro
+    
+-   **平台**: Telegram Gateway（实时响应 + cron 推送）
+    
+-   **OS**: Windows 10 + Git Bash (MSYS2)
+    
+-   **工作目录**: `D:\Hermes file\`
+    
+
+> 所有代码和命令均在此环境中验证通过 ✅
+
 _最后更新: 2026-05-22_  
 _作者: Paradigme × Hermes_
+
+# **02 · Crypto Trading — 量化交易系统**
+
+> 从策略研究到实盘执行的全栈量化交易笔记
+
+* * *
+
+## **📋 本模块文章**
+
+| # | 标题 | 核心内容 |
+| --- | --- | --- |
+| 1 | 妖币策略 v2.2 完整解析 | 4种K线形态 + OI/Vol组合 + 1K线确认 |
+| 2 | 凯利公式仓位管理 | Half-Kelly、风险预算、胜率约束 |
+| 3 | 风控体系 | 日亏上限、冷却期、持仓限制 |
+
+## **🎯 学完你能**
+
+-   识别妖币（极小市值 + 高波动）的入场信号
+    
+-   用 K 线确认机制过滤假信号
+    
+-   用凯利公式科学计算仓位
+    
+-   搭建完整的风控体系
+    
+
+* * *
+
+### **环境**
+
+-   **交易所**: Binance Futures（合约）
+    
+-   **库**: CCXT · NumPy · Pandas · TA-Lib
+    
+-   **代理**: 127.0.0.1:1081（SOCKS5）
+    
+-   **代理出口 IP**: 172.235.214.193（已加白名单）
+    
+-   **回测**: 8妖币 × 30天 × 5分钟 K线
+    
+
+# **03 · Web3 Data — 数据基础设施**
+
+> 加密市场的数据获取、分析和自动化推送系统
+
+* * *
+
+## **📋 本模块文章**
+
+| # | 标题 | 核心内容 |
+| --- | --- | --- |
+| 1 | BlockBeats API 完全指南 | 1500+数据源 · 7大场景 · 端点速查 |
+| 2 | 内容自动化流水线 | 数据采集 → LLM加工 → 推送 |
+
+## **🎯 学完你能**
+
+-   用 BlockBeats API 获取市场情绪、链上资金流、宏观指标
+    
+-   搭建从数据到内容的自动化流水线
+    
+-   设计适合自己的加密数据仪表盘
+    
+
+* * *
+
+### **数据栈**
+
+-   **API**: BlockBeats Pro（1500+ 信息源）
+    
+-   **链上**: Solana / Base / Ethereum Netflow
+    
+-   **宏观**: M2 · DXY · 美债 · ETF 资金流
+    
+-   **衍生品**: 合约 OI · Bitfinex 多头 · 交易所排名
+    
+
+# **04 · DevOps & Infra — 运维实战**
+
+> Windows 环境下 AI Agent 的运维操作笔记 磁盘迁移 · 代理配置 · Python 环境
+
+* * *
+
+## **📋 本模块文章**
+
+| # | 标题 | 核心内容 |
+| --- | --- | --- |
+| 1 | Windows 下 Hermes 运维 | Junction 磁盘迁移 · 目录结构 · Gateway 恢复 |
+| 2 | Python 环境与代理 | 双 Python 问题 · 代理传透 · 依赖管理 |
+
+* * *
+
+### **我的环境**
+
+-   **OS**: Windows 10
+    
+-   **Shell**: Git Bash (MSYS2) — 不是 PowerShell
+    
+-   **Python**: CPython 3.14（用户目录）vs MSYS2 Python（无 pip）
+    
+-   **代理**: SOCKS5/HTTP 127.0.0.1:1081
+    
+-   **工作磁盘**: D:\\Hermes file\\（主存储，C 盘减压）
+    
+
+# **05 · Systems Thinking — 工程控制论 × AI Agent**
+
+> 钱学森《工程控制论》的核心概念，应用到 AI Agent 设计
+
+* * *
+
+## **📋 本模块文章**
+
+| # | 标题 | 灵感来源 |
+| --- | --- | --- |
+| 1 | 闭环验证 | Ch7 反馈控制系统 |
+| 2 | 冗余验证 + 意图重建 + 上下文保鲜 | Ch17 可靠性 · Ch11+14 滤波 · Ch9 采样 |
+
+* * *
+
+## **核心理念**
+
+AI Agent 不是聊天机器人——它是一个**控制系统**：
+
+-   输入: 用户指令
+    
+-   控制器: LLM + Tool Calling
+    
+-   执行器: 工具（终端/文件/网络）
+    
+-   反馈: 工具返回结果
+    
+-   **闭环验证**: 对比输出和预期，修正偏差
+    
+
+# **06 · Esoteric × Trading — 玄学决策辅助系统**
+
+> 八字 + 紫微斗数 + 西方星盘 三合一引擎的工程实现 不暴露任何个人命盘数据，只展示原理与架构
+
+* * *
+
+## **📋 本模块文章**
+
+| # | 标题 | 核心内容 |
+| --- | --- | --- |
+| 1 | 三系统推演引擎 | 算法原理 · 架构设计 · cron 自动化 |
+
+* * *
+
+## **设计原则**
+
+-   **个人数据本地化**: 出生数据存 `birth_data.json`（gitignore），永不上传 GitHub
+    
+-   **纯 Python 实现**: 八字/紫微用标准库，星盘可选 skyfield
+    
+-   **解耦设计**: 三个系统独立计算 → `daily_synthesis.py` 聚合输出
+    
+-   **Cron 自动化**: 每天 10:00 HKT 生成结构化行动指南
+    
+
+* * *
+
+## **免责声明**
+
+玄学是**决策辅助工具**，不是预测。最终决策永远在自己。 系统定位为"提供多维度视角"，类似多因子模型中的非量化维度。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 **✅ 已完成事项**  
 • 事项: **BlockBeats API 验证**  
@@ -111,6 +318,7 @@ _作者: Paradigme × Hermes_
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 今天从零到一：把 Telegram 接上了（踩了 SOCKS5→HTTP 代理的坑），装好了 gh CLI 并完成 GitHub 认证，给 Hermes 做了 C 盘大瘦身（sessions/caches/skills 全迁 D 盘），存储器从内置升级到 scope-recall（SQLite + LanceDB 双层架构），构建了三套完整的交易基础设施——币安交易模块（含凯利仓位）、妖币合约策略 v2.2（68 分 + 1K 线确认）并完成 8 妖币回测验证、实盘扫描 16 币（市场安静无信号属正常），还把玄学三合一每日推送设成了 cron。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/egak09/images/2026-05-20-1779291544684-image.png)
@@ -121,11 +329,13 @@ _作者: Paradigme × Hermes_
 
 
 
+
 今天主要讲进行了hermes的部署，现在还在学习怎么使用和自己编译skills
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
