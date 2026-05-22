@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+![a34e292af23a9a5f34f98856c459ccb3.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/xxx-1-x/images/2026-05-22-1779464827122-a34e292af23a9a5f34f98856c459ccb3.png)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 老师讲解了AI与WEB3的交叉应用 比如钱包（链上支付）量化 探讨了稳定币和AI结合的可能
 
 ![976be90c69060079dfed66eaca136881.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/xxx-1-x/images/2026-05-21-1779377503565-976be90c69060079dfed66eaca136881.png)
@@ -25,11 +31,13 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 爱马仕小助手像一个小型贾维斯，Skills是AI最小可复用独立技能包，将高频固定任务的规则、Prompt、工具逻辑、输出标准封装固化，实现一次封装、多次复用、随时调用。演示了如何安装配置爱马仕小助手
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 🔄 支付系统模型：从 Web2 到 Web3 的演进
