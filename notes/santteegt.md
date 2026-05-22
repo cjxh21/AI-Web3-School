@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+**What I did today:** Read the AI × Web3 School Handbook intro page to get a first overview of how both domains connect. Then read the LLM chapter and the Prompt chapter in full, taking structured notes in the repo knowledge base. Also completed the three setup tasks on WCB: “Set Up the Course Tools”, “Create Your Course GitHub”, and “Complete Learning Agent Setup”. Deferred hands-on coding experiments to Day 2.
+
+**What I learned:** LLMs generate probabilistically reasonable output — not trustworthy facts by default. The closer an LLM gets to the execution layer in an AI × Web3 system, the more its natural-language output must be converted into verifiable, deterministic objects. On the prompting side: a prompt is interface design, not just a question. A good prompt lets the model know when to stop rather than pushing it to be more confident. Critically, prompts should not be the sole security layer — guardrails and human handoffs are required for high-risk actions. Prompt injection is a first-class security risk, especially in agent scenarios with access to internal systems.
+
+**Blockers / questions:** No hard blockers today. Experiments (on-chain analysis with real transaction data) were deferred to Day 2 due to time constraints.
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 **What I did today:**
 
 Completed full learning environment setup for AI × Web3 School Cohort 0. Bootstrapped the personal learning repo with Sensei (Claude/Cowork agent), created [AGENTS.md](http://AGENTS.md), [profile.md](http://profile.md), 4-week learning plan, daily note template, and full directory structure. Reviewed the Handbook overview and confirmed program structure.
@@ -37,6 +47,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 -   Reviewed the handbook's recommended startup prompt to create a learning agent
     
 
@@ -53,6 +64,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 -   Attended the first co-learning session. Even if it was mostly for the Chinese audience, I noticed there was a walkthrough on setting up a Hermes agent. It should be worth exploring Hermes vs my current Openclaw instance for this bootcamp
     
 -   Watched the replay session about web3 fundamentals with a focus on how blockchain txs work, wallets and private keys.
@@ -64,6 +76,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
