@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+![Screenshot 2026-05-22 at 23.57.21.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-22-1779465443887-Screenshot_2026-05-22_at_23.57.21.png)
+
+今天诚实地请个假，有优先级更高的事情需要做。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 **核心Takeaway：**AI 从"工具"变成"经济参与者"的那一刻，Web3 就从可选项变成了必需品。
 
 /
@@ -60,11 +68,13 @@ Further question/action：
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 今天主要听了Bruce分享的Web3的运行基础。之前我也听不同的人讲过这个部分，其它部分Bruce老师的解读其实能发现是从技术底层逻辑上去拆解为什么其中某一个环节的存在对于整个系统会有影响——这一点其实我还不够问自己更深。最后的Takeaway是web3不仅是关于技术，技术只是基础设施，而更涉及到社会学、经济学和密码学。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 ![Screenshot 2026-05-19 at 15.37.24.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-19-1779191101442-Screenshot_2026-05-19_at_15.37.24.png)
@@ -81,6 +91,7 @@ X博主分享：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
