@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天看了AI下乡计划，逛了疗愈展感觉运气变好了
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 web3的运行原理，资产不存在钱包里，而是储存在链上。
 
 钱包只是认证身份，不需要任何个人信息，只认操作
@@ -27,11 +33,13 @@ web3的运行原理，资产不存在钱包里，而是储存在链上。
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 搭建好了Hermes，但是还不会用
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ![屏幕截图 2026-05-18 202135.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/puxunucovulo41-lab/images/2026-05-18-1779110672241-_____2026-05-18_202135.png)
