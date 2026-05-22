@@ -17,7 +17,9 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
-Today I studied ZK privacy infrastructure and Synthesis hackathon winning projects. Key takeaways: one-line MCP integration for ZKProofport AI; Railgun privacy is not just a mixer, but combines UTXO design, interaction noise, broadcaster flow, and anonymity sets; and ZK identity can be layered from World ID to Semaphore to attribute proofs. I also reviewed related repositories and project patterns including Semaphore, World ID, ERC-5564, ZKProofport, Railgun, Maiat, Nastar, SynthPact, Agora, and Inchy.
+I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-22. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
+
+My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
