@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+![PixPin_2026-05-22_22-11-29.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-22-1779463485116-PixPin_2026-05-22_22-11-29.jpg)
+
+看录像学习昨天的内容。
+
+以太坊签名和广播流程：
+
+1.  发送方用自己的私钥和待签名交易信息根据哈希算法生成签名，
+    
+2.  将交易执行调用RPC广播到全区块链上面，非常多的接收方会收到这个交易请求，该请求包括三类信息：原始消息、声称发送地址、携带的签名，
+    
+3.  验证该交易：签名加上原始消息，通过ecrecover算法反推出签署者，并与声称发送地址进行比较，如果一致就确认发送方的意图，经过该验证后可以写入区块。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ![PixPin_2026-05-21_10-20-26.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-21-1779331565605-PixPin_2026-05-21_10-20-26.jpg)
 
 在云服务器上由于有各种安全限制，安装过程有些源连接不上，虽然Hermes Agent安装完成，但有很多bug，后续看看境外的云服务器是否也有这些问题。
@@ -24,6 +40,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 ![PixPin_2026-05-19_20-01-07.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-19-1779197671834-PixPin_2026-05-19_20-01-07.jpg)
@@ -35,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
