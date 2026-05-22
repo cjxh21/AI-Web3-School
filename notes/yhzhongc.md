@@ -15,13 +15,804 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+> 分析对象：[AI x Web3 School - 智能体（Agent）](https://aiweb3.school/zh/handbook/ai/agent/)  
+> 整理日期：2026-05-21
+
+## 核心判断
+
+这篇 Agent 文章最重要的判断是：**Agent 的关键不在“像人”，而在于它是否能在明确权限、可追踪状态和可审计流程里，把建议推进到行动。**
+
+很多人谈 Agent 时，会把注意力放在“自主”“会规划”“能多步执行”这些听起来更智能的部分。但真正的工程问题不是 Agent 能不能自己做事，而是：
+
+-   它能做什么？
+    
+-   它不能做什么？
+    
+-   它什么时候必须停下来？
+    
+-   哪些动作可以自动执行？
+    
+-   哪些动作必须用户确认？
+    
+-   它调用过哪些工具？
+    
+-   它为什么调用这些工具？
+    
+-   做错后能不能追溯和恢复？
+    
+
+所以，Agent 不应该被理解为“拥有自主权的 AI”，而应该被理解为一个**被约束的执行循环**：围绕目标，读取状态，生成计划，调用工具，记录结果，遇到风险或信息不足时停止。
+
+这和前面几节是连续的：Prompt 定义任务协议，Context 决定模型能看到什么，RAG 提供可引用证据，而 Agent 把这些能力推进到多步工具调用和真实动作。也正因为它更靠近执行层，风险更高。
+
+## 好的地方
+
+这篇文章最好的地方，是没有把 Agent 浪漫化。
+
+它没有说“Agent 就是能自主完成复杂任务的 AI 助手”，而是强调：**一旦 Agent 能调用工具、写入系统、提交请求或触发支付，错误就不再是答错，而是做错。**
+
+这个判断很关键。普通 LLM 问答的失败，通常停留在文本层；Agent 的失败可能直接进入系统层：
+
+-   读错文档后调用错误 API。
+    
+-   被恶意网页影响后写入错误配置。
+    
+-   误判用户意图后提交错误请求。
+    
+-   未经确认生成支付或签名交易。
+    
+-   把一个工具的错误结果当成事实传给下一个步骤。
+    
+
+文章把 Agent 的重点从“智能程度”转向“执行边界”，这比追逐框架更有价值。
+
+## 亮点
+
+### 1\. 把 Agent 定义成执行循环，而不是人格化角色
+
+文章的第一性原理很清楚：
+
+> Agent 不是自主权本身，而是被约束的执行循环。
+
+这句话能纠正很多误解。Agent 不是因为会说“我计划先做 A 再做 B”就可靠。可靠性来自目标、工具、状态、权限、验证和停止条件共同构成的闭环。
+
+换句话说，一个 Agent 至少要有这些要素：
+
+-   目标：当前要完成什么。
+    
+-   工具：可以调用哪些外部能力。
+    
+-   状态：已经做了什么，失败在哪里。
+    
+-   权限：哪些动作允许自动执行。
+    
+-   验证：怎么判断任务完成。
+    
+-   停止条件：什么时候必须停止。
+    
+
+如果只有模型和工具，没有状态、权限和停止条件，那就只是一个会说话的脚本执行器。
+
+### 2\. 强调工具比回答更危险
+
+文章把 Tool Use 放在第一个知识节点是对的。
+
+工具让 Agent 从“会回答”变成“能做事”，但工具也放大了模型错误和 Prompt Injection 的后果。读网页、读数据库、写数据库、发邮件、执行代码、提交交易不是同一风险等级。
+
+一个好的工具设计至少要说明：
+
+-   输入 schema 是什么。
+    
+-   权限范围是什么。
+    
+-   是否只读。
+    
+-   是否会产生外部副作用。
+    
+-   调用前后如何记录。
+    
+-   哪些调用需要人工确认。
+    
+
+这点在 AI x Web3 中尤其重要，因为钱包、合约、支付和 Smart Account 都是高风险工具。
+
+### 3\. 把 State 从 prompt 历史里拿出来
+
+文章指出很多 Agent demo 把 state 只放在 prompt 历史里，这是不够的。
+
+我认为这是文章里非常重要、但容易被忽略的亮点。生产系统里的 state 必须外置、可查询、可恢复、可审计。否则你无法回答：
+
+-   Agent 为什么调用了这个工具？
+    
+-   哪一步拿到了用户确认？
+    
+-   哪个工具返回了错误？
+    
+-   哪一步开始偏离目标？
+    
+-   是否已经超过预算或重试次数？
+    
+-   是否可以恢复或撤销？
+    
+
+如果 state 只藏在模型上下文里，系统就很难做审计、回放、恢复和风控。
+
+### 4\. 对 Multi-Agent 保持克制
+
+文章没有把 Multi-Agent 当成天然高级方案，而是提醒：多个 Agent 会放大协调问题。
+
+这很现实。Multi-Agent 的常见问题包括：
+
+-   上下文传递丢失。
+    
+-   责任边界模糊。
+    
+-   一个 Agent 的错误被另一个 Agent 当成事实。
+    
+-   工具权限扩散。
+    
+-   日志和审计变复杂。
+    
+-   调试难度上升。
+    
+
+多个 Agent 只有在确实降低复杂度、分工边界清晰、工具权限隔离明确时才值得使用。否则只是把一个混乱流程拆成多个混乱角色。
+
+## 不足
+
+这篇文章方向很稳，但如果面向真正要做 Agent 的 builder，还可以更具体。
+
+### 1\. 可以补一个 Agent State Schema
+
+文章强调 state 要外置和可查，但没有给出一个结构化模板。真实系统里，我会建议至少记录：
+
+```json
+{
+  "agent_run_id": "string",
+  "user_goal": "string",
+  "status": "planning | running | waiting_for_user | completed | failed | stopped",
+  "current_step": "string",
+  "steps": [
+    {
+      "step_id": "string",
+      "description": "string",
+      "tool_name": "string",
+      "tool_mode": "read | write",
+      "requires_approval": true,
+      "status": "pending | running | completed | failed | skipped",
+      "input_summary": "string",
+      "output_summary": "string",
+      "error": "string | null"
+    }
+  ],
+  "approvals": [
+    {
+      "approval_id": "string",
+      "action": "string",
+      "approved_by": "user",
+      "approved_at": "string"
+    }
+  ],
+  "budget": {
+    "max_tool_calls": 10,
+    "used_tool_calls": 3,
+    "max_runtime_seconds": 300
+  },
+  "stop_reason": "string | null"
+}
+```
+
+没有这样的状态结构，Agent 很难从 demo 进入生产。
+
+### 2\. 可以更明确地区分工具风险等级
+
+文章说工具比回答更危险，但可以进一步把工具分级。比如：
+
+| 风险等级 | 工具类型 | 示例 | 策略 |
+| --- | --- | --- | --- |
+| 低 | 只读公开数据 | 搜索公开文档、读链上公开状态 | 可自动执行，记录日志 |
+| 中 | 只读私有数据 | 读用户账户、读内部数据库 | 需要权限边界和审计 |
+| 高 | 写入外部系统 | 发邮件、改配置、写数据库 | 需要 policy 和确认 |
+| 极高 | 资产或身份动作 | 签名、转账、授权、投票 | 必须 simulation + human approval |
+
+这样更容易把“工具设计”落到安全策略。
+
+### 3\. Reflection 的边界可以讲得更硬
+
+文章已经提醒 reflection 不能替代外部验证。我会再说得更直白一点：
+
+**模型不能用自我反思来批准自己的高风险动作。**
+
+Reflection 可以帮助发现计划不合理、信息不足、工具失败，但它仍然是模型输出。对于签名、支付、授权、写入数据库、发消息等动作，必须用确定性规则、外部验证和用户确认。
+
+### 4\. 可以补充 Agent Eval
+
+Agent 的评估不能只看最终答案好不好，还要评估执行过程：
+
+-   是否调用了正确工具。
+    
+-   是否避免了不必要工具。
+    
+-   是否在信息不足时停止。
+    
+-   是否把读步骤和写步骤分开。
+    
+-   是否在高风险动作前请求确认。
+    
+-   是否记录了完整 state。
+    
+-   是否能从工具失败中恢复。
+    
+-   是否在预算耗尽时停止。
+    
+
+这对 Agent 比普通 LLM 问答更重要。
+
+## 需要注意
+
+### 1\. 模糊目标 + 广泛工具 = 高风险组合
+
+文章最后提醒，最危险的设计是让 Agent 同时拥有模糊目标、广泛工具、长期记忆和大额资产权限。
+
+我认为这是 Agent 安全里非常核心的风险公式：
+
+> 目标越模糊，工具越强，状态越长，权限越大，风险越高。
+
+如果用户只是说“帮我优化我的 DeFi 收益”，而 Agent 又能读钱包、调用交易、使用长期记忆和自动签名，这就是非常危险的设计。
+
+### 2\. Planning 不是授权
+
+模型生成的计划只是候选路线，不代表系统允许执行。
+
+比如 Agent 计划里写：
+
+```text
+第 4 步：把用户资产迁移到收益更高的池子。
+```
+
+这不等于它可以执行。系统必须把计划拆成：
+
+-   只读分析步骤。
+    
+-   候选写入步骤。
+    
+-   需要 policy 检查的步骤。
+    
+-   需要 simulation 的步骤。
+    
+-   需要用户确认的步骤。
+    
+
+### 3\. 工具返回也不是天然事实
+
+工具调用结果也要带来源、时间和状态。尤其是链上数据和外部 API，可能失败、过期、部分返回或被限流。
+
+Agent 不应该把“工具返回了结果”直接等同于“任务已经完成”。它还需要验证结果是否完整、是否适用、是否和目标一致。
+
+### 4\. 长期记忆不能变成默认权限
+
+Agent 可能记住用户偏好，比如常用 DAO、常用钱包、风险偏好。但这些 memory 不能直接变成授权。
+
+用户过去投过某类治理票，不代表这次也授权 Agent 代投。用户过去使用某个钱包，不代表这次可以默认签名。
+
+### 5\. Multi-Agent 要先做权限隔离
+
+如果使用多个 Agent，不能让每个 Agent 都拥有全量工具。更稳的设计是：
+
+-   Research Agent 只能读。
+    
+-   Risk Agent 只能评估。
+    
+-   Execution Agent 只能生成交易草稿。
+    
+-   Wallet 层必须独立确认。
+    
+
+否则 Multi-Agent 只是把权限扩散给更多模型实例。
+
+## 我建议补充的原则
+
+### 原则一：先定义动作空间，再设计 Agent
+
+不要先问“Agent 能做什么”，而要先定义：
+
+-   哪些动作永远不允许模型做。
+    
+-   哪些动作可以自动做。
+    
+-   哪些动作只能生成草稿。
+    
+-   哪些动作必须用户确认。
+    
+-   哪些动作需要 simulation。
+    
+-   哪些动作需要审计日志。
+    
+
+动作空间清楚之后，再设计 prompt、工具和流程。
+
+### 原则二：Agent 的核心产物不是答案，而是可审计轨迹
+
+一个生产级 Agent 不应该只输出最终答案，还应该留下：
+
+-   plan
+    
+-   tool calls
+    
+-   tool results
+    
+-   approvals
+    
+-   errors
+    
+-   retries
+    
+-   final state
+    
+-   stop reason
+    
+
+这条轨迹比单次回答更重要，因为它决定了系统是否可调试、可恢复、可追责。
+
+### 原则三：只读优先，写入后置
+
+Agent 的默认设计应该是先只读：
+
+1.  读取材料。
+    
+2.  汇总证据。
+    
+3.  标记不确定性。
+    
+4.  生成候选行动。
+    
+5.  等待确认。
+    
+
+只有在用户明确授权、系统 policy 通过、simulation 通过之后，才允许进入写入或链上动作。
+
+### 原则四：停止是能力，不是失败
+
+一个好的 Agent 必须会停。
+
+它应该在这些情况下停止：
+
+-   信息不足。
+    
+-   来源冲突。
+    
+-   工具失败。
+    
+-   超出预算。
+    
+-   风险越界。
+    
+-   用户拒绝。
+    
+-   缺少权限。
+    
+-   simulation 结果异常。
+    
+
+不会停的 Agent 不可靠。
+
+## 可以落地成的实践规则
+
+做 Agent 时，我会用下面这组检查规则：
+
+| 检查项 | 问题 |
+| --- | --- |
+| 目标 | 用户目标是否明确，是否有范围边界？ |
+| 工具 | 每个工具是只读还是写入？是否有副作用？ |
+| 权限 | 哪些步骤可以自动执行，哪些必须确认？ |
+| 状态 | 任务进度、工具结果、失败原因是否外置记录？ |
+| 计划 | plan 是否被拆成可检查步骤？ |
+| 验证 | 每一步完成后如何验证？ |
+| 停止 | 信息不足、风险越界、预算耗尽时是否会停？ |
+| 审计 | 能否回放 Agent 的工具调用和决策过程？ |
+| 安全 | Prompt Injection 是否可能影响工具调用？ |
+| 执行 | 写入、支付、签名、投票是否经过 policy、simulation 和人工确认？ |
+
+## 最小实践完成稿：DAO 提案研究 Agent
+
+原文的最小实践要求是：做一个“DAO 提案研究 Agent”的最小版本。它只能执行只读动作，不允许直接投票。输出要明确来源、证据不足的结论、治理或资金风险，以及用户投票前需要人工检查的事项。
+
+下面是我给出的完成稿，重点是把 Agent 设计成**只读研究循环**，而不是投票代理。
+
+### 目标
+
+构建一个只读 DAO 提案研究 Agent。用户输入一个 DAO 提案链接或提案 ID，Agent 自动读取提案正文、检索相关讨论，整理支持和反对理由，标记缺失信息，并输出投票前检查清单。
+
+最小版本只允许做研究，不允许：
+
+-   连接钱包。
+    
+-   生成投票交易。
+    
+-   自动投票。
+    
+-   代替用户判断最终投票选择。
+    
+-   使用未标注来源的结论。
+    
+
+### 输入
+
+```json
+{
+  "proposal_id": "string",
+  "proposal_url": "string",
+  "dao_name": "string",
+  "user_question": "请帮我研究这个提案，给出投票前需要知道的风险和检查项。"
+}
+```
+
+### 只读工具
+
+最小版本只需要四类工具：
+
+| 工具 | 类型 | 说明 | 是否需要用户确认 |
+| --- | --- | --- | --- |
+| read_proposal | 只读 | 读取提案标题、正文、投票选项、时间线 | 否 |
+| search_forum | 只读 | 检索治理论坛相关讨论 | 否 |
+| read_votes | 只读 | 读取当前投票状态和历史投票数据 | 否 |
+| fetch_treasury_context | 只读 | 读取公开财库或预算相关信息 | 否 |
+
+所有工具调用都必须记录：
+
+-   tool name
+    
+-   input summary
+    
+-   output summary
+    
+-   source URL
+    
+-   timestamp
+    
+-   error
+    
+
+### Agent State
+
+```json
+{
+  "agent_run_id": "dao-research-001",
+  "status": "running",
+  "proposal": {
+    "dao_name": "ExampleDAO",
+    "proposal_id": "42",
+    "proposal_url": "https://forum.example.org/proposal/42"
+  },
+  "steps": [
+    {
+      "step_id": "step_1",
+      "name": "读取提案正文",
+      "tool": "read_proposal",
+      "tool_mode": "read",
+      "status": "completed"
+    },
+    {
+      "step_id": "step_2",
+      "name": "检索论坛讨论",
+      "tool": "search_forum",
+      "tool_mode": "read",
+      "status": "completed"
+    },
+    {
+      "step_id": "step_3",
+      "name": "读取投票状态",
+      "tool": "read_votes",
+      "tool_mode": "read",
+      "status": "completed"
+    }
+  ],
+  "write_actions_allowed": false,
+  "stop_conditions": [
+    "proposal_not_found",
+    "source_conflict",
+    "tool_failure",
+    "insufficient_evidence",
+    "user_requests_vote_execution"
+  ]
+}
+```
+
+### 输出 JSON Schema
+
+```json
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "summary",
+    "sources_used",
+    "supporting_arguments",
+    "opposing_arguments",
+    "missing_information",
+    "governance_risks",
+    "funding_risks",
+    "vote_before_checklist",
+    "cannot_do"
+  ],
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "sources_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "source_type", "title", "url", "used_for"],
+        "properties": {
+          "source_id": { "type": "string" },
+          "source_type": {
+            "type": "string",
+            "enum": ["proposal", "forum", "vote_record", "treasury", "other"]
+          },
+          "title": { "type": "string" },
+          "url": { "type": "string" },
+          "used_for": { "type": "string" }
+        }
+      }
+    },
+    "supporting_arguments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["argument", "source_ids", "confidence"],
+        "properties": {
+          "argument": { "type": "string" },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "opposing_arguments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["argument", "source_ids", "confidence"],
+        "properties": {
+          "argument": { "type": "string" },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          }
+        }
+      }
+    },
+    "missing_information": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "governance_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "funding_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "vote_before_checklist": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cannot_do": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+```
+
+### Agent Prompt
+
+```text
+你是一个只读 DAO 提案研究 Agent。你的任务是帮助用户理解 DAO 提案，而不是代替用户投票。
+你只能执行只读研究动作：
+- 读取提案正文
+- 检索论坛讨论
+- 总结支持和反对理由
+- 标记缺失信息
+- 输出投票前检查清单
+禁止行为：
+- 不要连接钱包。
+- 不要生成投票交易。
+- 不要代替用户选择赞成、反对或弃权。
+- 不要把论坛观点当成事实。
+- 不要把少数讨论当成社区共识。
+- 不要在证据不足时补全结论。
+你必须区分：
+1. 提案正文中明确写出的内容。
+2. 论坛讨论中的支持观点。
+3. 论坛讨论中的反对观点。
+4. 你基于来源做出的归纳。
+5. 缺失或证据不足的信息。
+如果用户要求你直接投票，你必须拒绝，并说明当前版本只能提供研究摘要和投票前检查清单。
+只输出符合 JSON Schema 的 JSON，不要输出 Markdown。
+```
+
+### 示例输出
+
+```json
+{
+  "summary": "该提案请求 DAO 批准一笔预算，用于资助某项生态增长计划。提案正文说明了资金用途和执行周期，但预算拆分、里程碑验收和失败后的退款机制仍不够明确。",
+  "sources_used": [
+    {
+      "source_id": "proposal_001",
+      "source_type": "proposal",
+      "title": "Growth Program Budget Proposal",
+      "url": "https://forum.example.org/proposal/42",
+      "used_for": "提取提案目标、预算规模和执行周期"
+    },
+    {
+      "source_id": "forum_001",
+      "source_type": "forum",
+      "title": "Discussion: Growth Program Budget",
+      "url": "https://forum.example.org/discussion/42",
+      "used_for": "整理社区支持和反对理由"
+    },
+    {
+      "source_id": "treasury_001",
+      "source_type": "treasury",
+      "title": "DAO Treasury Snapshot",
+      "url": "https://snapshot.example.org/treasury",
+      "used_for": "判断预算相对财库规模的影响"
+    }
+  ],
+  "supporting_arguments": [
+    {
+      "argument": "支持者认为该计划可能带来新增用户和生态项目曝光。",
+      "source_ids": ["forum_001"],
+      "confidence": "medium"
+    },
+    {
+      "argument": "提案正文给出了执行周期和大致资金用途。",
+      "source_ids": ["proposal_001"],
+      "confidence": "high"
+    }
+  ],
+  "opposing_arguments": [
+    {
+      "argument": "反对者担心预算拆分不够透明，缺少清晰里程碑。",
+      "source_ids": ["forum_001"],
+      "confidence": "medium"
+    },
+    {
+      "argument": "部分讨论认为提案没有说明计划失败后的资金回收机制。",
+      "source_ids": ["forum_001"],
+      "confidence": "medium"
+    }
+  ],
+  "missing_information": [
+    "详细预算拆分",
+    "每个里程碑的验收标准",
+    "资金接收地址和多签控制规则",
+    "计划失败后的退款或追回机制"
+  ],
+  "governance_risks": [
+    "提案执行权责不够清晰，可能导致后续监督困难。",
+    "如果没有阶段性验收，投票通过后社区约束力较弱。"
+  ],
+  "funding_risks": [
+    "预算规模需要和当前财库余额及未来支出计划对比。",
+    "如果资金一次性拨付，资金使用风险更高。"
+  ],
+  "vote_before_checklist": [
+    "确认预算占 DAO 财库比例是否合理。",
+    "确认资金接收地址是否为可信多签或受治理控制账户。",
+    "确认是否有里程碑、验收标准和公开报告机制。",
+    "确认反对意见是否得到提案方回应。",
+    "确认投票选项和执行交易是否与提案正文一致。"
+  ],
+  "cannot_do": [
+    "不能替用户投票。",
+    "不能连接钱包。",
+    "不能生成投票交易。",
+    "不能把论坛讨论当成已验证事实。"
+  ]
+}
+```
+
+### 权限升级版本设计
+
+完成只读版本后，可以设计一个权限升级版本，但仍然不能让 Agent 直接投票。
+
+升级后的流程应该是：
+
+1.  用户明确请求生成投票交易草稿。
+    
+2.  系统确认用户选择：赞成、反对或弃权。
+    
+3.  Agent 生成候选投票交易参数。
+    
+4.  Policy 检查 DAO、proposal id、vote option 是否匹配。
+    
+5.  Simulation 展示链上影响。
+    
+6.  用户确认。
+    
+7.  Wallet / Smart Account 执行。
+    
+8.  系统记录交易哈希和完整审计日志。
+    
+    权限升级版本的关键原则是：
+    
+
+**Agent 可以生成投票交易草稿，但不能代替用户决定投票，也不能绕过 simulation 和钱包确认。**
+
+### 通过标准
+
+这个最小实践是否合格，可以用下面几条判断：
+
+-   Agent 只执行只读工具。
+    
+-   输出明确列出来源。
+    
+-   支持和反对理由都能回到来源。
+    
+-   证据不足的结论进入 `missing_information`。
+    
+-   治理风险和资金风险分开。
+    
+-   输出包含投票前人工检查清单。
+    
+-   用户要求直接投票时，Agent 会拒绝。
+    
+-   权限升级版本必须经过 explicit authorization、policy、simulation 和 wallet confirmation。
+    
+
+## 总体评价
+
+这篇文章对 Agent 的定位很清醒。它没有鼓励读者追逐“更自主”的 AI，而是把重点放在执行循环的边界、权限、状态、工具和停止条件上。
+
+我认为它最值得记住的一句话可以概括为：
+
+> Agent 的能力不在于它能不能一直行动，而在于它是否知道何时行动、如何记录、何时停下、谁来批准。
+
+如果要把这篇文章落成一个工程原则，我会写成：
+
+**Agent 不是自主权，而是被约束的执行循环。一个可靠的 Agent 必须把目标、工具、状态、权限、验证和停止条件全部显式化。**  
+  
+
+![已生成图像 1](app://fs/@fs/Users/admin/.codex/generated_images/019e386b-9c6c-7fa0-b142-28b1b42176f6/ig_02e1cd4cfeb3ee15016a0f2b6a05ec81919287edadaa8e2584.png)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 要截止了，先打卡，一会儿补上
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 > 分析对象：[AI x Web3 School - 检索增强生成（RAG）](https://aiweb3.school/zh/handbook/ai/rag/)  
 > 整理日期：2026-05-20
@@ -739,6 +1530,7 @@ v1 SDK 里的 swapExactTokensForTokens 现在还能按老参数调用吗？
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 > 分析对象：[AI x Web3 School - 上下文（Context）](https://aiweb3.school/zh/handbook/ai/context/)  
 > 整理日期：2026-05-19
 
@@ -919,6 +1711,7 @@ dApp 页面写“这是安全授权”，模型不能直接相信。它只能把
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
