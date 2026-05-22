@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今日完成：
+
+1、优化了学习agent的思路和学习路径，不再完全依靠agent出代码和总结经验，而是只是在卡壳的时候提示，尽量自己学习问题；
+
+2、ai在web3中的应用学习；
+
+今日感想：
+
+1、之前全部都是ai查看handbook生成方案，然后总结经验，连最后的结果测试都是ai出得，我学习到的东西比较少，及时替换掉
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 **\# Day 4 打卡 - Context 管理实践**
 
   
@@ -324,6 +338,7 @@ Context 不是简单的文本拼接，而是信息治理问题：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 **\# Day 3 打卡 - Web3 基础复习 + Web3 AI Assistant**
 
@@ -722,6 +737,7 @@ experiments/web3-ai-assistant/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 **\# Day 2 打卡 - RAG 系统与 AI Agent 实践**
@@ -1255,6 +1271,7 @@ return response.choices\[0\].message.content # 返回最终答案
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
