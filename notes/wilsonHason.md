@@ -15,8 +15,23 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+-   参加co-learning √
+    
+-   参加课程 √
+    
+
+Hash：把任意数据变成固定长度指纹，用来验证数据是否一致
+
+Public Key：和私钥成对出现的公开信息
+
+Signature：对某段具体消息或交易内容的授权证明
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 -   参加当天课程培训 √
     
 
@@ -34,6 +49,7 @@ instruction 是给模型的任务规则
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 -   参加实时课程 √
     
 -   参加co-learning √
@@ -48,6 +64,7 @@ instruction 是给模型的任务规则
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 -   实时参加AI Agent 入门 —— Hermes 从 0 到 1 √
@@ -66,6 +83,7 @@ instruction 是给模型的任务规则
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
