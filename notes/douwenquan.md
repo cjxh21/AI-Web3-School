@@ -15,8 +15,48 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天完成了两部分学习：  
+  
+一、AI 基础概念深化  
+
+-   系统学习了 Agent 架构（Plan + Reflection + Multi-Agent）
+    
+
+-   了解了主流框架生态（LangChain、LangGraph、OpenAI Agents SDK 等）
+    
+
+-   记录了 MCP 协议的核心机制（Tool Schema、Permission）
+    
+
+-   理解了 Fine-tuning 和 Inference 的基本概念
+    
+
+二、Co-learning：Agent Wallet  
+
+-   学习了 Cobo Agentic Wallet 的产品定位和技术架构
+    
+
+-   理解了 Agent Wallet 解决的核心问题：权限控制、安全隔离、人工确认
+    
+
+-   收藏了开发文档：
+    
+    [https://www.cobo.com/products/agentic-wallet/manual/developer/quickstart-overview](https://www.cobo.com/products/agentic-wallet/manual/developer/quickstart-overview)
+    
+
+关键认识：  
+
+-   Agent = 模型 + 工具 + 编排，是能自主执行任务的系统
+    
+
+-   Agent Wallet 是 AI × Web3 的关键基础设施，让 Agent 能安全地管理资产和交易
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 # 2026-05-21 每日学习笔记
 
 ## 今日目标
@@ -78,6 +118,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 # 2026-05-20 每日学习笔记
@@ -180,6 +221,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -206,6 +248,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
