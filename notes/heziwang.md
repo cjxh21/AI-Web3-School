@@ -15,8 +15,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+学习笔记：  
+[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md)  
+  
+钱包不是账号登录器，而是控制权入口。连接钱包只是让网站知道我是谁；签名是在表达同意；确认交易会真的发到链上；Approve Token 是授权未来花我的 Token，要特别小心。
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-23-1779539739488-image.png)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-22.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-22.md)
 
 今天学习了 Web3 Network 页面，今天课也上完了 一些比较厉害的同学分享了学习方法，感觉非常受益，我也学到了很多。
@@ -28,6 +39,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 [https://github.com/heziwang/ai-web3-school-cohort-wang](https://github.com/heziwang/ai-web3-school-cohort-wang)
 
@@ -42,6 +54,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 [https://github.com/heziwang/ai-web3-school-cohort-wang](https://github.com/heziwang/ai-web3-school-cohort-wang)
@@ -69,6 +82,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
