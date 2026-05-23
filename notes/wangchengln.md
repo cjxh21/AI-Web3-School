@@ -15,8 +15,58 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+### **🎯 今日目标**
+
+搭建 AI 分析脚本，模拟"链下 AI 推理"环节。
+
+### **📖 理论（1小时）**
+
+NLP 是 AI 的重要子领域，在 Web3 中可显著改变用户与去中心化应用的交互方式，实现更直觉化的界面，弥合人类语言与数字服务之间的鸿沟。一个典型的 AI Oracle 服务场景：使用 NLP 模型分析社交媒体情绪，然后将"情绪评分"提交到链上，供 DeFi 协议作为风险评估参数。
+
+### **🛠️ 实操（2小时）**
+
+安装依赖：`pip install openai requests python-dotenv`
+
+编写 `ai_analyzer.py`（以加密市场情绪分析为例）：
+
+```
+Python
+```
+
+```
+import os
+from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def analyze_market_sentiment(news_text: str) -> str:
+    """调用 LLM 分析加密市场情绪，返回 BULLISH/BEARISH/NEUTRAL + 简短理由"""
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": 
+             "You are a crypto market analyst. Analyze the given news and return ONLY: "
+             "SENTIMENT: [BULLISH/BEARISH/NEUTRAL] | REASON: [one sentence]"},
+            {"role": "user", "content": f"News: {news_text}"}
+        ],
+        max_tokens=100
+    )
+    return response.choices[0].message.content.strip()
+
+if __name__ == "__main__":
+    test_news = "Bitcoin ETF sees record inflows as institutional adoption surges in 2025."
+    result = analyze_market_sentiment(test_news)
+    print(f"AI Analysis Result: {result}")
+```
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ### **🎯 今日目标**
 
 将合约部署上链，拿到真实的合约地址。
@@ -70,6 +120,7 @@ npx hardhat run scripts/deploy.js --network sepolia
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 ### **🎯 今日目标**
 
@@ -136,6 +187,7 @@ npx hardhat test  # 跑通默认测试
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 # **Web3 入门实践总结笔记**
@@ -490,6 +542,7 @@ text
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1024,6 +1077,7 @@ text
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
