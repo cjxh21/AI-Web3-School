@@ -15,8 +15,54 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+机器支付：
+
+1.定义
+
+也就是 M2M（Machine-to-Machine）支付：不是你掏出手机手动扫码，而是设备、程序或智能终端在一定条件下自动触发付款。
+
+2.主要场景
+
+无人零售/自助设备：自动售货机、自助咖啡机、智能货柜——你拿取商品→感应→机器自动结算扣款。
+
+物联网/IoT 自动结算：例如新能源车充电桩按用量自动计费扣费；共享设备按使用时长自动续费。
+
+企业侧自动化付款：RPA/后台任务根据规则（发货确认、对账结果等）自动触发银行/第三方打款。
+
+3.本质
+
+支付的发起方是机器或程序，人只做授权/设置，不逐笔手动点"确认"。
+
+4.关键环节
+
+身份/凭证（手机号、会员码、车牌、设备ID、Token…）
+
+计量/触发条件（重量传感、用电度数、停车时长、订单状态）
+
+扣款通道（微信/支付宝免密、预授权、企业对公接口等）
+
+机器支付标准
+
+1.MPP（Machine Payments Protocol，机器支付协议）
+
+把 AI Agent、商家、支付服务商之间的交互变成标准化、可编程流程，解决互操作性
+
+2.APOP（Agentic Payment Open Protocol，智能体支付开放协议框架）
+
+四大支柱：智能体身份管理 → 意图管理 → 用户身份管理 → 支付授权管理；强调合规可控、安全为要、信任链 
+
+3.ACP / UCP 等
+
+不同路径的 Agent-to-Agent 或 Agent-to-Merchant 支付"沟通规则" 
+
+支付通道必须 KYC（知道谁发起）+ AML（反洗钱）+ 交易可溯源，机器代付也不例外！
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 \# Day 3: 提示词（Prompt）
 
 \- **日期**: 2026-05-22
@@ -183,6 +229,7 @@ Prompt → Context → Model → Code → Guard/Simulation → Human Check
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 Topic: 大语言模型（LLM）
 
 Permalink: Topic: 大语言模型（LLM）
@@ -246,6 +293,7 @@ Permalink: Next Steps
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ![75289f364db872768eec8fbd1e584f5c.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Opfor-World/images/2026-05-18-1779117411735-75289f364db872768eec8fbd1e584f5c.jpg)
