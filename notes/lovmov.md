@@ -15,8 +15,32 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+![PixPin_2026-05-23_15-33-39.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-23-1779525180207-PixPin_2026-05-23_15-33-39.jpg)
+
+1\. Hermes agent特点：开源、跨平台、终端运行、消息网关。
+
+2\. Hermes agent六大核心超能力：
+
+a. 多模型支持：灵活接入各类模型
+
+b. 工具调用：读写文件、搜索网页等功能
+
+c. Cron定时任务：自动执行监控或摘要
+
+d. Memory记忆：记住偏好和工作习惯
+
+e. Gateway消息网关：直接接入Telegram、微信等
+
+f. Skills技能：沉淀固定任务流程
+
+3\. 不推荐用Hermes agent去连接codex等AI 编码助手，而是直接使用这类AI编码助手。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ![PixPin_2026-05-22_22-11-29.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-22-1779463485116-PixPin_2026-05-22_22-11-29.jpg)
 
 看录像学习昨天的内容。
@@ -33,6 +57,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 ![PixPin_2026-05-21_10-20-26.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-21-1779331565605-PixPin_2026-05-21_10-20-26.jpg)
 
 在云服务器上由于有各种安全限制，安装过程有些源连接不上，虽然Hermes Agent安装完成，但有很多bug，后续看看境外的云服务器是否也有这些问题。
@@ -40,6 +65,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -52,6 +78,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
