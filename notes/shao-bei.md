@@ -15,8 +15,14 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/shao-bei/images/2026-05-23-1779550196275-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/shao-bei/images/2026-05-23-1779550268151-image.png)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 完成 AI×Web3 首期班次全套学习环境搭建，依托 Claude 与协同智能体初始化个人学习仓库，搭建完整目录架构，创建智能体说明、个人资料、四周学习规划以及日常笔记模板。通读项目手册，明晰整体课程体系。
 
 学习总结
@@ -31,6 +37,7 @@ timezone: UTC+8
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 整个区块链网络就像一座工厂：
 
 普通验证者（证明者）：相当于流水线上的质检员，负责核验每个区块是否合规，稳定拿基础奖励。
@@ -42,6 +49,7 @@ timezone: UTC+8
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 ![ScreenShot_2026-05-19_205739_884.webp](https://web3career.build/api/proof-attachments?key=proof-attachments%2Fryheo3abiYugCV2z5qCgst6RLqzPD02c%2Fcmp9vku4s0p0rmw012cdl2lsr%2Fb8437456-3b43-4440-85fc-aa5ecdb16d32.webp)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/shao-bei/images/2026-05-19-1779199745585-image.png)
