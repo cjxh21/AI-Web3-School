@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+打卡
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 1 # Daily Note - 2026-05-22
 
 2
@@ -41,11 +47,13 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今天学习了AI 在 Web3 的应用，但除了分享会之外，别的进度几乎为0，得尽快开始啊
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天的重点是补 Web3 基础。我会优先参加 Web3 运行原理，把账户、钱包、签名、交易、Gas、合约和区块浏览器这些核心概念串起来理解，而不是只停留在名词层面。对我这种 AI 背景、Web3 新手的路径来说，这一步非常关键。
@@ -61,11 +69,13 @@ AI x Web3 School
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
