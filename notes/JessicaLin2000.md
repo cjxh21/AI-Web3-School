@@ -15,8 +15,34 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+| 单词 / 术语 | 音标 | 词性 | 通俗解释（大白话） | 场景例句 |
+| --- | --- | --- | --- | --- |
+| Agentic Economy | /eɪˈdʒentɪk iˈkɒnəmi/ | 名词短语 | 「智能体经济」，就是让 AI 机器人（Agent）能自己在链上交易、合作、干活的经济系统，AI 不再只是工具，而是能参与赚钱的角色 | The agentic economy lets AI agents buy and sell things on the blockchain.（智能体经济让 AI 智能体可以在区块链上买卖东西） |
+| ERC-8004 | /ˌiː ɑː siː eɪt ˈθaʊzənd əʊ hʌndrəd əʊ fɔː/ | 名词 | 以太坊的新规则，专门给 AI 机器人做「链上身份证」和「信用分」，让 AI 能被别人信任，比如证明它是安全的、靠谱的 | ERC-8004 gives AI agents verifiable identities on the blockchain.（ERC-8004 让 AI 智能体在区块链上拥有可验证的身份） |
+| ERC-8183 | /ˌiː ɑː siː eɪt ˈθaʊzənd əʊ hʌndrəd əʊ θriː/ | 名词 | 以太坊的新规则，和 AI 机器人的「链上支付、分配资金」有关，让 AI 能自己处理钱，不用人一直盯着 | （注：本次直播未展开，可理解为 AI 的链上钱包规则） |
+| Core Thesis | /kɔː ˈθiːsɪs/ | 名词短语 | 核心观点 / 核心主张，就是整个项目最想强调的大方向 | The core thesis is that Ethereum is the backbone for the machine economy.（核心观点是：以太坊是机器经济的支柱） |
+| Decentralized Settlement | /diːˈsentrəlaɪzd ˈsetlmənt/ | 名词短语 | 去中心化结算，就是不用银行 / 第三方，直接在链上完成交易和资金清算，没人能控制或篡改 | Ethereum provides decentralized settlement for AI agents.（以太坊为 AI 智能体提供去中心化结算服务） |
+| Coordination Backbone | /kəʊˌɔːdɪˈneɪʃn ˈbækbəʊn/ | 名词短语 | 协调支柱，就像 AI 机器人的「共享工作台」，让不同 AI 之间能互相沟通、合作干活 | Ethereum acts as the coordination backbone for the machine economy.（以太坊是机器经济的协调支柱） |
+| Machine Economy | /məˈʃiːn iˈkɒnəmi/ | 名词短语 | 机器经济，指 AI、机器人这些机器作为主体参与的经济活动，它们自己交易、赚钱、分配资源 | The machine economy is built on Ethereum, with humans at the center.（机器经济以以太坊为基础，以人为核心） |
+| Identity and Trust | /aɪˈdentəti ənd trʌst/ | 名词短语 | 身份与信任，ERC-8004 的核心功能，给 AI 做链上身份，让大家知道这个 AI 是谁、安不安全、值不值得合作 | EIP-8004 is about identity and trust for AI agents.（EIP-8004 是关于 AI 智能体的身份与信任的标准） |
+| Registry | /ˈredʒɪstri/ | 名词 | 注册表，就像链上的「AI 档案库」，记录 AI 的身份、信用、验证信息 | ERC-8004 has three registries: Identity, Reputation, Validation.（ERC-8004 有三个注册表：身份、声誉、验证） |
+| Validation | /ˌvælɪˈdeɪʃn/ | 名词 | 验证，确认 AI 的身份、代码是安全的、没被篡改，比如用 TEE 技术做安全验证 | The validation registry checks if an AI agent is safe to interact with.（验证注册表会检查 AI 智能体是否安全可交互） |
+| Reputation | /ˌrepjuˈteɪʃn/ | 名词 | 声誉 / 信用，记录 AI 之前的交易记录、合作表现，就像 AI 的「信用分」 | The reputation registry tracks how reliable an AI agent is.（声誉注册表会记录 AI 智能体的可靠性） |
+| TEE-based verification | /tiː iː iː beɪst ˌverɪfɪˈkeɪʃn/ | 名词短语 | 基于可信执行环境的验证，一种让 AI 代码无法被篡改的安全技术，保证 AI 不会偷偷做坏事 | TEE-based verification makes sure the AI agent’s code is not tampered with.（基于 TEE 的验证确保 AI 智能体的代码不会被篡改） |
+| Smart Contracts | /smɑːt ˈkɒntrækts/ | 名词短语 | 智能合约，链上自动执行的程序，比如 AI 之间约定好的交易，到了条件就自动完成，不用人操作 | Agents can negotiate automatically via smart contracts.（智能体可以通过智能合约自动协商） |
+| Builder Path | /ˈbɪldə pɑːθ/ | 名词短语 | 开发者路径，就是从新手到能自己开发 AI+Web3 项目的学习路线，教你怎么用这些规则做项目 | The builder path teaches you how to build with ERC-8004.（开发者路径教你如何基于 ERC-8004 进行开发） |
+
+  
+Agent（智能体）」？它和普通的 AI 聊天机器人有什么不一样？
+
+去中心化结算和我们平时用微信 / 支付宝转账，有什么区别？
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天我第一次系统了解了 AI + Web3 的核心方向，发现它的本质不是 “发布一个项目”，而是搭建能长期运行的经济基础设施。其中三个和我们普通人最相关的方向是：
 
 AI Agent + 钱包：让 AI 从 “只会说建议” 变成 “能帮你实际操作链上交易”，但必须在我们授权的安全规则里干活。
@@ -38,6 +64,7 @@ AI 驱动的链上分析工具：把链上公开的 “看不懂的数字” 翻
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 今天我第一次系统了解了 AI + Web3 的核心方向，发现它的本质不是 “发布一个项目”，而是搭建能长期运行的经济基础设施。其中三个和我们普通人最相关的方向是：
 
@@ -63,6 +90,7 @@ AI 驱动的链上分析工具：把链上公开的 “看不懂的数字” 翻
 
 
 
+
 ![9e624133935ce03186dcc4b827531082.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/JessicaLin2000/images/2026-05-20-1779292119144-9e624133935ce03186dcc4b827531082.jpg)![badd5a011b01a19645bbe496cfb6119b.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/JessicaLin2000/images/2026-05-20-1779292122489-badd5a011b01a19645bbe496cfb6119b.jpg)
 
 今天上了coleraning课，了解到了openclaw,hermes都只是工具，可以不装采用人工做笔记的方式。但是我觉得还是装了比较好，目前再装hermes有点卡在这个验证码的部分
@@ -76,6 +104,7 @@ AI 驱动的链上分析工具：把链上公开的 “看不懂的数字” 翻
 
 
 
+
 AI工具生态图谱有
 
 聊天型AI，AI编程助手，终端型AI比如open claw，codex，claude code等等，模型平台，通用agent AI
@@ -83,6 +112,7 @@ AI工具生态图谱有
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
