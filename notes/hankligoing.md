@@ -15,8 +15,96 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+今天观看学习**Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path**
+
+## 一、核心论点
+
+**Ethereum for AI = Ethereum for Humans**
+
+Ethereum 是公共、可编程的区块链，核心价值是：无需中介即可拥有数字资产，无需中心化运营方即可实现协作。随着 AI agents 成为新型"经济参与者"，Ethereum 正在演变为机器经济的**去中心化结算与协调骨干**。
+
+* * *
+
+## 二、为什么现在讨论 AI + Ethereum？
+
+-   过去 18 个月，LLM 从"聊天机器人"进化为能写代码、转移资金、做决策、雇佣其他 agents 的系统
+    
+-   AI agents 无法安全使用为人类设计的基础设施（密码、银行账户、法律合同等）
+    
+-   **当下设计的基础设施选择，将决定未来 agentic economy 的运行方式**
+    
+
+* * *
+
+## 三、Ethereum 的核心设计原则：CROPS
+
+| 字母 | 含义 | 说明 |
+| --- | --- | --- |
+| C | 抗审查 | 无单一主体能阻止有效交易执行 |
+| R | 开源且自由 | 代码可审计、可 fork、可组合（乐高积木式构建） |
+| O | — | （包含在整体框架中） |
+| P | 隐私 | 零知识证明：证明真实性而不暴露底层数据 |
+| S | 安全 | 代码按承诺运行，持续可用 |
+
+这些原则支撑了身份、声誉、支付、可执行协议等一整套 AI agent 基础设施。
+
+* * *
+
+## 四、关键协议与项目
+
+**EIP-8004**：AI agents 的身份与信任标准
+
+-   **验证（Verification）**：可验证 agent 身份
+    
+-   **注册表（Registry）**：agent 的注册与查询
+    
+-   **声誉（Reputation）**：agent 本身（非背后人类）的信任分数
+    
+-   可扩展至 API、oracle 等任何需要信誉机制的数字实体
+    
+
+**x402**：机器对机器（M2M）支付协议
+
+-   "Payment Required"状态码，支持稳定币支付
+    
+-   无需信用卡、API key 或发票系统
+    
+
+**真实案例**：Ethereum Foundation 试点 AI agents 辅助分配公共物品资金（数十万美元跨数百 GitHub 仓库），人类设计规则，agents 扩大执行规模。
+
+* * *
+
+## 五、Q&A 要点摘录
+
+-   **AI 主要应用领域**：支付是最大方向，可编程货币让 agent 行为可被约束（如限额钱包 + 智能合约）
+    
+-   **下一个突破点**：大型企业支付（Stripe、Visa 等入局 AI-powered payments）
+    
+-   **协议 vs 应用**：应用更重要，builders 应聚焦自己熟悉的垂直市场（如中国本地市场）
+    
+-   **关于 token**：Sophia 明确表示不评论项目 token，建议做 builders 而非 traders
+    
+-   **基础设施开放性**：最终由 builders 决定——是让少数公司掌控，还是建立在中立的去中心化基础上
+    
+
+* * *
+
+## 六、推荐资源
+
+-   [ai.ethereum.foundation](http://ai.ethereum.foundation)
+    
+-   [pse.dev](http://pse.dev)
+    
+-   [8004.org](http://8004.org)
+    
+-   Sophia 个人 Twitter（可进一步交流）
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天参加了 Co-learning｜任务推进与答疑，Week 1 例会｜优秀笔记分享、答疑、下周课程预告
 
 ![视频截图.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hankligoing/images/2026-05-22-1779456674890-____.png)
@@ -27,6 +115,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今天学习了解 AI 在Web3的应用。
 
 ![视频截图.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hankligoing/images/2026-05-21-1779369103831-____.png)
@@ -36,6 +125,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 学习了解Web3运行原理，包括账户、钱包、签名、交易、Gas、合约、区块浏览器和测试网验证如何组成一次完整链上操作。
 
 ![视频截图.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hankligoing/images/2026-05-20-1779272412804-____.png)
@@ -43,6 +133,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
