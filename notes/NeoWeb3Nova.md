@@ -15,8 +15,37 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+> 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
+
+> 关键动作：
+
+> 1.  补齐/确认模块 B 合约部署计划
+>     
+> 2.  用「5W 风险框架」对比 Agentic Commerce vs AI Security 方向
+>     
+> 3.  模块 C 最小原型产出：流程图 + 伪代码 + README
+>     
+
+> 今天把handbook的AI和WEB3基础知识部分顺了一遍，发现很多知识点之前都遗漏了，还有一些是发现之前理解都是错误的。
+> 
+> 然后把这周的课程任务清理了一些，每个任务里都有详情提交，这里就不冗余了。
+> 
+> ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-23-1779535778853-image.png)
+> 
+> 。
+
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-23.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-23.md)
+
+> [#AIWeb3School](#AIWeb3School) [#Week2Prep](#Week2Prep) [#Day6](#Day6) [#BuilderMode](#BuilderMode)
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-23-1779535827406-image.png)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 > 【AI × Web3 School 打卡 Day 5 | Week 1 收官】
 > 
 > 今日参加 Week 1 收官 Co-learning，同步模块 B/C 进度，完成 Week 1 整体复盘。
@@ -52,6 +81,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 > 今日推进模块 C 最小交叉实验原型，同时确认模块 B 链上实践完成度。
@@ -108,6 +138,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -136,6 +167,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -183,6 +215,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
