@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+学习了context，同时把之前学习的llm、prompt串了起来，串成了一条线，慢慢在理解ai的工作方式，但是进度有点偏慢，还需要加速。同时很多主题课和colearning都还没有去学习，有点焦虑，这个进度实在有点慢
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天学习prompt，理解了一个好的prompt不是一次成型的，需要不断与agent交流，修改，它是我们和大模型之间的桥梁，接下去两天要加快学习进度，今天听了几位优秀学员的分享，他们中有人介绍的学习方法和态度我觉得非常有用，能让我减少焦虑，更好学习
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今天撞上了Hermes，整体感觉比open claw聪明好多，也好用很多，准备开始使用它学习起来
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天的co learning学到的最大的一点其实是web3不会取代web2，ai正在改变一切，但是其实真的在用agent的人还是很少，加油学习，努力作出自己的agent落地案例，那我就已经走在全世界90%的人的前面了
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 今天用折腾安装GitHub CLI，不知道为什么总出问题。学习了昨天和今天的主题课，学习了两个领域的一些基础知识和基础工具，发现其实我两个领域都是小白
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
