@@ -15,8 +15,51 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+今日学习总结：  
+  
+今天参加了两场活动：  
+  
+一、Open Agentic Economy 分享会  
+
+-   了解了 Agentic Economy 机器支付协议标准
+    
+
+-   学习了 ERC-8004（服务发现与协商）和 ERC-8183（机器支付与结算）
+    
+
+-   理解了 Agent 经济系统的完整路径：服务发现 → 任务协商 → 支付结算 → 凭证记录
+    
+
+-   了解了相关开源项目和实现路径
+    
+
+二、LXDAO 周会  
+
+-   了解了 LXDAO 的治理结构和运作机制
+    
+
+-   观察到社区发展方向存在困惑
+    
+
+-   发现活动运营方面存在一些问题
+    
+
+关键认识：  
+
+-   Agentic Economy 是 AI × Web3 的重要落地场景
+    
+
+-   协议标准化是 Agent 之间互操作的基础
+    
+
+-   支付 + 身份 + 验证是 Agent 经济的三大支柱
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -56,6 +99,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 # 2026-05-21 每日学习笔记
 
@@ -118,6 +162,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -222,6 +267,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -248,6 +294,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
