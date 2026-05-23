@@ -22,10 +22,13 @@ AI x Web3 School
 第二个分享是Web3下乡计划，这个我有点难过，因为recording的质量很差，声音很小，有起码一半时间并没有声音。所以我也没有浪费时间继续听下去。有点遗憾。
 
 最后我会做一些handbook里面的最小实践，因为我一直都不知道如何开始，直到我的朋友提点我一下，说可以用Codex 。于是我下载了Codex，有点小激动。想不到有机会玩一下vibe coding。Let‘s see！
+
+![Screenshot 2026-05-23 at 20.59.52.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/deerjane-bjj/images/2026-05-23-1779550411952-Screenshot_2026-05-23_at_20.59.52.png)
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 今天去了例會，裡面的小夥伴都很厲害！！特別是Luvia，她只有大一而已，真的後生可畏！！我也要好好加油！！另外一樣有趣的事情，就是大家都有不同程度的焦慮，果然焦慮都是亞洲人的標配啊。。。
 
@@ -36,6 +39,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天終於可以部署hermes AI，作為一個編程小白，我有點小激動。之後再來更新一下set up的結果。
@@ -64,6 +68,7 @@ AI x Web3 School
 
 
 
+
 今日目標是要做3樣東西：
 
 1）根據ChatGPT提供的Study Plan，在Github建立Repo，並將Day1、2的筆記錄入。  
@@ -81,6 +86,7 @@ AI x Web3 School
 
 
 
+
 Day2
 
 My note is saved in Google docs: [https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX\_dfMbQRMUDxJcWA0k/edit?usp=sharing](https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX_dfMbQRMUDxJcWA0k/edit?usp=sharing)
@@ -90,6 +96,7 @@ Basically I just read the handbook and clarify the ideas of different AI concept
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
