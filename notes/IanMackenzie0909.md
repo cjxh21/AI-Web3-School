@@ -15,8 +15,147 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+## 1\. 📝 EIP-7702：讓 EOA 接上智能帳戶能力
+
+原本：
+
+```text
+EOA = 私鑰簽名 + 直接送交易
+Smart Account = 合約驗證 + 可程式化邏輯
+```
+
+EIP-7702 的方向是：
+
+```text
+EOA + authorization / delegation
+→ 暫時具備智能帳戶能力
+→ 透過 UserOperation 流程執行
+```
+
+白話說就是：
+
+> **原本普通錢包地址，也可以透過授權方式「暫時穿上智能帳戶外衣」。**
+
+它讓 EOA 有機會支援：
+
+-   批次交易
+    
+-   gas sponsor
+    
+-   權限降級
+    
+-   UserOperation 流程
+    
+-   更接近 Web2 的操作體驗
+    
+
+* * *
+
+## 2\. 💰 Sponsored UserOp：把 gas 問題藏到後面
+
+Sponsored UserOp 的重點是：
+
+```text
+UserOperation + Paymaster
+```
+
+也就是使用者不一定要自己付 ETH gas。
+
+流程變成：
+
+```text
+使用者操作
+→ 產生 UserOperation
+→ Paymaster 判斷是否贊助
+→ Bundler 送出
+→ 使用者完成操作
+```
+
+這對 UX 很關鍵，因為 Web3 新手最常卡在：
+
+-   沒 ETH
+    
+-   不懂 gas
+    
+-   不想先去交易所買幣
+    
+-   被多次簽名嚇跑
+    
+
+所以 Sponsored UserOp 的本質是：
+
+> **讓鏈上操作更像一般 App：點下去就完成，而不是先搞懂 gas。**
+
+* * *
+
+## 3\. ⛓️ L2 / RIP-7560：AA 的未來會更原生化
+
+ERC-4337 現在是用「應用層 workaround」達成智能帳戶：
+
+```text
+UserOperation → Bundler → EntryPoint → Smart Account
+```
+
+但 RIP-7560 想做的是：
+
+```text
+Native AA Transaction → 鏈本身直接支援智能帳戶交易
+```
+
+也就是把 Account Abstraction 從「外掛式架構」推向「鏈原生能力」。
+
+差別是：
+
+| 現在 ERC-4337 | 未來 RIP-7560 |
+| --- | --- |
+| 需要 EntryPoint | 不一定需要 |
+| 需要 Bundler | 可能由原生 mempool / proposer 處理 |
+| 是應用層方案 | 是協議層 / L2 原生方案 |
+| 現在可用 | 需要 L2 升級支援 |
+
+> **ERC-4337 是現在能用的 AA；RIP-7560 是未來更原生、更有效率的 AA。**
+
+* * *
+
+## 4\. 🌿 Core Standards：AA 不是單一技術，而是一組規格生態
+
+| 標準 | 核心意思 |
+| --- | --- |
+| ERC-4337 | 現在主流的智能帳戶架構 |
+| ERC-7562 | 保護 Bundler / Mempool 的安全規則 |
+| EIP-7701 | Ethereum L1 原生 AA 的方向 |
+| RIP-7560 | L2 / Rollup 原生 AA 的方向 |
+| RIP-7711 | Native AA 的 mempool 傳播規則 |
+| RIP-7712 | 多維 nonce，讓智能帳戶能平行處理不同任務 |
+
+最重要的是：
+
+> **ERC-4337 解決「現在怎麼做」；  
+> EIP-7702 解決「EOA 怎麼過渡到智能帳戶」；  
+> RIP-7560 / EIP-7701 解決「未來鏈要怎麼原生支援 AA」；  
+> ERC-7562 / RIP-7711 / RIP-7712 解決「安全、mempool、nonce 管理」這些基礎設施問題。**
+
+* * *
+
+KEY TAKE AWAY：
+
+> -   **EIP-7702 讓 EOA 也能接上 AA**
+>     
+> -   **Sponsored UserOp 讓 gas 體驗更接近 Web2**
+>     
+> -   **L2 / RIP-7560 讓 AA 往鏈原生化演進**
+>     
+> -   **Core Standards 則是整個 AA 生態的標準路線圖**
+>     
+
+Notion: [https://rainy-cry-c97.notion.site/3687c68bd87f81e3bf12d2e29a00d03c?pvs=74](https://rainy-cry-c97.notion.site/3687c68bd87f81e3bf12d2e29a00d03c?pvs=74)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ## 1\. Smart Account：錢包變成「可程式化帳戶」
 
 ERC-4337 最核心的改變是：  
@@ -117,6 +256,7 @@ Take away：
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 # 私鑰的意義：**揭開個人主權的序幕**
 
 ## 隨機創建 → 立即擁有
@@ -140,6 +280,7 @@ Take away：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 （先聽我嘮叨會：前兩天一直不知道去哪打卡🥹一直在任務區裡翻找，找了個寂寞🤣。今天終於發現要在哪點到了😭我是不是快被淘汰了🥲）
