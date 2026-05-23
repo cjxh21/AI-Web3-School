@@ -15,8 +15,120 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+**开发栈（Dev Stack）**
+
+可以先把一条最小开发链路拆成六步：
+
+在本地或浏览器 IDE 写出合约。
+
+编译合约，得到 bytecode 和 ABI。
+
+在本地链或测试网部署合约。
+
+写测试覆盖核心状态变化和权限边界。
+
+前端用合约地址和 ABI 读取或发送交易。
+
+在区块浏览器验证源码、交易和事件。
+
+\-Remix
+
+Remix 是浏览器里的 Solidity IDE，它可以编写、编译、部署和调试合约，适合入门、教学、原型和快速验证
+
+合约实验台
+
+\-Hardhat
+
+适合 JavaScript/TypeScript 项目，把合约开发接进测试、脚本和前端工程理解本地链、测试网、部署脚本、合约验证和环境变量如何组成完整开发流程
+
+合约工程框架
+
+contracts/：Solidity 合约源码。
+
+test/：TypeScript 或 Solidity 测试。
+
+ignition/ 或 scripts/：部署模块和脚本。
+
+hardhat.config.ts：网络、编译器、插件和变量配置。
+
+artifacts/：编译生成的 ABI、bytecode 和 metadata。
+
+\-Foundry
+
+更偏命令行和 Solidity-native 测试，适合高强度合约开发和快速反馈
+
+forge、cast、anvil
+
+forge test：运行合约测试。
+
+forge build：编译合约。
+
+anvil：启动本地测试链。
+
+cast call：读取链上合约。
+
+cast send：发送交易调用合约。
+
+\- OpenZeppelin
+
+提供常用合约标准和安全组件，但不能替代对业务逻辑的审查
+
+包含 ERC-20、ERC-721、AccessControl、Ownable、Pausable 等常见模块。使用成熟库可以减少重复造轮子，也能避免很多基础实现错误产品决策要自己做
+
+\-viem / wagmi
+
+主要解决前端与链交互的问题：读合约、写合约、管理账户、处理网络和缓存
+
+viem 是 TypeScript 以太坊接口库，强调类型安全和底层调用能力
+
+wagmi 则面向 React 应用，提供钱包连接、账户状态、合约读写和 hooks
+
+**网络（Network）**
+
+理解 Network，是为了知道一笔交易从钱包签名到最终被用户看到，中间经过了哪些层：钱包、RPC、mempool、区块、共识、执行、确认、索引和浏览器
+
+链上应用不是直接写数据库，而是在一个公开、按区块推进、由网络共识维护的状态机上提交请求
+
+\-Block
+
+区块是交易被批量提交和排序的单位
+
+一个区块通常包含交易列表、前一个区块的引用、状态根、时间戳、gas 使用情况和共识相关信息。交易进入区块后，节点会执行这些交易并更新全局状态
+
+\-Consensus
+
+Consensus 让这些节点在没有中心数据库的情况下，对区块顺序和状态变化形成一致看法
+
+\-PoS
+
+PoS 用质押和惩罚机制组织验证者，替代 PoW 挖矿来维护网络安全
+
+网络安全不是“免费”的，它来自经济质押、客户端实现和节点参与
+
+\-Testnet
+
+测试网用于在接近真实链的环境里测试合约、前端和交易流程
+
+Testnet 的资产没有真实经济价值
+
+\-L2
+
+Layer 2 通常把大量交易放到主网之外执行，再把结果或证明提交回主网
+
+费用更低、确认更快
+
+\-Rollup
+
+是主流 L2 扩展路线
+
+常见 rollup 类型包括 optimistic rollup 和 zero-knowledge rollup
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 观看回放 Web3运行原理
 
 助记词-私钥-公钥-钱包地址
@@ -119,6 +231,7 @@ Solidity 代码会被编译成 EVM 字节码，部署到链上后由节点执行
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 赶不上直播  
 观看回放 _AI 时代，Web3 开发者需要具备的基础知识和架构能力_  
   
@@ -137,6 +250,7 @@ Web3基础知识继续充电中……
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 学习以太坊的基础基础概念、生态系统  
   
 智能合约、dApps、Gas手续费、NFT  
@@ -146,6 +260,7 @@ Web3基础知识继续充电中……
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
