@@ -16,8 +16,17 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+0523筆記  
+  
+今天開始進行運用VS CODE搭建虛擬環境，並引入openai進行建置。  
+因為還是新手，所以過程花費30分鐘排錯，隨後導入成功。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 0522筆記
 
 經由昨天老師說的內容，目前正在嘗試做一個小專案，自動交易系統。
@@ -31,6 +40,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天最有印象的是驗證者validator這一部份  
@@ -50,6 +60,7 @@ AI x Web3 School
 
 
 
+
 0519筆記  
   
 透過Hermes指定一个“大脑”，也就是大语言模型。  
@@ -60,6 +71,7 @@ Hermes Agent支持众多主流模型，包括**OpenAI、Anthropic Claude。**
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
