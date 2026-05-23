@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+周末好好复习肖老师的区块链原理
+
+YouTube是好东西
+
+Web 3 career 也是行业明灯
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天学到某大佬说的
 
 如果一早对新出来的模型 新技术感到焦虑
@@ -37,6 +47,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今晚八点Elon 老师 讲解的AI in Web 3 application
 
 这是刚需 也是大方向
@@ -44,6 +55,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 Web 3的运行原理
@@ -59,6 +71,7 @@ Web 3的运行原理
 
 
 
+
 为什么用爱马仕
 
 因为更beginner friendly
@@ -66,6 +79,7 @@ Web 3的运行原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
