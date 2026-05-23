@@ -16,8 +16,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+0524筆記  
+  
+今天搭建LLM的時候遇到很多問題，一開始是完全無法啟動，原來是版本太新。  
+接著接入API發現很多大模型要token費用，試過openai、gemini、deepseek，雖然費用一開始都不高，但是前期還是需要以免費資源為主，於是看到grok，能夠運用，並且順利搭建成功。  
+  
+成功發展第一步，能夠對話的LLM模型。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 0523筆記  
   
 今天開始進行運用VS CODE搭建虛擬環境，並引入openai進行建置。  
@@ -26,6 +37,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 0522筆記
 
@@ -40,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -61,6 +74,7 @@ AI x Web3 School
 
 
 
+
 0519筆記  
   
 透過Hermes指定一个“大脑”，也就是大语言模型。  
@@ -71,6 +85,7 @@ Hermes Agent支持众多主流模型，包括**OpenAI、Anthropic Claude。**
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
