@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+```
+阅读如下章节
+```
+
+[**检索增强生成（RAG）**](https://aiweb3.school/zh/handbook/ai/rag/)
+
+[**智能体（Agent）**](https://aiweb3.school/zh/handbook/ai/agent/)
+
+[**框架（Frameworks）**](https://aiweb3.school/zh/handbook/ai/frameworks/)
+
+[**氛围编程**](https://aiweb3.school/zh/handbook/ai/vibe-coding/)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 -   阅读手册总览，了解四部分地图：AI 基础、Web3 基础、AI x Web3 Bridge、前沿探索。
     
 -   写下自己当前最强和最弱的基础区域。
@@ -28,11 +44,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 补齐学习者画像，阅读第一个选定的 Handbook 章节，并把一个不清楚的概念转化成 feedback 或小实验
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
