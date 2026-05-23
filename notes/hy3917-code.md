@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+**ERC-8004（身份）** — 给 AI 代理颁发"身份证"，让其他代理能找到它、信任它
+
+**ERC-8183（商业）** — 定义代理之间如何接任务、锁定资金、验收结算，相当于链上版 Upwork
+
+**x402（支付）** — 代理之间的即时微支付通道
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 OpenAI Agents SDK 是 OpenAI 官方推出的一个轻量级、功能强大的 Python 框架，专为构建单 Agent 或多 Agent
 
 协作工作流而设计。它秉持“Python 优先”的理念，让开发者无需引入过度复杂的抽象框架，就能轻松实现工具调用、状态管理、Agent
@@ -109,6 +119,7 @@ Libraries 提供。
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 [https://z168r49nf7s0-d.space-z.ai/](https://z168r49nf7s0-d.space-z.ai/)
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hy3917-code/images/2026-05-20-1779274011029-image.png)
@@ -139,6 +150,7 @@ Libraries 提供。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 《大语言模型 (LLMs) 指南》学习笔记
