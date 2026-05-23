@@ -15,8 +15,62 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+回放**AI Agent 入门 —— Hermes 从 0 到 1**
+
+1\. 一個學到的概念與方法：從 Prompt Engineering 轉向 Context Engineering
+
+•   核心概念：Hermes 的核心不再只是寫好提示詞，而是Context Engineering。這意味著 Agent 的效能取決於它能存取的記憶、技能文檔（Skills）以及它所處的環境邊界。
+
+•   運作方法：身份與任務隔離
+
+(1)   Hermes 支持在 Telegram 等平台利用不同的主題來隔離不同的 Agent 身份（例如：一個負責量化交易，一個負責通訊錄管理）。
+
+(2)   記憶不串台：每個身份擁有獨立的 Skill 和 Memory，這確保了 Agent 在執行特定任務時，不會被其他領域的上下文干擾。
+
+2\. 安裝過程與運用心得（深度技術細節）
+
+在實際操作 Hermes 的過程中，有幾個關鍵的技術細節與心得是維持系統穩定的核心：
+
+•   安裝時的環境權限與依賴：
+
+(1)   自動化配置：Hermes 提供一鍵安裝指令，會自動檢測並配置 Node.js、Python 與 Git 等環境。
+
+(2)   Sudo 權限的重要性：在 Linux/WSL2 環境下，安裝腳本會請求管理員權限，這是為了配置系統級服務，確保 Agent 可以在後台持續運行並在開機時自動啟動。
+
+•   通訊網關（Gateway）的配置心得：
+
+(1)   安全性優於便利性：安裝過程中，絕對不要將 API Key 或 Secret 發送到聊天群組中。建議應透過「環境變量」的方式設定，或讓 Agent 提供指令引導你在本地機器上手動設置。
+
+(2)   防止「爆 Token」的配置：強烈建議開啟Wake Word功能（如：設定關鍵字為「小黑」）。這樣 Agent 只有在被點名時才會啟動大模型運算，能有效節省 API 費用並防止在群組中亂入對話。
+
+(3)   硬體需求超乎想像的低：即使是內存僅 3-4GB、CPU 性能較弱的舊設備，只要能跑 WSL2，就能流暢運行 Hermes，因為它主要依賴遠端 API 而非本地算力。
+
+3\. 一個準備採取的行動：建立「多來源自動化資訊簡報」
+
+•   行動目標：利用 Hermes 讀取本地文件的能力，建立一個每日自動匯報系統。
+
+•   執行步驟：
+
+(1)   利用 hermes module 連結微信或 Telegram 作為輸出端。(2)
+
+(2)   將 GitHub 倉庫或本地 Markdown 文檔路徑設定為 Knowledge Source。
+
+(3)   設定定時任務，讓 Agent 每天早晨自動獲取最新的實時新聞，結合我儲存的知識庫，生成一份專屬的簡報發送到通訊軟體。
+
+4\. 一個想繼續追問的問題：自動化驗證與糾錯的界限
+
+追問內容：影片提到 Hermes 具備「自動觀察結果並自我糾錯」的循環。我想追問：這種糾錯機制是否能處理「邏輯性幻覺」（Logical Hallucination）？
+
+例如：當 Agent 執行一條本地 CLI 指令失敗時，它會嘗試修復指令；但如果指令執行成功但結果邏輯錯誤（如量化交易中的計算公式偏差），Hermes 是否有內建的驗證框架（Validation Framework）來捕捉這類非崩潰型的錯誤？
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/1118sophie/images/2026-05-23-1779547105827-image.png)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 **1\. AI Agent 的本質與演進**
 
 **\* AI Agent 更像「數位助理」或「執行者」，能理解目標後，自主拆解步驟並完成任務。**
@@ -85,6 +139,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 **在 AI 時代，開發者的價值不在於編碼速度，而是在於對底層知識的掌握與架構設計能力。**
 
 **1\. AI 時代下開發者的角色轉變：從「執行者」變為「架構師」**
@@ -130,6 +185,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 研究主題擬定與發想
