@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+今天完成了AI开发相关的入门学习，内容覆盖官方API基础课程、Z.ai的GLM MaaS API开发者文档（包括OpenAI兼容接口的快速上手与5分钟跑通第一个请求）、Z.ai Coding Plan解锁GLM全系列模型调用、Claude Code 101的AI编程工具入门，以及AI Agent基础概念的视频课程。通过这些内容，我不仅掌握了大模型API调用的基础流程与OpenAI兼容接口的优势，还了解了AI编程工具的高效用法，初步建立了对AI Agent核心要素的认知，为后续的AI开发实践打下了扎实基础。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天系统开启大语言模型入门学习，通过视频搭建起对LLM的基础认知与核心直觉，借助Hugging Face课程深入理解大模型的底层工作原理，同时上手实操练习LLM基础API调用，跟着官方课程完整学习Claude API的使用方法。从理论概念到实操落地，逐步掌握大模型基础逻辑与接口调用技能，夯实AI开发入门基础
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 理清Prompt、Workflow、Agent的边界：Prompt由人决策，仅单次问答；Workflow是固定预设流程，模型为流程节点；Agent可自主规划、动态调用工具、管理状态，三者失控风险与可调试性差异明显。
 
@@ -32,6 +39,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今日学习了LLM大模型基础核心知识点，梳理总结如下：
