@@ -15,8 +15,63 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+## **今日完成**
+
+### **受限 Web3 助手设计**
+
+新建 `tasks/DeFi-Swap-Assistant.md`：
+
+-   **AI 能做：** 规划、报价查询、风险检查、生成交易说明、验证结果
+    
+-   **AI 不能做：** 接触私钥、自动签名、自动授权
+    
+-   **3 个人工确认点：** 钱包连接 → Approve 授权 → Swap 签名
+    
+-   **5 类风险：** 数据源污染、用户盲从签字、链上状态变化、AI 无法识别所有诈骗、敏感信息保存
+    
+
+### **项目拆解**
+
+新建 `tasks/AIxWeb3-Project-Dissection.md`，拆解两个真实项目：
+
+**x402（生产级）**
+
+-   解决：AI Agent 怎么给 API 付钱
+    
+-   核心：HTTP 402 + USDC，75M 笔/月
+    
+-   成员：Stripe、Visa、Circle、Cloudflare、Coinbase 等 23 家
+    
+
+**ERC-8004（Draft）**
+
+-   解决：AI Agent 怎么建立和传递信任
+    
+-   核心：ERC-721 身份 + Reputation Registry + Validation Registry
+    
+-   注意：Draft 状态，落地需核实
+    
+
+**两者关系：** ERC-8004 管信任，x402 管结算，合在一起是 AI Agent 经济的基础设施栈。
+
+### **ethskills skill 保存**
+
+从 [https://ethskills.com/SKILL.md](https://ethskills.com/SKILL.md) 下载并保存为 Hermes skill。
+
+关键事实：
+
+-   Gas < 1 gwei（主网 Swap 约 $0.04）
+    
+-   EIP-7702 已上线
+    
+-   Polygon zkEVM 即将关停
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ### **主题 1：Vibe Coding（氛围编程）**
 
 **一句话解释：** 人和 AI Coding Agent 共同迭代软件的工作方式，人负责方向、约束和验收，Agent 负责生成、修改、搜索和执行工程动作。不是"把需求丢给 AI 等代码"，而是更清楚地管理 repo、任务、上下文、测试和提交边界。
@@ -126,6 +181,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 ### **主题 1：LLM 核心概念**
 
@@ -538,6 +594,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -770,6 +827,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1153,6 +1211,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
