@@ -15,8 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+观看web3运行原理的直播
+
+1.  ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-05-23-1779542705454-image.png)
+    
+    大概路径：身份——授权——传播——排序——执行——确认
+    
+2.  共识机制:PoW vs PoS
+    
+    ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-05-23-1779544560185-image.png)
+3.  智能合约：写在链上能被交易触发的代码
+    
+4.  web3是三门学科的交叉：密码学、经济学、社会学
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 Hermes Agent 简介
 
 Hermes Agent 是由 \[Nous Research\]([https://nousresearch.com/](https://nousresearch.com/)) 开发的开源 AI 智能体框架，核心特性：
@@ -199,6 +216,7 @@ hermes
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 1.web3一部分程度上是要解决信任问题
 
 2.如何解决信任问题（区块链）：
@@ -236,6 +254,7 @@ hermes
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 1.了解了Hermes vs OpenClaw一些对比：
 
 想要一个 越用越聪明的贴身 AI 助理，单智能体 + 内置学习闭环 → 选 Hermes
@@ -251,6 +270,7 @@ hermes
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
