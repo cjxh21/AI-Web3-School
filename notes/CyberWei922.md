@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天印象最深的是搞清楚了 Prompt、Workflow、Agent 三个东西的区别。之前老是觉得用 ChatGPT 问问题就算是在用 AI 了，现在才知道那只是最基础的 Prompt 层，模型回答完就结束了，决策还是在人这边。Workflow 是把路径提前写死，Agent 才是真的让模型自己规划、自己调工具、自己决定下一步，三个东西的复杂度和风险完全不在一个量级。感觉以后看到有人说”我做了个 AI agent”会忍不住想问他到底是哪一层。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 在当前 AI 应用开发的浪潮中，MaaS（模型即服务）的普及彻底颠覆了传统的开发门槛。它将高不可攀的 GPU 算力成本转化为“按 Token 付费”的轻量化管道，让开发者只需操控 `model`、`messages`、`temperature` 和 `max_tokens` 这四个核心入参，就能将顶级大模型的智慧无缝接入自己的代码中；从官方的 Quick Start 开始跑通第一个 API 请求，不仅是技术上的“Hello World”，更是从一个硬件使用者向 AI 原生应用构建者迈出的关键一步。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 最近在复盘大模型落地应用时，对 **Prompt、Workflow（工作流）** 和 **Agent（智能体）** 的边界、风险以及可调试性有了更深的体感。这三者不是简单的技术升级，而是三种完全不同的**人机协同范式**：
 
@@ -54,11 +61,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 ASDA
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -77,6 +86,7 @@ ASDA
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
