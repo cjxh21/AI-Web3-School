@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+-   今天在培训Hermes。
+    
+-   明天批量做任务。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 -   成功实践Hermes部署
     
 -   思考了Hackqthon选题的可能性，钱包选题大家都很有想法，之外的选题又有什么呢？
@@ -24,6 +32,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 -   co-learning
     
@@ -37,6 +46,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 -   参加AI下乡计划
     
 
@@ -45,6 +55,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -59,6 +70,7 @@ AI x Web3 School
 
 
 
+
 -   钱包与抽象X推文大纲
     
 -   参加Hermes部署讲座。准备部署一个Hermes。
@@ -66,6 +78,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
