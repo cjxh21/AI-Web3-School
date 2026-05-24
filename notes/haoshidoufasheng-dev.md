@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天周末休息
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-23-1779549460539-image.png)
 
 分享关于web行业的相关内容，回答评论问题关于黑客松等等
@@ -24,6 +30,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-22-1779448523466-image.png)
 
@@ -34,6 +41,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-21-1779378123882-image.png)
 
 今天的学习讲述web3与ai相结合的相关知识
@@ -41,6 +49,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -80,11 +89,13 @@ AI x Web3 School
 
 
 
+
 今天耽误了直播的前半部分，只听了后半部分，大概学习了一下Hermes 的部署与配置，还没有看完，明天将这两天学习内容补上
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
