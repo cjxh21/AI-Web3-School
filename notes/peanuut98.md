@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+Day 7 · 2026-05-24 · @peanuut98
+
+今日学习：
+
+\- 复盘了在 Rabby + Base Sepolia 上发的那笔测试网转账（一个测试地址 → 另一个测试地址，全程测试网，无主网资产）。
+
+\- 在 BaseScan 上把 Tx Hash / Status / Block / Timestamp / From / To / Value / Txn Fee 这 7 个字段重新读了一遍，对照 Day 1–Day 3 学的概念，每个字段都能用自己的话解释。
+
+\- 整理了一份「链上验证清单」：钱包说成功不算数，必须 Tx Hash 在 BaseScan 上能搜到才算真的上链；From 余额扣减 = Value + Txn Fee。
+
+\- 划清楚了哪些步骤钱包能帮我做（签名 / 估 Gas / 广播），哪些必须人工确认（网络选择 / 地址核对 / 金额位数 / Gas 量级 / 签名内容）。
+
+最大的认知变化：
+
+\- 区块浏览器不是「一个看交易的网站」，是链上事实的唯一二次验证渠道 — 这是「钱包侧成功」和「链上侧成功」的分界线。
+
+卡点：
+
+\- 还没真正接触合约调用 / ERC-20 转账，BaseScan 的 Token Transfers 和 Input Data 怎么读，下周再补。
+
+明日 / 下周：
+
+\- Day 8：写 Week 1 weekly note，把这一周整理成一份复习材料。
+
+\- Week 2：开始读 Transaction 的细节（mempool、确认数、ERC-20、第一次 Read Contract）。
+
+🔗 [https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-24.md](https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-24.md)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 Day 6 · 2026-05-23 · @peanuut98
 
 诚实记录：Day 4 (05-21) 和 Day 5 (05-22) 我没打卡，也没真的学。今天 Day 6 不补假打卡，而是回到主线把 Wallet 这一章稳住。
@@ -51,6 +83,7 @@ Day 6 · 2026-05-23 · @peanuut98
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 Day 3 · 2026-05-20 · @peanuut98
 
 今日学习：
@@ -84,6 +117,7 @@ Day 3 · 2026-05-20 · @peanuut98
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 Day 2 · 2026-05-19 · @peanuut98
 
 今日学习：
@@ -109,6 +143,7 @@ Day 2 · 2026-05-19 · @peanuut98
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
