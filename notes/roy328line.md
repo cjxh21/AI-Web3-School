@@ -15,8 +15,32 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+\# 2026-05-24
+
+<!-- DAILY\_CHECKIN\_2026-05-24\_START -->
+
+今日學習：深讀 Machine Payment 模組（Stablecoin Payment / Budget / Quote / Payment Intent / x402 / MPP / Subscription / Micropayment）
+
+GitHub 筆記：[https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-24.md](https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-24.md)
+
+Machine Payment 核心整理：
+
+第一性原理：Agent 不應該擁有無限支付能力，只應該拿到具體任務、預算和收款方範圍內的支付權限。支付能力 = 執行能力，一旦 Agent 可以付款，它就可以消耗用戶資金或被惡意上下文誘導。
+
+三個核心原則：預算先於執行（沒有預算邊界 = 沒有安全自動支付）、報價必須可比較（Agent 需知道價格/幣種/有效期/退款條件）、收據必須可驗證（付款後能證明付給誰/為什麼付/交付了什麼）。
+
+關鍵知識點：x402 把 HTTP 402 Payment Required 變成互聯網原生支付流程，讓 Agent 處理 402（付款）就像處理 401（登錄）一樣自然。MPP 協議化機器間支付流程：服務發現 → 報價 → 授權 → 結算 → 收據。Micropayment 不適合每次都上鏈結算（成本超過服務本身），需要 L2 / payment channel / 批量結算設計。
+
+個人洞察：機器支付不是技術問題，而是信任問題。Builder 機會：「Agent 可以信任、用戶可以控制、服務方可以驗證」的支付基礎設施。
+
+<!-- DAILY\_CHECKIN\_2026-05-24\_END -->
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 學習日誌 · 2026-05-23（Day 7）
 
 今日學習：Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path（直播）+ Agent Wallet 模組深讀
@@ -35,6 +59,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 學習日誌 · 2026-05-22（Day 6）
 
 今日學習：Co-learning 任務推進 + 例會分享 + Week 1 整體複習
@@ -52,6 +77,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 \-–
@@ -104,6 +130,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 
 
+
 今日學習：Frameworks 模組深讀（LangChain / LangGraph / OpenAI Agents SDK / Hermes）+ Hermes 安裝實作
 
 主要收穫：
@@ -122,6 +149,7 @@ GitHub 筆記：https://github.com/IntensiveCoLearning/AI-Web3-School/pull/29
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -151,6 +179,7 @@ Hermes Agent 預習：Skills 可復用高層指令集 / Long-term Memory 跨 ses
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
