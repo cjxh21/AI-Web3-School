@@ -15,19 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+[https://www.notion.so/AI-Web3-Week-1-Proof-of-Work-Pack-36abbd522ac780fca5d9eb09e034768a?source=copy\_link](https://www.notion.so/AI-Web3-Week-1-Proof-of-Work-Pack-36abbd522ac780fca5d9eb09e034768a?source=copy_link)
+
+今天我总结了这周的学习内容和结果
+
+反思我这一周的学习，我发现我的时间安排过于轻松，每天只学2小时根本不够用，我应该调整好当下，早睡早起
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天我完成了多个任务，参加了colearning和周分享会
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今天在共学和AI下乡计划中了解了AI\*Web3的方向和项目，明白了AI和web3的机会：去中心化 AI 基础设施、AI Agent + 钱包、AI 链上分析工具、智能钱包和安全助手、交易所和 DeFi 智能风控，这又利于我在后面的共学中更好地找到自己前进的方向
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 今天学校课程比较忙，所以我看了学习面板中的一些对AI介绍的视频，对LLM模型又来了大概的了解，LLM通过对数据的收集和处理，判断一句话下一秒生成每种词语的概率，生成决策树，再通过决策树的分析，回答用户的问题。
@@ -37,6 +49,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
