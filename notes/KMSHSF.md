@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+前两天太忙了，忙得我都忘记打卡了，我还以为已经超过一周三次没有打卡了，实际上是已经一周两次没有打卡了，吓我一跳，一看今天再不打卡就要被淘汰了，今天恢复学习打卡~
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 参加今晚的“AI下乡计划”直播
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 刚听完Bruce老师的直播分享，很有收获哇！！！
 <!-- DAILY_CHECKIN_2026-05-20_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 参与共学~
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
