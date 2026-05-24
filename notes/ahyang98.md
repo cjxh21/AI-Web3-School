@@ -15,13 +15,35 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+# obsidian
+
+1.  obsidian为本地md文档，方便与AI结合
+    
+2.  可以保存到github进行同步和管理
+    
+3.  可以采用karpathy模式，进行每日信息收集、AI整理、总结
+    
+
+这是目前对obsidian的应用模式
+
+# subagent或者多agent模式
+
+1.  multi agent模式，上下文隔离，互不干扰，可以并行执行
+    
+2.  hermes中有看板模式，可以控制多任务之间的依赖。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天了解到obsidian和subagent，明后天会重点学习下。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 # task3存在的问题
 
@@ -30,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 # Task3
@@ -75,6 +98,7 @@ ok，按照开发计划开始开发吧
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
