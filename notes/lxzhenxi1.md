@@ -15,19 +15,41 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+Future of AI \* Ethereum: Ethereum becoming the coordination layer of value commitment for machines in the machine economy, with humans at center. ERC-8004: Trustless Agent went live same week as OpenClaw.
+
+Core thesis: Ethereum moves value and encforces agreement without needing a central operator.- AI Agent Infrastructure.
+
+CROPS (Censorship Resistace, Opensource, Privacy, Security) are what agents need: Identity, Reputation, Payments, Enforceble Agreeemnt, Neutral Infrastructure.
+
+A neutral layer where machines coordinate at scale, but people train agency, ownership and control.
+
+EIP 8004: A standard that gives agents verificable indentity and reputation on the public nework.
+
+X402 payments: machine to mahine payment. Receives HTTP402 :Payment required code, for API and agents to adviertise price. Accept payment with a single line of code- can be stablecoin.
+
+Example: Deep funding. Allocate funding to github repos.
+
+[Websites: 8004.org](http://8004.org) ai.ethereum.foudation [PSE.dev](http://PSE.dev)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 练习用AI生成定期行业简报，流程图以及行业研究
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 学习优秀笔记
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 web3 钱包：以助记词为母单位生成子钱包 公钥取哈希后部分字段 签字可验证 钱包是托管钥匙调用链上记录的出口 资产链上记账
@@ -50,6 +72,7 @@ web3 核心：密码学 经济学 社会学
 
 
 
+
 成功设置hermes agent Telegram channel 并创建GitHub Repo
 
 [https://github.com/lxzhenxi1/ai-web3-school-cohort-0](https://github.com/lxzhenxi1/ai-web3-school-cohort-0)
@@ -61,11 +84,13 @@ web3 核心：密码学 经济学 社会学
 
 
 
+
 成功安装Hermes Agent
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
