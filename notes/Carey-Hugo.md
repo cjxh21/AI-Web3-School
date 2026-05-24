@@ -15,8 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+```
+✅ Day 7/30 - AI × Web3 School
+
+今日完成：
+1. W1 Task 4：Foundry 合约部署到 Sepolia 测试网
+   - 合约：SimpleStorage（get/set）
+   - 地址：0x1dC966b692C45eCb0E3e96416d9C7f8057F74A1D
+   - TxHash：0x61d54e3daec4bd84dec0718caefd50a0f2edd30d513db365d307715e3374bc8b
+   - 链上验证：status=0x1 ✅
+
+W1 全部完成！
+
+明日计划：
+- W2 启动：Agent 入门
+- WCB W2 打卡
+```
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 Day 6/30 - AI x Web3 School
 
 1\. W1 Task 3：Etherscan 区块链浏览器实战 ✅
@@ -45,11 +66,13 @@ Day 6/30 - AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 天完成了 W1 前三节核心概念学习：1. 区块链浏览器 Etherscan - 理解了址/交易/区块结构，可查询任意公开地址余额和历史；2. 钱包与账户类型 - EOA（私钥控制）、智能合约账户（代码控制）、多签钱包（多人签名）三者的权限差异；3. 智能合约 - 部署在链上的程序，代码即规则，执行即清算，无私钥。明天计划：领取 Sepolia 测试币，部署最小合约，完成 W1 测试任务。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 ✅ 今天学了什么：  
@@ -66,6 +89,7 @@ Day 6/30 - AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -120,6 +144,7 @@ Web3 基础 — 密码学 / 钱包 / 智能合约
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
