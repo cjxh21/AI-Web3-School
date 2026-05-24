@@ -16,19 +16,27 @@ AI agent
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天看youtube的视频给hermes装上了kanpan和仪表盘，可以实现多agent并行了，然后还通过全息投影把hermes的记忆通过两层结构，一层是memory tool，第二层是context factor，第二层可以保存到本地，从而实现了hermes的无限记忆，不过这一条四十分钟的视频和操作我做了一整个上午，好消耗精力 我想做一个四小时deadline，不然太累了。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ![{8D104B07-5C11-4342-8F69-07B6887A79D6}.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sunyuchenyaobo/images/2026-05-21-1779359792748-_8D104B07-5C11-4342-8F69-07B6887A79D6_.png)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 今天在youtube上学习了chase ai的cladue code＋obstian的工作流，搭建了一个ai第二大脑系统
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 ![{D186D30A-BCB6-48C4-A741-F29909A2261E}.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sunyuchenyaobo/images/2026-05-19-1779171379995-_D186D30A-BCB6-48C4-A741-F29909A2261E_.png)
@@ -38,6 +46,7 @@ AI agent
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
