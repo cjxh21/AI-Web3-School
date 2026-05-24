@@ -15,13 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+1.  **Prompt → Workflow → Agent 的边界**：Prompt 是让模型回答，决策在人；Workflow 是预定义任务流程，模型是其中一个节点，路径固定；Agent 是模型自主规划、动态调用工具、跨轮管理状态。三者失控风险和可调试性完全不同。
+    
+2.  **AI Coding 工具的价值与限制**：Claude Code、Codex CLI、Cursor 能快速生成样板代码、解释陌生库、加速原型。但代码审查、测试设计、架构决策无法被替代。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 **LLM：Large Language Medols**
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 今天我整理了 Week 1 的学习目标和任务范围。作为 AI、Web3 和编程都刚入门的学习者，我把本周路径拆成几个必做任务：搭建 learning agent 和 GitHub repo、完成一次 AI 工具实践、理解 Web3 基础链路、完成一次测试网交互，并做一个 AI x Web3 最小交叉实验。
 
@@ -32,6 +41,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -90,6 +100,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
