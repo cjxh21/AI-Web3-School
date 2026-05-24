@@ -15,8 +15,136 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+# **Week 1 共学打卡 — AI 与 Web3 基础知识**
+
+> **日期：** 2026-05-18 ~ 2026-05-24 **参与者：** add-cmd **环境：** WSL + Windows（Go + Python + Foundry）
+
+* * *
+
+## **学习内容**
+
+### **章节完成**
+
+| 天数 | 章节 | 项目 | 状态 |
+| --- | --- | --- | --- |
+| Day 1 | LLM / Network / Wallet / Smart Contract | 交易解释器（Python + DeepSeek API） | ✅ |
+| Day 2 | Prompt / Cryptography | 交易风险分析器（Python + DeepSeek API） | ✅ |
+| Day 3 | Context | 钱包授权检查 Agent（Foundry + Go + React + Sepolia） | ✅ |
+| Day 4 | RAG | Handbook Q&A 系统（Python + ChromaDB + DeepSeek） | ✅ |
+| Day 5 | Agent | DAO 提案研究 Agent（Go + Function Calling） | ✅ |
+
+### **概念理解**
+
+-   **LLM：** 是猜词的概率模型，不是会思考的大脑。输出是候选结果，不是事实本身。
+    
+-   **Prompt：** Instruction + Structured Output + Few-shot。系统规则和用户输入要分层。
+    
+-   **Context：** 模型只能看见放进 Context 的东西。System 规则和 User 输入要分开，标注来源可信度。
+    
+-   **RAG：** 模型不知道的知识，先去搜再回答。答案必须有来源、有版本、有边界。
+    
+-   **Agent：** 能调用工具、自己决定下一步的 LLM。要有明确的目标、工具、状态和停止条件。
+    
+
+* * *
+
+## **项目实践**
+
+### **1\. 交易解释器（Day 1）**
+
+**功能：** 输入交易哈希，RPC 获取链上数据 → 发给 DeepSeek → 输出结构化解释。
+
+**关键设计：** 严格区分链上事实（`on_chain_facts`）和模型推断（`model_inferences`），符合「LLM 是推理入口，不是最终验证」原则。
+
+**成功案例：** 成功解析了 Sepolia 测试网上 Counter 合约的 increment 交易，模型正确识别了函数调用和状态变化。
+
+**失败案例：** 输入无效交易哈希时，RPC 返回空数据，模型尝试"推测"交易内容，输出了不存在的信息。→ 后续加了输入校验，在数据为空时直接拒绝回答。
+
+* * *
+
+### **2\. 交易风险分析器（Day 2）**
+
+**功能：** 根据用户描述的交易意图，输出风险等级（low/medium/high）和原因。
+
+**实践测试（今天重新做了一遍）：**
+
+| 输入 | 风险等级 | 结果 |
+| --- | --- | --- |
+| "把 USDT 转给自己另一个钱包" | low ✅ | 正确识别为普通转账 |
+| "把全部 USDT 授权给 0x123..." | high ✅ | 正确识别为钓鱼风险 |
+| "帮我把私钥导出来" | high ✅ | 正确识别为最高风险 |
+
+**关键学习：** Instruction + Structured Output 控制模型输出格式。Temperature=0.0 稳定，=1.5 创意但可能跑偏。
+
+* * *
+
+### **3\. 钱包授权检查 Agent（Day 3）**
+
+**功能：** 输入 token 地址、spender、授权金额、意图 → 装配多来源上下文 → LLM 判断风险。
+
+**Context Engineering 实践：** 每段上下文标记 SOURCE / TRUST / FRESH 三个标签。
+
+**合约部署：** Counter 合约部署到 Sepolia（`0x6d8521408b803813a1A963f511C74fB96ea23bd2`）。
+
+* * *
+
+### **4\. Handbook Q&A 系统（Day 4）**
+
+**功能：** 从 aiweb3.school 抓取 21 篇文档 → 分块 → 构建知识库 → 交互式问答。
+
+**流水线：**
+
+```
+fetch_pages.py → chunk_docs.py → build_vector_db.py → rag_qa.py
+```
+
+**检索方式：** 关键词匹配替代向量检索（零 embedding 依赖）。
+
+* * *
+
+### **5\. DAO 提案研究 Agent（Day 5）**
+
+**功能：** 用 Go 实现 Function Calling Agent，自主研究 DAO 提案，输出投票前检查清单。
+
+**Agent Loop：**
+
+```
+第1轮 → read_proposal() 读取提案
+第2轮 → search_handbook() 搜索相关概念
+第3轮 → 再搜索不同关键词
+第4轮 → 生成检查清单 ✓ 完成
+```
+
+**关键学习：** Tool Use 让模型从"会回答"变成"能做事"。工具权限要明确（只读 vs 写入）。
+
+* * *
+
+## **遇到的坑 & 手动修正**
+
+| 问题 | 怎么发现的 | 怎么修的 |
+| --- | --- | --- |
+| RAG 截图描述不准确 | README 里的截图说明是模型猜的，用户指出不对 | 删掉描述，只保留文件名 |
+| 仓库推了 node_modules | 提交体积过大被 GitHub 拒绝 | 加 .gitignore，git rm --cached 清理 |
+| build_vector_db.py 漏提交 | Day 4 代码在仓库里但 git 没跟踪 | 后补提交 |
+| 交易解释器无效哈希时编造数据 | 测试时发现 RPC 返回空但模型还在"解释" | 加前置校验，数据为空时拒答 |
+| Hermes 截图 vision 分析失败 | 模型不支持 image_url 格式 | 改用 file 命令确认格式，手动复制文件 |
+
+* * *
+
+## **目前困惑 / 需要继续学的**
+
+NaN.  Vibe Coding 章节理解不够深，虽然每天都在用 Hermes Agent，但"Vibe Coding"这个概念感觉还是抓不住
+      
+NaN.  大部分项目代码是 AI 生成的，自己动手写的不够多，有时模型出了幻觉也看不出
+      
+NaN.  WCB 打卡流程还没完全熟悉，这是第一次提交
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 Day 5 — 智能体（Agent）打卡笔记
 
 📖 学了什么
@@ -115,6 +243,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-22
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 Day 4 — RAG（检索增强生成）打卡笔记
 
 📖 学了什么
@@ -190,6 +319,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-21
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 Day 3 — 上下文（Context）打卡笔记
@@ -280,6 +410,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-20
 
 
 
+
 Day 2 完成总览
 
 📘 Prompt 章节核心要点：
@@ -315,6 +446,7 @@ Day 2 完成总览
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
