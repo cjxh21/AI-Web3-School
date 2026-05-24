@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+笔记： [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-24.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-24.md)  
+学习了 Web3 网络的基本运行方式，理解了 Chain、Network、Node、Transaction 和 Wallet 之间的关系。  
+Web3 可以先理解成一套“公开账本系统”，资产记录在链上，钱包并不存钱，而是负责管理私钥、签名和发起交易。一笔交易大致会经历“钱包签名 → 发到网络 → 节点验证 → 打包进区块 → 链上确认”的过程。
+
+钱包负责签名，节点负责验证，区块负责记录，整个网络负责共同认账。
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-24-1779621052439-image.png)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 学习笔记：  
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md)  
   
@@ -27,6 +39,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-22.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-22.md)
 
@@ -39,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 [https://github.com/heziwang/ai-web3-school-cohort-wang](https://github.com/heziwang/ai-web3-school-cohort-wang)
@@ -54,6 +68,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -82,6 +97,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
