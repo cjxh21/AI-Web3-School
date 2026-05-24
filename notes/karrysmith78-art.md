@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+### **1\. Maintainers（维护者）**
+
+这些角色保证系统正常运行：
+
+-   **Developers（开发者）**：负责编写和维护智能合约代码。
+    
+-   **Oracles（预言机）**：向系统提供链下价格数据（如 ETH/USD 价格），保证清算时有真实可靠的市场价格。
+    
+-   **Keepers（清算人）**：监控抵押仓位，当抵押不足时，触发清算机制，把抵押品卖出，维持系统稳定。
+    
+
+👉 可以理解为“**运维团队**”，保证 DAI 不会失控。
+
+### **2\. Governors（治理者）**
+
+这些角色决定系统的规则：
+
+-   **MKR Holders（MKR 持有人）**：MKR 是 MakerDAO 的治理代币，持有人可以投票决定抵押率、利率、清算机制等参数。
+    
+-   **Risk Teams（风险团队）**：评估哪些资产可以作为抵押品、设定风险参数，保证系统不被高风险资产拖垮。
+    
+
+👉 可以理解为“**股东+风险管理部门**”，负责制定政策。
+
+### **3\. Users（用户）**
+
+真正使用 DAI 的人：
+
+-   **Vault Owners（仓库拥有者）**：把 ETH、USDC 等资产抵押到协议中，生成 DAI。
+    
+-   **DAI Holders（DAI 持有人）**：使用、存储、交易 DAI 的人。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 ## **方式 A（优先）：用系统盈余缓冲 Surplus Buffer填坑**
 
 -   协议平时会累积“盈余”（来自稳定费、PSM 手续费、RWA 收益等），先放进 **Surplus Buffer**。
@@ -45,6 +81,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 ## **方式 A（优先）：用系统盈余缓冲 Surplus Buffer填坑**
 
@@ -77,6 +114,7 @@ AI x Web3 School
 
 
 
+
 ## **1\. 清算机制**
 
 -   当抵押率过低时，系统会拍卖抵押物，确保 DAI 有足够资产支撑。
@@ -105,6 +143,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
