@@ -15,13 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天学习了python，安装了hermes
+
+明天白天计划把hermes跟完，python跟完
+
+晚上七点到九点学新的
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 周六，放假一天，先欠着，前面忘打了，算补签
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 colearning打卡
 
@@ -32,12 +43,14 @@ colearning打卡
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 开始一件事情，需要情绪  
 完成一件事情，需要定力
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
