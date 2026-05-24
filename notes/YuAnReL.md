@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今日摸鱼
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 ## **Today’s Goal**
 
 -   学习 DeFi 的基础概念：Token、AMM、Lending、Stablecoin、Liquidity。
@@ -349,6 +355,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 \## Today’s Goal
 
 \- 学习账户抽象（Account Abstraction, AA）的基本概念。
@@ -604,6 +611,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 ## **Today’s Goal**
 
 -   学习以太坊开发相关工具链：Remix、Hardhat、Foundry、OpenZeppelin、viem。
@@ -780,6 +788,7 @@ AI x Web3 School
 
 
 
+
 \## Today’s Goal
 
 \- 学习 Web3 相关的密码学、钱包、智能合约和 ETH 合约基础知识。
@@ -899,6 +908,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
