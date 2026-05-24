@@ -15,8 +15,128 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+pDay 7 | AI × Web3 School
+
+今日完成
+
+· 观看周六英文分享会回放（嘉宾：以太坊 Sophia 老师）
+
+· 主题：《以太坊在人工智能的未来中扮演着什么角色？》
+
+分享会核心内容整理
+
+一、AI Agent 的演变与问题
+
+Sophia 老师首先回顾了 AI 的发展：从早期的问答助手，到如今能够编写代码、转移资金、做决策、协调软件、甚至使用其他 Agent 的存在。
+
+她指出，之所以现在讨论 AI 与以太坊的结合而非去年或更早，是因为从去年开始 Agent 呈现指数级增长，同时也带来了一系列问题：
+
+· AI Agent 无法使用人类的基础设施
+
+· 无法安全使用密码
+
+· 无法开设银行账户
+
+· 无法等待数天的结算周期
+
+· 无法依赖法院或法律合同
+
+· 无法通过人类渠道建立信誉
+
+核心问题在于：AI Agent 交易的基础设施将决定新经济的运作方式——谁可以参与、信任如何建立、价值流向哪里、竞争环境是否开放。这套基础设施正在被设计，而设计选择会随 AI 活动规模扩大而不断放大。
+
+二、以太坊是什么
+
+以太坊是一个公开、可编程的区块链，核心功能：
+
+· 无需中介即可数字拥有物品
+
+· 无需中心运营商即可与他人协调
+
+· 在没有中心运营商的情况下转移价值并执行协议
+
+三、以太坊的设计原则（CROPS）
+
+Swen 助教特别请 Sophia 老师展开讲解了这四点：
+
+· Censorship Resistance（抗审查）
+
+· Open Source and Free（开源免费）
+
+· Privacy（隐私）
+
+· Security（安全）
+
+四、为什么以太坊的设计适合 AI Agent
+
+Agent 需要：身份、信誉、支付、可执行的协议、中立的基础设施。而这些恰好是以太坊围绕 CROPS 原则构建的。
+
+核心论点：以太坊是机器经济中为机器提供的去中心化结算与协调中枢，而人类始终处于中心位置——一个机器可以大规模协调但人类保留能动性、所有权和控制权的中立层。
+
+五、提到的技术方向
+
+· EIP 8004：Agent 的身份与信任
+
+· x402 支付
+
+六、AI × 以太坊的实际项目
+
+· AI 驱动的协议安全（active RFPs）
+
+· ZK LM credits（与 PSE 团队联合）
+
+· ZKML 研究
+
+· 大学研究合作伙伴关系
+
+案例：Deep Funding——以太坊基金会试点的一个机制，使用 AI Agent 来分配公共物品资助。
+
+七、未来方向
+
+· ERC-8004 验证注册表（基于 TEE 的验证）
+
+· 扩展的私有支付基础设施
+
+· 通过智能合约进行 Agent 间的自动协商
+
+· 与 AI 框架和企业工具的更深整合
+
+· 更深度的大学研究合作
+
+八、核心结论
+
+Ethereum for AI = Ethereum for humans
+
+九、推荐学习网址
+
+· [8004.org](http://8004.org)
+
+· [AI.ethereum.foundation](http://AI.ethereum.foundation)
+
+· [PSE.dev](http://PSE.dev)
+
+十、答疑环节
+
+Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付领域的看法。
+
+补充说明
+
+分享会末尾 Swen 助教与 Sophia 老师的讨论环节在 B 站视频中未完整呈现，后续计划去推特查找完整内容。
+
+下一步
+
+· 继续学习 Handbook 的 AI 部分
+
+· 查阅推特补全答疑讨论内容
+
+· 浏览推荐的学习网址
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -39,6 +159,7 @@ timezone: UTC+8
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 Day 5 | AI × Web3 School
 
@@ -76,6 +197,7 @@ Day 5 | AI × Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -107,6 +229,7 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -116,11 +239,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
