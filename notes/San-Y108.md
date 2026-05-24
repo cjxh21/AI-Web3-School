@@ -15,8 +15,38 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+5.24 打卡 | Web3 概念 + 第一笔链上交易                                                                                        
+
+     今天集中收尾 Week 1 的 Web3 任务。                                                                                            
+
+     概念卡片（5篇笔记）                                                                                                           
+
+     - 密码学：私钥、签名、哈希是怎么串起来的                                                                                      
+
+     - 钱包：连接/签名/发交易是三种完全不同的操作，风险逐级升高                                                                    
+
+     - 网络：L1 是地基，L2 是快速通道，桥是搬运工也是最弱一环                                                                      
+
+     - 智能合约与账户：EOA 单人单钥 vs 多签多人确认 vs 智能账户可编程                                                              
+
+     - 钱包 vs 交易所：谁是真正的资产控制者                                                                                        
+
+     测试网交易                                                                                                                    
+
+     在 Sepolia 上完成了第一笔交易——0.01 ETH 自己转给自己，交易哈希 0x3875...，Etherscan 可查。Gas 21000、费用 ~0.00005            
+
+     ETH。感受最深的是「点按钮 ≠ 交易完成」，从签名到确认真的需要时间。                                                            
+
+     下一步： 用 Remix 在 Sepolia 部署一个最小智能合约。                                                                           
+
+     笔记都在：[https://github.com/San-Y108/ai-web3-school-cohort-0](https://github.com/San-Y108/ai-web3-school-cohort-0)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 今日学习内容：                                                                                                        
 
      1. 完成 Web3 基础 Handbook 第四章「智能合约」阅读                                                                     
@@ -45,6 +75,7 @@ AI x Web3 School
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 今天吧那个实习手册全部看完了，学了好多，也知道了区块链的发展方向和岗位需求。由于今天考试，所以只能做这么多了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -52,11 +83,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天我完成了「创建课程 GitHub repo」任务，由于开了一整天的会，所以没有看hermes的直播，明天看。我理解到它不只是建立一个仓库，而是在搭建未来 4 周 的学习工作台。通过这个任务，我实践了 Git 的基础操作，包括初始化仓库、创建目录、commit 和 push；同时也学会了用项目化方式组织学习内容，例如用 `daily/` 记录每日学习、`tasks/` 保存任务 proof、`experiments/` 存放实验、`handbook-feedback/` 记录反馈、`hackathon/` 为后续项目预留空间。本次仓库初始化主要由 Hermes Agent 协助完成，包括创建目录结构、README、profile、learning-plan 和模板文件，我负责人工确认内容是否准确、结构是否合理，并检查没有提交 API Key、私钥、助记词、token、`.env` 等敏感信息。最终，我已经将仓库 push 到 GitHub，并完成了多次 commit，为后续课程学习、记录和提交打下了基础。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
