@@ -15,8 +15,214 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+这几天看完了OpenClaw、Hermes、CC、Harness，尤其是Harness，直觉感觉确实是agent的核心，而不是所谓的“模型不够harness来凑”。很多细节，靠记记不住，但是蕴含着大道至简的哲学思想，怪不得说架构师到最后都是哲学家。
+
+### Claude Code
+
+**Claude Code 基础概念**
+
+**Claude Code 是什么？有什么特点？**
+
+Claude Code 是 Anthropic 推出的 AI 编程助手，通过命令行或桌面应用运行。它把 Claude 模型能力封装在结构化的工具体系和权限管控机制里，让 AI 能在本地环境执行开发任务。
+
+**核心特点**：
+
+全能编程助手
+
+支持 API Key、Arkose 验证、Markdown/Cursor/Bash 等多种输入方式，集成 GitHub、Slack 等外部工具（通过 MCP 协议），可以编写代码、运行测试、创建 PR、部署应用。
+
+权限管控体系
+
+五道权限链层层把关：参数校验 → PreToolUse Hooks → 三类规则匹配 → 工具自检 → AI classifier。被拒绝的工具连 schema 都不会发给模型，从根源消除风险。用户可以通过 Hooks 注入自定义逻辑，不用改源代码。
+
+工作流自动化
+
+Checkpoints 机制定期保存工作状态，Plan Mode 让 AI 先规划再执行，支持 Subagent 并行处理多个任务。
+
+**Claude Code 与** [**CLAUDE.md**](http://CLAUDE.md) **是什么关系？**
+
+[CLAUDE.md](http://CLAUDE.md) 是 Markdown 格式的项目配置文件，Claude Code 启动时自动读取它来理解项目规范和约束。
+
+**工作原理**：
+
+项目知识注入
+
+Claude Code 启动时自动查找项目根目录的 [CLAUDE.md](http://CLAUDE.md)，将其内容注入 System Prompt，成为 AI 的"项目宪法"，相当于给 AI 提供了一份项目专属的行为准则。
+
+分级规则系统
+
+Rules 文件分三级定义规则：项目根目录、全局配置、用户配置，优先级是项目 > 全局 > 用户。Claude Code 启动时自动加载并合并所有规则。
+
+**典型内容**：
+
+包括项目描述和技术栈、编码规范（如 React + TypeScript + Vite）、文件结构说明、测试要求、最佳实践和注意事项。
+
+**注意**：ETH Zurich 研究发现，自动生成的 [CLAUDE.md](http://CLAUDE.md) 可能让 Agent 表现下降，因为过于详细的规则会增加认知负担。最佳实践是保持简洁，只放模型自己无法发现的关键约束。
+
+**Claude Code 的三种交互模式是什么？**
+
+**键入模式（默认）**
+
+在终端输入命令后 Claude 直接执行，适合快速执行单条指令、调试代码、查看结果。示例`claude "fix the bug in login.ts"`。
+
+**accept edits.on 自动接受模式**
+
+AI 生成的代码修改自动应用，不需要人工确认。适合信任度高的场景、批量修改、自动化流程，但可能引入意外修改，建议配合 git 版本控制。
+
+**Plan Mode（规划模式）**
+
+AI 先制定计划，用户审核后再执行。适合复杂任务、多步骤操作、高风险变更。流程是：用户提需求 → AI 生成计划 → 用户确认 → AI 执行。
+
+**选择建议**：
+
+简单任务用键入模式（快速高效），复杂任务用 Plan Mode（先规划后执行），自动化场景用 accept edits.on（减少交互）。Plan Mode 下 AI 会更谨慎，适合首次接触项目或重要功能开发。
+
+**Claude Code 核心机制**
+
+**Checkpoints 机制是如何工作的？**
+
+Checkpoints 是定期保存机制，防止长任务中途失败导致工作丢失。
+
+**工作方式**：
+
+自动保存时间点
+
+输入 /rewind 触发手动保存，执行重要操作前自动创建快照（如运行测试、提交代码），在 /checkpoints 查看所有保存点。
+
+状态快照内容
+
+包括当前对话上下文、文件修改记录、已执行的命令历史、AI 的推理过程。
+
+回滚和恢复
+
+使用 /checkpoints 查看所有保存点，选择特定保存点恢复，可以"时光倒流"到之前状态。运行 `npm install` 等命令时，建议先创建 Checkpoint。
+
+**实践建议**：
+
+重要操作前手动 `/rewind`，定期检查 `/checkpoints` 确保关键节点已保存，遇到问题时优先回滚到最近的稳定状态，而不是继续往前试错。
+
+类比：Checkpoints 就像游戏的存档点，可以在关键节点保存进度，出问题时读档重来。
+
+**Hooks 机制的作用是什么？有哪些类型？**
+
+Hooks 是 Claude Code 在执行特定操作前后自动运行的 shell 脚本，让用户在不修改源代码的前提下注入自定义逻辑。
+
+**六种 Hooks 类型**：
+
+1\. **PreToolUse**：工具调用前执行（拦截、修改）
+
+2\. **PostToolUse**：工具调用后执行（日志、反馈）
+
+3\. **UserPromptSubmit**：用户提交 Prompt 时执行
+
+4\. **Stop**：Claude 试图停止时执行（强制补充动作）
+
+5\. **PreCompact**：上下文压缩前执行（保存关键信息）
+
+6\. **Notification**：收到通知时执行
+
+**典型使用场景**：
+
+自动化测试（PostToolUse Hook）：每次代码修改后自动运行测试，示例：`if write 或 edit → run test`。
+
+权限审计（PreToolUse Hook）：记录所有敏感操作（如文件删除），在执行前发送通知或请求人工确认。
+
+强制流程（Stop Hook）：Claude 试图停止前强制运行测试，防止"改了代码没测试就说完成了"。
+
+**配置方式**：在 settings.json 中配置 Hooks，无需修改 Claude Code 源码。这是 Harness Engineering 的典型实践——用确定性机制替代概率性 Prompt。
+
+**MCP是什么？与 Hooks 有什么区别？**
+
+MCP 是 Anthropic 提出的标准化协议，让 AI Agent 可以连接外部系统（如数据库、GitHub、Slack）并调用它们的能力。
+
+**MCP 与 Hooks 的区别**：
+
+定位：MCP 连接外部世界（获取数据、调用外部 API），Hooks 控制内部行为（拦截、日志、审计）。
+
+触发方式：MCP 是 AI 主动调用外部工具获取能力，Hooks 是 Claude Code 在特定时机自动执行脚本。
+
+实现层次：MCP 是标准化协议，跨工具通用（Claude Code、Cursor 等都支持），Hooks 是 Claude Code 特有机制，用户自定义 shell 命令。
+
+**协同关系**：
+
+常见组合是 PreToolUse Hook + MCP Server。示例：调用 GitHub MCP 前，先用 Hook 检查权限、记录操作日志。相当于 Hooks 是"守门员"，MCP 是"工具箱"。
+
+**常见 MCP Server**：
+
+Figma MCP（读取设计稿）、GitHub MCP（管理仓库、创建 PR）、Supabase/Rails MCP（数据库操作）、Gmail/Calendar MCP（邮件和日历）。
+
+MCP 解决"Agent 去哪拿数据"，Hooks 解决"Agent 如何被管控"。
+
+**Claude Code 高级功能**
+
+**Subagent 是什么？什么时候使用？**
+
+Subagent 是 Claude Code 启动的子 Agent，用于并行执行独立任务或处理特定职责。主 Agent 将任务委派给多个 Subagent，它们各自独立工作，完成后汇报结果。
+
+**典型使用场景**：
+
+并行执行独立任务：同时运行前端测试和后端测试，节省时间，两个 Subagent 同时工作。
+
+专业化分工：一个 Subagent 负责代码生成，另一个负责测试编写，每个 Agent 专注自己擅长的领域。
+
+隔离上下文：主 Agent 上下文接近上限时，启动 Subagent 处理新任务，避免主 Agent 上下文被污染。
+
+**调用方式**：
+
+主 Agent 说"启动 Subagent 执行 X 任务"，Subagent 在后台工作，完成后返回结果。输入 `/agent + Create new agent` 创建新 Subagent。
+
+**注意事项**：
+
+Agent Skill 可以互相调用（主 Agent 调 Subagent，Subagent 间也能互调）。Subagent 有独立上下文，不会看到主 Agent 的对话历史。需要明确告诉 Subagent 任务目标和所需信息。
+
+**Token 优化机制有哪些？**
+
+Claude Code 需要处理长对话和大型项目，Token 管理很关键。通过多种机制节省 Token 消耗。
+
+**六种优化机制**：
+
+渐进式披露（Progressive Disclosure）：Skill 三层加载（元数据 → 指令层 → 资源/代码），只在需要时才读取详细内容。
+
+上下文压缩：定期压缩历史对话，保留关键信息，丢弃冗余细节。
+
+外部化存储：代码脚本存在文件系统，运行时只看输出结果。参考文档按需读取，不全部加载到上下文。
+
+Checkpoint 精简：保存状态时只保留必要信息，不保存完整对话，只保存决策和结果。
+
+Subagent 隔离：不同 Subagent 独立上下文，避免共享污染。只传递必要结果，不传递完整上下文。
+
+选择性 API 调用：只在必要时调用 MCP Server，缓存 API 结果，避免重复请求。
+
+**实践建议**：90% 的用户用 Sonnet 模型就够了，速度快、成本低。只有极高并发或复杂推理才需要 Opus。
+
+**Session、Plan Mode、Stop Hook 的关系和使用场景？**
+
+**三者定位**：
+
+Session 文件：工作状态的持久化存储，在 `~/.claude/sessions/` 目录下，记录当前对话、修改历史、上下文状态，可以随时暂停工作，下次继续。
+
+Plan Mode：规划优先的执行模式，AI 先制定详细计划、用户审核，适合复杂任务、多步骤操作，防止 AI"边做边想"导致方向错误。
+
+Stop Hook：强制补充动作的拦截器，Claude 试图停止前自动触发，可以强制运行测试、提交代码，防止 AI"干了一半就说完成"。
+
+**协同关系**：
+
+复杂项目开发：开启 Plan Mode → AI 生成计划 → 用户确认 → 开始执行 → 执行过程中 Session 持续保存 → AI 认为完成时 Stop Hook 触发强制测试 → 测试通过后真正完成，Session 保存最终状态。
+
+中断与恢复：工作到一半需要离开 → Session 自动保存 → 第二天加载 Session 继续 → 不需要重新解释背景，AI 直接从断点继续。
+
+**实践建议**：
+
+复杂任务开启 Plan Mode（`Shift + Tab`），关键操作配置 Stop Hook 强制检查，长期任务依赖 Session 机制，随时可中断。
+
+这三者结合，让 Claude Code 从"一次性对话工具"变成"长期协作伙伴"。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 ### **Harness Engineering**
 
 **Harness Engineering 核心概念**
@@ -217,6 +423,7 @@ Harness 不是越多越好，关键是在高风险点精准设防。
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今天梳理了一些关于A2A支付技术相关的观点。  
   
 中心化与去中心化并非衡量AI支付能力的唯一维度，A2A支付本身包含众多维度。如果聚焦于A2A支付体系，第一个维度是中心化与去中心化，但背后还存在其他关键问题。第二个维度是路径选择问题，因为A2A支付是高度自主的支付能力，在模型能力和应用无法一步到位的情况下，必须考虑持续演进的路径，不同路径的差异会很大。第三个维度是A2A的本质涉及agent之间的通信与互通，包括通信层协议和协作层协议，而谷歌最早提出了A2A概念。
@@ -228,6 +435,7 @@ Harness 不是越多越好，关键是在高风险点精准设防。
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 ### Hermes
@@ -505,6 +713,7 @@ OpenClaw 跟 Hermes 的区别主要在产品哲学上——OpenClaw 把自动化
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
