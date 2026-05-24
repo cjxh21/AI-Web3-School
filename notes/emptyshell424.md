@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天学了hello-agent，ReAct智能范式部分。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ### day4 浑浑噩噩的一天，明天恢复
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ```
 **Day 3** · 2026.5.20
@@ -42,6 +49,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 **Day 2** · 2026.5.19
 
 **Plan**
@@ -60,6 +68,7 @@ _Step by step._
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
