@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+今天老师分享的时候我又在开车，只听了一部分，还是聊一下我最近研究的ppt agent，我在群里看到女娲skill，搜索了一下，还找到了一个叫达尔文的skill，出自同一个人花叔，在感慨skill的同时，我还发现了一个ppt的skill，准备去看看好用不，也是花叔做的，huashu-slides，准备一会去试试，微信里也找了几个skill，生成html感觉还可以，但是可编辑的pptx就不太行，而且图片的处理也存在问题，深色背景和白底图片会显得突兀，我让agent重构图片，换掉底色，会丢失一部分信息，今天有一个新的思路，改ppt的背景色，感觉融洽了
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天听了小伙伴的分享，感觉大家学的很认真，也很深入，自己可能真的是年龄大了，感觉接受新知识的速度变慢了，有一个小伙伴还研究出了大模型额度的bug，虽然我没有试过，但是卡bug这种事情听起来就很厉害，我目前像用agent做ppt，加了最近很火的skill ppt master，感觉还行，问题也有，输入模板的话问题比较多，没办法生成一个差不多的ppt，自己搭建的agent工作流反而套模板可以，但是自由发挥的话不太行，我在想把两者结合一下，看看效果
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 ![293bb186989279fc63b5f651730819fa.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vitalebob/images/2026-05-21-1779372675009-293bb186989279fc63b5f651730819fa.jpg)
 
@@ -30,6 +37,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 ![20f296725bad6f7021b5dffef4f5af56.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vitalebob/images/2026-05-20-1779282888809-20f296725bad6f7021b5dffef4f5af56.jpg)
@@ -42,11 +50,13 @@ AI x Web3 School
 
 
 
+
 今天学习AI，hermes，接触过openclaw，听说hermes是openclaw的增强版，具有自我学习的能力，我用cursor部署了hermes，导入学习计划，感觉现在的ai真的很强大，自己探索的程度还是很低，以前只停留在对话，现在利用agent可以完成很多事情，我觉得是一个必备的技能，学习如何使用AI agent，希望学到更多知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
