@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+-   实时参加 5.25 Co-learning｜Co-learning
+    
+-   实时参加 5.25｜Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 -   完成Week 1｜线上活动｜观看回放 5.20｜Web3 运行原理
     
 -   完成Week 1｜线上活动｜观看回放 5.23｜Open Agentic Economy
@@ -27,6 +35,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 -   学习有点懈怠，主要完成week 1的无时间限制的长期任务：
     
@@ -40,6 +49,7 @@ Week 1｜前置准备｜完成 Proof-of-Work 提交测试
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 -   参加co-learning 和优秀笔记分享，被安利了游牧岛小程序，体验了一下，感觉可以找搭子找工作以及找别人的idea思维碰撞
     
 -   通过游牧岛发现一个初创AI项目，体验了一下产品，给项目方写了点使用体验（点子不错，但是使用感觉比较一般
@@ -49,6 +59,7 @@ Week 1｜前置准备｜完成 Proof-of-Work 提交测试
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -64,6 +75,7 @@ obsidian+github以及workbuddy+github，在尝试自己的workflow
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
