@@ -62,7 +62,7 @@ _Simulation：成功，没有警告”_
 
 ### 关于Context（上下文）
 
-Context 的定义是：模型这一次能看到、能使用、能被影响的信息空间；也就是说，凡是你在一次请求里发给模型的内容，都属于这次的 context。（例如上面的例子：用户输入内容+内部prompt=context）。一个靠谱的 Agent context 通常会分层，比如指令层、任务层、事实层、知识层、记忆层，以Prompt的最小实践为例子：
+Context 的定义是：模型这一次能看到、能使用、能被影响的信息空间；也就是说，凡是你在一次请求里发给模型的内容（例如上面的例子：用户输入内容+内部prompt=context）和模型在外部资料库access到的资料，都属于 context。一个靠谱的 Agent context 通常会分层，比如指令层、任务层、事实层、知识层、记忆层，以Prompt的最小实践为例子：
 
 **_整个模型输入 = context  
 其中：  
@@ -74,6 +74,7 @@ simulation 结果 = 事实层 context
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -99,6 +100,7 @@ simulation 结果 = 事实层 context
 
 
 
+
 今日主要是補听了之前的分享，包括Web3 的运行原理和Web3下乡计划。前者的分享者Bruce 老师在结束分享时提供了几个问题（附截图），值得好好思考一下，因为我也很认同老师所说的Web3 并不是只有技术本身，还是由密码学、经济学和社会学三种学科交集的中心。我的专业是社会学，难怪会被Web3这个大概念吸引。但他蕴含的底层逻辑和核心思想还是需要深刻的思考和认识。除此之外，老师也简介了Web3的一些基本概念和运行，这部分也加深我的认识，特别是节点等。不过因为我也使用过Web3产品（例如钱包、defi、domain等等），所以有一定的理解。
 
 第二个分享是Web3下乡计划，这个我有点难过，因为recording的质量很差，声音很小，有起码一半时间并没有声音。所以我也没有浪费时间继续听下去。有点遗憾。
@@ -118,6 +120,7 @@ simulation 结果 = 事实层 context
 
 
 
+
 今天去了例會，裡面的小夥伴都很厲害！！特別是Luvia，她只有大一而已，真的後生可畏！！我也要好好加油！！另外一樣有趣的事情，就是大家都有不同程度的焦慮，果然焦慮都是亞洲人的標配啊。。。
 
 今天沒有真實使用到Hermes Agent，這個要留到明天才可以用了。今天就只看了handbook的內容，重點還是focus在AI方面。可能我也了解一下Obsidian怎麼用去打造屬於我的知識庫吧！
@@ -127,6 +130,7 @@ simulation 结果 = 事实层 context
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -169,6 +173,7 @@ simulation 结果 = 事实层 context
 
 
 
+
 今日目標是要做3樣東西：
 
 1）根據ChatGPT提供的Study Plan，在Github建立Repo，並將Day1、2的筆記錄入。  
@@ -193,6 +198,7 @@ simulation 结果 = 事实层 context
 
 
 
+
 Day2
 
 My note is saved in Google docs: [https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX\_dfMbQRMUDxJcWA0k/edit?usp=sharing](https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX_dfMbQRMUDxJcWA0k/edit?usp=sharing)
@@ -202,6 +208,7 @@ Basically I just read the handbook and clarify the ideas of different AI concept
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
