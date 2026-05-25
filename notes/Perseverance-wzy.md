@@ -15,8 +15,99 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+官方文档：[短期记忆——LangChain](https://docs.langchain.com/oss/python/langchain/short-term-memory)
+
+\[LangChain overview | LangChain Reference\]([https://reference.langchain.com/python/langchain/?\_gl=1\*1fpqq8o\*\_gcl\_au\*Njg5Mzc3OTE2LjE3Njc5NTc5ODA.\*\_ga\*MzI4Mjc2MzIxLjE3Njc5NTc5ODA.\*\_ga\_47WX3HKKY2\*czE3Njg0OTM2NTYkbzE0JGcxJHQxNzY4NDkzNzAxJGoxNSRsMCRoMA](https://reference.langchain.com/python/langchain/?_gl=1*1fpqq8o*_gcl_au*Njg5Mzc3OTE2LjE3Njc5NTc5ODA.*_ga*MzI4Mjc2MzIxLjE3Njc5NTc5ODA.*_ga_47WX3HKKY2*czE3Njg0OTM2NTYkbzE0JGcxJHQxNzY4NDkzNzAxJGoxNSRsMCRoMA)..)
+
+# **BaseChatMessageHistory**
+
+`BaseChatMessageHistory`是用来保存聊天消息历史的抽象基类，ChatMessageHistory是一个用于 **存储和管理对话消息** 的基础类，它直接操作消息对象（如
+
+HumanMessage, AIMessage 等），是其它记忆组件的底层存储工具。下面对`BaseChatMessageHistory`的核心属性与方法进行分析：
+
+## **属性**
+
+`messages: List[BaseMessage]`：用来接收和读取历史消息的只读属性
+
+在API文档中，ChatMessageHistory 还有一个别名类：InMemoryChatMessageHistory；导包时，需
+
+使用：from langchain.memory import ChatMessageHistory
+
+## **方法**
+
+`add_messages`：批量添加消息，默认实现是每个消息都去调用一次add\_message
+
+`add_message`：单独添加消息，实现类必须重写这个方法，否则会抛出异常
+
+`clear()`：清空所有消息，实现类必须重写这个方法
+
+## **常见实现类**
+
+分析LangChain源码可知，在 LangChain 的类结构中，顶层基类是 `BaseChatMemory`，用于 控制“什么时候加载记忆、什么时候写入”等核心功能， 是所有“聊天记忆类”的抽象基类，定义了统一接口。其职责不是存储数据，而是 协调数据读写。
+
+而 `InMemoryChatMessageHistory` 是具体实现，定义了 “记忆存在哪、怎么存”
+
+下面是LangChain中常用的消息历史组件以及它们的特性，其中`InMemoryChatMessageHistory`是`BaseChatMemory`默认使用的聊天消息历史组件。
+
+| 组件名称 | 特性 |
+| --- | --- |
+| InMemoryChatMessageHistory | 基于内存存储的聊天消息历史组件 |
+| FileChatMessageHistory | 基于文件存储的聊天消息历史组件 |
+| RedisChatMessageHistory | 基于Redis存储的聊天消息历史组件 |
+| ElasticsearchChatMessageHistory | 基于ES存储的聊天消息历史组件 |
+
+# **实践使用**
+
+## **快速体验**
+
+`InMemoryChatMessageHistory` 是 LangChain 中的一个内存型消息历史记录器，用于在对话过程中临时存储 AI 和用户之间的消息记录。接下来通过一个简单的示例演示如果使用：
+
+```python
+from langchain_core.chat_history import InMemoryChatMessageHistory
+from langchain_ollama import ChatOllama
+from loguru import logger
+
+# 初始化Ollama语言模型实例，配置基础URL、模型名称和推理模式
+llm = ChatOllama(model="deepseek-r1:7b", reasoning=False)
+
+# 创建内存聊天历史记录实例，用于存储对话消息
+history = InMemoryChatMessageHistory()
+
+# 添加用户消息到聊天历史记录
+history.add_user_message("我叫玉子烧，我正在学习langchain")
+
+# 调用语言模型处理聊天历史中的消息
+ai_message = llm.invoke(history.messages)
+
+# 记录并输出AI回复的内容
+logger.info(f"第一次回答\\n{ai_message.content}")
+
+# 将AI回复添加到聊天历史记录中
+history.add_message(ai_message)
+
+# 添加新的用户消息到聊天历史记录
+history.add_user_message("我叫什么？我的爱好是什么？")
+
+# 再次调用语言模型处理更新后的聊天历史
+ai_message2 = llm.invoke(history.messages)
+
+# 记录并输出第二次AI回复的内容
+logger.info(f"第二次回答\\n{ai_message2.content}")
+
+# 将第二次AI回复添加到聊天历史记录中
+history.add_message(ai_message2)
+
+# 遍历并输出所有聊天历史记录中的消息内容
+for message in history.messages:
+    logger.info(message.content)
+```
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 LangChain 模型接口可参考官方文档：[https://reference.langchain.com/python/langchain\_core/language\_models/](https://reference.langchain.com/python/langchain_core/language_models/)
 
 ## 1.单独创建一个密钥环境变量并放在langchain\_env目录文件下面
@@ -987,6 +1078,7 @@ for i in range(k):
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 ## 今天终于装上了。。。
 
 ## 一、前期准备
@@ -1171,6 +1263,7 @@ hermes
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1481,6 +1574,7 @@ print("最终回答：", response["output"])
 
 
 
+
 # 以太坊账户（Accounts）笔记
 
 ## 一、账户概述
@@ -1578,6 +1672,7 @@ print("最终回答：", response["output"])
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
