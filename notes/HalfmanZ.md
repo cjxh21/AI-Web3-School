@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+研究了一下codex
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ### 1\. LLM (Large Language Models / 大型语言模型)
 
 -   LLM 是自然语言处理（NLP）模型中一个极其强大的子集。它们的显著特征在于**规模庞大（Massive size）**、**训练数据海量（Extensive training data）**，并且能够在极少甚至不需要针对特定任务进行训练的情况下，执行广泛的语言任务。
@@ -56,11 +62,13 @@ Workflow 是指**将多个 LLM 处理节点、工具调用或 Agent 按照特定
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 today I deal with the problem of chatgpt plus, and then I will use it for my AI.
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 特别的日子，表达一下对web3未来的520
@@ -71,11 +79,13 @@ today I deal with the problem of chatgpt plus, and then I will use it for my AI.
 
 
 
+
 打卡，期待晚上追老师的分享
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
