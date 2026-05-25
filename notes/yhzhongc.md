@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+先打个卡，明早补上
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 > 分析对象：[AI x Web3 School - 智能体（Agent）](https://aiweb3.school/zh/handbook/ai/agent/)  
 > 整理日期：2026-05-21
 
@@ -807,11 +813,13 @@ Agent 的默认设计应该是先只读：
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 要截止了，先打卡，一会儿补上
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 > 分析对象：[AI x Web3 School - 检索增强生成（RAG）](https://aiweb3.school/zh/handbook/ai/rag/)  
@@ -1531,6 +1539,7 @@ v1 SDK 里的 swapExactTokensForTokens 现在还能按老参数调用吗？
 
 
 
+
 > 分析对象：[AI x Web3 School - 上下文（Context）](https://aiweb3.school/zh/handbook/ai/context/)  
 > 整理日期：2026-05-19
 
@@ -1711,6 +1720,7 @@ dApp 页面写“这是安全授权”，模型不能直接相信。它只能把
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
