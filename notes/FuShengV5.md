@@ -15,8 +15,37 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Day 6 | AI × Web3 School
+
+今日完成：
+
+1.  理解 Week 1 课程任务"最小可交互 AI 学习产物"的要求和可选形式
+    
+2.  将自己已有的 Spring AI Agent 改造成 Handbook 问答助手
+    
+3.  设计 System Prompt：严格基于 Handbook 回答，举例必须附带可查证 URL，禁止编造
+    
+4.  新增 HandbookQueryTools：getHandbookToc（查目录）+ getHandbookSection（按章节抓内容）
+    
+5.  验证问答效果：LLM、Instruction 等概念均能正确定位到 Handbook 章节，给出结构化解说
+    
+6.  完成 README 提交说明，上传至个人学习仓库
+    
+
+感受：这次任务的实践性很强，把前面学的 System Prompt 设计、Tool Use、Context Engineering 概念真正用起来了。比较满意的地方是 prompt 设计——跟 Hermes 讨论了好几轮才确定"禁止编造+引用必须可查证"这条红线。实际测试中两张截图也能清晰说明 Agent 的行为差异：宏观概念和章节内知识节点都能正确处理。
+
+下一步：
+
+-   继续推进 Phase 1 AI 基础剩余章节（Frameworks / MCP / Vibe Coding / Evaluation / Fine-tuning / Inference）
+    
+-   可选改进：增加本地缓存、Jsoup HTML 解析、Web UI
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 Day 7 | AI × Web3 School
 
 今日完成
@@ -138,6 +167,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -160,6 +190,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -201,6 +232,7 @@ Day 5 | AI × Web3 School
 
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -234,6 +266,7 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -245,11 +278,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
