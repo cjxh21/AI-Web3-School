@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+今天我完成了 Week 1 综合进阶任务“设计一个受限 Web3 助手或小 workflow”。
+
+我设计并实现了一个本地 CLI 原型：受限 Web3 助手。它不会连接钱包、不会读取私钥、不会签名、不会 approve、不会转账、不会写入合约，也不会自动提交 WCB。它只负责根据用户输入的 Web3 操作类型进行风险
+
+分级，并生成 AI 可做事项、人工确认清单、执行前检查、推荐步骤和 proof 模板。
+
+这个 workflow 的核心边界是：AI 可以解释和规划，但遇到签名、授权、转账、合约写入时必须暂停，由我人工复核并在钱包中手动确认。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今天看了Open Agentic Economy:From ERC-8004/ERC-8183 to Builder Path的回放，我的思考是：除了身份和支付，AI 还需要哪些以太坊基础设施？
 
 在以太坊代理经济（Agentic Economy）中，除了解决身份信任（如 ERC-8004）和机器支付（如 x402）之外，AI 智能体要真正实现自主运行、拥有数字资产并进行规模化协作，还需要以下几个关键的以太坊基础设施和机制：
@@ -35,11 +47,13 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 今天整理笔记
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 5.22参加了例会收获是：
@@ -51,6 +65,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -73,6 +88,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -161,6 +177,7 @@ AI x Web3 School
 
 
 
+
 今天完成了 Week 1 Web3 向任务：整理 Web3 基础概念卡片。
 
 Proof-of-Work:
@@ -176,6 +193,7 @@ Proof-of-Work:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
