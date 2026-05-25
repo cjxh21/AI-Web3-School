@@ -16,8 +16,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+0526筆記  
+  
+今天一直在回想LLM對長文本資料的硬傷，過去看到許多實作家在部屬openclaw自動運營之後，產生問題，導致損失產生。  
+於是昨日的課程，又將我把這個議題重新整理一次，發現不只是TOKEN要增加，而且有可能需要額外部屬agent，將長文本的內容分散執行，避免遺漏的可能性。  
+  
+我會先試著在主執行代理之外，設置一個唯讀的“一致性守護者”代理，它只專注於追蹤原始目標、重要約束和已產生的狀態摘要，定期中斷主代理進行校正，防止其偏離目標，作為長期對抗「狀態丟失」的架構設計。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 0525筆記  
   
 上週成功將api導入LLM中，並成功開啟對話模型。  
@@ -28,6 +39,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 0524筆記  
   
@@ -41,6 +53,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 0523筆記  
   
 今天開始進行運用VS CODE搭建虛擬環境，並引入openai進行建置。  
@@ -49,6 +62,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -65,6 +79,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -90,6 +105,7 @@ AI x Web3 School
 
 
 
+
 0519筆記  
   
 透過Hermes指定一个“大脑”，也就是大语言模型。  
@@ -100,6 +116,7 @@ Hermes Agent支持众多主流模型，包括**OpenAI、Anthropic Claude。**
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
