@@ -15,13 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+今晚的分享让我对 AI Agent 的理解又深了一层。以前我主要关注 Agent 的**工具调用**和**即时执行能力**，但长期记忆才是让 Agent 从临时助手变成真正伙伴的关键开关。
+
+**个人应用计划**：
+
+1.  在 Hermes Agent 中重点配置 [**SOUL.md**](http://SOUL.md) 和持久化记忆模块，先把我的工作风格、常用工具、项目偏好固化进去。
+    
+2.  尝试为每个重要项目建立独立 Context + 记忆档案，让 Agent 在多天任务中保持连贯性。
+    
+3.  每周做一次“记忆 Review”，让 Agent 帮我总结本周决策和可优化的点，形成闭环。
+    
+
+这个课程非常及时！结合上次的 Hermes 从0-1 实战，今天的内容正好补上了持久化这块短板，让我对搭建个人 AI 系统更有信心了。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今天主要是休息，还要回放周六上午的**Open Agentic**
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 学习了优秀心得分享。下一步我想建立关于国债期货自动复盘的量化分析。之前卡在抓取数据，现在暂时解决了，通过金融终端的API接口接数据。另外复习前面的知识点。
 
@@ -30,6 +48,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -48,6 +67,7 @@ AI x Web3 School
 
 
 
+
 学完了Hermes的从0到1，自己也成功安装了Hermes，而且是在云服务器安装的。以前安装小龙虾开电脑麻烦。现在准备进一步连上飞书。希望能长期使用Hermes。
 
 ![207f68c0-8876-4247-b613-c36d7c27e41e.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/cainiao0924/images/2026-05-20-1779291495586-207f68c0-8876-4247-b613-c36d7c27e41e.png)
@@ -60,11 +80,13 @@ AI x Web3 School
 
 
 
+
 昨天学习了Web3的内容，老师说Web2其实很重要。钱包重要性也说了，我有meta mask，准备在自己的chrome里浏览器扩展。老师讲了抢特朗普儿子币的案例，永远都得注意安全，自己交易安全和链上DAPP的安全。关于栈等其他内容还需要深入学习。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
