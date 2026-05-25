@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今天主要是做任务
 
 1.**AI × Web3 最小交叉流程图：**用 Excalidraw 画了从「用户自然语言输入」到「链上执行验证」的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成一条链路。
@@ -50,6 +56,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -76,6 +83,7 @@ RPC 广播 → mempool →
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -99,6 +107,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -228,6 +237,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -279,6 +289,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -311,6 +322,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
