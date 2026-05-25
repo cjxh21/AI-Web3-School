@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+这两天都到研究skill，现在的审计coverage还挺高的。至少所有被AI comfirm的findings都是对的
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 继续bug bounty
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 \# Designing a Line-Level Root-Cause Tagging System for Smart Contract Codebases
 
@@ -796,6 +803,7 @@ The highest-priority sources to consult and operationalize are these.
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 我去这一期有1000多人啊！！！
 
 今天开源了我写的skill，有点成就感哈哈哈
@@ -803,6 +811,7 @@ The highest-priority sources to consult and operationalize are these.
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -815,6 +824,7 @@ I’m truly grateful to have discovered such a fascinating field before the age 
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1174,6 +1184,7 @@ A\_flash }o--o{ R\_trust : "amplifies"
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
