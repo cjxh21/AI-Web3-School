@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+[https://www.notion.so/0525-36b58ebd3abb808391d4f4c9c9724e40?source=copy\_link](https://www.notion.so/0525-36b58ebd3abb808391d4f4c9c9724e40?source=copy_link)
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 [https://www.notion.so/0524-36a58ebd3abb807d9865e81a2094e972?source=copy\_link](https://www.notion.so/0524-36a58ebd3abb807d9865e81a2094e972?source=copy_link)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 [https://www.notion.so/0522-36758ebd3abb8018a247f14e969db483?source=copy\_link](https://www.notion.so/0522-36758ebd3abb8018a247f14e969db483?source=copy_link)
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 [ai-web3-school-cohort-0/day2026-5-21 at master · numberngc2237-cyber/ai-web3-school-cohort-0](https://github.com/numberngc2237-cyber/ai-web3-school-cohort-0/blob/master/day2026-5-21)
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 [ai-web3-school-cohort-0/day2026-05-20 at master · numberngc2237-cyber/ai-web3-school-cohort-0](https://github.com/numberngc2237-cyber/ai-web3-school-cohort-0/blob/master/day2026-05-20)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 [ai-web3-school-cohort-0/day2026-5-18 at master · numberngc2237-cyber/ai-web3-school-cohort-0](https://github.com/numberngc2237-cyber/ai-web3-school-cohort-0/blob/master/day2026-5-18)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
