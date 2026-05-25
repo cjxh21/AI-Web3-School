@@ -15,8 +15,271 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+### **1\. Payment / Commerce**
+
+**AI 侧：** AI Agent 可以自动决策触发支付（买 API、买数据、买算力），无需人介入。
+
+**Web3 侧：**
+
+-   **x402**（生产级）：HTTP 402 状态码实现机器支付，成员包括 Stripe、Visa、MasterCard、Coinbase、Google Cloud、AWS 等 23 家（来源：[x402.org/ecosystem](https://www.x402.org/ecosystem)）
+    
+-   USDC 结算，Stripe USDC 收款已上线，Cloudflare Workers 原生支持
+    
+-   EIP-3009 支持 gasless transfer
+    
+
+**Reference：**
+
+-   官网：[https://www.x402.org/](https://www.x402.org/)
+    
+-   文档：[https://docs.x402.org/](https://docs.x402.org/)
+    
+-   白皮书：[https://www.x402.org/x402-whitepaper.pdf](https://www.x402.org/x402-whitepaper.pdf)
+    
+
+* * *
+
+### **2\. Identity + Capability**
+
+**AI 侧：** AI Agent 需要动态发现彼此的能力、相互协商任务、执行多步骤协作。
+
+**Web3 侧：**
+
+-   **MCP（Model Context Protocol）**：Anthropic 出品，AI Agent 连接工具的标准，SDK 支持 Python/JS/Rust
+    
+    -   生态庞大：GitHub 搜索"MCP server"返回 **564 个仓库**（来源：GitHub API，2026-05）
+        
+    -   热门 MCP Servers：mcp-use (9994⭐)、awslabs/mcp (9122⭐)、armor-crypto-mcp (182⭐)、solana-mcp (159⭐)、alchemy-mcp-server (86⭐)
+        
+-   **A2A（Agent-to-Agent）**：Google 推进，Agent 之间互相发现和协作，与 MCP 互补
+    
+-   **ERC-8004**（⚠️ **Draft**）：链上 Agent 身份标准，ERC-721 NFT 形式，作者包括 MetaMask/Coinbase/Google；状态来源：[eips.ethereum.org](http://eips.ethereum.org)，badge 显示 "⚠️ Draft"
+    
+-   ERC-8004 专门留了 x402 支付证明槽位（两者天然互补）
+    
+
+**Reference：**
+
+-   MCP 官网：[https://modelcontextprotocol.io/](https://modelcontextprotocol.io/)
+    
+-   A2A GitHub：[https://github.com/a2aproject/A2A](https://github.com/a2aproject/A2A)
+    
+-   ERC-8004：[https://eips.ethereum.org/EIPS/eip-8004](https://eips.ethereum.org/EIPS/eip-8004)
+    
+-   GitHub MCP Search：[https://github.com/search?q=MCP+server+modelcontextprotocol（564](https://github.com/search?q=MCP+server+modelcontextprotocol（564) repos, 2026-05）
+    
+
+* * *
+
+### **3\. Wallet / Permission**
+
+**AI 侧：** AI 钱包异常检测、误触转款预防、人工确认判断。
+
+**Web3 侧：**
+
+-   **Safe**（原 Gnosis Safe）：多签钱包龙头，支持 Smart Account + ERC-1271 合约签名
+    
+-   **Session Key**：Safe 正在探索给 AI Agent 授权的方案——有限权限、限时、自动撤销
+    
+-   **ERC-7732**（推进中）：Smart Contract Wallet 接口标准
+    
+-   **ERC-6900**：模块化账户抽象，插件系统
+    
+-   趋势：从 EOA 转向 Smart Account，权限表达从"私钥控制"转为"代码规则"
+    
+
+**AI Agent 安全事件（2025-2026）：**
+
+-   Prompt Injection 是 AI 钱包最大威胁：攻击者通过在对话/数据中注入恶意指令，让 AI Agent 执行非预期的链上交易（来源：AI Security 研究，NIST AI Framework）
+    
+-   2025 年有多起实验性 AI Agent 被诱导转移资产的案例（主要是研究/实验性质，尚未有大额损失报告）
+    
+-   核心问题：AI Agent 的 prompt 或 tool call 被污染后，无法区分"用户真实意图"和"注入指令"
+    
+
+**Reference：**
+
+-   Safe：[https://safe.global/](https://safe.global/)
+    
+-   ERC-7732：[https://eips.ethereum.org/EIPS/eip-7732](https://eips.ethereum.org/EIPS/eip-7732)
+    
+-   NIST AI Security Framework：[https://csrc.nist.gov/pubs/ai/100/2/final](https://csrc.nist.gov/pubs/ai/100/2/final)
+    
+
+* * *
+
+### **4\. Privacy / Security**
+
+**AI 侧：** AI 需要识别敏感信息、防御注入攻击、保护用户数据不被泄露。
+
+**Web3 侧：**
+
+-   链上数据天然公开，AI 处理时面临数据暴露风险
+    
+-   **ZK + AI**：零知识证明用于证明"模型确实执行了某段代码而不暴露权重"——热点方向
+    
+-   **TEE（可信执行环境）**：Intel SGX、ARM TrustZone 用于 AI 推理隐私计算，硬件依赖强
+    
+-   **Prompt Injection 防御工具**：Rebuff（protectai/rewind）等专门检测注入攻击
+    
+
+**Reference：**
+
+-   NIST AI Security：[https://csrc.nist.gov/pubs/ai/100/2/final](https://csrc.nist.gov/pubs/ai/100/2/final)
+    
+-   Rebuff：[https://github.com/protectai/rewind](https://github.com/protectai/rewind)
+    
+
+* * *
+
+### **5\. Governance / Coordination**
+
+**AI 侧：** AI 总结提案、追踪行动项、检查预算，辅助人做决策。
+
+**Web3 侧：**
+
+-   **Snapshot + OpenZeppelin Defender**：DAO 常用工具，已支持部分自动化
+    
+-   **Llamafolio、DeepDAO**：链上治理数据分析，AI 整合程度有限
+    
+-   趋势：AI 在治理中承担辅助角色（整理工作），核心决策仍由人做
+    
+
+**Reference：**
+
+-   Snapshot：[https://snapshot.org/](https://snapshot.org/)
+    
+-   OpenZeppelin Defender：[https://www.openzeppelin.com/defender](https://www.openzeppelin.com/defender)
+    
+
+* * *
+
+### **6\. Dev Tooling / 开发者工具**
+
+**AI 侧：** 自然语言查询链上数据、代码自动生成、合约安全分析。
+
+**Web3 侧：**
+
+-   **AI Coding Assistants**：Cursor AI、GitHub Copilot、ChainGPT 等已支持 Solidity
+    
+-   **Smart Contract Security**：Slither（Trail of Bits）、Mythril、Certora、CertiK 等 AI 增强安全工具
+    
+-   **On-chain Data Access**：The Graph（索引）、Blockscout（浏览器 API）、Alchemy（Web3 API）
+    
+-   **各链原生 AI 集成动态（2025-2026）：**
+    
+    -   **Solana**：推出 AI Agent 程序，生态内有多个 AI+MCP 集成（solana-mcp 159⭐）
+        
+    -   **Base**：Coinbase 官方在 2025 年积极推进 Base AI 开发者工具集成
+        
+    -   **NEAR**：near-mcp（30⭐）提供 AI 友好的链上数据接口
+        
+    -   趋势：主流 L1/L2 都在推出原生 AI SDK 或官方 MCP Server，降低开发者接入门槛
+        
+
+**Reference：**
+
+-   The Graph：[https://thegraph.com/](https://thegraph.com/)
+    
+-   Alchemy：[https://www.alchemy.com/](https://www.alchemy.com/)
+    
+-   Slither：[https://github.com/crytic/slither](https://github.com/crytic/slither)
+    
+-   solana-mcp GitHub：[https://github.com/solana-developers/solana-mcp](https://github.com/solana-developers/solana-mcp)
+    
+
+* * *
+
+## **各方向 Hackathon 项目方向**
+
+> 每个项目都必须同时依赖 AI 能力和 Web3 机制，单独靠 AI 或单独靠 Web3 都做不了。
+
+### **1\. Payment / Commerce**
+
+| 项目 | AI 做什么 | Web3 做什么 |
+| --- | --- | --- |
+| x402 支付中间件 | 一行代码自动处理 402 | x402 协议 + USDC 结算 |
+| AI Agent 钱包 Dashboard | 可视化余额和消耗 | 链上 USDC 记录 |
+| API 付费墙 | 按调用量自动结算 | x402 + 合约记录 |
+| 多链支付聚合 | 自动选最优支付路径 | 多链钱包 + 稳定币 |
+
+### **2\. Identity + Capability**
+
+| 项目 | AI 做什么 | Web3 做什么 |
+| --- | --- | --- |
+| MCP Server 聚合平台 | 按能力搜索/分类 | MCP 协议 + 链上注册 |
+| 多 Agent 协作编排器 | 拆解复杂任务、协调多 Agent | A2A/MCP 协议 |
+| Agent 信誉查询工具 | 聚合多维度评分 | ERC-8004 链上记录 |
+| 垂直领域 Agent 市场 | 按调用量计费 | MCP + x402 支付 |
+
+### **3\. Wallet / Permission**
+
+| 项目 | AI 做什么 | Web3 做什么 |
+| --- | --- | --- |
+| AI 钱包权限管理器 | 可视化权限范围 | Safe + Session Key |
+| 链上交易异常检测 | ML 检测可疑交易 | 链上监控 |
+| 预算控制面板 | 实时显示消耗进度 | 合约执行 |
+| 多签协作工作流 | AI 作为特殊签名人 | Safe 多签 |
+
+### **4\. Privacy / Security**
+
+| 项目 | AI 做什么 | Web3 做什么 |
+| --- | --- | --- |
+| Prompt Injection 检测 | 检测注入意图 | 链上行为分析 |
+| 链上数据差分隐私 | 自动模糊化敏感信息 | 公开账本处理 |
+| AI Agent 安全审计 | 评估攻击面 | 合约权限分析 |
+| 敏感信息保险箱 | 强制多重确认 | 合约锁定 |
+
+### **5\. Governance / Coordination**
+
+| 项目 | AI 做什么 | Web3 做什么 |
+| --- | --- | --- |
+| DAO 提案摘要 Bot | 总结 + 投票建议 | Snapshot 提案读取 |
+| 预算执行追踪仪表盘 | 实时监控花销 | 链上预算记录 |
+| 治理参与激励系统 | 给投票者发奖励 | POAP/合约空投 |
+| 会议行动项 AI 助手 | 提取行动项 | 提案 + 投票记录 |
+
+### **6\. Dev Tooling / 开发者工具**
+
+| 项目 | AI 做什么 | Web3 做什么 |
+| --- | --- | --- |
+| On-chain Copilot | 自然语言查链上数据 | MCP + LLM + 多链 API |
+| 智能合约阅读器 | 分析合约功能和安全点 | 代码分析 |
+| Gas 优化建议工具 | 分析最优 gas 策略 | 链上数据 |
+| 多链区块浏览器 | 统一界面查询 | 多链 API 聚合 |
+
+* * *
+
+## **各方向未解决核心问题**
+
+| 方向 | 未解决问题 | 为什么值得做 |
+| --- | --- | --- |
+| Payment | AI 钱包风险控制（授权额度、异常检测） | 支付是刚需，安全是采用瓶颈 |
+| Identity + Capability | 多 Agent 协作编排框架；Agent 能力验证防虚假 | 信任+协作是复杂任务基础，当前没有成熟方案 |
+| Wallet | AI 误触转款预防；Prompt Injection 实时防御 | 安全是 AI 钱包最大障碍 |
+| Privacy | ZK+AI 实用化；AI 输出不泄露链上隐私 | ZK+AI 是 2025-2026 热点，潜力大 |
+| Governance | 低成本提案验证（结果和提案是否一致） | 治理核心，未被解决 |
+| Dev Tooling | 自然语言到合约调用仍不可靠；AI 安全审计缺标准 | 开发体验直接影响采用率 |
+
+* * *
+
+## **综合评估矩阵**
+
+| 方向 | AI+Web3 同时需要？ | 成熟度 | 热点 | 一周 demo？ | Hackathon 推荐 |
+| --- | --- | --- | --- | --- | --- |
+| Payment | ✅ | 🟢 生产级 | 🔴 热 | ✅ x402 SDK | ✅ |
+| Identity + Capability | ✅ | 🟡 MCP 生产 / ERC-8004 草稿 | 🔴 热 | ✅ MCP SDK | ✅ |
+| Wallet | ✅ | 🟡 发展中 | 🟡 中 | ⚠️ Safe SDK | ✅ |
+| Privacy | ✅ | 🟡 研究阶段 | 🟡 中 | ⚠️ 安全 demo 复杂 | ✅ |
+| Governance | ✅ | 🔴 早期 | 🟢 低 | ✅ 纯软件 | ⚠️ 需社区 |
+| Dev Tooling | ✅ | 🟢 MCP 生产 | 🔴 热 | ✅ SDK 丰富 | ✅ |
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -89,6 +352,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -143,6 +407,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 ### **主题 1：Vibe Coding（氛围编程）**
@@ -254,6 +519,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -670,6 +936,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -902,6 +1169,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1287,6 +1555,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
