@@ -15,8 +15,104 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+![截屏2026-05-25 20.05.44.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/San-Y108/images/2026-05-25-1779712282142-__2026-05-25_20.05.44.png)
+
+Daily Note — 2026-05-25                                                                 
+
+     今日学习内容                                                                            
+
+     - Handbook 章节：AI 基础前三章 —                                                        
+
+     大语言模型（LLM）、提示词（Prompt）、上下文（Context）                                  
+
+     -                                                                                       
+
+     关键概念：Token、Embedding、Transformer、Hallucination、Instruction、Few-shot、Stru     
+
+     ctured Output、Prompt Injection、Context Window、Context                                
+
+     Engineering、Memory、Knowledge Base                                                     
+
+     笔记 / 理解                                                                             
+
+     > 今天读了 Handbook AI 基础前三章，建立了一个核心认知：LLM 是推理层，不是真相源。       
+
+     >                                                                                       
+
+     > LLM 的工作方式是算概率，不是查数据库。Token                                           
+
+     是模型处理文本的基本单位，直接影响上下文容量和调用成本。Hallucination                   
+
+     在普通问答里是质量问题，在带执行能力的系统里是流程风险——不能只靠"写更好的               
+
+     prompt"来应对，需要外部校验。                                                           
+
+     >                                                                                       
+
+     > Prompt                                                                                
+
+     是你和模型之间的接口协议，不是神奇咒语。它应该定义任务目标、可用输入、禁止行为、输      
+
+     出格式。Prompt 是软约束，真正的安全边界由代码、权限、校验和审计承担。                   
+
+     >                                                                                       
+
+     > Context                                                                               
+
+     是模型这一次能看到的信息空间。模型的输出只取决于它当前能看见的上下文。所以系统必须      
+
+     治理好什么能进上下文、带着什么身份进去、过期后怎么退出。Memory                          
+
+     不能替代实时授权——过去允许的动作不代表现在仍然允许。                                    
+
+     >                                                                                       
+
+     > 三章的关联：Prompt 定任务 → Context 给数据 → LLM 生成 → 代码校验 → 人工确认。这是     
+
+     AI×Web3 交叉场景的最小安全链路。                                                        
+
+     疑问 / 卡点                                                                             
+
+     暂无明显卡点，三章概念比较清晰。                                                        
+
+     实验 / 动手                                                                             
+
+     无，今天主要是概念学习阶段。                                                            
+
+     打卡记录                                                                                
+
+     - 打卡草稿：见下方                                                                      
+
+     -                                                                                       
+
+     提交链接：[https://github.com/San-Y108/ai-web3-school-cohort-0/blob/main/concepts/ll](https://github.com/San-Y108/ai-web3-school-cohort-0/blob/main/concepts/ll)     
+
+     [m-prompt-context.md](http://m-prompt-context.md)                                                                     
+
+     - 提交时间：待确认                                                                      
+
+     明日计划                                                                                
+
+     - Batch 2：读 Web3 基础「开发栈（Dev Stack）」，建立技术栈图景                          
+
+     - 继续 Batch 3：读 AI 基础「RAG」和「Agent」，为 AI×Web3 交叉任务打基础                 
+
+     要我直接写入仓库并提交吗？另外打卡草稿是：                                              
+
+     今天完成了 Handbook AI 基础前三章学习：LLM、Prompt、Context。                           
+
+     核心认知：LLM 是推理层不是真相源；Prompt 是软约束不是安全边界；Context                  
+
+     决定模型看见什么，系统必须治理好信息的进出。                                            
+
+     产出：concepts/[llm-prompt-context.md](http://llm-prompt-context.md)（系统笔记）
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 5.24 打卡 | Web3 概念 + 第一笔链上交易                                                                                        
 
      今天集中收尾 Week 1 的 Web3 任务。                                                                                            
@@ -47,6 +143,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 今日学习内容：                                                                                                        
 
      1. 完成 Web3 基础 Handbook 第四章「智能合约」阅读                                                                     
@@ -76,6 +173,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 今天吧那个实习手册全部看完了，学了好多，也知道了区块链的发展方向和岗位需求。由于今天考试，所以只能做这么多了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -84,11 +182,13 @@ AI x Web3 School
 
 
 
+
 今天我完成了「创建课程 GitHub repo」任务，由于开了一整天的会，所以没有看hermes的直播，明天看。我理解到它不只是建立一个仓库，而是在搭建未来 4 周 的学习工作台。通过这个任务，我实践了 Git 的基础操作，包括初始化仓库、创建目录、commit 和 push；同时也学会了用项目化方式组织学习内容，例如用 `daily/` 记录每日学习、`tasks/` 保存任务 proof、`experiments/` 存放实验、`handbook-feedback/` 记录反馈、`hackathon/` 为后续项目预留空间。本次仓库初始化主要由 Hermes Agent 协助完成，包括创建目录结构、README、profile、learning-plan 和模板文件，我负责人工确认内容是否准确、结构是否合理，并检查没有提交 API Key、私钥、助记词、token、`.env` 等敏感信息。最终，我已经将仓库 push 到 GitHub，并完成了多次 commit，为后续课程学习、记录和提交打下了基础。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
