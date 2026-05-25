@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+![屏幕截图 2026-05-25 234441.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-25-1779723901109-_____2026-05-25_234441.png)
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 AI + Web3 学习笔记
 
 整理时间：2026-05-24
@@ -435,6 +441,7 @@ Agent 钱包 elizaOS 开源 Web3 agent 框架
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 ```
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -840,6 +847,7 @@ renderExec();
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 ![屏幕截图 2026-05-22 204758.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-22-1779454088506-_____2026-05-22_204758.png)
 
 ```
@@ -863,6 +871,7 @@ file:///C:/Users/Accuracy/WorkBuddy/2026-05-22-task-7/gas-interactive-learning.h
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1020,6 +1029,7 @@ Web3是密码学、经济学、社会学三门学科的交叉：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
