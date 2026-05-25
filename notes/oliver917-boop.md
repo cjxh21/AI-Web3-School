@@ -15,19 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+![IMG_7613.jpeg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-25-1779713161791-IMG_7613.jpeg)
+
+今天收听了Long-term Memory for AI Agents线上会
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今日休息，还没有Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path的回放
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 今天休息，录屏更新后回看今天的线上会
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 ![ScreenShot_2026-05-22_201818_080.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-22-1779454420450-ScreenShot_2026-05-22_201818_080.png)
@@ -41,6 +51,7 @@ AI x Web3 School
 
 
 
+
 ![ScreenShot_2026-05-21_205012_074.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-21-1779368216889-ScreenShot_2026-05-21_205012_074.png)
 
 晚上收看了AI 下乡计划｜AI 在 Web3 的应用 的线上会，个人理解2种技术结合起来的各种应用场景还处于起步阶段，后续还需要拓宽思路，寻找机会
@@ -48,6 +59,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -72,6 +84,7 @@ AI x Web3 School
 
 
 
+
 ![ScreenShot_2026-05-19_200306_640.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-19-1779195702479-ScreenShot_2026-05-19_200306_640.png)
 
 今天的分享会主要讲了Hermes Agent的搭建过程，给予agent一些管理员权限确实不太让人放心，不过agent会提示是否需要授权危险的指令，老师建议选取每次都授权，后续需要查询一些安全性的知识
@@ -79,6 +92,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
