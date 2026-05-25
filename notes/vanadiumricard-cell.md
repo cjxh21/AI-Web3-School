@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+1.链接hermes obsidian 微信，建立个人知识库，微信远程输入碎片化知识，自动整理，写入对应目录
+
+2.收听直播课，了解基本agent记忆
+
+![ce856d7da112c94c53df778a2c867925.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-25-1779723771504-ce856d7da112c94c53df778a2c867925.jpg)
+
+后期任务1，继续调教Hermes，部署个人网页，自动提交脚本
+
+2，完善个人知识库，系统化知识
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ### 1
 
 今天学习了计算机网络今天学习了计算机网络。
@@ -50,6 +64,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 \## 📝 今日收货记录
 
@@ -86,6 +101,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 ![8ea165da574308ceb2b5da1cbeee40b2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-20-1779289671833-8ea165da574308ceb2b5da1cbeee40b2.jpg)
 
 讲了web3的整体宏观的运行流程，比昨天的老师讲的更宏观，可惜没有仔细整理，今天时间一直在跟Hermes斗争，搭建一个工作流反而搭建塌了，没有达成昨天的目标，气死我了，明天继续延续昨天目标
@@ -93,6 +109,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -107,6 +124,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
