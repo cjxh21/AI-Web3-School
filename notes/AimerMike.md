@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Today I reviewed the basic Web3 objects an AI agent must respect: network, chain ID, account, private key, signature, transaction, gas, block, and finality. The key insight is that an agent can help explain and prepare actions, but the wallet and signature are the authority layer. The model should never access private keys. A safer AI x Web3 flow is: user intent -> transaction preview -> human review -> wallet signature -> network execution -> public state -> agent summary.
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 Three concepts that became clearer:
 
 1.  LLMs are reasoning/interface layers, not reliable truth sources.
@@ -41,6 +47,7 @@ Build a small wallet transaction risk summary prototype that takes decoded trans
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 MCP and evaluation.
 
 Today I studied tool interfaces and evaluation as the control layer for agents. The key idea is that tools should have structured inputs, outputs, permissions, and failure modes. In AI x Web3, evaluation should check safety behavior, not only answer quality. A wallet agent should mention chain ID, distinguish transfer vs approval, flag unlimited approvals, use simulation when available, state missing context, and never sign or submit without human confirmation. I created a tool boundary checklist for future agent design.
@@ -48,6 +55,7 @@ Today I studied tool interfaces and evaluation as the control layer for agents. 
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 An agent is not just a chatbot. A practical agent usually combines:
@@ -89,6 +97,7 @@ In Web3, the central risk is permission. A normal software agent might send an e
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -151,6 +160,7 @@ RAG is not magic. It can still fail if retrieval finds the wrong source, misses 
 
 
 
+
 Prompt design is safety design. In Web3, context quality and permission boundaries decide whether an AI agent is just helpful or dangerously overconfident.
 
 ```markdown
@@ -182,6 +192,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 
 
+
 | 角色 | 擅长领域 | 短板 | 使用边界 |
 | --- | --- | --- | --- |
 | LLM 大语言模型 | 解读释义、内容总结、对比分析、方案规划 | 无上下文无法获取实时信息，无法保证内容绝对真实 | 必须主动说明信息不确定点与信息来源局限 |
@@ -200,6 +211,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
