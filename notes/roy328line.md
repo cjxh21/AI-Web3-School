@@ -15,8 +15,225 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+## **今日學習主題**
+
+深讀 Handbook：Agent Identity 模組
+
+* * *
+
+## **Agent Identity｜核心整理**
+
+### **什麼是 Agent Identity？**
+
+Agent Identity 不是給 Agent 起個名字，而是讓用戶、服務和其他 Agent 能驗證：它是誰、誰控制它、能提供什麼能力、服務入口在哪裡、歷史記錄能不能追溯。
+
+核心問題不是「如何命名 Agent」，而是：
+
+-   誰擁有這個 Agent？
+    
+-   Agent 能做什麼（具體能力邊界）？
+    
+-   如何調用它（服務入口）？
+    
+-   它使用哪些錢包或密鑰？
+    
+-   歷史聲譽和驗證記錄在哪裡？
+    
+
+Agent Identity 的核心，是把 Agent 從臨時會話變成可發現、可驗證、可追責的經濟參與者。
+
+* * *
+
+### **第一性原理**
+
+> **Agent 身份必須綁定控制權、能力聲明和服務入口，而不只是一個顯示名稱。**
+
+三個基本要求：
+
+-   **身份要可解析**：別人能從 identifier 找到 profile 和 endpoint
+    
+-   **控制權要可證明**：更新 profile 或接收付款的人要能證明自己是 owner
+    
+-   **能力要可驗證**：能力聲明需要測試、證明、評價或歷史記錄支撐
+    
+
+* * *
+
+### **知識節點整理**
+
+**Agent Profile（身份說明文件）**
+
+-   包含：名稱、描述、服務範圍、價格、接口、錢包地址、能力列表、模型/工具說明、隱私政策、owner、版本
+    
+-   應同時給人和機器看：人能理解服務內容和運營方，機器能解析 endpoint、capabilities、schemas、auth、payment
+    
+-   **更新歷史很重要**：換了模型、換了服務端、換了收款地址、增加高風險能力，都不應靜默發生，更新記錄本身就是信任信號
+    
+
+**Capability（能力聲明）**
+
+-   描述 Agent 能完成什麼任務、需要哪些輸入和權限
+    
+-   越具體越有用：輸入類型、輸出格式、是否需要錢包權限、是否調用外部 API、最長執行時間、失敗如何退款
+    
+-   **風險分級**：低風險（只讀分析）、中風險（生成交易草稿）、高風險（自動執行交易）
+    
+-   不應寫成「我什麼都能做」
+    
+
+**Service Endpoint（服務入口）**
+
+-   可以是：HTTPS API、A2A endpoint、MCP server、Webhook 或鏈上 registry 指向的服務地址
+    
+-   **安全性直接影響身份可信度**：攻擊者劫持 endpoint，即使鏈上 Agent id 沒變，用戶實際調用的也可能是惡意服務
+    
+-   Endpoint 更新應需要 owner 簽名，並保留歷史
+    
+-   還要描述支持的協議和版本（A2A、MCP、REST API、WebSocket 交互方式不同）
+    
+
+**Registry（身份登記）**
+
+-   用來登記、發現和更新 Agent 身份
+    
+-   鏈上 registry：提供公開可查的身份錨點（agent id、owner、profile URI、服務 endpoint 和更新記錄），更去中心化
+    
+-   鏈下 registry：更靈活，但信任邊界更中心化
+    
+-   **Registry 能證明「這個身份是誰注册的」，但不能證明「這個 Agent 一定好用或安全」**
+    
+
+**DID / VC（去中心化身份與可驗證憑證）**
+
+-   DID：可解析的去中心化身份，不局限於某條鏈，Agent 可用 DID 表達跨平台身份
+    
+-   VC（Verifiable Credential）：由某個 issuer 簽發的聲明（如「通過了某個能力測試」「由某團隊運營」）
+    
+-   **VC 的可信度取決於 issuer**：任何人都能簽發聲明，不等於任何聲明都可信，產品要展示 issuer、簽發時間、撤銷狀態和驗證路徑
+    
+-   相關標準：W3C DID Core、W3C Verifiable Credentials
+    
+
+**A2A（Agent 間通信）**
+
+-   關注 Agent 與 Agent 之間如何發現、通信、協商任務和交換結果
+    
+-   A2A 是通信層（怎麼協作），身份系統是信任層（在和誰說話），兩者需要結合
+    
+-   **在支付場景中**，A2A 消息最好和 Payment Intent、Receipt、Escrow 狀態關聯，否則對話和結算會分裂成兩套不可對帳系統
+    
+
+**Ownership（控制權）**
+
+-   決定誰能更新 Agent profile、收款地址、服務 endpoint 和權限
+    
+-   Agent owner 可以是：EOA、Smart Account、多簽、DAO 或企業帳戶
+    
+-   **高價值 Agent 不應由單個熱錢包控制**
+    
+-   建議把 operator（運行服務）和 owner（控制身份和關鍵更新）分開
+    
+
+* * *
+
+### **Agent Identity 在 AI x Web3 的位置**
+
+Agent Identity 是 Agent Trust、Machine Payment 和 Agentic Commerce 的**前置條件**：
+
+-   用戶要付款給 Agent → 必須知道付款對象是誰
+    
+-   另一個 Agent 要委托任務 → 需要驗證對方服務入口和歷史記錄
+    
+
+**身份本身不等於可信**，它只是信任系統的第一層：
+
+1.  先知道對象是誰（Identity）
+    
+2.  再看它做過什麼、誰評價過它（Reputation）
+    
+3.  是否有 stake、是否有驗證證明（Trust）
+    
+
+* * *
+
+### **關鍵概念對比**
+
+| 概念 | 定義 | 重點 |
+| --- | --- | --- |
+| Agent Profile | Agent 的公開說明文件 | 同時服務人和機器，更新要有記錄 |
+| Capability | Agent 能完成的任務聲明 | 具體化、分風險等級 |
+| Service Endpoint | Agent 的調用入口 | 更新需要 owner 簽名，保留歷史 |
+| Registry | 身份的登記和發現系統 | 提供發現性，但不保證能力品質 |
+| DID / VC | 去中心化身份和可驗證聲明 | VC 可信度取決於 issuer |
+| A2A | Agent 間通信協議 | 通信層，需與支付/結算系統關聯 |
+| Ownership | 控制 Agent 身份和關鍵操作的權力 | 高價值 Agent 需多簽，operator/owner 分離 |
+
+* * *
+
+### **最小實踐設計**
+
+設計一個 Agent Profile：
+
+1.  **基本信息**：Agent 名稱、描述、owner（Smart Account 地址）、endpoint（HTTPS API）
+    
+2.  **Capabilities**（3 個）：
+    
+    -   能力 1：「生成 Solidity 測試」（輸入：合約代碼，輸出：測試文件，價格：0.5 USDC，限制：無法執行部署）
+        
+    -   能力 2：「分析 DAO 治理提案」（輸入：提案 ID，輸出：摘要報告，價格：0.1 USDC，限制：只讀）
+        
+    -   能力 3：「執行小額穩定幣支付」（輸入：收款方地址、金額，輸出：交易 hash，價格：0.01 USDC，限制：每次最高 10 USDC，風險：高）
+        
+3.  **更新機制**：只有 owner 多簽錢包簽名才能更新 profile，更新後發送 on-chain event 通知訂閱方
+    
+4.  **Endpoint 驗證**：endpoint 包含 owner 簽名的 challenge-response，可用公鑰驗證歸屬
+    
+
+* * *
+
+### **個人發想**
+
+今天最大的收穫是理解了「Agent 身份」和「人的身份」的本質差異。
+
+人的身份靠法律和社會關係來保證——信任一個人，因為有法律責任、社會聲譽、長期關係。但 Agent 可以在毫秒內建立、複製、消亡，傳統身份機制完全失效。
+
+Agent Identity 的精妙之處在於：把身份從「名字」提升到「可驗證的能力邊界和控制權結構」——不需要信任一個 Agent「是好的」，只需要能驗證它能做什麼、誰負責、失敗怎麼辦。
+
+DID/VC 的思路讓我感到興奮：如果 Agent 能累積 VC（能力測試通過證明、成功交付記錄、組織隸屬證明），那就像是 Agent 的「學歷和工作履歷」，可以跨平台攜帶和驗證。這是 Agentic Economy 的基礎設施，而不只是技術細節。
+
+Operator/Owner 分離的設計也很關鍵——讓運行服務的人和控制身份的人可以是不同角色，這樣即使服務方出問題，身份的所有權和責任仍然清晰。
+
+Builder 的機會在於：設計「Profile 可機器解析、Capability 有風險分級、Endpoint 更新有簽名記錄、VC 可跨平台攜帶」的 Agent Identity 系統，讓 AI Agent 的部署和使用從「盲目信任」走向「可驗證信任」。
+
+* * *
+
+## **今日產出**
+
+-   Agent Identity 核心概念整理（7 個知識節點完整筆記）
+    
+-   關鍵概念對比表（Profile / Capability / Endpoint / Registry / DID / VC / A2A / Ownership）
+    
+-   最小實踐設計：完整 Agent Profile 設計（含 3 個 Capability、更新機制、Endpoint 驗證方式）
+    
+-   個人判斷框架：可信 Agent 身份的三個基本要求（可解析、控制權可證明、能力可驗證）
+    
+
+* * *
+
+## **明日計劃**
+
+-   深讀 Agent Trust & Reputation 模組
+    
+-   整理 Agent Identity → Trust → Reputation 的完整信任鏈路
+    
+-   繼續推進 Week 1 Proof-of-Work Pack
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 \# 2026-05-25
 
 <!-- DAILY\_CHECKIN\_2026-05-25\_START -->
@@ -55,6 +272,7 @@ Settlement & Escrow 的本質不是「鎖錢」，而是「把整個業務流程
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 \# 2026-05-24
 
 <!-- DAILY\_CHECKIN\_2026-05-24\_START -->
@@ -80,6 +298,7 @@ Machine Payment 核心整理：
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 學習日誌 · 2026-05-23（Day 7）
 
 今日學習：Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path（直播）+ Agent Wallet 模組深讀
@@ -100,6 +319,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 
 
+
 學習日誌 · 2026-05-22（Day 6）
 
 今日學習：Co-learning 任務推進 + 例會分享 + Week 1 整體複習
@@ -117,6 +337,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -173,6 +394,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 
 
+
 今日學習：Frameworks 模組深讀（LangChain / LangGraph / OpenAI Agents SDK / Hermes）+ Hermes 安裝實作
 
 主要收穫：
@@ -191,6 +413,7 @@ GitHub 筆記：https://github.com/IntensiveCoLearning/AI-Web3-School/pull/29
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -222,6 +445,7 @@ Hermes Agent 預習：Skills 可復用高層指令集 / Long-term Memory 跨 ses
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
