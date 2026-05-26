@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+1.  阅读链感知上下文和web3工具章节
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天太忙了，还没来得及学习，先打卡
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 1.  将week1剩余的任务完成并提交
     
@@ -30,6 +37,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 1.  阅读handbook中mcp、evaluation、fine-tuning、inference四个章节并完成最小实践
@@ -43,6 +51,7 @@ AI x Web3 School
 
 
 
+
 1.  阅读handbook中的agent，frameworks，vibe coding章节，完成最小实践
     
 2.  学习怎么为claude安装skills，怎么自己写skills。发现几个通用的skills（find-skills，skill-creator，superpowers）
@@ -50,6 +59,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -79,6 +89,7 @@ AI x Web3 School
 
 
 
+
 1.  阅读handbook中的llm，prompt章节
     
 2.  使用claude code写erc20合约+foundry测试，根据hermes提供审阅清单判断ai编写的合约代码质量
@@ -95,6 +106,7 @@ AI x Web3 School
 
 
 
+
 1.  完成claude code安装并接入ds api，尝试vibe coding
     
 2.  与ai头脑风暴黑客松idea
@@ -102,6 +114,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
