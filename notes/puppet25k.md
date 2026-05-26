@@ -15,8 +15,45 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+### **Cobo Agentic Wallet 分享**
+
+1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
+    
+2.  理解了当前 Agent 管钱的三大风险：静默篡改、越界创建钱包、无终止开关
+    
+3.  学习了范式转变：从 Copilot（AI建议+人类批准）到 Agent（结构化授权+执行绑定）
+    
+4.  掌握了 Cobo Agentic Wallet 三大首创：
+    
+    -   MPC for AI Agents：私钥拆分（用户+Agent+Cobo三方，2/2门限签名）
+        
+    -   Pact 授权协议：Intent → Plan → Guardrails → Expiry 四要素
+        
+    -   Recipe 技能层：预定义验证工作流（Uniswap V3 Swap、X402 Payment 等）
+        
+5.  核心认知：语言无法强制权限，信任应从软件承诺转移到密码学保证
+    
+6.  理解了"Don't give agents wallets. Give agents scoped authorization."
+    
+
+### **随堂笔记**
+
+> 不要把钱包给 Agent，要给 Agent 受约束的授权，并且让执行绑定在授权上。
+
+### **下一步工作**
+
+1.  继续 Handbook Web3 基础学习 — 下一站 **钱包（Wallet）**
+    
+2.  跟进 Week 2 AI×Web3 交叉实践课程
+    
+3.  开始动手实操钱包和链上交互
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ### **Co-Learning — Railgun & Kohaku 隐私系统详解**
 
 1.  参加了 @0xMalingshu 的 Co-Learning 分享（冬天の馬鈴薯🥔，Co-CTO @Zzyzx\_labs）
@@ -74,6 +111,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 ### **密码学（Cryptography）**
 
@@ -159,6 +197,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -181,6 +220,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -230,6 +270,7 @@ AI x Web3 School
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -245,6 +286,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -311,11 +353,13 @@ AI x Web3 School
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
