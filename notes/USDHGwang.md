@@ -15,8 +15,46 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+**\## Today's Events**
+
+\- 學院 Week 2 Lesson 2：Cobo 團隊來賓演講介紹 Agentic Wallet (CAW)
+
+\- Q&A 跟講者交流 AIP 的 approach 對比
+
+**\## Key Learnings**
+
+1. **Cobo CAW 三層架構**：MPC（私鑰分片成 User + Agent + Cobo 三份，Cobo 永遠是 co-signer）+ Pact（off-chain 授權協議：intent / execution plan / policy / completion condition）+ Recipe（為已驗證的 DeFi 協議預先寫好執行路徑，例如 Aave V3、Uniswap V3、Hyperliquid）
+
+2. **Cobo 提的 4 種 agent 系統風險**：Prompt Injection / Shadow Operations（agent 在用戶看不見處創建紙帳戶）/ EOA private key 洩漏 / Zombie Permissions（未撤銷的合約授權變成攻擊面）
+
+3. **Cobo 的 gap**：講者親口承認 CAW 目前**\*\*沒解決 unverified contract safety\*\*** 這個問題，遇到 Recipe 沒覆蓋的合約時只能在 UI 跳高風險提醒，無法強制攔截
+
+4. **架構抽象層對比**：
+
+\- Cobo CAW = service-level 解法：vertically integrated wallet 服務、centralized trust（Cobo 為必要 co-signer）、proprietary Pact framework
+
+\- AIP（基於 ERC-7579）= protocol-level 解法：modular smart account、open standard、提供 base + 社群擴展 module，以 ERC-7579 module 形式嵌入既有 AA wallet
+
+\- 兩者不是直接競品，是不同抽象層的方法。Cobo 講者把 AIP 定位為「另一層方法」是準確的
+
+**\## Actions Taken**
+
+\- Q&A 跟講者確認 Cobo 在 unverified contract 這層的處理上限
+
+\- 對比後 AIP 的 differentiator 變清楚：Cobo 解的是「agent 在已知協議範圍內的安全執行」，AIP 解的是「agent 在 account 層的執行 integrity，包含未驗證合約的處理」
+
+**\## Questions / Follow-ups**
+
+\- Cobo Recipe（DeFi 協議 specific 的 validated execution path）這層在 AIP 開放生態下要不要對應提供？還是留給社群 module？
+
+\- AIP 動態閾值 module 設計（能應不同 pool 做調整）作為 first additional module，這個方向學院黑客松可以開始 prototype
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 學院筆記 — Agent Memory
 
 \## 課堂訊號
@@ -142,6 +180,7 @@ Agent 架構應由系統的\*\*具體 failure point\*\* 驅動（context anxiety
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 ```
 # Vault for Agents, Not Self-Review — 一個 PKM Reframe 紀錄
@@ -295,6 +334,7 @@ Agent 進 vault 從 top MOC 開始，**不全 grep**。比 pure Zettelkasten「h
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 # 跟 Claude 深挖 Agent 記憶架構
@@ -533,6 +573,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼：
 
 1\. Learning Agent 初始化
@@ -581,6 +622,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼
 
 發布 obsidian-knowledge-vault
@@ -600,6 +642,7 @@ repo 7 個 commit，今天從空目錄推到完整 README + prompt + annotated o
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -681,6 +724,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -701,6 +745,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
