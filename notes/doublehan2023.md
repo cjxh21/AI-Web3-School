@@ -15,8 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+# Day 9
+
+-   Watched 5.25 recording
+    
+-   Built comprehensive knowledge notes on Agent Memory System Design
+    
+-   Submitted the WCB Watch Recording task with replay link and 3 key takeaways
+    
+
+## Next:
+
+-   Continue Week 2 direction exploration — which AI × Web3 problem space to focus on
+    
+-   Watch 5.26 recording
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 # Day 7
 
 -   Reviewed core Week 1 concepts:
@@ -42,6 +61,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 # Day 4
 
 -   Watched 5.18 Recording: Web3 Architecture Skills in the AI Era
@@ -64,6 +84,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 # Day 3
@@ -89,6 +110,7 @@ AI x Web3 School
 
 
 
+
 # Day 2:
 
 ## Started my Week 1 journey with Web3 foundations. Here's what I did today:
@@ -111,6 +133,7 @@ Read Handbook chapters (Network → Cryptography → Wallet → Smart Contract),
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
