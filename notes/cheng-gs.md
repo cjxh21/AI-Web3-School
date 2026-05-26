@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天我主要把 Week 2 的 `Privacy / Security / Sovereignty` 方向真正落到了一个可执行的安全实验框架上，而不是停留在“AI × Web3 很有风险”这种泛泛判断。
+
+最重要的进展是，我把这周的主线明确收敛到了 **CAW 的安全边界实验**。我先确认了当前的 CAW 环境状态：测试网是 `Sepolia`，wallet 已经完成 pairing，而且已经有 active pact，可以看到 `pending approvalpolicy-enforced txpact lifecycle` 和 `operation tracking` 这些关键信息。这让我不再只是抽象讨论 agent 安全，而是可以围绕一个真实的、已经具备策略检查能力的钱包基础设施去做实验。
+
+在此基础上，我把这轮实验需要的结构化材料都搭起来了。首先，我整理了阶段一的环境说明，明确了 wallet、group、链地址、交互方式和测试资金情况。然后我设计了三档 pact，分别对应 **只读 pact、低风险执行 pact、超限需审批 pact**，目的是观察在不同策略强度下，agent 被攻击诱导之后，CAW 到底会 `AllowedPaused for owner approval`，还是 `Denied`。接着我把攻击样本拆成了三大类`prompt injection伪造工具返回越权指令`，并具体列出了 12 个可复现的攻击样本。为了后面真正跑实验，我还准备了结果记录模板和阶段 5 的执行 runbook，规定了每次实验该怎么跑、怎么记、怎么判断拦截层和最终结果。
+
+除了实验设计，我今天也把理论分析部分往前推进了。我写了一份基于当前 CAW 环境的 threat model，不是套模板，而是直接围绕你现在的系统来写：里面明确列出了资产、权限、数据流、工具调用面、外部依赖和失败后果，也把问题落到了一个很清晰的判断上：真正关键的不是 agent 会不会“想错”，而是它错误的意图能不能推进到真实链上动作，而 CAW 的价值正是在于尽量把这些危险动作挡在基础设施层。
+
+如果用一句话总结我今天的工作，那就是：\*\*我把 Week 2 从“方向选择”推进到了“安全实验框架已经搭好，只差真实跑样本并填结果”的状态。\*\* 现在我已经不缺问题框架，也不缺文档骨架，下一步的重点就是开始真实运行 pact 和攻击样本，把 `allowed / paused / denied` 的结果跑出来。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天我主要完成了 **模块 A：AI × Web3 方向扫描与主方向选择** 的学习和初步选题。
 
 首先，我快速梳理了 AI × Web3 的几个主要交叉方向，包括 Payment / Commerce、Identity / Reputation、Wallet / Permission、Privacy / Security、Dev Tooling / Agent Workflow 和 Governance / Coordination。我理解到，这一阶段的重点不是同时做很多项目，而是先看清不同方向分别在解决什么问题、适合什么类型的学员，以及它们更可能落在产品、工具、协议、风控模型还是研究层。
@@ -46,6 +60,7 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 * * *
 
 # **Week 1 总结**
@@ -67,6 +82,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 \# AI × Web3 助手 Stage 2 实现说明
@@ -382,6 +398,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -717,6 +734,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 
 
+
 今天我主要完成了 Week 1 Proof-of-Work Pack 的收口工作，把零散材料整理成了可提交、可审核的公开入口。核心产出是把 \[[README.md](http://README.md)\]重写成 Week 1 总入口，并补上了 \[tasks/[minimal-ai-web3-workflow.md](http://minimal-ai-web3-workflow.md)\]，用最小流程说明了 AI 生成、人工复核、钱包确认、测试网执行和区块浏览器验证之间的边界。
 
 今天还补充了对这个最小 AI × Web3 工作流的简短说明，明确了它解决什么问题、哪些步骤由 AI / Agent 辅助、哪些步骤必须人工确认、如何验证最终结果，以及主要风险点。最后，这些更新已经提交并推送到 GitHub
@@ -724,6 +742,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -885,6 +904,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
