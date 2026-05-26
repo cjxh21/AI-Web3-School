@@ -15,8 +15,36 @@ Web3 开发者 Python Go  Rust  Solidity
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+**Day 9 (5/26) — AI × Web3 Bridge：Agent Wallet / Machine Payment / Settlement & Escrow**  
+  
+**今日阅读**  
+Handbook Bridge 三章：  
+\- Agent Wallet（智能体钱包）  
+\- Machine Payment（机器支付）  
+\- Settlement & Escrow（结算与托管）  
+  
+**Agent Wallet 核心**  
+Session Key 是时间绑定的能力令牌——允许 Agent 在指定时段和范围内自动执行。Agent 生成候选动作，Guard 拒绝越界动作。Guard 分两层：链上（合约规则检查 calldata/target）和链下（单笔/日累计限额）。所有自动化权限必须有用户可见的关闭入口。AI ↔️ Wallet 的接口必须是结构化 Action Schema，不是自然语言。  
+  
+**Machine Payment 核心**  
+把"付款意图"和"实际结算"拆开，每一步都有凭证。意图 → Policy Check → Quote Lock（服务方绑定承诺，不能改价）→ Escrow Hold → 服务交付 → 结算释放。Policy 层是唯一跟 AI 模型无关的组件——确定性代码可审计可形式化验证。  
+  
+**Settlement & Escrow 核心**  
+结算不是"打钱"，而是把任务/交付/验收/付款绑定成可验证流程。ERC-8004（Agent 身份/声誉）提供"这个人是谁"；ERC-8183（任务/支付/交付）定义"要做什么、怎么付、怎么验收"。两者互补。Escrow 锁资金直到条件满足，超时自动回滚是 Agent 的最后防线。  
+  
+**三章联系**  
+递进权限粒度：Agent Wallet（身份+权限，Session Key 限制）→ Machine Payment（意图+结算，Policy 限制）→ Settlement & Escrow（交付+验收，Escrow 保证）  
+  
+**Bridge 进度**  
+9/12 ✅（Chain-aware Context, Web3 Tool Use, Agent Workflow, Agent Wallet, Machine Payment, Settlement & Escrow 已完成）  
+剩余：Agent Identity, Trust & Reputation, Verifiable AI, AI Security, AI Privacy, Governance AI
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 2026-05-25 (Day 8) — Week 2 开篇：AI × Web3 Bridge
 
 **今日学习内容：**  
@@ -53,6 +81,7 @@ Web3 开发者 Python Go  Rust  Solidity
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 026-05-24 (Day 7) — Week 1 收尾：Web3 基础扫读，双基础通关  
   
 **今日学习内容：**  
@@ -80,6 +109,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 
 
+
 2026-05-23 (Day 6) — Web3 基础：密码学 → 钱包 → 智能合约 → 开发栈  
   
 **今日学习内容：**  
@@ -102,6 +132,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -132,6 +163,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 
 
+
 2026-05-21 (Day 4) — MCP & Vibe Coding 学习  
   
 **今日学习内容：**  
@@ -154,6 +186,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -211,6 +244,7 @@ Vibe Coding 不是"把需求丢给 AI 等代码"，而是人负责方向/约束/
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
