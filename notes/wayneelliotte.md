@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+传统的银行账户和信用卡高度依赖人类的生物信息（如刷脸、短信验证码 2FA）。如果一个 Agent 自动帮你在网上订机票，它卡在输入短信验证码这一步，自动化流程就会中断。Agent 支付产品通过编程接口（API）为 AI 创建了机器数字身份。它利用加密货币钱包（Web3 基础设施）或新型的数字化银行账户（如虚拟信用卡/VCC），让 Agent 可以通过代码签名、公私钥校验等机器可读的方式，合规、自主地完成身份验证并进行支付。
+
+Agent 之间的交互往往是高频、微额的。如果走传统的 Visa/Mastercard 渠道，每笔交易的固定手续费（如 $0.3）远超交易本身的价值。大量采用区块链 Layer 2（如 Base, Arbitrum）、闪电网络（Lightning Network）或状态通道（State Channels）。将单笔交易手续费降低到分币级（$0.001 甚至更低）。支持每秒数万次的并发微支付，满足 AI 毫秒级调用 API 时的实时结算需求。
+
+agent 支付最核心的风险控制（Risk Control）模块。产品提供了极其精细化的策略引擎（Policy Engine）：
+
+-   **单次/每日限额**：限制 Agent 每天最多只能花 $50。
+    
+-   **白名单商户**：限定该钱包只能向特定的 API 供应商（如 OpenAI, Serper）付款，禁止向其他未知地址转账。
+    
+-   **按条件触发（Conditional Auth）**：小额（如 $5 以内）允许 Agent 自动决策，大额交易（如 $100 以上）自动挂起并向人类发送 Telegram/邮件通知，等待人类“一键确认”
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 memory是需要解决的问题
 
 要在人与AI的交互中才有好的创意诞生
@@ -37,11 +53,13 @@ memory技术栈
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天没怎么学习，明天开始有周末时间做学习和机器人
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天抽空在学ai的东西
@@ -59,6 +77,7 @@ memory技术栈
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -81,11 +100,13 @@ memory技术栈
 
 
 
+
 今天在让codex自动把aiweb3 school的平台api接进我的hermes里面，看下来还是不太会用，我的面板是配置面板，聊天还得进tg机器人。再研究研究
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
