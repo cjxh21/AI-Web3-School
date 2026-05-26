@@ -15,8 +15,268 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+\## Today’s Goal
+
+\- 学习 Web3 中 Indexing 的作用。
+
+\- 理解 Event Indexing、Subgraph、RPC、Data Pipeline 等概念。
+
+\- 梳理 Indexing 在 AI Agent 链上交互中的位置。
+
+\- 回答一个问题：Indexing 是每个用户自己做，还是会有统一供应商？
+
+\## Learning Materials
+
+\- The Graph Indexing Overview: [https://thegraph.com/docs/en/indexing/overview/](https://thegraph.com/docs/en/indexing/overview/)
+
+\- The Graph Graph Node: [https://thegraph.com/docs/en/indexing/tooling/graph-node/](https://thegraph.com/docs/en/indexing/tooling/graph-node/)
+
+\- Alchemy API Overview: [https://www.alchemy.com/docs/get-started](https://www.alchemy.com/docs/get-started)
+
+\- Goldsky Docs: [https://docs.goldsky.com/introduction](https://docs.goldsky.com/introduction)
+
+\## Notes
+
+\### Why Indexing Is Needed
+
+\- 今天主要学习了 Web3 中 indexing 相关的知识，明白了为什么需要 indexing。
+
+\- 区块链本身是按区块和交易顺序组织的数据结构，适合验证状态和执行交易，但不适合直接做复杂查询。
+
+\- 如果只用 RPC 直接查链，很多问题会很麻烦：
+
+\- 查询某个地址过去所有交易。
+
+\- 查询某个合约所有历史事件。
+
+\- 统计某个协议的 TVL、用户数、成交量。
+
+\- 查询某个用户在多个协议里的资产、仓位和收益。
+
+\- 给前端页面提供快速、结构化的数据。
+
+\- Indexing 的作用是把原始链上数据解析、整理、存储成更容易查询的数据结构。
+
+\- 可以简单理解为：链负责产生和验证事实，indexer 负责把这些事实整理成应用可用的数据。
+
+\### RPC
+
+\- 这里的 `RPC` 是 Remote Procedure Call，不是 `PRC`。
+
+\- 在 Web3 里，RPC 通常指应用和区块链节点交互的接口。
+
+\- 通过 RPC 可以：
+
+\- 查询区块。
+
+\- 查询交易。
+
+\- 查询账户或合约状态。
+
+\- 查询 logs / events。
+
+\- 发送交易。
+
+\- RPC 是链上交互的底层入口，但它通常不是面向复杂业务查询的最佳接口。
+
+\- 例如，“查某个地址过去两年所有 ERC-20 转账，并按 Token 分类汇总”这类问题，用原始 RPC 做会很重；更适合使用已经 indexed 的数据 API 或自建 indexer。
+
+\### Event Indexing
+
+\- Event Indexing 是 indexing 中非常重要的一类。
+
+\- 智能合约可以 emit events，例如 ERC-20 的 `TransferApproval`。
+
+\- 这些 events 会进入交易 receipt logs，方便链下系统读取。
+
+\- Event Indexing 的流程通常是：
+
+\- 从某个起始区块开始扫描。
+
+\- 通过 RPC 或节点数据流读取区块和 logs。
+
+\- 根据合约地址、event signature、topics 过滤目标事件。
+
+\- 解码 event 参数。
+
+\- 把事件转换成数据库里的结构化记录。
+
+\- 处理链重组、重复数据、断点续扫和回填。
+
+\- Event Indexing 很适合处理：
+
+\- Token 转账记录。
+
+\- NFT mint / transfer。
+
+\- DEX swap。
+
+\- Lending deposit / borrow / repay / liquidation。
+
+\- DAO vote。
+
+\### Subgraph
+
+\- Subgraph 是 The Graph 生态中的一种 indexing 方式。
+
+\- 一个 Subgraph 通常定义：
+
+\- 要监听哪些合约。
+
+\- 要处理哪些 events 或 calls。
+
+\- 数据 schema 长什么样。
+
+\- 事件发生时如何把链上数据映射成实体。
+
+\- Subgraph 的结果通常通过 GraphQL API 查询。
+
+\- The Graph 的 Graph Node 会连接区块链节点，按 Subgraph 定义抓取、处理并存储数据，然后提供查询接口。
+
+\- Subgraph 的价值是让开发者不用从零写完整 indexer，而是用声明式配置和 mapping 代码构建一个面向应用的数据 API。
+
+\### Data Pipeline
+
+\- Data Pipeline 是更通用的数据处理流程，不限于 The Graph。
+
+\- 一个链上数据 pipeline 通常包括：
+
+\- Ingestion：从 RPC、节点、Firehose、WebSocket 或第三方 API 获取数据。
+
+\- Decode：解析交易、events、ABI、内部调用等。
+
+\- Transform：把原始数据转换成业务实体，例如用户仓位、Token 余额、交易记录。
+
+\- Store：写入 Postgres、ClickHouse、Elasticsearch、Redis、数据湖或向量数据库。
+
+\- Serve：通过 REST、GraphQL、SQL、Webhook 或内部服务提供查询。
+
+\- Monitor：监控延迟、漏块、重组、失败任务和数据一致性。
+
+\- 对生产系统来说，pipeline 还需要处理：
+
+\- Reorg：链重组导致某些区块或事件需要回滚。
+
+\- Backfill：从历史区块补数据。
+
+\- Checkpoint：记录处理到哪个区块，失败后可以恢复。
+
+\- Idempotency：重复处理同一事件时不能重复写入错误结果。
+
+\- Freshness：数据延迟是否满足业务需求。
+
+\### Indexing and AI Agent
+
+\- 今天也理解了 indexing 在 AI Agent 链上交互中处在什么位置。
+
+\- AI Agent 如果要和链上世界交互，通常需要几个层次：
+
+\- Wallet / Signing：负责身份、签名和交易授权。
+
+\- RPC / Node：负责读取链上实时状态、模拟交易、发送交易。
+
+\- Indexing / Data Layer：负责读取历史数据、事件、仓位、余额变化、协议状态和复杂查询。
+
+\- Reasoning / Planning：AI Agent 根据数据理解当前情况，生成计划。
+
+\- Execution：Agent 通过钱包和 RPC 发起链上操作。
+
+\- Indexing 更像 AI Agent 的“链上记忆和检索层”。
+
+\- 没有 indexing，Agent 只能零散地查当前状态或单个交易，很难理解历史行为、用户资产变化、协议风险和长期趋势。
+
+\- 有了 indexing，Agent 可以更容易回答：
+
+\- 用户过去做过哪些链上操作？
+
+\- 某个仓位是否接近清算？
+
+\- 某个 Token 的历史流动性如何？
+
+\- 某个协议最近是否出现异常事件？
+
+\- 某个地址是否和风险地址交互过？
+
+\## Questions and Answers
+
+\### Q1: Indexing 是每个用户自己做吗？还是会有一个统一的供应商？
+
+\- 简短答案：普通用户通常不自己做 indexing；也没有唯一统一供应商。
+
+\- 更准确地说，indexing 是一个分层市场：
+
+\- 普通用户：通常通过钱包、dApp、区块浏览器或 AI Agent 间接使用 indexed data，不会自己跑 indexer。
+
+\- dApp / 协议团队：会根据需求选择第三方 indexing 服务、部署 Subgraph、自建 indexer，或混合使用。
+
+\- 基础设施供应商：提供 RPC、indexed API、Subgraph hosting、data pipeline、webhook、streaming 等能力。
+
+\- 去中心化 indexing 网络：例如 The Graph 中有不同 Indexers 提供 indexing 和 query 服务，不是单一公司或单一节点。
+
+\- 所以不是“每个用户自己做”，也不是“全行业只有一个供应商做”。
+
+\- 实践中常见选择有几种：
+
+\- 直接用第三方 Data API：适合钱包、dashboard、NFT、portfolio、transfer history 等常见场景。
+
+\- 用 Subgraph：适合协议级数据、事件驱动的数据模型、GraphQL 查询。
+
+\- 自建 indexer：适合需要高度定制、低延迟、强控制、合规要求或成本可控的大型应用。
+
+\- 混合方案：关键数据自建，通用数据用供应商，冷数据或分析数据进入 data warehouse。
+
+\- 是否自建，主要取决于：
+
+\- 数据是否足够通用。
+
+\- 查询是否复杂。
+
+\- 延迟要求高不高。
+
+\- 成本是否可接受。
+
+\- 是否需要跨链。
+
+\- 是否需要对数据正确性和可用性有更强控制。
+
+\- 是否能接受供应商锁定。
+
+\### Q2: RPC 和 Indexing 的关系是什么？
+
+\- RPC 是读取链和发送交易的底层接口。
+
+\- Indexing 通常会用 RPC 或节点数据流作为数据来源之一。
+
+\- RPC 更像“直接问节点一个具体问题”，indexing 更像“长期把链上数据整理成数据库”。
+
+\- 对实时关键状态，应用可能直接读 RPC。
+
+\- 对历史、聚合、搜索、复杂列表和 analytics，应用通常读 indexed data。
+
+\### Q3: AI Agent 应该直接查链，还是查 indexed data？
+
+\- 两者都需要。
+
+\- AI Agent 需要 indexed data 来理解历史和上下文，例如用户仓位、资产变化、协议事件。
+
+\- AI Agent 也需要 RPC 来读取最新状态、模拟交易、估算 gas、发送交易。
+
+\- 一个更稳妥的模式是：
+
+\- 用 indexed data 做观察、检索和分析。
+
+\- 用 RPC 做最终状态确认和交易执行前检查。
+
+\- 用钱包做签名和权限边界。
+
+\- 对涉及资金的操作，不能只依赖旧的 indexed data；执行前应该用 RPC 或可信实时数据再确认一次。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 \## Today’s Goal
 
 \- 学习 Web3 中预言机（Oracle）的作用。
@@ -197,11 +457,13 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 今日摸鱼
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 ## **Today’s Goal**
@@ -538,6 +800,7 @@ AI x Web3 School
 
 
 
+
 \## Today’s Goal
 
 \- 学习账户抽象（Account Abstraction, AA）的基本概念。
@@ -795,6 +1058,7 @@ AI x Web3 School
 
 
 
+
 ## **Today’s Goal**
 
 -   学习以太坊开发相关工具链：Remix、Hardhat、Foundry、OpenZeppelin、viem。
@@ -973,6 +1237,7 @@ AI x Web3 School
 
 
 
+
 \## Today’s Goal
 
 \- 学习 Web3 相关的密码学、钱包、智能合约和 ETH 合约基础知识。
@@ -1092,6 +1357,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
