@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天终于用上了“爱马仕”，不过是离线版本的，不知道在线调用的虚拟系统Ubuntu一直下载失败，后面再研究研究。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -40,11 +48,13 @@ sophia老师讲课非常nice！！！！
 
 
 
+
 继续学习！
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -762,6 +772,7 @@ Monitoring 是上线后的安全感知层，用来发现异常并触发响应。
 
 
 
+
 学了很多web3的基础知识，知道了公钥私钥钱包的用途，了解了智能合约的原理，Btuce老师讲的非常通俗易懂，点赞点赞。Swen老师的co-learning也很有耐心
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -775,11 +786,13 @@ Monitoring 是上线后的安全感知层，用来发现异常并触发响应。
 
 
 
+
 听draken老师讲如何安装Hermes，并且自己尝试安装，试了几次没成功，目前还在调试电脑环境阶段…
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
