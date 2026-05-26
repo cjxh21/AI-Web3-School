@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+水個打卡
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 假日休息一下
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 **观看回放 5.20｜Web3 运行原理**  
   
@@ -36,6 +43,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 學習了**Hermes Agent** 的入門概述  
@@ -91,11 +99,13 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 
 
+
 打卡，基本上把第一週的內容都看完了。都是些較為基礎的內容。把任務一跟任務二完成了。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
