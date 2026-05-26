@@ -14,6 +14,263 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+# Day 9 技术打卡报告：RAG 与来源可信度评估体系
+
+## 摘要
+
+本报告记录了 AI x Web3 School 第 9 天的学习成果，聚焦于**检索增强生成（RAG, Retrieval-Augmented Generation）** 与**链上数据来源可信度（Source Credibility）** 两大核心议题。通过系统性梳理不同信息源的可靠性边界，建立了「来源类型 → 刷新频率 → 引用规范」的决策矩阵，为后续 Agent 工作流中的上下文构建提供了可量化的质量保障框架。
+
+---
+
+## 1. 来源可信度分级体系
+
+根据信息来源的变更频率、可验证性与访问成本，构建三级可信度评估模型：
+
+| 等级 | 来源类型 | 典型示例 | 刷新频率 | 可信度特征 |
+|:---:|---|---|---|---|
+| **L1** | **静态文档** | Handbook、Wiki、官方文档 | 月/季度更新 | 高确定性，内容稳定但可能滞后 |
+| **L2** | **半动态内容** | WCB 课程、Community 讨论、项目白皮书 | 周/日更新 | 中等确定性，需交叉验证 |
+| **L3** | **链上实时数据** | 余额、交易状态、合约事件、Gas 价格 | 秒/分钟级变化 | 高时效性，但需注意数据源可靠性 |
+
+---
+
+## 2. 来源类型深度对比
+
+```mermaid
+mindmap
+  root((来源类型))
+    L1 静态文档
+        Handbook
+            优点：结构化、权威、离线可读
+            缺点：更新滞后、缺少实时案例
+        适用场景：概念学习、术语定义、架构理解
+    L2 半动态内容
+        WCB Learning
+            优点：课程体系完整、有上下文引导
+            缺点：平台绑定、被动跟随进度
+        Community Discussion
+            优点：实践性强、覆盖边缘案例
+            缺点：信息碎片化、正确性参差
+    L3 链上数据
+        On-chain State
+            优点：实时、准确、可编程访问
+            缺点：需 RPC 节点、解析复杂度高
+        Transaction History
+            优点：不可篡改、可验证全量历史
+            缺点：需索引器、gas 成本
+```
+
+---
+
+## 3. RAG 系统中的来源管理协议
+
+### 3.1 检索层设计
+
+```
+Input: User Query
+     ↓
+┌─────────────────────────────────────────────┐
+│  Query Classification Module                 │
+│  ├── Task Type: Factual / Conceptual / Act  │
+│  └── Required Freshness: Real-time / Stable │
+└─────────────────────────────────────────────┘
+     ↓                    ↓
+  Real-time           Stable Query
+     ↓                    ↓
+┌───────────┐      ┌─────────────────┐
+│ Chain RPC │      │ Vector DB +     │
+│ (L3)      │      │ Handbook (L1)   │
+│ + 链上验证│      │ + WCB Content   │
+└───────────┘      │ (L2)            │
+                   └─────────────────┘
+                        ↓
+              ┌─────────────────┐
+              │ Context Fusion  │
+              │ + Source Tag    │
+              │ + Confidence    │
+              └─────────────────┘
+                        ↓
+              ┌─────────────────┐
+              │ LLM Generation  │
+              │ + Citation      │
+              └─────────────────┘
+```
+
+### 3.2 来源标注规范
+
+| 标识符 | 来源 | 适用数据类型 | 刷新策略 |
+|---|---|---|---|
+| `[H:doc_name]` | Handbook 章节 | 概念定义、术语解释 | 定期批量更新 |
+| `[W:course_id]` | WCB Learning | 课程内容、任务描述 | 跟随课程进度 |
+| `[C:chain:address]` | 链上合约 | 余额、状态、事件 | 实时查询 |
+| `[C:tx:hash]` | 链上交易 | 历史记录、Gas 消耗 | 快照后不可变 |
+
+---
+
+## 4. 来源可信度 Checklist
+
+### 4.1 引用决策树
+
+```
+Is the data time-sensitive?
+    │
+    ├─ YES → Is it on-chain data?
+    │           │
+    │           ├─ YES → Query RPC / Indexer
+    │           │         ↓
+    │           │         Add timestamp + block number
+    │           │         ↓
+    │           │         Validate: confirmations ≥ 1
+    │           │
+    │           └─ NO → Check last_updated timestamp
+    │                     ↓
+    │                     Apply TTL (Time-To-Live) rule
+    │
+    └─ NO → Is it a conceptual question?
+                │
+                ├─ YES → Use Handbook + WCB
+                │
+                └─ NO → Hybrid: Handbook + Community + Stable Data
+```
+
+### 4.2 可信度验证 Checklist
+
+| 检查项 | L1 静态文档 | L2 半动态内容 | L3 链上数据 |
+|---|---|---|---|
+| ✅ 版本/更新时间可查 | 必须 | 必须 | 必须 |
+| ✅ 来源权威性评估 | 必须 | 建议 | 必须（RPC 可靠性） |
+| ✅ 交叉引用验证 | 建议 | 必须 | 必须（多节点确认） |
+| ✅ 变更历史可追溯 | 建议 | 必须 | 必须（不可篡改） |
+| ✅ 数据解析一致性 | N/A | N/A | 必须（解析逻辑验证） |
+
+---
+
+## 5. 链感知上下文（Chain-aware Context）集成
+
+### 5.1 Agent 上下文构建协议
+
+```mermaid
+sequenceDiagram
+    participant User as User Query
+    participant Classifier as Query Classifier
+    participant Retriever as RAG Retriever
+    participant ChainSvc as Chain Service
+    participant Fusion as Context Fusion
+    participant LLM as LLM
+
+    User->>Classifier: Raw Query
+    Classifier->>Classifier: Classify: Type + Freshness
+    Classifier->>Retriever: Stable Query (if needed)
+    Classifier->>ChainSvc: Real-time Query (if needed)
+    
+    Retriever-->>Fusion: L1/L2 Context + Sources
+    ChainSvc-->>Fusion: L3 Context + Block# + Timestamp
+    
+    Fusion->>Fusion: Merge + Rank by relevance
+    Fusion->>Fusion: Add source tags + confidence scores
+    
+    Fusion->>LLM: Augmented Context
+    LLM-->>User: Grounded Response + Citations
+```
+
+### 5.2 上下文质量保障不变量
+
+$$ContextQuality(t) = \alpha \cdot Freshness(t) + \beta \cdot Completeness(t) + \gamma \cdot Correctness(t)$$
+
+其中：
+
+- $\alpha + \beta + \gamma = 1$（权重归一化）
+- $Freshness(t) \in [0, 1]$：实时数据的时间衰减系数
+- $Completeness(t) \in [0, 1]$：上下文覆盖度（是否包含关键来源）
+- $Correctness(t) \in [0, 1]$：数据校验通过率
+
+**约束条件**：若 $Freshness(t) < 0.5$ 且数据类型为 `ON_CHAIN`，则触发强制刷新。
+
+---
+
+## 6. 实践输出：来源管理规则
+
+### 6.1 刷新频率决策表
+
+| 数据类型 | 示例 | 刷新策略 | TTL |
+|---|---|---|---|
+| 合约 ABI / 方法签名 | 函数列表、参数类型 | 首次读取 + 手动刷新 | 无上限 |
+| 代币余额 | 用户 ETH/USDC 余额 | 实时查询（按需） | 即时 |
+| Gas 价格 | 当前建议 gas | 实时查询 | < 1 分钟 |
+| 账户抽象配置 | 智能钱包策略 | 查询时验证 | < 5 分钟 |
+| 概念/术语定义 | 什么是智能合约 | 静态引用 | 无需刷新 |
+
+### 6.2 引用规范示例
+
+```
+User Query: 我的钱包当前余额是多少？
+
+Agent Response:
+> 当前 ETH 主网余额为 1.234 ETH（数据来源：[C:chain:0xYourAddress], 区块 #12345678, 时间戳 2026-05-27T14:32:00Z）
+> 
+> 注意：链上数据具有实时性，执行交易前请重新确认余额。
+
+Source Tags:
+- [C:chain:0x...] = On-chain query via RPC
+- Block# = Immutability guarantee
+- Timestamp = Freshness indicator
+```
+
+---
+
+## 7. 安全与边界场景
+
+### 7.1 数据源可信度风险
+
+| 风险类型 | 触发场景 | 防御策略 |
+|---|---|---|
+| RPC 数据不可信 | 使用未知/去中心化节点 | 指定可信节点列表（Alchemy/Infura/自建） |
+| 缓存过期 | L1/L2 数据未及时刷新 | 记录 `last_fetched`，设置 TTL |
+| 解析错误 | 合约 ABI 更新但本地未同步 | 动态获取 ABI 或 fallback 到标准接口 |
+| 链重组 | 依赖未确认交易的状态 | 要求 `confirmations ≥ 1` |
+| 上下文污染 | RAG 检索了过时/错误 chunk | 添加 `source_verified` 标记 |
+
+### 7.2 Fallback 机制
+
+```
+Primary Source Failed?
+    │
+    ├─ YES → Is it a critical operation?
+    │           │
+    │           ├─ YES → Abort + Request Manual Confirmation
+    │           │
+    │           └─ NO → Fallback to Secondary Source
+    │                     │
+    │                     └─ All Sources Failed?
+    │                               │
+    │                               └─ YES → Return "Data Unavailable" + Retry Option
+```
+
+---
+
+## 8. 学术标签
+
+`#RAG #检索增强生成 #来源可信度 #Chain-aware-Context #Agent-Context #数据质量 #上下文管理 #Web3-Data-Sources`
+
+---
+
+## 9. 下一步行动
+
+- [ ] 将来源标注规范集成到 Agent prompt 模板中
+- [ ] 实现 RPC 可信节点配置模块
+- [ ] 构建链上数据缓存层与 TTL 管理
+- [ ] 设计 RAG chunk 的来源元数据（metadata）结构
+- [ ] 验证来源管理协议在实际 Agent 工作流中的可行性
+
+---
+
+**打卡完成**
+Day 9 | 2026-05-26
+核心收获：建立了来源可信度评估框架，明确了 RAG + Chain-aware Context 的集成路径，为后续 Agent 工具调用提供了坚实的上下文质量保障基础。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 ## Day 8 | 高保真Prompt工程与链感知上下文架构设计
