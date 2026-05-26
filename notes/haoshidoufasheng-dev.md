@@ -15,19 +15,59 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+**智能合约的骨架**
+
+SolidityStorageABI
+
+-   **1**
+    
+    **SPDX + pragma 是每个合约的起点**
+    
+    `// SPDX-License-Identifier: MIT` 声明开源协议，`pragma solidity ^0.8.0;` 锁定编译器版本，两行缺一不可，否则编译时报警。
+    
+-   **2**
+    
+    **状态变量存在链上，gas 昂贵**
+    
+    写在 `contract` 体内、函数外的变量（如 `uint public count;`）持久存储在 EVM Storage，每次写入约消耗 20,000 gas。
+    
+-   **3**
+    
+    **visibility 决定谁能调用**
+    
+    `public` 任意调用；`external` 仅外部；`internal` 仅合约内部及子合约；`private` 仅本合约。忘写 visibility 在 0.8+ 会报错。
+    
+-   **4**
+    
+    **view / pure 函数不消耗 gas（链下调用时）**
+    
+    `view` 可读状态变量但不修改；`pure` 完全不访问链上状态。本地调用免 gas，但在交易中被调用仍计费。
+    
+-   **5**
+    
+    **constructor 只跑一次，部署时执行**
+    
+    用于初始化 owner、设定初始参数。0.8 之前用 `function ContractName()`，现统一写 `constructor()`，注意历史代码区别。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天水一下明天补
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 今天周末休息一天，未进行相关学习
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -38,6 +78,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -54,6 +95,7 @@ AI x Web3 School
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-21-1779378123882-image.png)
 
 今天的学习讲述web3与ai相结合的相关知识
@@ -61,6 +103,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -106,11 +149,13 @@ AI x Web3 School
 
 
 
+
 今天耽误了直播的前半部分，只听了后半部分，大概学习了一下Hermes 的部署与配置，还没有看完，明天将这两天学习内容补上
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
