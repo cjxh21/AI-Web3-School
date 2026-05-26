@@ -15,8 +15,54 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+一、重要的概念：「當 AI 開始能控制資金時，Trust becomes infrastructure。」
+
+過去 Chatbot 只是回答問題，但未來 Autonomous Agent 會真正執行交易、控制錢包、操作鏈上合約、自主完成工作流程。但問題是，單靠 prompt 無法真正限制 AI 的權限，因此可能出現：
+
+1\. Silent Override：AI 默默修改指令或金額
+
+2\. Shadow Custody：AI 私自建立新錢包並移動資金
+
+這讓我理解到：AI 的風險不只是「做錯事」，而是「在沒有被發現的情況下越權」。因此，Cobo 提出的三層架構：
+
+•   MPC：避免單一方掌握完整私鑰
+
+•   Pact Authorization Protocol：把規則寫進基礎設施
+
+•   Recipe Skill Layer：限制 AI 只能使用驗證過的執行流程
+
+核心概念是：不要直接把 wallet 給 AI，而是給它受限制的權限（Pact）。
+
+二、採取行動
+
+我想進一步研究：「如何讓 AI Agent 的金融決策變得Verifiable。」接下來我會：
+
+•   研究 MPC、Account Abstraction、Policy Engine 的概念
+
+•   理解 AI Agent 如何安全操作鏈上資產
+
+•   持續關注 AI × Web3 × Autonomous Finance 的應用
+
+•   思考這些架構如何與量化金融、智能交易 Agent 結合
+
+另外，我也想試著從：「AI 能不能自主做金融決策」，進一步思考：「AI 如何在被限制與驗證的情況下安全做決策」。
+
+三、問題
+
+如果未來 AI Agent 可以自主交易與管理資產，那責任到底該歸屬於誰？
+
+例如：如果 AI 被 prompt injection 攻擊怎麼辦？AI 是否有可能繞過規則自己建立新的 execution path？
+
+我認為未來 Autonomous Finance 最大的問題可能不只是技術，而是：「如何建立 AI 的可信任治理與責任機制。」
+
+![IMG_0810.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/1118sophie/images/2026-05-26-1779799418208-IMG_0810.jpg)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 Agent Memory
 
 一、核心概念
@@ -73,6 +119,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 1\. 合約安全審計的實踐與成果
 
 •   實際操作：講者提到實際使用了 OpenAI 推出的EVM Bench工具進行智能合約審計。此外，他們團隊還設計了一套合約審計知識庫（Wiki），將歷史發現的安全問題與風險分級存入服務端。
@@ -94,6 +141,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 回放**AI Agent 入门 —— Hermes 从 0 到 1**
@@ -149,6 +197,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -223,6 +272,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 
 
+
 **在 AI 時代，開發者的價值不在於編碼速度，而是在於對底層知識的掌握與架構設計能力。**
 
 **1\. AI 時代下開發者的角色轉變：從「執行者」變為「架構師」**
@@ -268,6 +318,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
