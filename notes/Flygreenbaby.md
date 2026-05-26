@@ -15,8 +15,87 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+```
+# Day 9 打卡草稿
+
+**日期**: 2026-05-26
+
+---
+
+## 今日学习内容
+
+### 开发栈（Dev Stack）：从 Remix 到 Hardhat 的工程链路
+
+- 搞清了 Web3 开发栈的六步链路：写合约 → 编译 → 部署 → 测试 → 前端调用 → 浏览器验证
+- 在 Remix 成功部署了 Counter 合约（含 count()、increment()、CountChanged event）
+- 尝试用 Hardhat 搭建本地工程，因 Node.js v25.4.0 版本过高导致依赖反复冲突，最终放弃
+- 收获：Remix 适合快速实验，正式项目需要 Hardhat/Foundry + Git，但前提是 Node.js 要用 LTS 版本
+
+### 网络（Network）：测试网交易追踪
+
+- 通过 pk910 水龙头领取了 Sepolia 测试 ETH
+- 用 MetaMask 给自己发了 0.001 ETH 交易
+- 在 Sepolia Etherscan 追踪交易详情：Tx Hash、Status、Block、Gas Fee、Gas Price、Confirmations
+- 切换到 Ethereum Mainnet 发现同一地址余额为 0 → 验证了多链隔离
+- 理解了 AI Agent 操作链上时必须感知 chain id，否则读错链数据完全错误
+
+---
+
+## 今日产出
+
+| 文件 | 说明 |
+|------|------|
+| `notes/week2/day9-dev-stack.md` | 开发栈学习笔记 |
+| `notes/week2/day9-network.md` | 网络学习笔记 |
+| `logs/day9-dev-stack-network-qa.md` | Day 9 学习对话记录 |
+| `prompts/day9-dev-stack-network-prompts.md` | Day 9 Prompt 使用记录 |
+
+---
+
+## 进度
+
+### Week 1 实践状态
+
+| 篇目 | 笔记 | 实践 |
+|------|:--:|:--:|
+| ① LLM | ✅ | ✅ |
+| ② Prompt | ✅ | ✅ |
+| ③ Context | ✅ | ✅ |
+| ④ RAG | ✅ | ✅ |
+| ⑤ Agent | ✅ | ✅ |
+| ⑥ Frameworks | ✅ | ✅ |
+| ⑦ Vibe Coding | ✅ | ⏸️（缺 Node.js） |
+| ⑧ MCP | ✅ | ⬜ |
+| ⑨ Evaluation | ✅ | ⬜ |
+| ⑩ Fine-tuning | ✅ | ⬜ |
+| ⑪ Inference | ✅ | ⬜ |
+
+Week 1 实践：**6/11 完成**
+
+### Week 2 进度
+
+| 篇目 | 笔记 | 实践 |
+|------|:--:|:--:|
+| ① Cryptography | ✅ | ✅ |
+| ② Wallet | ✅ | ✅ |
+| ③ Smart Contract | ✅ | ✅ |
+| ④ Dev Stack | ✅ | ⏸️（Remix ✅，Hardhat 因 Node.js 版本放弃） |
+| ⑤ Network | ✅ | ✅ |
+| ⑥~⑩ | ⬜ | ⬜ |
+
+Week 2：**5/10 完成**
+
+---
+
+*AI x Web3 School Day 9 课程完成 — 由 Hermes AI（模型：阿里百炼免费模型）在 2026-05-26 生成*
+```
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ```
 # Day 8 打卡草稿
 
@@ -103,6 +182,7 @@ Week 2：**3/10 完成**
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 ```
 # Day 7 打卡草稿
 
@@ -169,6 +249,7 @@ Week 1 实践：**6/11 完成**
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 \# Daily Note: 2026-05-23
@@ -277,6 +358,7 @@ _AI x Web3 School Day 6 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 
 
 
+
 \# Daily Note: 2026-05-22
 
 \## 📋 今日计划
@@ -370,6 +452,7 @@ _AI x Web3 School Day 5 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -3729,6 +3812,7 @@ _AI x Web3 School Day 4 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 
 
 
+
 📝 今日学习笔记预览 (Day 3)
 
 \# Day 3 学习笔记：Prompt Engineering & Context Engineering
@@ -3886,6 +3970,7 @@ _学习笔记结束_
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -4278,6 +4363,7 @@ NaN.  ✅ 校验靠 Schema（JSON Schema、Pydantic 等）
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
