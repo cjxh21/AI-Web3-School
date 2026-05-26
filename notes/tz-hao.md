@@ -15,8 +15,38 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+## **提示工程（让Agent从“靠运气”到“稳定可控”）**
+
+### **1\. 系统提示符与用户提示符**
+
+| 层 | 放什么 | 更新频率 | Web3类比 |
+| --- | --- | --- | --- |
+| 系统提示 | 角色、规则、工具说明 | 几乎不变 | 契约代码——行为定义边界 |
+| 用户提示 | 具体任务、数据 | 各自不同 | 交易calldata——每次不同输入 |
+
+**核心原则**：把“你是谁”“不能克”放系统，把“这次克”放用户。混着放→代理随任务变来变去，“看心情”遵守规则。
+
+### **2\. 构造输出**
+
+令Agent波形能力被程序解析，不能靠“感觉”：
+
+| 方式 | 做法 | 适用场景 |
+| --- | --- | --- |
+| Markdown 规定 | 约定格式，则提取 | 简单的场景，够用就行 |
+| JSON 模式 | 强制只输出JSON | 程序消费，但会降低推理质量 |
+| 函数调用 | 重构输出重构参数 | 最可靠（部分模型支持） |
+| 约束编码 | token生成阶段强制语法 | 100%合格，企业级 |
+
+> **Web3类比**：Markdown ≈ 注释写接口文档（看人品），JSON 模式 ≈ ABI 编码，约束解码 ≈ solc 编译器（语法层保证）。
+
+> **经验法则**：能用函数调用的用函数调用，不能用JSON模式，别用正则硬解析自然语言。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ## **深度知识：Agent 架构模式**
 
 > 补充 Handbook 没覆盖的工程层面知识
@@ -67,11 +97,13 @@ timezone: UTC+8
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 上午听了一下直播，感觉还是有点蒙  
@@ -97,6 +129,7 @@ timezone: UTC+8
 
 
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -110,6 +143,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -128,6 +162,7 @@ timezone: UTC+8
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -139,11 +174,13 @@ timezone: UTC+8
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
