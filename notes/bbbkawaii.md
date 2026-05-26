@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+学习了一些 PM 角度的观点
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 学习了 AI agent 的Long-term Memory 的一些机制
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 学习OpenAI Agents SDK，尝试创建 agent
 <!-- DAILY_CHECKIN_2026-05-24_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 学习的内容：x402Coinbase 和 Cloudflare 推出的、复用 HTTP 402 状态码的机器原生支付协议，处理的是单次、即时、小额的「按调用付费」场景。三者的分工大致是：ERC-8004 管「我是谁、你信不信我」，x402 管「按次付费的微支付」，ERC-8183 管「带交付与验收的复杂任务结算」
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 了解了区块浏览器和测试网，包括以太坊目前最常用的两个主流测试网
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 学习了区块链浏览器、钱包、信任机制、支付生命周期相关的概念
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
