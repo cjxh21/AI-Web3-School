@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+练习使用hermas 还是不太会使用它，用ai协助使用
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ### 1\. 钱包、私钥与个人主权
 
 -   **核心概念：** 私钥是控制资产的“终极签名印章”，谁拥有就能控制资产。助记词是私钥的可读备份，而地址是由公钥截取生成的公开收款号。
@@ -70,6 +76,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 **学习主题：** 深入理解以太坊账户 (Ethereum Accounts)
 
 **参考资料：** [Ethereum 官方开发者文档](https://ethereum.org/developers/docs/accounts/)
@@ -119,6 +126,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 1.观看**AI 在 Web3 的应用，了解AI在web3可以有哪些应用，在使用的时候应该注意什么**  
 **2.运用ai辅助安装wsl2环境，研究api**
 <!-- DAILY_CHECKIN_2026-05-21_END -->
@@ -128,12 +136,14 @@ AI x Web3 School
 
 
 
+
 1.观看**AI 时代，Web3 开发者需要具备的基础知识和架构能力回放**  
 **2.了解Natural Language Processing and Large Language Models，以及transformer的原理**
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
