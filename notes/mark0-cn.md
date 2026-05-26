@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+[https://www.notion.so/365e1810ba1780ceab6efaaa23dbdcf3](https://www.notion.so/365e1810ba1780ceab6efaaa23dbdcf3)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 [https://www.notion.so/MPT-366e1810ba17807fab44fa01df0410fa](https://www.notion.so/MPT-366e1810ba17807fab44fa01df0410fa)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 [https://www.notion.so/Session-365e1810ba17809d80f5f8f28f5ad05e](https://www.notion.so/Session-365e1810ba17809d80f5f8f28f5ad05e)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 [https://www.notion.so/Skill-Tool-Hermes-365e1810ba1780d08918ef2e0113bcf6](https://www.notion.so/Skill-Tool-Hermes-365e1810ba1780d08918ef2e0113bcf6)
@@ -40,11 +48,13 @@ AI x Web3 School
 
 
 
+
 [https://www.notion.so/365e1810ba17800ab31fe6f4dee38d00](https://www.notion.so/365e1810ba17800ab31fe6f4dee38d00)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -64,11 +74,13 @@ AI x Web3 School
 
 
 
+
 [https://www.notion.so/Hermes-Agent-Loop-365e1810ba1781b1a7c6d105eaf41d11](https://www.notion.so/Hermes-Agent-Loop-365e1810ba1781b1a7c6d105eaf41d11)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
