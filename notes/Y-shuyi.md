@@ -23,10 +23,155 @@ AI x Web3 School
     
 
 ![Screenshot 2026-05-26 at 12.19.02.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-26-1779769199686-Screenshot_2026-05-26_at_12.19.02.png)
+
+Q: 什么是 Agentic Wallet？它和普通钱包的核心区别是什么？
+
+• date: 2026-05-26
+
+• track: agent-commerce
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 想听懂 Cobo Agentic Wallet 分享，但目前对基础概念接近 0 了解。
+
+• next\_action: 用“用户先设规则，Agent在规则内执行”写出1句话定义，并举1个自动支付例子。
+
+• status: exploring
+
+• answer\_note: Agentic Wallet核心是“策略授权+自动执行”，不是AI自由操作钱包。
+
+☐ Q: 为什么 Web3 + Agent 支付会兴起？
+
+• date: 2026-05-26
+
+• track: ecosystem
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 对“支付兴起”背景不清楚，无法判断行业趋势是否真实。
+
+• next\_action: 按“需求侧（Agent执行任务）/供给侧（链上可编程支付）”各写3点驱动因素。
+
+• status: exploring
+
+• answer\_note: 本质是AI从问答走向执行，执行需要可编程、全球化、7x24结算能力。
+
+☐ Q: Agent 为什么会“失控”？失控具体指什么？
+
+• date: 2026-05-26
+
+• track: privacy
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 看到“Two Silent Failures”案例页，对风险表述理解困难。
+
+• next\_action: 用“提示词约束≠权限约束”写一段100字解释，并列出1个越权示例与1个防护点。
+
+• status: exploring
+
+• answer\_note: 失控多为权限与架构问题，不是“AI情绪失控”；需策略引擎、审计与刹车机制。
+
+☐ Q: MPC 是什么？它在钱包里解决的核心问题是什么？
+
+• date: 2026-05-26
+
+• track: data-sovereignty
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 在多处看到MPC术语，但缺少可落地理解。
+
+• next\_action: 用“钥匙拆分、多人协同签名、无人持有完整私钥”做30秒口头复述。
+
+• status: exploring
+
+• answer\_note: MPC把单点私钥风险拆散，降低单点被盗/单人作恶风险。
+
+☐ Q: MPC 和多签钱包到底差在哪（从用户体验和链上表现看）？
+
+• date: 2026-05-26
+
+• track: agent-commerce
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 两者都没实际体验过，概念容易混淆。
+
+• next\_action: 做一张3行对比表（签名发生位置、链上可见性、操作流畅度）。
+
+• status: exploring
+
+• answer\_note: 多签常是链上多地址审批；MPC多在链下协同生成签名，链上常像单地址签名。
+
+☐ Q: 如何找到并验证一个 DAO 的多签钱包地址是否可信？
+
+• date: 2026-05-26
+
+• track: ecosystem
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 需要从“知道概念”过渡到“能自己查证真实项目地址”。
+
+• next\_action: 按“官网来源→Safe链接→Etherscan合约标签”流程，复查LXDAO地址并记录证据截图。
+
+• status: exploring
+
+• answer\_note: 可信性看来源（官方）、类型（Contract）、行为（与治理/金库上下文一致）。
+
+☐ Q: 是否需要为 Agent 实验单独创建测试钱包，而不是复用主钱包？
+
+• date: 2026-05-26
+
+• track: privacy
+
+• priority: soon
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 已开始测试网实践，担心权限和资金混用风险。
+
+• next\_action: 制定“主钱包/实验钱包”隔离规则：网络、额度、白名单、授权周期。
+
+• status: exploring
+
+• answer\_note: 建议隔离；测试与主资产分离是最基础的风控动作。
+
+☐ Q: 对当前学习阶段，哪些概念是“必须现在懂”，哪些可以后置？
+
+• date: 2026-05-26
+
+• track: meta
+
+• priority: now
+
+• source: logs/[2026-05-26.md](http://2026-05-26.md)
+
+• context: 当前基础较弱，深入细节容易信息过载。
+
+• next\_action: 建立“Now/Soon/Later”学习清单，每次新问题先归类再展开。
+
+• status: exploring
+
+• answer\_note: 当前优先：Agentic Wallet定义、MPC与多签差异、权限边界与风控；后置密码学细节。
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 # 打卡日志 — 2026-05-25
 
@@ -113,11 +258,13 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 ![Screenshot 2026-05-24 at 23.57.18.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-24-1779638290862-Screenshot_2026-05-24_at_23.57.18.png)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -130,6 +277,7 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 
 
+
 ![Screenshot 2026-05-22 at 23.57.21.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-22-1779465443887-Screenshot_2026-05-22_at_23.57.21.png)
 
 今天诚实地请个假，有优先级更高的事情需要做。
@@ -137,6 +285,7 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -190,11 +339,13 @@ Further question/action：
 
 
 
+
 今天主要听了Bruce分享的Web3的运行基础。之前我也听不同的人讲过这个部分，其它部分Bruce老师的解读其实能发现是从技术底层逻辑上去拆解为什么其中某一个环节的存在对于整个系统会有影响——这一点其实我还不够问自己更深。最后的Takeaway是web3不仅是关于技术，技术只是基础设施，而更涉及到社会学、经济学和密码学。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -216,6 +367,7 @@ X博主分享：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
