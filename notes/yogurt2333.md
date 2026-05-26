@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+**1.Obsidian = RAG** 的顿悟 — 自己的笔记系统本质上就是检索+生成，打算做个 Obsidian Agentic RAG
+
+**2.🚀 部署并验证了首个 Solidity 合约到 Sepolia**
+
+\- 合约: `HelloWorld` — 存储+修改消息
+
+\- 地址: `0x11eA5B31C313aE5DA3C224EfAff57CdE6B1aDF18`\]([https://sepolia.etherscan.io/address/0x11eA5B31C313aE5DA3C224EfAff57CdE6B1aDF18](https://sepolia.etherscan.io/address/0x11eA5B31C313aE5DA3C224EfAff57CdE6B1aDF18))
+
+\- 状态: ✅ 编译 ✅ 部署 ✅ Etherscan 验证通过
+
+\- 踩坑: Hardhat v2 vs v3、Node.js 版本兼容、PowerShell 语法、Etherscan 验证字节码匹配
+
+3\. **调研了 Cobo Agentic Wallet** — MPC 非托管 + Pact 协议 + Recipe 技能层的 AI Agent 钱包，跟我的 AdventureX 方向直接相关
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 \### ✅ 完成：Vibe Coding 架构设计
 
 今天凌晨我们把 vibe coding 的分层架构落地成文档了，存在 `plans/vibe-coding-architecture.md`。
@@ -55,6 +73,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -82,6 +101,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -99,6 +119,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -129,6 +150,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -150,6 +172,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
