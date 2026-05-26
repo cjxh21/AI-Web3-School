@@ -10,7 +10,17 @@ timezone: UTC+8
 
 ## Self-introduction
 
-AI x Web3 School
+很高兴加入 AI x Web3 School 🚀
+
+我是一个长期从事全栈 / Web3 开发的开发者，目前主要在做加密货币钱包、DApp，以及 AI + Web3 方向的一些产品探索。
+
+这次参加 AI x Web3 School，最想深入研究的是：
+AI Agent 如何真正与链上协议、钱包、DeFi 结合，成为普通用户也能使用的产品。
+
+我希望在这次共学中，能够完成一个 AI × Web3 的小 Demo，比如：
+让 AI 理解用户意图，并辅助完成链上交互、资产管理或 DeFi 操作。
+
+也期待认识更多一起做 AI × Web3 的朋友，一起学习、交流、做项目 🙌
 
 ## Notes
 
