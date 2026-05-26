@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天跟进了学习进度，学到了RAG，并且完成了学习任务，也顺便将obsidian进行了更新，且让agent更新了本地文件
+
+![1514278cf2e4a80db35502faf79b1ec8.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-26-1779810794658-1514278cf2e4a80db35502faf79b1ec8.png)
+
+效率越来越快了，现在通过学习，跟codex的磨合时间越来越少，也初步明白了如何跟agent进行交流，让他跑事情
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天将ai学习任务里的英文进行了磨合（英文弱），我让codex跟obsidian进行结合，并产出了一份可供我私人学习的英语图表
 
 ![9f9d540b91c1b2c673026bbd2cfd98d7.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-25-1779696694427-9f9d540b91c1b2c673026bbd2cfd98d7.png)
@@ -31,6 +41,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天没有更近新的学习任务，一天都在搞定安装git、学会怎么创建GitHub repo、以及怎么部署本地文件夹让codex push到GitHub上，以及完成了
 
 ![59d9768418f6224c3f5ccd4c244fc807.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-22-1779464214747-59d9768418f6224c3f5ccd4c244fc807.png)
@@ -40,6 +51,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 今天是第二天的学习任务，对prompt有了一些粗浅的理解，也对codex的交互更熟练了，也明白怎么使用跟让数据理解的自然语言跟LLM沟通，也完善了用户画像（第一天不知道有这块），明天将对接github repo，将codex的数据放在里面
 
 ![78603492a45ac303c8cd40bdeceb69bf.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-21-1779378254690-78603492a45ac303c8cd40bdeceb69bf.png)
@@ -47,6 +59,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -67,6 +80,7 @@ AI x Web3 School
 
 
 
+
 ![3054dd988c54ed99c9f666f26a330f46.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-19-1779204393778-3054dd988c54ed99c9f666f26a330f46.png)
 
 今天课听下来整体还是听不懂，但根据draken老师的操作理解了一些控制微信的运行逻辑，感觉实操还是有些困难，在寻求大家的帮助的时候建议我用codex去辅助安装，然后现在39分，我依旧卡在第一步
@@ -78,6 +92,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
