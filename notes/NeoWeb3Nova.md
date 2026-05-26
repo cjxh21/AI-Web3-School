@@ -15,8 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+> 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
+> 
+> 关键动作：
+> 
+> 1.  方向决策：Agentic Commerce
+>     
+> 2.  5W 拆解：把「谁发起/执行/付款/验证/承担风险」映射到具体技术组件
+>     
+> 
+> 通过一个小项目来展示整个拆解流程[https://github.com/NeoWeb3Nova/ai-web3-assistant](https://github.com/NeoWeb3Nova/ai-web3-assistant)
+> 
+> ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-26-1779804978300-image.png)
+
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md)
+> 
+> [#AIWeb3School](#AIWeb3School) [#Week2](#Week2) [#Day9](#Day9) [#HackathonPrep](#HackathonPrep)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 > 今日完成 Co-learning 线上共学，并深度阅读 Handbook 三章交叉内容：Agent Identity、Settlement & Escrow、Governance AI。
 
 > 关键动作：
@@ -49,6 +70,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -77,6 +99,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 > 【AI × Web3 School 打卡 Day 5 | Week 1 收官】
@@ -114,6 +137,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -174,6 +198,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -202,6 +227,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -251,6 +277,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
