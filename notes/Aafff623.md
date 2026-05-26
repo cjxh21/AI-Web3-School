@@ -15,8 +15,58 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+\---
+
+今日完成｜Week 2 Day 3 · 5/26
+
+参加活动：
+
+\- Virtuals（19:00-20:00）✅
+
+\- Cobo Agentic Wallet PM 分享（20:00-21:00）✅
+
+有效笔记（6 条）：
+
+【Virtuals】
+
+1\. Agent 资产化逻辑：创建→持币→分享收益，Smart Account 的 programmable 特性天然适合链上自动化收益分配
+
+2\. 去中心化所有权与托管安全的张力：Agent 所有权交给社区后，操作权限如何安全托管？Session Key 是这个问题的答案
+
+3\. Agent 代币化经济模型可作为 Hackathon 扩展设计方向
+
+【Cobo Agentic Wallet】
+
+4\. Agent 钱包的特殊需求：7×24 运行、高频交互，无法像人类一样手动确认每笔交易，需要预设策略 + 自动审批流
+
+5\. Session Key 的"有限权限"设计哲学（时间/金额/操作类型限制）与 Cobo 策略引擎思路高度一致
+
+6\. MPC + AA 的结合点：MPC 管密钥分片，AA 管权限策略，Session Key 可作为两者的桥梁
+
+对 Hackathon 的启发：
+
+Smart Account + Session Key 的方向被进一步验证。Cobo 的机构级实践说明"有限权限"是 Agent 钱包的刚需，不是可选功能。Virtuals 的 Agent
+
+经济模型则为项目扩展提供了代币化设计空间。
+
+下一步：
+
+明天开始阅读 ZeroDev Session Key 文档，评估 SDK 接入难度，进入技术预研阶段。
+
+\---
+
+附：repo 链接
+
+\- 完整笔记：daily-log/week-2/2026-05-26/[2026-05-26.md](http://2026-05-26.md)
+
+\- Hackathon 方向文档：hackathon/[DIRECTION.md](http://DIRECTION.md)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 # **2026-05-25**
 
 > Week 2 · Day 2 · 周一
@@ -62,6 +112,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 # **2026-05-23**
@@ -199,6 +250,7 @@ AI x Web3 School
 
 
 
+
 # **2026-05-22**
 
 > Week 1 · Day 6 · 周五
@@ -252,6 +304,7 @@ AI x Web3 School
 
 
 
+
 # **2026-05-21**
 
 > Week 1 · Day 5 · 周四 , 直达 Github Repo: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-21](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-21)
@@ -297,6 +350,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -418,6 +472,7 @@ Github 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/ma
 
 
 
+
 Github repo 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-19](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-19)
 
 # **2026-05-19**
@@ -471,6 +526,7 @@ Github repo 直达地址: [https://github.com/Aafff623/web3career-study-track/tr
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
