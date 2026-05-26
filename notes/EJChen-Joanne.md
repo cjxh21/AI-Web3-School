@@ -15,8 +15,54 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+### **Agentic wallet**
+
+1\. why agentic economy?
+
+\- 如何讓大型模型agent在執行層自行調用錢包付crypto
+
+\- 如何建立人與agent的授權支付
+
+2\. 待解問題：如何讓AI代表人類的intent去花錢？
+
+\- 痛點：鏈上需透過人使用私鑰動用crypto
+
+3\. 如沒有Agent的可控邊界，會導致什麼問題？
+
+\- _Silent Override_: ex. 人在prompt中限制只能花100美，但如沒有硬性的邊界層和授權規則，AI在執行上有時候會超出人類預期，只有在人類強制干預時才能中止，可能為時已晚。
+
+\- _Shadow Custody_ (影子託管): AI可能會自行創建EOA，將資金轉出MCP錢包，將資金放入不可控和安全性較低的空間，就追不回來了。
+
+4\. Agent可能失控的情形：
+
+\- Prompt Injection:
+
+\- Shadow Operations: AI去執行未明確授權的行動，ex. 自行創建新錢包
+
+\- Unscoped Authority: 如無設定權限邊界，系統性的敞口大
+
+\- Zombie Permissions: 授權未撤銷時，
+
+Trust will become infrastructure.
+
+5\. 主流的Agent Wallet作法：只讓Agent做預期內的事（current），如何設定邊界讓AI自由發揮成爲下一步。
+
+\- 人類做Approve
+
+6\. Cobo:
+
+\* Key management: MPC
+
+\* Pact Authority Protocol: 設定邊界
+
+\* Recipe: 賦予其他skills, 串接DeFi, ex. Uniswap
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 1.  安排第二周學習計劃：[https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week2.md](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week2.md)
     
 2.  參與晚上分享會。
@@ -24,6 +70,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 1.  回放今日分享會課程。
     
@@ -34,6 +81,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 1.  復盤本週間課程及概念學習，準備週末可以補上本週尚缺內容：AI、Web3的知識解釋集錦、確定AI學習助手workflow
     
 2.  參與同學筆記分享會和確立本次參與共學主要目標：本身Web3開發經驗，缺少AI Agent的實操和應用，先不以必須產出兩項技術交互的項目，我認為AI可以幫上我在每天非常多的Web3訊息內（訂閱的news、關注的），打造客製化的訊息流
@@ -41,6 +89,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -57,6 +106,7 @@ AI x Web3 School
 
 
 
+
 1.  將handbook內容製作[學習卡](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/terms.json)，並加入至learning bot的功能，可以在聊天機器人中做隨機的test。
     
 2.  完成學習handbook中AI和Web3基礎的解釋。
@@ -69,6 +119,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -117,6 +168,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
