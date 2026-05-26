@@ -15,8 +15,32 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天正式进入 Week 2 的方向研究主线。我完成并提交了 AI × Web3 问题地图与主方向选择，把 7 个方向重新梳理了一遍，最后选择 Wallet / Permission / Safe Execution 作为接下来最值得深挖的主线。
+
+这条线和我的黑客松方向 AI Wallet Clear Intent Guard 越来越接近：它不是要做一个完整钱包，也不是让 AI 自动签名，而是在签名前把用户意图、确定性的交易事实、权限策略、授权边界和支付路径放在同一个 review surface 里，让人能更清楚地决定是否继续。
+
+今天也整理了 Cobo Agent Take Wallet 课程笔记。最大的收获是，Agent wallet safety 不能靠“模型听话”，而需要执行层的安全设计：MPC、scoped authority、policy check、completion condition、audit trail、recipe skill layer，以及必要时把控制权交还给人的恢复路径。
+
+下午完成了 Payment / Commerce｜最小支付与商业流程拆解，用 AI Wallet Transaction Review Agent 作为场景，把 agent commerce 拆成报价、预算授权、执行审查、交付、验收、付款、退款、争议和 proof。这个任务让我意识到，agent payment 不是单纯“能不能付款”，而是一整条服务交付和风险确认链路。
+
+今日记录：
+
+[**https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md**](https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md)
+
+Today I moved into the Week 2 direction-research track. I completed and submitted the AI x Web3 problem map and main direction selection, then chose Wallet / Permission / Safe Execution as my main line for deeper work.
+
+This line is becoming closely connected to my Hackathon direction, AI Wallet Clear Intent Guard. The goal is not to build a full wallet or let AI sign automatically. The safer wedge is a pre-signing review layer that compares user intent, deterministic transaction facts, policy constraints, authority boundaries, and payment-route details before a human decides whether to continue.
+
+I also organized the Cobo Agent Take Wallet class note. My main takeaway is that agent wallet safety cannot rely on the model being obedient. It needs execution-layer safety design: MPC, scoped authority, policy checks, completion conditions, audit trails, recipe skill layers, and a recovery path back to human control.
+
+I also completed the Payment / Commerce minimal flow task using an AI Wallet Transaction Review Agent scenario. It helped me see that agent payment is not just about whether money can move. It is a full service flow: quote, budget authorization, review execution, delivery, acceptance, payment, refund, dispute, and proof.
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天的学习主线是 Agent Memory 和 Agent wallet。
 
 整理了 Long Term Memory for AI Agents 课程笔记。我最大的收获是：Agent Memory 不是简单的向量数据库，也不是把上下文无限拉长。更关键的问题是如何对内容进行高质量压缩，如何形成可触发的记忆节点，如何在正确任务里召回少量关键记忆，以及如何在召回后重新解释、更新和遗忘。
@@ -45,6 +69,7 @@ My AI Wallet Clear Intent Guard direction moved one step forward: it should even
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 今天我继续整理 AI x Web3 School 第一周后半段的学习成果，完成了 AI 基础概念卡片、Web3 基础概念卡片，并围绕自己的黑客松方向拆解了两个 AI 钱包相关项目：Cobo Agentic Wallet 和 Coinbase AgentKit / Agentic Wallet / x402。
 
 这次最大的收获是，AI 钱包方向不能简单理解成“让 AI 帮我操作钱包”。更安全、更适合黑客松的切口是签名前 review layer：先把用户自然语言意图、确定性的交易事实、权限策略和支付路径放在一起检查，再由人决定是否签名。
@@ -66,6 +91,7 @@ Cobo taught me to think in terms of task-scoped, policy-enforced, reviewable, an
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 今天是 Week 1 的集中收尾日。我把前几天分散完成的 AI、Web3、AI x Web3 综合任务整理成一组更完整的 public proof：测试网交易、只读智能合约调用、EOA / 智能账户 / 多签权限比较、AI x Web3 最小交叉流程图、Week 1 Proof-of-Work Pack，以及一个受限 Web3 助手 workflow。
 
 这次最大的收获是，AI x Web3 的安全边界不能停留在一句“人工确认”。它需要被拆成具体流程：AI 可以解释和准备，工具可以验证公开事实，钱包负责展示待签名动作，人负责确认或拒绝，链上系统负责执行并留下可验证记录，public repo 负责保存脱敏后的 proof。
@@ -85,6 +111,7 @@ I also organized Sophia's guest talk on Open Agile Economy / AI Agent Economy. A
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -115,6 +142,7 @@ I also reported a platform-review issue today. In a Web3 operating-principles ta
 
 
 
+
 今天我整理了 2026-05-21 AI 与 Web3 结合方向分享会笔记。最大的收获是，AI x Web3 不是单向叠加，而是双向关系：Web3 可以为 AI 提供更开放的算力、数据和激励网络，AI 也可以帮助 Web3 在钱包安全、链上数据理解和语义化交互上变得更可用。
 
 另外，我也记录了一个自己主动寻找和分析外部参考后形成的黑客松候选方向：围绕 AI 钱包签名安全，探索 AI 如何在用户确认前帮助理解风险。这个方向和课程主题有关联，但不是课程直接给出的题目。考虑到 idea 还在早期，我只保留低信息量公开版本，不展开具体产品细节。public repo 是学习证明，不等于把所有想法都公开。
@@ -135,6 +163,7 @@ I also recorded a Hackathon candidate direction formed through my own external r
 
 
 
+
 今天我整理了 2026-05-20 Web3 运行原理分享会笔记，从第一性原理复盘了一笔交易如何从钱包签名开始，经过 RPC、mempool、builder、validator、出块和确认，最终成为链上状态。
 
 最大的收获是：Web3 不是几个孤立概念，而是一条从私钥到 finality 的完整系统链路。钱包负责控制签名，交易表达用户意图，gas 定价链上资源，RPC 连接用户和网络，智能合约承载公开规则，协议升级则依赖技术实现和社会共识共同完成。
@@ -150,6 +179,7 @@ The biggest takeaway is that Web3 is not a set of isolated concepts. It is a ful
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -180,6 +210,7 @@ Another important takeaway is that the direction of Qy Knowledge Hub became clea
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
