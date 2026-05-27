@@ -15,13 +15,20 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+1
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 1
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 最低要求： 1. 比较 EOA、智能账户、多签账户三类账户。 2. 至少包含 4 个比较维度。 3. 每类账户至少给出一个适用场景和一个风险点。 4. 说明哪些操作必须人工确认。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
@@ -32,11 +39,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -53,6 +62,7 @@ timezone: UTC+8
 
 
 
+
 ```
 链上数据存在哪？全球几万个全节点硬盘里，Etherscan只是索引层。数据越来越大怎么办：状态过期、无状态客户端、历史数据修剪、数据可用性采样、Layer 2 + 数据压缩、专门存储链。核心思路不是让每个节点存所有，而是分工。
 ```
@@ -60,6 +70,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -118,6 +129,7 @@ timezone: UTC+8
 
 
 
+
 理解Web3底层原理：
 
 成功安装Hermes：将任务和AIxWEB3学习网站发送了
@@ -142,6 +154,7 @@ hermes gateway
 
 
 
+
 [先安装wsl，安装好了之后会输入账号密码，打开wsl环境进行配置](https://hermes-agent.nousresearch.com/docs/zh-Hans/getting-started/installation)
 
 具体网站Hermes：
@@ -153,6 +166,7 @@ hermes gateway
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
