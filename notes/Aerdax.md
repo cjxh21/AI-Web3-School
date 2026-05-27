@@ -15,8 +15,137 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+\# 2026-05-27 学习笔记  
+  
+\> WCB Learning：https://web3career.build/zh/programs/AI-Web3-School#tab=learning  
+  
+\## 今日任务  
+  
+\- \[x\] 阅读 Handbook：智能体（Agent）  
+\- \[x\] 写笔记  
+\- \[x\] 完成实践：DAO 提案研究 Agent（带权限升级）  
+\- \[x\] 接入 WCB Agent API，更新学习工具规范  
+\- \[ \] 完成今日打卡  
+  
+\## 学习路径  
+  
+今日选择：\*\*挑战路径\*\*（Handbook 章节 + 笔记 + 实验 + WCB API 工具接入）  
+  
+\## 笔记  
+  
+\### Handbook 阅读：智能体（Agent）  
+  
+\*\*核心定义：\*\*  
+Agent 是能围绕目标持续调用工具、读取状态、调整步骤的 AI 系统。关键不在"像人"，而在于能否在\*\*明确权限和可审计流程\*\*里把建议推进到行动。  
+  
+\*\*第一性原理：\*\*  
+\> Agent 不是自主权本身，而是\*\*被约束的执行循环\*\*。目标、工具、状态、权限和停止条件缺一不可。  
+  
+\*\*5 个知识节点：\*\*  
+  
+| 节点 | 一句话 | 关键认知 |  
+|------|--------|---------|  
+| Tool Use | 调用外部能力 | 读和写是不同风险等级，工具设计必须明确权限范围 |  
+| Planning | 把目标拆成步骤 | 计划只是候选路线，不是授权 |  
+| \*\*State\*\* | 任务进度和结果的外置记录 | 必须外置可查，不能只藏在 prompt 历史里 |  
+| Reflection | Agent 检查中间结果 | 自我检查提高质量，但不能替代外部验证 |  
+| Multi-Agent | 多 Agent 分工 | 先问：是否真的减少了复杂度？ |  
+  
+\*\*对我认知的校正：\*\*  
+之前理解 Agent 是"调用模型前用多个环节丰富 prompt"——这只描述了入口。真正的 Agent 是一个\*\*循环\*\*：模型调用是循环里的一个节点，调用后还要读工具结果、更新 State、再决策，直到满足停止条件。  
+  
+\*\*AI × Web3 关键结论：\*\*  
+\> 最危险的设计是让 Agent 同时拥有\*\*模糊目标、广泛工具、长期记忆和大额资产权限\*\*。  
+  
+稳健的 AI × Web3 Agent 架构：只读步骤自动执行 → 写入步骤进入 policy 检查 → simulation 展示链上影响 → 用户确认 → 钱包执行 → 日志记录。  
+  
+\### 代码 / 实验  
+  
+\*\*实践：DAO 提案研究 Agent（含权限升级版本）\*\*  
+\- 路径：\`experiments/dao-agent/\`  
+\- 数据源：Snapshot GraphQL API（真实 ENS DAO 提案）  
+\- LLM：Groq llama-3.1-8b-instant（json\_mode 强制 JSON 输出）  
+  
+\*\*State 结构（演示核心）：\*\*  
+\`\`\`python  
+@dataclass  
+class AgentState:  
+proposal\_id / title / text / choices # 输入层  
+pros / cons / risks / missing\_info # 分析层（每步写入）  
+checklist / verdict # 判断层  
+vote\_draft / user\_confirmed / confirmation\_time # 权限升级层  
+steps\_completed / sources\_used / errors # 审计层  
+\`\`\`  
+  
+\*\*5 步执行流程：\*\*  
+\`\`\`  
+Step 1: fetch\_proposal → 只读，Snapshot API  
+Step 2: analyze\_content → LLM 分析 pros/cons/risks  
+Step 3: identify\_gaps → LLM 找缺失信息  
+Step 4: build\_checklist → LLM 生成检查清单 + verdict  
+Step 5: simulate\_vote → 权限升级，需 3 次人工确认  
+\`\`\`  
+  
+\*\*权限升级的 3 道门：\*\*  
+1\. 用户主动选择进入（\`是否进入投票模拟步骤？\`）  
+2\. policy 检查 verdict：high\_risk 需输入 OVERRIDE / needs\_review 再次确认  
+3\. 展示草稿后最终确认，时间戳写入 State 审计轨迹  
+  
+\*\*踩到的坑：\*\*  
+1\. Groq llama-3.1-8b-instant 不老实返回 JSON，用 \`response\_format: json\_object\` 解决  
+2\. \`identify\_gaps\` 解析失败会阻断后续所有步骤——改为失败降级（空列表 + 继续）而非硬停止  
+  
+\*\*运行方式：\*\*  
+\`\`\`bash  
+cd experiments/dao-agent  
+.venv/bin/python dao\_agent.py \[snapshot\_proposal\_id\]  
+\`\`\`  
+  
+\### WCB Agent API 接入  
+  
+今天完成了 WCB Agent API 的完整接入和规范化：  
+\- 确认可用 procedures（events、program、tasks 等）  
+\- 修正 secret key 变量名为 \`WCB\_AGENT\_SECRET\_API\_KEY\`（对齐官方文档）  
+\- 发现 Handbook 可直接读取（需绕过本地代理），更新了 CLAUDE.md 访问规范  
+\- 新会话启动时会自动拉取今日活动 Zoom 链接和当周课程目标  
+  
+\### 卡点 & 疑问  
+  
+\- State 如何持久化（断点续跑）？目前每次运行重新拿 API，生产场景需要序列化到磁盘或 DB  
+\- 多步 Agent 里，每个 step 的 LLM prompt 如何做版本管理？prompt 变了结果可能完全不同  
+\- \`simulate\_vote\` 的 policy 检查目前是硬编码在代码里的，真实系统应该是可配置的规则引擎  
+  
+\## 打卡草稿  
+  
+\> 以下内容用于复制到打卡平台，手动提交。  
+  
+\*\*今日完成：\*\*  
+阅读 Handbook Agent 章节，完成 DAO 提案研究 Agent 最小实践（experiments/dao-agent/）。实现了显式 State 管理的 5 步执行流程（Snapshot API 读取 → LLM 分析 → 识别缺口 → 生成检查清单 → 权限升级投票模拟），并为写入步骤设计了 3 道人工确认门。另完成 WCB Agent API 接入，学习工具链现在可自动读取课程活动和 Handbook 内容。  
+  
+\*\*学到的关键点：\*\*  
+Agent 不是"调用模型前丰富 prompt 的流程"，而是一个以 State 为核心的执行循环：模型调用只是循环里的一个节点，之后还要读工具结果、更新 State、再决策。State 必须外置可查，不能藏在 prompt 历史里——这是 Agent 可审计、可恢复、可调试的基础。"只读步骤自动执行，写入步骤人工确认"是 AI × Web3 Agent 的最小安全边界。  
+  
+\*\*遇到的问题：\*\*  
+Groq llama-3.1-8b-instant 不稳定返回 JSON，用 response\_format: json\_object 解决。另一个设计问题：某步 LLM 解析失败是否应该阻断后续步骤？选择了降级（失败 → 空列表 + 继续），而非硬停——因为只读分析的失败不应阻断用户拿到部分结果。  
+  
+\*\*明日计划：\*\*  
+推进 Week 2 方向地图，用统一判断框架分析 1–2 个 AI × Web3 交叉方向（优先 agent identity 或 machine payment），并准备 5.29 Week 2 例会笔记分享。  
+  
+\## 打卡记录  
+  
+\- 提交时间：  
+\- 打卡链接：https://web3career.build/zh/programs/AI-Web3-School#tab=learning  
+  
+\## Handbook Feedback  
+  
+暂无
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 # 2026-05-26 学习笔记
 
 > WCB Learning：[https://web3career.build/zh/programs/AI-Web3-School#tab=learning](https://web3career.build/zh/programs/AI-Web3-School#tab=learning)
@@ -148,6 +277,7 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 今日完成： 阅读 Handbook「提示词」和「上下文」两章，完成两个最小实践：① 写出交易风险摘要 Prompt，按角色/任务/约束/输出四段结构，三组测试（普通转账/无限授权/意图不匹配）全部正确触发风险等级约束；② 为钱包授权检查 Agent 设计 Context Spec，按 5 层结构定义每个字段的来源、刷新策略和可信度。 学到的关键点： 高分线不能交给 Prompt——约束规则要硬编码进 system prompt，不依赖模型自由判断。Context 设计的核心是分层：指令层不可被外部输入覆盖，事实层必须实时查询不得缓存，dApp 页面说明属于不可信外部内容必须显式标注。 遇到的问题： Few-shot 的边界：维护的是推理模式和格式示例，不是覆盖所有业务逻辑。Prompt Injection 目前先了解概念，进入 Agent 开发阶段再深入。 明日计划： 继续阅读 Handbook 下一章节，考虑把 tx-risk-prompt 和 tx-explainer 的输出对接，形成完整的"读取链上数据 → 生成风险摘要"管道。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
@@ -155,11 +285,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 今天由于一直在外面没有电脑不方便更深度的学习，所以只是用手机看了昨天和今天的课程录播，并且阅读了handbook第二章节的内容，目前学习中靠之前掌握的知识和工作中内容暂时还没有遇到什么阻碍，看到群里有很多优秀的人分享自己的学习方法或者自制的小工具，向优秀的人学习
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -194,6 +326,7 @@ exactInputSingle
 
 
 
+
 今天补齐了之前所有的录播课，下班前刚好有空终于可以参加一次直播了。由于公司本来就从事web3领域，虽然在大陆公司业务能接触到的公链业务场景和技术有限，不过还好是不少了解，并且日常对ai也是深度使用，目前学习起来还挺轻松，继续努力
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aerdax/images/2026-05-20-1779269636559-image.png)
@@ -201,6 +334,7 @@ exactInputSingle
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
