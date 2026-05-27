@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+今天是 AI x Web3 School Week 2 的第三天，晚上准备参加 Co-learning「任务推进与答疑」和「Neo-Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders」主题分享。今天的关键词是 privacy，我想把它和前几天学到的 Agentic Wallet、长期记忆、钱包权限和链上验证放在一起理解。
+
+我现在对隐私的理解不只是“隐藏信息”，而是 builder 在设计系统时必须处理的一组边界问题：哪些数据必须公开，哪些数据应该最小化收集，哪些操作需要用户明确授权，哪些记录可以被验证但不应该暴露过多个人信息。尤其在 Web3 里，地址、交易、合约交互天然带有公开性；而在 AI 场景里，Agent 又可能读取上下文、总结历史、调用工具和生成行动建议。因此隐私问题会同时出现在链上数据、Agent 记忆、工具调用、钱包权限和用户确认流程里。
+
+结合我的 Hackathon 方向，我会继续关注 Agent 权限和交易解释相关的小项目。如果要做一个交易风险解释器或 Agent Wallet 权限面板，就不能只告诉用户“这笔交易是否危险”，还要考虑如何减少不必要的数据暴露、如何明确授权边界、如何让用户知道 Agent 看到了什么、准备做什么、最后链上发生了什么。隐私、安全和可验证性应该一起设计，而不是事后再补。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天是 AI x Web3 School Week 2 的开端，晚上学习了「Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性」相关内容，也继续整理了 Week 1 到 Week 2 的学习记录。
 
 今天的主题让我开始思考 Agent 的“长期记忆”到底应该怎么设计。对学习型 Agent 来说，记忆不应该只停留在聊天上下文里，因为聊天上下文会丢失、会混乱，也不容易复盘。更可靠的方式是把重要状态沉淀到结构化记录里：daily note 记录每天做了什么，tasks 记录任务和 proof，experiments 记录小实验，handbook-feedback 记录疑问和改进建议，Git commit history 则提供一条可追溯的时间线。
@@ -26,6 +36,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 今天是 AI x Web3 School Week 1 的收尾日。我先用 Learning Agent 通过 WCB API 做了一次任务盘点：今天没有新增直播活动，5.19 Hermes 回放任务和 5.20 Web3 运行原理任务已经通过；今天主要需要处理 Week 1 例会和 Open Agentic Economy 的 proof，并整理这一周的学习收获。
 
@@ -38,6 +49,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 今天是 AI x Web3 School Week 1 的第 6 天，我先用 Learning Agent 通过 WCB API 查询了今天的任务。今天的主题是 Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path。
 
 我对 Open Agentic Economy 的初步理解是：当 AI Agent 不再只是聊天助手，而是可以发现任务、调用工具、发起支付、参与协作甚至代表用户执行某些动作时，它就进入了一个更开放的经济网络。这个网络里最关键的问题不是“Agent 能不能自动做事”，而是 Agent 的身份如何被识别、权限如何被限制、支付如何发生、执行结果如何验证、出错后的责任边界怎么设计。这里 Web3 的价值会变得更具体：钱包、签名、交易、合约、链上记录和标准化协议可以帮助 Agent 行为变得可授权、可追踪、可结算、可验证。
@@ -47,6 +59,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -63,11 +76,13 @@ AI x Web3 School
 
 
 
+
 Web3 不能只追求“去中心化”，还必须重新设计安全、财政、治理、责任和分配机制。 否则去中心化只是把旧世界的问题换了一种形式重新出现。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -88,6 +103,7 @@ Web3 不能只追求“去中心化”，还必须重新设计安全、财政、
 
 
 
+
 今天是 AI x Web3 School Day 2，我先补看了昨晚课程的回放，并继续用 Learning Agent 查询和整理今天的 WCB 任务。昨晚回放帮助我把 AI x Web3 的学习主线重新捋了一遍：这不是简单把 AI 和 Web3 两个关键词拼在一起，而是要理解模型能力、工具调用、钱包、签名、支付、身份、权限、安全执行和可验证记录如何在真实场景里连成一条执行链。
 
 Web3 基础上，今天主要补了几个心智模型：钱包不只是“登录工具”，更像是用户控制账户和签名权限的入口；地址是链上身份和资产位置的公开标识，但真正能控制地址的是私钥 / 助记词，所以绝不能交给任何 Agent；交易不是普通的后端请求，一旦签名并上链，就会进入区块链的状态变更流程，并且需要通过区块浏览器、交易哈希和合约调用记录来验证结果；授权和转账也不是一回事，授权可能会给某个合约持续使用资产的权限，因此比“点一下确认”更需要看清楚对象、额度和风险。
@@ -97,6 +113,7 @@ Web3 基础上，今天主要补了几个心智模型：钱包不只是“登录
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
