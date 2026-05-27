@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+关于 agent memory 的一个思考：或许结构化的知识库可以降低 memory 工程化的压力  
+  
+链接：[https://x.com/SwenChan/status/2059569996158927129?s=20](https://x.com/SwenChan/status/2059569996158927129?s=20)
+
+正文：
+
+Every agent memory solution right now is converging on the same assumption: the agent should be a "know-it-all" at the start of every session. But what if that assumption itself is the bottleneck? Cramming more and more into the prompt. Context keeps bloating. Results keep degrading. **Stuff everything into your head**—whether you're human or an agent—and you don't get smarter. **You get dumber**.
+
+[@karpathy](https://x.com/karpathy)
+
+pointed to a different answer: LLM Wiki. Don't make the agent remember everything. Take knowledge out of the prompt and give it structure. Three physical layers, each with a clear job: **Raw** — source material, immutable **Wiki** — agent-compiled, structured .md files **Schema** — rules for how the agent writes, links, and decides when to build a new page Queries don't touch raw docs. They read pre-compiled pages. Cross-references are already there. Contradictions are already flagged. Knowledge compounds. An agent doesn't need to be a know-it-all before it walks in. Walk in with first principles. Figure out the rest as you go. The wiki has the answers. **Most agent memory solutions are RAG** at their core—stuffing things into the context window, whether it's "memories" or "retrieval results." LLM Wiki takes the other path: RAG starts from scratch with the textbook, every single time. LLM Wiki already has the notes written, every claim traces back to the source, and they only get thicker. LLM Wiki source repository: [https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 今日笔记：EOA、智能账户和多签账户的权限差异  
 [https://x.com/SwenChan/status/2058823951531593904?s=20](https://x.com/SwenChan/status/2058823951531593904?s=20)
 
@@ -27,6 +43,7 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 做了英文版的 《AI x Web3 School 入门指南》：[https://x.com/SwenChan/status/2058272289041609186?s=20](https://x.com/SwenChan/status/2058272289041609186?s=20)
 
 和英文版的《大模型API key 接入入门指南》：[https://x.com/SwenChan/status/2058267141707854223?s=20](https://x.com/SwenChan/status/2058267141707854223?s=20)
@@ -34,6 +51,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 帮大家审批任务中！！
@@ -44,6 +62,7 @@ AI x Web3 School
 
 
 
+
 今天参加sophia的分享，其实一些问题没有得到很好的解答hhh
 
 晚上批了2700多份任务，麻了
@@ -51,6 +70,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -70,6 +90,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -125,6 +146,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 
 
+
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
 
 然后跟着做做任务 收集问题
@@ -132,6 +154,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
