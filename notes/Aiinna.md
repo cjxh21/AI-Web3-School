@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+web2 how to use web3, we crate embad wallet or smart contract wallet
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-26-1779797483001-image.png)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 -   [https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 听到大家的分享让我觉得我们在不同层
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -59,6 +68,7 @@ AI-generated content may be incorrect.](file:////Users/ailinna/Library/Group%20C
 
 
 
+
 [https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flygreenbaby.md#%E5%89%8D%E8%A8%80](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flygreenbaby.md#%E5%89%8D%E8%A8%80)  
   
 像大佬学习
@@ -71,11 +81,13 @@ AI-generated content may be incorrect.](file:////Users/ailinna/Library/Group%20C
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-19-1779199360711-image.png)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
