@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+今天参加了「Neo-Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders」分享，并把它和 Week 2 的 Security / Privacy 方向连接起来。
+
+我今天最重要的理解是：privacy 不只是保护数据，也是在保护用户的自主性。分享里提到 Neo-Cypherpunk 可以理解为 privacy + play + care + community，这让我觉得隐私不应该只是少数技术专家的小圈子议题，而应该从普通人能理解、能实践的小动作开始，比如更安全的通信工具、减少广告追踪、使用 VPN、理解平台如何收集数据。
+
+结合 AI x Web3，我意识到这个问题会更复杂。AI agent 可能长期保存上下文、调用 API、读取文件、访问钱包、生成交易计划，甚至参与链上动作。如果不限制它能看到什么、记住什么、调用什么、代表用户做什么，agent 越强，用户暴露的范围就越大。
+
+今天我把昨天学习的 Wallet / Permission 和今天的 Security / Privacy 接起来理解：privacy 决定 agent 能看到什么，permission 决定 agent 能做什么，audit 决定事后能否验证发生了什么，human confirmation 决定关键动作是否仍由人负责。
+
+我也整理了一个 agent workflow threat model 初稿，包括用户输入、上下文读取、模型调用、工具调用、链上动作生成、签名确认、交易执行、记忆保存和日志记录等环节。下一步我想把它扩展成 Week 2 的 Security / Privacy 任务材料，进一步说明哪些信息不能进入 agent，哪些动作必须人工确认，以及公开仓库和 private 材料如何分离。
+
+Repo:
+
+[**https://github.com/yangyuwen-bri/aiweb3-learning-journal**](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 今天主要学习了 Week 2 的 Wallet / Permission / Safe Execution 方向，并参加了 Product manager of Cobo Agentic Wallet 分享。
 
 我今天的核心理解是：当 AI agent 开始参与链上动作时，最重要的问题不是“怎么让 agent 自动发交易”，而是“如何让 agent 只在明确授权、预算限制、策略检查和人工确认边界内执行”。如果 agent 直接接触私钥，或者获得长期、模糊、无限制的钱包权限，风险会非常高。
@@ -34,6 +52,7 @@ Repo:
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 今天参加 / 学习了「Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性」相关内容，并把课件整理成中文学习笔记。
 
@@ -57,6 +76,7 @@ Repo:
 
 
 
+
 今天主要做 Week 1 收尾和 proof-of-work 打包。我回顾了目前已经完成并提交的任务：GitHub 学习仓库、课程工具准备、Learning Agent Setup、Sepolia 测试网交易，以及 5.20 Web3 运行原理相关记录。
 
 今天也继续整理 AI Concept Coach 这个 AI 可交互学习产物。它不是普通聊天框，而是一个概念复述训练器：用户输入 AI 概念困惑，glm-5.1 生成结构化解释和自测问题；用户再用自己的话复述，模型反馈复述质量并生成修正版学习笔记。
@@ -70,6 +90,7 @@ Repo:
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -99,6 +120,7 @@ Repo:
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -149,6 +171,7 @@ Repo:
 
 
 
+
 今天围绕 Week 1 的 AI Agent / Hermes 主题，整理了自己对 prompt、workflow 和 agent 的初步理解，并把它和我的 AI x Web3 School 学习仓库连接起来。
 
 今日完成：
@@ -185,6 +208,7 @@ Demo:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
