@@ -15,8 +15,68 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+## **今日完成：Agent Payment/Commerce Flow 设计**
+
+### **任务产出**
+
+-   设计"Agent 帮人完成任务并收款"的最小 commerce flow
+    
+-   完成 x402 vs ERC-8183 对比分析
+    
+
+* * *
+
+## **场景：链上操作委托**
+
+**角色**：Client（委托方）/ Provider Agent（执行方）/ Evaluator（验收方）/ Facilitator（支付中介）/ Arbiter（仲裁方）
+
+### **完整流程（7步）**
+
+```
+报价(Quote) → 预算授权(Budget Auth) → 执行(Execution) → 
+交付(Delivery) → 验收(Acceptance) → 付款/退款/争议 → 记录证明(Attestation)
+```
+
+**关键机制**：
+
+-   **Escrow**：Client 将预算锁入 JobContract，Agent 完成后才能解锁
+    
+-   **Evaluator**：第三方验收方调用 `complete` 或 `reject` 决定资金走向
+    
+-   **Hook**：可插入仲裁合约（如 Kleros）处理争议
+    
+-   **Reputation**：完成后 Client 提交链上反馈，计入 Agent 声誉
+    
+
+* * *
+
+## **x402 vs ERC-8183 对比**
+
+| 维度 | x402 | ERC-8183 |
+| --- | --- | --- |
+| 解决的问题 | HTTP 层支付握手 | 整个 commerce flow 组织 |
+| 核心概念 | 402 Payment Required + Facilitator | Job Escrow + Evaluator |
+| 验收机制 | ❌ 无 | ✅ Evaluator 裁定 |
+| 争议处理 | ❌ 无 | ⚠️ 通过 Hook 接入外部仲裁 |
+| 适用场景 | API 付费、micropayments | 复杂任务外包、多方验收 |
+
+**结论**：x402 + ERC-8004 + ERC-8183 组合是最小可行方案
+
+-   ERC-8004：Agent 身份注册与发现
+    
+-   ERC-8183：Job 生命周期 + Escrow + 验收
+    
+-   x402：HTTP 层支付握手 + Facilitator 结算
+    
+
+详细文档：[https://github.com/chxii/ai-web3-school-cohort-0/blob/master/tasks/Agent-Payment-Commerce-Flow.md](https://github.com/chxii/ai-web3-school-cohort-0/blob/master/tasks/Agent-Payment-Commerce-Flow.md)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 ## **今日完成：AI × Web3 问题地图**
 
 ### **任务产出**
@@ -144,6 +204,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 ### **1\. Payment / Commerce**
 
@@ -409,6 +470,7 @@ AI Agent 自动执行交易，但：
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -483,6 +545,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -537,6 +600,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -650,6 +714,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1070,6 +1135,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1302,6 +1368,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1689,6 +1756,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
