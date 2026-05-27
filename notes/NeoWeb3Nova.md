@@ -51,21 +51,21 @@ AI x Web3 School
 
 **方向 C (Wallet) 放入 backlog：**
 
--   相关性很强，但最好在 Payment 闭环跑通后作为“权限控制层”深化，而不是单独开线。  
+-   相关性很强，但最好在 Payment 闭环跑通后作为“权限控制层”深化，而不是单独开线。
     
 -   理由：“agent 能不能自动付款”这个问题自然会带出“在什么权限范围内付款”，所以 Wallet 会被自然覆盖进去。
     
 
-[Open: Pasted image 20260527230716.png](LLM-Wiki/raw/assets/fe8e05ce7fe3435472d0167f2f083c98_MD5.jpg)  
-LLM-Wiki/raw/assets/fe8e05ce7fe3435472d0167f2f083c98\_MD5.jpg
-
 > 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md)
 
 > [#AIWeb3School](#AIWeb3School) [#Week2](#Week2) [#Day10](#Day10) [#Colearning](#Colearning) [#HackathonPrep](#HackathonPrep)
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-27-1779894780843-image.png)
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
@@ -87,6 +87,7 @@ LLM-Wiki/raw/assets/fe8e05ce7fe3435472d0167f2f083c98\_MD5.jpg
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 > 今日完成 Co-learning 线上共学，并深度阅读 Handbook 三章交叉内容：Agent Identity、Settlement & Escrow、Governance AI。
@@ -123,6 +124,7 @@ LLM-Wiki/raw/assets/fe8e05ce7fe3435472d0167f2f083c98\_MD5.jpg
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -151,6 +153,7 @@ LLM-Wiki/raw/assets/fe8e05ce7fe3435472d0167f2f083c98\_MD5.jpg
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -190,6 +193,7 @@ LLM-Wiki/raw/assets/fe8e05ce7fe3435472d0167f2f083c98\_MD5.jpg
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -254,6 +258,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -282,6 +287,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -333,6 +339,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
