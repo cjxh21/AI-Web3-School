@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+Day 10 · 2026-05-27 · @peanuut98
+
+今日学习：
+
+\- 读了 Handbook「Web3 基础 · Smart Contract」，把合约拆成「代码 + 状态 + ABI + 签名 + gas」几个零件。
+
+\- 把读（call）和写（transaction）的差别讲清楚：读不签名不花 gas，写必须签名 + gas + 不可逆。
+
+\- 把 ABI 和 Agent tool schema / OpenAPI 放一起看，整理出一张对照表 — 合约调用本质上就是带了链上约束的工具调用。
+
+\- 在 Remix 里打开了一个最小 Counter 合约样例，只读不部署，重点看编译后的 ABI 长什么样。
+
+最大的认知变化：
+
+\- AI Agent + 链上工具不是工具列表里多塞一个 endpoint 的事 — 多出来的三层约束（钱包签名 / gas + 不可逆 / 全网可见）决定了权限边界、人工确认和日志这几件事必须在产品设计里同步出现。
+
+卡点：
+
+\- 还没自己部署过合约；ABI 到 tool schema 的自动映射、read/write 在 RPC 层怎么区分、proxy 要不要现在学，这三件事各开了一个 issue 后续跟。
+
+明日 / 下一步：
+
+\- Day 11 进 Account Abstraction（Smart Account / Session Key），接 Day 9 那条「金库实现路径」验证问题。
+
+\- 周末把 Counter 合约部到 Base Sepolia，BaseScan 上验证一次调用记录。
+
+🔗 [https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md](https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 # **Day 9 打卡**
 
 > 2026-05-26 (Tuesday) · Week 2 / Day 9 · 主题：**把方向从「消费者订阅」切到「Agent 服务采购与结算」B2B 闭环**
@@ -264,6 +296,7 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 Day 7 · 2026-05-24 · @peanuut98
 
 今日学习：
@@ -295,6 +328,7 @@ Day 7 · 2026-05-24 · @peanuut98
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 Day 6 · 2026-05-23 · @peanuut98
@@ -333,6 +367,7 @@ Day 6 · 2026-05-23 · @peanuut98
 
 
 
+
 Day 3 · 2026-05-20 · @peanuut98
 
 今日学习：
@@ -368,6 +403,7 @@ Day 3 · 2026-05-20 · @peanuut98
 
 
 
+
 Day 2 · 2026-05-19 · @peanuut98
 
 今日学习：
@@ -393,6 +429,7 @@ Day 2 · 2026-05-19 · @peanuut98
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
