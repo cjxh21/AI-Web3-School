@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+# **2026-05-27 隐私主题打卡**
+
+今天围绕 Neo-Cypherpunk 和隐私文化层做了学习整理。我的一个收获是：隐私不只是“把数据藏起来”的技术问题，也和个人自由、身份边界、抗审查、产品设计和用户信任有关。
+
+Web3 强调开放和可验证，但链上公开状态也会让用户暴露更多行为痕迹。比如地址资产、交易历史、交互对象、社群关系都可能被长期追踪。对 Builder 来说，不能只追求透明和可组合性，也要考虑用户是否拥有足够的选择权和安全感。
+
+我觉得 Neo-Cypherpunk 的启发是：隐私应该被当作基础设计原则，而不是最后补上的功能。一个 AI x Web3 项目如果涉及 Agent、钱包、支付或身份，就更要提前考虑哪些信息应该公开，哪些信息只应该本地处理，哪些操作需要用户明确授权。
+
+接下来我想继续关注 privacy / security 方向，尤其是 AI Agent 在读取链上数据、调用钱包和生成用户画像时，如何避免过度收集信息，以及如何让用户理解自己正在暴露什么。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 # **2026-05-26 Week 2 打卡**
 
 今天开始进入 Week 2 的学习。相比 Week 1 偏工具入门和基础补齐，Week 2 更像是在做方向判断：哪些问题真的值得用 AI x Web3 来解决，哪些只是把两个概念拼在一起。
@@ -30,6 +44,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 # **2026-05-23 Open Agentic Economy 回放打卡**
 
@@ -80,6 +95,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 # **2026-05-21 Hermes 工作流设计打卡**
 
 今天比较忙，没有系统学习新的课程内容，主要在思考怎么把 Learning Agent 的方法用到自己的真实工作流里。
@@ -97,6 +113,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -128,6 +145,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -288,6 +306,7 @@ AI 时代更重要的能力包括：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
