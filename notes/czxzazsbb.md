@@ -15,8 +15,51 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+1\. agent是智能体或者代理。
+
+2\. LLM（大语言模型）：输入--LLM--输出(无法自己调用工具)
+
+3\. tokenizer:编码和解码，token:文字，tokenid：数字（token映射）。token是处理大模型的基本单元。
+
+4\. context(上下文)：有对话历史，用户问题，工具列表等，大模型临时记忆体
+
+5\. context window(上下文窗口)能容纳最大token数量
+
+6\. prompt(提示词):大模型接受的具体问题或指令，决定大模型输出质量
+
+7\. tool(工具):给大模型提供一套可以调用的外部能力让大模型感知和影响外部环境\[大模型(选择工具，归纳总结——平台串联流程)\]
+
+8\. MCP：统一接入规范。
+
+9\. agent(智能体):自主规划，自主调用工具，五个部分LLM--prompt（system prompt）--memory(记忆)--external knowledge（外部知识）--tools（工具）
+
+10\. 构建模式ReAct，推理+行动（agent loop）
+
+11\. Agent skill:说明文档（Markdown文档）：
+
+第一部分元数据层技能叫什么负责做什么事情(name：代表agent skill的名字description:描述)
+
+第二部分指令层
+
+12\. woekflow:设计固定流程ai按既定路线走（执行人规定的路线）
+
+13\. 判断是否为agent：能否围绕目标自主完成工作会思考会推理会检查不满意还会继续迭代循环loop
+
+| LLM 无法自己 调用工具 | ✅ 对。更准确：LLM 只能输出"我想用这个工具"的文字，真正执行调用的是外部平台/agent loop |
+| token 是文字 、tokenID是数字 | token 是文本最小处理单元（可能是一个词、一个子词、甚至一个字符），不一定 = 一个汉字/单词 |
+| context是"大模型临时 记忆体" | ⚠️ 容易误解。LLM本身没有记忆——每次调用都要把对话历史重新塞进context。所谓"记忆"是平台帮你拼好再传进去的 |
+| MCP：统一接入规范 | 全称 Model Context Protocol，让不同 LLM / 客户端能用同一套工具和资源 |
+| agent skill | 补：description 字段就是给 LLM 自己看的"什么时候该用我"——所以写得越具体，被正确调用的概率越高 |
+| workflow | 关键差异：路径是人定的还是 AI 自己选的——人定 = workflow，AI 自己选 = agent |
+
+整理优化： [https://github.com/czxzazsbb/AI-Web3-School/blob/main/personal/daily/2026-05-27.md](https://github.com/czxzazsbb/AI-Web3-School/blob/main/personal/daily/2026-05-27.md)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 |   |   |   |
 | --- | --- | --- |
 |   |   |   |
