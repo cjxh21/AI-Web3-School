@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+今天要交初稿没来得及学习明天继续
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 **智能合约的骨架**
 
 SolidityStorageABI
@@ -55,11 +61,13 @@ SolidityStorageABI
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 今天水一下明天补
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 今天周末休息一天，未进行相关学习
@@ -71,6 +79,7 @@ SolidityStorageABI
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-23-1779549460539-image.png)
 
 分享关于web行业的相关内容，回答评论问题关于黑客松等等
@@ -78,6 +87,7 @@ SolidityStorageABI
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -96,6 +106,7 @@ SolidityStorageABI
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-21-1779378123882-image.png)
 
 今天的学习讲述web3与ai相结合的相关知识
@@ -103,6 +114,7 @@ SolidityStorageABI
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -150,11 +162,13 @@ SolidityStorageABI
 
 
 
+
 今天耽误了直播的前半部分，只听了后半部分，大概学习了一下Hermes 的部署与配置，还没有看完，明天将这两天学习内容补上
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
