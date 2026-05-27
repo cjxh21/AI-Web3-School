@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+今天参会，看了别人实际案例，觉得很强大
+
+![1000012791.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/mooncake-17/images/2026-05-27-1779891772526-1000012791.jpg)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 参加了会议，学习怎么让agent长记忆，今天代码没怎么敲。
 
 ![0942b332c19d8746cd72184f70fb97f.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/mooncake-17/images/2026-05-25-1779716247823-0942b332c19d8746cd72184f70fb97f.jpg)
@@ -25,6 +33,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 用cursor搭建了一个简单的测试钱包项目，先学习区块链，后面再想着怎么结合ai吧
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/mooncake-17/images/2026-05-23-1779551148622-image.png)
@@ -32,6 +41,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 参加会议，并且自己琢磨了一下怎么弄一个钱包测试，今天在调网络。
@@ -44,6 +54,7 @@ AI x Web3 School
 
 
 
+
 参加了今天的会议，之前不知道ai结合web3能做什么具体的案例，老师建议我们可以做一个ai结合钱包做安全环境识别的小插件，后续我也想弄一个这个看看，计划明天捣鼓一下怎么弄钱包
 
 ![b5a520b3575333a50ce1155e9b290a6.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/mooncake-17/images/2026-05-21-1779369025060-b5a520b3575333a50ce1155e9b290a6.jpg)
@@ -51,6 +62,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -67,6 +79,7 @@ AI x Web3 School
 
 
 
+
 参加会议并且成功配置了hermes，尝试使用微信连接hermes。
 
 ![a4e8629846ee3fd648baa7d2a650714.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/mooncake-17/images/2026-05-19-1779197444236-a4e8629846ee3fd648baa7d2a650714.png)![9640414c90b9fcd5038db1e4fcdb927.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/mooncake-17/images/2026-05-19-1779197387041-9640414c90b9fcd5038db1e4fcdb927.jpg)
@@ -74,6 +87,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
