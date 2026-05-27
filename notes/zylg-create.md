@@ -15,8 +15,105 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+## **今日目标**
+
+-   学习量化基础知识（动量、反转）
+    
+-   体验 OKX 钱包一键跟单功能
+    
+-   思考毫秒级跟单方案
+    
+-   完成实验笔记整理
+    
+
+## **学习内容**
+
+### **主要收获**
+
+**量化：动量 vs 反转**
+
+-   **动量效应 (Momentum)**：过去涨的继续涨，典型 CTA 策略基础，适合中期（周/月）
+    
+-   **反转效应 (Mean Reversion)**：价格偏离均值会回归，适合短期（秒/分钟），RSI 是典型指标
+    
+-   加密市场动量更短暂，信息传导更快，反转信号窗口更窄
+    
+-   经典文献：Jegadeesh & Titman (1993) 月度动量；长期(3-5年)反转更明显
+    
+
+**OKX 一键跟单痛点**
+
+-   端到端延迟 200ms ~ 3s+
+    
+-   来源：服务器接收 → 风控处理 → 信号转发 → 执行，链路长
+    
+-   波动行情中延迟导致严重滑点
+    
+
+**毫秒级跟单架构思路**
+
+-   **信号获取**：WebSocket 实时推送（<10ms），避免轮询
+    
+-   **执行层**：异步下单 + 预签名 + HTTP Keep-Alive 复用
+    
+-   **延迟瓶颈**：网络延迟 > 订单处理延迟，优化重点在同区域托管
+    
+-   **技术栈**：Python asyncio / Go（高性能）；Redis Pub/Sub 做进程间通信
+    
+-   **核心公式**：`总延迟 = 网络延迟 + 信号处理 + 订单签名 + API响应`
+    
+
+### **遇到的问题**
+
+-   一键跟单延迟无法满足高频策略需求
+    
+-   Python GIL 在高频场景是瓶颈
+    
+
+### **解决方案**
+
+-   探索程序化跟单：WebSocket 接收 + 异步下单
+    
+-   参考 Hummingbot 开源框架
+    
+
+## **实验记录**
+
+详细实验笔记见： `experiments/2025-05-27-quant-momentum-reversal-copytrading.md`
+
+### **核心代码片段**
+
+```
+# 动量因子
+def momentum_factor(prices, lookback=20):
+    return prices.pct_change(periods=lookback)
+
+# 均值回归因子（Z-score）
+def mean_reversion_factor(prices, window=20):
+    ma = prices.rolling(window).mean()
+    std = prices.rolling(window).std()
+    return (prices - ma) / std
+
+# 毫秒级跟单：异步下单框架
+async def place_order(self, inst_id, side, sz):
+    # 预签名 + 连接池复用
+    await self.place_order(...)
+```
+
+## **明日计划**
+
+-   深入研究 OKX WebSocket API 文档
+    
+-   用 Demo 账号测试 WebSocket 接收延迟
+    
+-   对比 Backtrader 动量/反转策略回测效果
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 ## **今日目标**
 
 -   参加 Agent Wallet 讲座
@@ -116,6 +213,7 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 打卡，试一下我的Hermes Agent部署的Github仓库是否成功
 
 话说ai真是好用
@@ -123,6 +221,7 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 收集资讯，学习英语
@@ -133,11 +232,13 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 加了小伙伴脑暴，在想项目最终的实现方式，如果能直接接入币安和okx钱包那就太好了。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -152,11 +253,13 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 我的First Agent又进了一步，可以抓取实时数据了，下一步应该让他分析一些数据，生成一些投资小白能看懂的信号。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -179,6 +282,7 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 明晚回家安装Hermes，可以用来比较一下和open claw有什么区别。
 
 AI的应用试过很多，但还没有真正用来提高效率，我感觉我的输入有问题。
@@ -186,6 +290,7 @@ AI的应用试过很多，但还没有真正用来提高效率，我感觉我的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
