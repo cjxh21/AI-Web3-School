@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+过去两天在agent的帮助下做了handbook中AI部分所提出的诸多最小实践，在自己的git repo里上传了学习的记录。web3这一块的内容就没有过多去做，为了追赶进度所以先开始对week2内容的探索，现在正在寻找深入探索的方向。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 创建好了GitHub Repository 使用Agent完成了Week 1模块A的学习并在仓库做了记录,正在赶工中。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 在微信上配置好了Hermes私人助手，阅读了agent开发手册以及langchain框架。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 之前C盘空间不足导致下载失败，后面清理了磁盘空间和废弃文件，成功在ubuntu安装好了hermes
@@ -44,6 +52,7 @@ AI x Web3 School
 
 
 
+
 安装Ubuntu的过程中，遇到了报错，查了原因是WSL需要更新，结果更新慢的要命，回头还得手动下载WSL，然后再配置Ubuntu。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
@@ -53,11 +62,13 @@ AI x Web3 School
 
 
 
+
 昨天在powershell装好了Deepseek+Hermes并且进行了对话，不过今天电脑崩掉了，我正在另一台电脑重新配置。这次决心先装好WSL2+Ubuntu，在linux 的环境下去配置Hermes并且按照分享会上的方式连接微信。正在配置Ubuntu中。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
