@@ -15,13 +15,342 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+\## 抽象合约  
+  
+当合约中至少有一个函数没有被实现，或者合约没有为其所有的基本合约构造函数提供参数时，合约必须被标记为 abstract。  
+  
+抽象合约不能被直接实例化，如果一个抽象合约本身实现了所有定义的功能，这也是可以的。  
+  
+子合约如果没有实现抽象父合约中所有未实现的函数，则子合约也是抽象的  
+  
+\`\`\`c  
+pragma solidity >=0.6.0 <0.9.0;  
+  
+//Feline仅定义未实现  
+abstract contract Feline {  
+function utterance() public virtual returns (bytes32);  
+}  
+\`\`\`  
+  
+\## 接口合约  
+  
+接口合约不能实现任何函数，不能继承其他合约，不能声明构造函数，不能声明状态变量，不能声明修饰器，但是可以继承其他接口合约。  
+  
+在接口合约中所有声明的函数必须是 external 类型的，接口合约中声明的函数都是隐式的 virtual 的类型，任何重写它们的函数都不需要 override 关键字。  
+  
+\`\`\`c  
+interface Token {  
+enum TokenType { Fungible, NonFungible }  
+struct Coin { string obverse; string reverse; }  
+function transfer(address recipient, uint amount) external;  
+}  
+\`\`\`  
+  
+\## 库合约  
+  
+库合约的三个核心特点：  
+  
+\- 无状态：库合约不能定义状态变量（也就是不能存钱、存数据）。  
+  
+\- 不能收钱：它不能接收以太币（没有 payable）。  
+  
+\- 不能自毁：它是一个纯粹的逻辑集合，一旦部署就稳稳地在那里。  
+  
+调用库合约的函数时，它是通过 delegatecall 执行的，代码运行在库合约里。但状态（Storage）、\*\*余额（Balance）和语境（msg.sender）\*\*全是调用者合约的。就像是请了一个“外援”来你家里，用你家里的厨具（你的存储空间）帮你做饭。  
+  
+\## 多继承、 C3 线性化规则  
+  
+\`\`\`c  
+  
+contract Destructible is owned {  
+function destroy() virtual public {  
+if (msg.sender == owner) selfdestruct(owner);  
+}  
+}  
+  
+contract Base1 is Destructible {  
+function destroy() public virtual override {super.destroy(); }  
+}  
+  
+  
+contract Base2 is Destructible {  
+function destroy() public virtual override {super.destroy(); }  
+}  
+  
+contract Final is Base1, Base2 {  
+//因为子合约同时is了Base1和Base2，所以必须写成override(Base1, Base2)，不能仅写其中一个  
+function destroy() public override(Base1, Base2) {  
+/\*\*  
+super.destroy()调用的是Base1还是Base2取决于Base1, Base2的先后顺序，遵循 C3 线性化（C3 Linearization） 规则，super 会寻找继承链条中“最右边”（也就是最新派生）的那个父类。  
+  
+下面调用的就是Base2.destroy()  
+\*/  
+super.destroy();  
+}  
+}  
+\`\`\`  
+  
+\`\`\`c  
+pragma solidity >=0.4.0 <0.9.0;  
+  
+contract X {}  
+contract A is X {}  
+//代码编译出错的原因是 C 要求 X 重写 A （因为定义的顺序是 A, X ）， 但是 A 本身要求重写 X， 这是一种无法解决的冲突。  
+contract C is A, X {}  
+\`\`\`  
+  
+\## virtual、override  
+  
+如果父合约有函数要被子合约重写，则父合约的函数必须加上virtual，子合约重写的函数必须加上override。  
+  
+如果抽象合约写了一个没有函数体 {} 的函数，它必须被标记为 virtual。因为要有子合约来实现。  
+  
+如果父合约的函数不允许被修改（强制所有子类都用这一套逻辑），就不能加 virtual。  
+  
+如果子合约重写父合约函数的同时还希望自己的函数被子合约重写，则可以同时用virtual override！  
+  
+从Solidity 0.8.8开始，当重写一个接口函数时，不需要 override 关键字，除非该函数被定义在多个基础上。  
+  
+\`\`\`c  
+// SPDX-License-Identifier: MIT  
+pragma solidity ^0.8.0;  
+  
+// 父合约  
+contract Employee {  
+// 使用 virtual 关键字，表示这个函数可以被子类重写  
+function getBonus() public pure virtual returns (uint) {  
+return 100;  
+}  
+}  
+  
+// 子合约  
+contract Manager is Employee {  
+// 使用 override 关键字，表示正在重写父类的同名函数  
+function getBonus() public pure override returns (uint) {  
+return 200;  
+}  
+}  
+  
+// 演示多态  
+contract Company {  
+function checkBonus() public pure returns (uint, uint) {  
+Employee emp = new Employee();  
+Employee mgr = new Manager();  
+// 虽然变量类型都是 Employee，但执行的是各自“最新”的逻辑  
+return (emp.getBonus(), mgr.getBonus());  
+// 结果是: 100, 200  
+}  
+}  
+\`\`\`  
+  
+\## 状态可变性的转换  
+  
+状态可变性本质上是权限的转换。子类可以比父类更严格，但是不能比父类更宽松  
+  
+\- payable：权限最宽（能读状态、写状态、收钱）。  
+  
+\- nonpayable (默认)：普通权限（能读状态、写状态，但不能收钱）。  
+  
+\- view：受限权限（只能读状态，不能写状态）。  
+  
+\- pure：最严权限（既不能读状态，也不能写状态）。  
+  
+所以nonpayable 可以被 view 和 pure 重写，view 可以被 pure 重写。  
+  
+\- external函数可以变为public，反过来不行  
+  
+\## external 比 public 更省 Gas  
+  
+\- external 函数：参数直接存储在 calldata 中。calldata 是只读的、不可修改的，且是由调用者直接发送的原始数据块。  
+  
+\- public 函数：由于 public 函数既支持外部调用，也支持内部（internal）调用，为了兼容内部调用，EVM 必须将参数从 calldata 拷贝到 memory（内存）中。  
+  
+\## CALL、DELEGATECALL、STATICCALL  
+  
+!\[\](image-1.png)  
+  
+\- CALL：你是去别人家借锅做饭。  
+  
+A 去调 B。A 跑到 B 的厨房（上下文），用 B 的锅（存储），做出来的饭也留在 B 家。B 看到的厨师是 A。  
+  
+\- DELEGATECALL：你是请外援来你家做饭。  
+  
+A 去调 B。A 把 B 这种“名厨”请到 A 自己的厨房里。B 用的是 A 的锅（存储），做出来的饭留在 A 家。重点是，B 看到的厨师依然是你（msg.sender 不变）。  
+  
+库合约就是这种模式。如果 B 写的逻辑是“把第一个抽屉打开”，它打开的是 A 的第一个抽屉！如果 A 和 B 的\*\*变量布局（Layout）不一致\*\*，会发生严重的内存错乱。  
+  
+\- STATICCALL：A去别人家参观，不准动手。  
+  
+这是 view 和 pure 函数底层使用的指令，A可以看 B 的数据，但如果尝试在 B 里写一行代码修改状态，EVM 会立刻报错（Revert）。  
+  
+\### 什么是变量布局  
+  
+变量布局（Storage Layout） 是指合约变量在区块链“硬盘”（Storage）上的排队位置。  
+  
+可以把合约的存储空间想象成一个无限长的储物柜，每个抽屉都有一个编号，从 0 开始。这些抽屉被称为 插槽（Slot），每个插槽的大小固定为 32 字节。  
+  
+当定义变量时，Solidity 会按照写的先后顺序，把它们一个一个放进这些插槽里。第一个定义的变量 占 Slot 0。第二个定义的变量 占 Slot 1（EVM中一个标准的插槽大小是 32 字节，如果变量很小，比如 uint8只有1个字节，Solidity 会尝试把多个变量挤进同一个 Slot 以节省空间，这叫变量打包）。  
+  
+在DELEGATECALL调用中，是A把B的逻辑拿回自己家运行，逻辑代码并不看“变量名”，它只看存储的“插槽编号”，如果A和B的存储变量布局不一致，可能会出现B要改的变量在A中不是实际要改的变量，这就是“存储碰撞”，导致数据被写乱了。  
+  
+\### 如何保证变量布局一致  
+  
+1\. 继承同一个“存储合约”  
+  
+创建一个专门存放变量的 Storage 合约。父合约和子合约（或者代理合约和逻辑合约）都继承它，确保插槽位置完全对齐。  
+  
+\`\`\`c  
+// 专门管账本的合约  
+contract BaseStorage {  
+uint public count;  
+address public owner;  
+mapping(address => uint) public balances;  
+}  
+  
+// 逻辑合约继承它  
+contract LogicV1 is BaseStorage {  
+function increment() public {  
+count += 1; // 这里的 count 永远在 Slot 0  
+}  
+}  
+  
+// 代理合约也继承它，确保 Slot 0, 1, 2 的位置完全对齐  
+contract MyProxy is BaseStorage {  
+// ... delegatecall 逻辑  
+}  
+\`\`\`  
+  
+2\. 使用“存储占位符”  
+  
+如果以后想给父合约增加新变量，该怎么办？直接加在后面会把子合约的布局顶乱，比较好的方法是最初定义变量前预留一些“空位”。  
+  
+\`\`\`c  
+contract Base {  
+uint public count;  
+address public owner;  
+  
+// 预留 50 个插槽，现在它们是空的  
+uint256\[50\] private \_\_gap;  
+}  
+  
+contract BaseV2 is Base {  
+// 当你想升级时，可以“占用”一个 gap 的位置  
+// 但因为有上面的 \_\_gap，后续变量的位置不会被移动  
+uint public newVariable;  
+uint256\[49\] private \_\_gapV2; // 更新剩下的空位  
+}  
+\`\`\`  
+  
+3\. 非结构化存储（Unstructured Storage）  
+  
+OpenZeppelin 等主流框架使用的终极方案，既然按顺序排队容易撞车，那就不按顺序排。把重要的变量（比如逻辑合约的地址）存到一个“超级远”的插槽里，\*\*远到几乎不可能发生碰撞\*\*。  
+  
+这个插槽的地址通常是根据一个特定的字符串做哈希（Keccak256）算出来的，例如：  
+slot = keccak256("org.zeppelinos.proxy.implementation") - 1  
+  
+\`\`\`c  
+// 这种写法直接操作汇编，跳过自动排序  
+bytes32 internal constant implSlot = 0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;  
+  
+function setImplementation(address newImpl) internal {  
+bytes32 slot = implSlot;  
+assembly {  
+sstore(slot, newImpl) // 直接存到很远远的插槽里  
+}  
+}  
+\`\`\`  
+  
+\## using for  
+  
+using A for B 分成两个主要用途：“成员函数（点调用）” 和 “运算符重载”。  
+  
+1\. 把库里所有的逻辑“嫁接”给某种类型，比如unint，然后直接.调用函数。  
+  
+\`\`\`c  
+library MathLib {  
+// 第一个参数必须是它要附加到的类型（比如 uint）  
+function triple(uint self) internal pure returns (uint) {  
+return self \* 3;  
+}  
+}  
+  
+contract Test {  
+using MathLib for uint; // 将 MathLib 的函数给到 uint  
+  
+function demo(uint x) public pure returns (uint) {  
+// x 现在就像对象一样，可以直接用 . 调用 triple  
+// x 会自动作为第一个参数传给 triple  
+return x.triple();  
+}  
+}  
+\`\`\`  
+  
+\`\`\`c  
+library UniversalLib {  
+function isZero(uint x) internal pure returns (bool) { return x == 0; }  
+function isEmpty(string memory s) internal pure returns (bool) { return bytes(s).length == 0; }  
+}  
+  
+contract MyContract {  
+//开启全能模式，库 UniversalLib 里的函数，只要参数类型对得上，任何变量都能用。  
+using UniversalLib for \*;  
+  
+function check() public pure {  
+uint n = 0;  
+string memory str = "";  
+  
+n.isZero(); // 有效，因为 n 是 uint  
+str.isEmpty(); // 有效，因为 str 是 string  
+}  
+}  
+\`\`\`  
+  
+2\. 函数列表与运算符重载 (高级用法)  
+  
+Solidity（0.8.19+）引入的功能，允许自定义 +、-、\\\* 等符号的行为，但是只适用于“用户定义的值类型”。  
+  
+\`\`\`c  
+// 1. 合约外面定义一个自定义类型（本质是 uint256，但类型名不同）  
+type Price is uint256;  
+  
+// 2. 合约外面定义一个自由函数  
+function addPrices(Price a, Price b) pure returns (Price) {  
+return Price.wrap(Price.unwrap(a) + Price.unwrap(b));  
+}  
+  
+// 3. 全局绑定：把这个函数绑定到 Price 类型的 + 号上  
+// global：表示这个规则在整个项目的所有文件中都有效。  
+using {addPrices as +} for Price global;  
+  
+contract Shop {  
+function total(Price p1, Price p2) public pure returns (Price) {  
+// 现在可以直接用 + 号连接两个 Price 类型了  
+return p1 + p2;  
+//否则要写成Price.wrap(Price.unwrap(p1) + Price.unwrap(p2));增加代码量  
+}  
+}  
+\`\`\`  
+  
+\*\*为什么需要using {addPrices as +} for Price global这种写法\*\*，比如uint256 applePrice = 100;uint256 myAge = 25;，如果不小心写成applePrice + myAge，编译器不会报错。然而在逻辑上，“价格”加“年龄”是毫无意义的。为了让代码更安全，Solidity 允许创建用户定义的值类型，也就是type Price is uint256;  
+  
+这就像是给 uint256 套了一个特制的“马甲”。虽然它的底层还是数字，但编译器会认为 Price 和 uint256 是完全不同的东西。  
+  
+因为 Price 是创造的新变量，它默认没有 +、-、\\\* 等操作。这就轮到 using {f as +} for Price global; 出场了。  
+  
+它告诉编译器：当看到两个 Price 类型的东西在做 + 运算时，请自动去运行 addPrices 函数。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 \[参考\](https://github.com/ogalias/OGBC-Intern-Project/blob/master/stage1/stage1.md) ## Polymarket 的核心数据模型 > 数据模型：事件 (Event)、市场 (Market)、条件 (Condition)、集合 (Collection)、头寸 (Position 或 TokenId) 在 Polymarket 中，事件代表一个预测主题，例如"某次美联储利率决议"。一个事件下可以包含一个或多个市场。每个市场对应该事件下的一个具体预测问题。例如，对于事件"2024年美国大选"可以有多个市场："候选人 A 当选总统？"、"候选人 B 当选总统？"等，每个市场通常是一个二元预测（Yes/No）。 - Market（市场） 对应具体的 Yes/No 问题，是交易发生的基本单位。一些事件只有一个市场（例如简单的二元事件），而有些事件包含多个市场形成一个多结果事件，此时通常采用 Polymarket 的"负风险 (NegativeRisk)"机制来提高资金效率。 - NegativeRisk（负风险） 当一个事件包含多个互斥市场（即"赢家通吃"的多选一事件）时，Polymarket 引入 NegRiskAdapter 合约，将这些市场关联起来，提高流动性利用率。具体来说，\*\*在同一事件下，一个市场的 NO 头寸可以转换为该事件中所有其他市场的 YES 头寸\*\*。NegRiskAdapter 合约提供了 convert 功能，实现 NO → YES 的头寸转换。 🎯 场景设定：2024 美国总统大选 假设只有两个主要候选人： 市场 A：特朗普获胜，市场 B：哈里斯获胜。这是一个互斥事件，只有一方获胜。 > ❌ 没有 NegRiskAdapter 时： > > 1.用户小明 认为“特朗普不会赢”，去市场 A 买入 NO (特朗普输)。 > > 成本：假设 NO 价格是 $0.60。小明花 $60 买了 100 股 NO。 > > 结果：如果特朗普输了（哈里斯赢），小明赚 $40。 > > 2.用户小红 认为“哈里斯会赢”。去市场 B 买入 YES (哈里斯赢)。 > > 成本：假设 YES 价格是 $0.55。小红花 $55 买了 100 股 YES。 > > 结果：如果哈里斯赢了，小红赚 $45。 虽然小明的观点（特朗普输）和小红的观点（哈里斯赢）在逻辑上是完全等价的，\*\*但他们的资金被锁在两个不同的市场池子里\*\*，最后获利也不一样。 > ✅ 引入 NegRiskAdapter 后： > > Polymarket 将这两个市场通过 NegRiskAdapter 合约关联起来，形成一个事件组合。核心逻辑公式：在互斥事件中持有“市场 A 的 NO” = 持有“除了 A 以外所有结果的 YES”，即：NO(特朗普) ≡ YES(哈里斯)，此时交易如下： > > !\[\](image.png) > > !\[\](image-1.png) NegRiskAdapter机制优势： 1. 流动性合并 通过转换机制，同一事件所有市场的 NO 流动性都可以瞬间变成任意其他市场的 YES 流动性，让不同候选人市场里的资金形成了一个巨大的共享资金池。\*\*大户想进出大单，不会因为某个单一市场深度不够而滑点巨大。\*\* 2. 资本效率 做市商不需要为每个结果都单独准备资金，可以只在一个市场（比如最热门的那个）提供 NO 流动性，然后通过 convert 自动满足其他市场 YES 的买单需求。 3. 无摩擦套利 如果市场价格出现偏差，例如：Price(NO\_Trump) = $0.60，Price(YES\_Harris) = $0.70，套利者可以瞬间买入 NO\_Trump，通过 Adapter 转换成 YES\_Harris，然后卖出！ Polymarket 使用 Gnosis 开发的条件代币框架 (Conditional Token Framework, CTF) 来实现预测市场的头寸代币化。 ### Condition（条件） 每个市场在链上的"登记身份"。创建市场时，会调用 CTF 合约的 prepareCondition 方法注册一个条件。ConditionId 是通过keccak256计算得出的\*\*唯一标识\*\*： \`\`\`solidity /\*\* oracle 是预言机合约地址（Polymarket 目前使用 UMA Optimistic Oracle 作为预言机）。 questionId 是问题的标识符（通常由问题内容等信息哈希得到，或 UMA Oracle 的 ancillary data 哈希）。 outcomeSlotCount 是结果选项数量。对于二元市场，值为 2。 \* \*/ conditionId = keccak256(oracle, questionId, outcomeSlotCount) \`\`\` ### Position（头寸） 头寸指用户持有的某市场某结果的份额。Polymarket 将每个头寸实现为一个 ERC-1155 标准的可交易代币（又称 PositionId 或 TokenId）。每种结果对应一个不同的 TokenId，用于区分 YES 和 NO 两种头寸。 ### CollectionId（集合 ID） 在条件代币框架中，中间引入了集合的概念，用于表示特定条件下某个结果集合。计算方法为： \`\`\`solidity /\*\* parentCollectionId 对于独立的条件通常为 bytes32(0)（Polymarket 所有市场都是独立条件，没有嵌套条件，因此 parentCollectionId 一律为 0）。 indexSet 是一个二进制位掩码，表示选取哪些结果槽位。对于二元市场，有两个可能的 indexSet： YES 头寸的 indexSet = 1 (0b01，表示选取第一个结果槽)。 NO 头寸的 indexSet = 2 (0b10，表示选取第二个结果槽)。 \* \*/ collectionId = keccak256(parentCollectionId, conditionId, indexSet) \`\`\` ### TokenId（PositionId） 最后，用抵押品代币地址和集合 ID 一起计算得到 ERC-1155 的 Token ID： \`\`\`solidity tokenId = keccak256(collateralToken, collectionId) \`\`\` 在 Polymarket 中，对于每个市场，会产生两个 TokenId，一个对应 YES 份额，一个对应 NO 份额。这两个 TokenId 是在该市场上交易的标的资产，代表了对同一预测问题的两种相反结果的头寸。 ### Collateral（抵押品） Polymarket 市场的押注资金均以稳定币 USDC (Polygon 上为 USDC.e) 作为抵押品。\*\*每份 Outcome Token 背后对应 1 USDC 的抵押\*\*，当市场结算时兑现。 价格含义：比如价格 0.60 USDC 意味着花 0.60 USDC 可购买该市场 1 份 YES 代币。如果该结果最终发生，持有者可赎回 1 USDC（获得净盈利 0.40 USDC）；如果未发生，则该代币价值归零，损失全部本金 0.60 USDC。因此，二元期权代币价格可以理解为市场对该事件发生概率的定价。 ## Polymarket 链上日志在"市场创建 → 交易 → 结算"全过程中的作用 ## 链上日志解析
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 * * *
 
@@ -134,6 +463,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 Gas 是 EVM 执行操作的单位。每条指令消耗固定的 gas，具体可以看\[以太坊 操作码\](https://ethereum.org/zh/developers/docs/evm/opcodes/)，gas 优化目标是减少交易所需的总 gas，提高用户体验并降低成本。  
   
 \*\*区块链数据存储位置有三种：storage（存储，也就是磁盘）、memory（内存，临时的）、calldata（只读数据）\*\*  
@@ -221,11 +551,13 @@ for (uint i = 0; i < len; ++i) {
 
 
 
+
 打卡，今天投了简历
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -422,6 +754,7 @@ AI 时代会出现大量新“商家”：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -694,6 +1027,7 @@ address addr = address(token);
 
 
 
+
 今天学了the graph。
 
 \[官网\]([https://thegraph.com/docs/en/subgraphs/quick-start/](https://thegraph.com/docs/en/subgraphs/quick-start/))
@@ -745,6 +1079,7 @@ publish 后：别人也能把它当正式网络服务来用
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
