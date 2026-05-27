@@ -168,7 +168,7 @@ more information
 | [hellolukeding](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hellolukeding.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [20031012qsl-web](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/20031012qsl-web.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [kyooo1232](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kyooo1232.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
-| [yangyuwen-bri](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yangyuwen-bri.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| [yangyuwen-bri](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yangyuwen-bri.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [ywan6541](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ywan6541.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LiCheng-Li](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LiCheng-Li.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
 | [irishong27-axia](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/irishong27-axia.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
