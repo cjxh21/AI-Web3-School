@@ -15,8 +15,50 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+agent项目驱动学习 Linux 基础入门笔记
+
+一、Linux 目录结构
+
+与 Windows 不同，Linux 只有一个顶级根目录 /，所有文件挂载其下。
+
+路径开头 / 代表根目录，路径中间 / 是层级分隔符。
+
+常用目录：
+
+\- /home/用户名：用户 HOME 目录
+
+\- /bin：系统核心程序
+
+\- /etc：系统配置文件
+
+\- /tmp：临时文件
+
+二、ls 命令（查看目录内容）
+
+ls \[-选项\] \[文件夹路径\]
+
+常用：ls -lah（显示全部+详细+人性化大小）
+
+\- -a：显示隐藏文件
+
+\- -l：长格式详细信息
+
+\- -h：人性化大小
+
+三、cd 与 pwd 命令
+
+cd 切换目录，pwd 查看当前位置。
+
+绝对路径以 / 开头，相对路径不以 / 开头。
+
+快捷符号：. 当前目录，.. 上一级，~ HOME 目录
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 1.链接hermes obsidian 微信，建立个人知识库，微信远程输入碎片化知识，自动整理，写入对应目录
 
 2.收听直播课，了解基本agent记忆
@@ -30,6 +72,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 ### 1
 
@@ -64,6 +107,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 \## 📝 今日收货记录
@@ -102,6 +146,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 
 
+
 ![8ea165da574308ceb2b5da1cbeee40b2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-20-1779289671833-8ea165da574308ceb2b5da1cbeee40b2.jpg)
 
 讲了web3的整体宏观的运行流程，比昨天的老师讲的更宏观，可惜没有仔细整理，今天时间一直在跟Hermes斗争，搭建一个工作流反而搭建塌了，没有达成昨天的目标，气死我了，明天继续延续昨天目标
@@ -109,6 +154,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -124,6 +170,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
