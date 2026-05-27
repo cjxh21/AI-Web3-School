@@ -15,8 +15,38 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+**今日学习总结**
+
+**Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
+
+**Budget** 给 Agent 的钱包加额度上限——每天最多花多少、单笔上限、只能调哪些合约。不是「让 Agent 随便花」，是「在这个范围内随便花」。
+
+**Quote** 不是 Agent 自己拼的价格，是服务方签过名的报价。Agent 拿到后验证签名确认没被篡改。类似后端拿到签过的 JWT 才放行，不能自己伪造 token。
+
+**Payment Intent** 用户签过字的支付承诺。Quote 是卖家报价，Payment Intent 是买家说「好，我同意付」。链上合约看到 Intent 就知道这笔钱被授权了，直接执行不用再问用户。
+
+**x402** 之前没搞懂，今天重新理解了。HTTP 402 是「这页要钱」，x402 是它的 Web3 实现。Agent 访问网页 → 对方返回 402 + 支付要求 → Agent 检查 Budget/Policy 判断能不能付 → 链上转账 → 拿收据 → 带收据重新请求 → 拿到内容。跟 Agent Wallet 接上：Budget 管能不能付，Policy 管付给谁。
+
+**MPP（Machine Payment Protocol）** 两个自动化系统之间直接谈钱结算，中间没有人类点确认。类似后端 service-to-service gRPC 调用，不会每次调接口都弹个登录。
+
+**Subscription** 就是自动续费，跟 Netflix 月费一个意思。不是存信用卡号，是链上合约按设定周期自动划钱，随时能取消。
+
+**Micropayment** 极小额按次支付。0.001 USDC 调一次 API，传统支付系统手续费比金额还高所以做不到。L2 gas 低让这事变得可行。
+
+* * *
+
+**今天踩的坑**
+
+读 Machine Payment 的时候 8 个节点当独立概念看，没串起来。Agent 帮我理了：Stablecoin → Budget → Quote → Payment Intent 是一条授权链，x402/MPP/Subscription/Micropayment 是四种支付场景的分叉。
+
+x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但 explain-back 让这些问题直接暴露出来，当场补上了。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 **今日学习内容**
 
 **AA Wallet / Smart Account**（基础层） 之前 Week 1 读 AA 的时候只觉得「很厉害」，现在理解了它的具体价值：传统 EOA 是一把私钥控制一切，AA 让账户本身能写规则——谁能操作、能操作什么、什么时候失效。Smart Account 就是带规则的钱包账户。对 Agent 来说，AA 的关键不是「钱包更高级」，而是账户终于能表达规则了。
@@ -41,11 +71,13 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 今天主要是做任务
@@ -83,6 +115,7 @@ AI x Web3 School
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -111,6 +144,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -134,6 +168,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -267,6 +302,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -320,6 +356,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -352,6 +389,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
