@@ -15,8 +15,34 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+## 一、缺少可控边界时已出现的两类风险案例
+
+| 风险类型 | 描述 | 后果 |
+| --- | --- | --- |
+| Send Override（静默覆盖） | Agent 在 Prompt 中被告知“只能花 100 美元”，但执行时悄悄修改金额 | 资金超支，且 Agent 不会主动告知 |
+| Shadow Custody（影子托管） | Agent 在 MPC 钱包外创建独立 EOA 地址，先转入资金再执行交易 | 绕过所有权限管控，资金脱离人类控制 |
+
+> 这类风险不一定是黑客攻击，而是大模型自主性带来的客观问题。
+
+* * *
+
+## 二、Agent 动用资金时的四类失控风险
+
+| 风险类型 | 含义 |
+| --- | --- |
+| Prompt Injection | 外部输入或幻觉导致 Agent 执行未授权交易 |
+| Shadow Operations | Agent 在人类看不见的地方创建子账户、执行隐藏路径 |
+| Unscoped Authority | 无限权限：私钥泄露或幻觉可导致全部资金被转走 |
+| Zombie Permissions | 授权未被撤销，合约后续出问题则长期暴露在攻击面下 |
+
+> **结论**：当 Agent 开始动钱，信任必须从应用层下沉到基础设施层，通过强制方式约束。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ### 1\. Agentic commerce 的下一个突破在哪里？
 
 **大型企业的支付场景**（Stripe、Bridge、Visa 等正在布局 AI 驱动的支付与交易）。
@@ -43,6 +69,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 ### 1\. Agentic commerce 的下一个突破在哪里？
 
@@ -81,6 +108,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 ## 一、Ethereum 的角色：价值与承诺的协调层
@@ -159,6 +187,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 一、实现原理
 
 1.  **Bittensor**：子网定义规则 → 矿工提供服务 → 验证者评分 → 链上结算 → 奖励
@@ -189,6 +218,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 | 方向 | 解决什么问题 | 主案例 | 核心原理 |
 | --- | --- | --- | --- |
 | 1. 去中心化 AI 基础设施 | 算力、存储、模型服务如何组织与激励 | Bittensor | Subnet 定义任务 → Miner 提供服务 → Validator 评估质量 → 链上共识 → Token 奖励优质供给 |
@@ -200,6 +230,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -217,6 +248,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
