@@ -15,8 +15,64 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+## Daily Note — 2026-05-27
+
+### 📖 今日学习
+
+主题：制作最小可交互 AI 学习产物 章节：Week 1 概念复习 + 产物提交
+
+🎯 产物：ai\_[learn.py](http://learn.py)
+
+文件：notes/week-01/ai\_[learn.py](http://learn.py) 用途：交互式 CLI 学习工具，把 Week 1 的 AI/Web3 概念变成可测验、可查阅、可对比的复习工具
+
+### 5 种模式：
+
+quiz — 概念测验（看描述猜概念名，自动计分）
+
+explain — 查阅概念详细解释
+
+compare — 预设 8 组概念对并排对比
+
+explore — 随机漫游
+
+list — 列出全部 14 个概念
+
+覆盖概念： LLM, Prompt, Context Window, Agent, Tool Use, Workflow, Guardrails, Human-in-the-Loop, RAG, MCP, EOA, Smart Account, Multisig, Agent Wallet
+
+### AI 辅助说明：
+
+概念库初稿由 AI 根据笔记+课程大纲生成
+
+我逐条复核了术语准确性（对照已完成的笔记文件）
+
+RAG/MCP/Agent Wallet 等未学概念由 AI 补充，我做了术语检查
+
+所有交互逻辑代码纯手写
+
+### 🧠 理解与收获
+
+做学习工具本身也是学习——写 quiz 判断逻辑时需要想清楚概念边界
+
+对比模式最有用：Agent vs Workflow / EOA vs 智能账户 这种"容易混淆"的概念，并排看就清楚了
+
+以后新学概念可以直接往 CONCEPTS 字典里加，低维护成本
+
+### ▶️ 下一步
+
+继续推进学习计划：Context → Agent 章节阅读
+
+### 📊 Progress
+
+Status: ✅ 学习产物制作完成
+
+Mood: 😊 好用的小工具
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 ## 每日打卡 — 2026-05-26（周二）
 
 ### 今日学习内容
@@ -72,6 +128,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 ## **EOA vs 智能账户 vs 多签账户：权限与安全边界对比**
 
@@ -155,6 +212,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 ## **1\. LLM（大型语言模型）**
 
 **一句话解释：** LLM 是通过海量文本训练出来的模型，能够理解和生成自然语言，本质上是一个"预测下一个词"的概率系统。
@@ -236,6 +294,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -324,6 +383,7 @@ echo 'export http_proxy=http://127.0.0.1:7890' >> ~/.bashrc
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -429,6 +489,7 @@ cd ~/openclaw && node scripts/run-node.mjs gateway
 
 
 
+
 ### **笔记 | AI 下乡计划｜AI 在 Web3 的应用**
 
 如果AI只是聊天，Web3不是必需品，但当AI开始租算力、买数据、调用APl、发起交易、管理资产、和其他agent协作时，它就需要一个能被授权、能付款、能记录、能追责的经济层。
@@ -450,6 +511,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -517,6 +579,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 
 
+
 **笔记 | AI Agent 入门：Hermes 从 0 到 1**
 
 今天学习了Hermes，总体来说和我在用的openclaw差不多，打算还是和龙虾一样部署在旧手机上。
@@ -530,6 +593,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
