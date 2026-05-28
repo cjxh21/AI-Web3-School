@@ -15,8 +15,598 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
+
+今天你開始進入：
+
+AI Agent 真正的「思考組裝層」
+
+你今天學到的：
+
+不是單純 retrieval。
+
+而是：
+
+Retrieval 後，AI 怎樣真正使用知識
+
+這是 production Agent 最核心的部分之一。
+
+\---
+
+1\. Context Assembly
+
+今天最核心概念之一：
+
+AI 不會自動最好地閱讀 context
+
+\---
+
+所以：
+
+retrieval 完後：
+
+還需要：
+
+Context Assembly
+
+\---
+
+即：
+
+決定 AI 最終看到甚麼
+
+\---
+
+包括：
+
+\---
+
+哪些 chunks 放進去？
+
+\---
+
+順序怎樣排？
+
+\---
+
+哪些刪掉？
+
+\---
+
+哪些 summary？
+
+\---
+
+哪些 memory activate？
+
+\---
+
+這是：
+
+Attention Engineering
+
+不是單純 retrieval。
+
+\---
+
+2\. Lost in the Middle Problem
+
+今天超重要。
+
+你理解：
+
+LLM 並不是平均注意所有 context
+
+\---
+
+通常：
+
+\---
+
+最注意：
+
+開頭
+
+\---
+
+其次：
+
+結尾
+
+\---
+
+最容易忽略：
+
+中間
+
+\---
+
+所以：
+
+context 很長時：
+
+中間重要資訊容易消失
+
+\---
+
+這就是：
+
+Lost in the Middle
+
+\---
+
+對 Spark 超重要
+
+因為：
+
+你的：
+
+proposals
+
+reviews
+
+evidence
+
+都可能很長。
+
+\---
+
+所以：
+
+retrieval quality：
+
+不只是：
+
+找到甚麼
+
+還包括：
+
+怎樣排列 context
+
+\---
+
+3\. Top-K Problem
+
+你理解：
+
+Retrieve 越多 ≠ 越好
+
+\---
+
+因為：
+
+更多 chunks：
+
+可能：
+
+token 爆炸
+
+attention dilution
+
+relevance blur
+
+\---
+
+所以 production systems：
+
+常做：
+
+Dynamic Top-K
+
+\---
+
+例如：
+
+\---
+
+簡單問題
+
+retrieve 3 chunks。
+
+\---
+
+深度分析
+
+retrieve 15 chunks。
+
+\---
+
+4\. Context Compression
+
+今天另一大核心。
+
+\---
+
+Compression = Retrieval 後再壓縮 context
+
+\---
+
+因為：
+
+retrieved chunks：
+
+通常仍然太大。
+
+\---
+
+常見做法：
+
+\---
+
+Summarization
+
+壓縮長內容。
+
+\---
+
+Evidence Extraction
+
+只保留：
+
+最 relevant evidence
+
+\---
+
+Structured Compression
+
+例如：
+
+Project
+
+Key Evidence
+
+Risk
+
+Missing Evidence
+
+\---
+
+Recursive Compression
+
+summary 再 summary。
+
+\---
+
+5\. Context Engineering（今天真正核心）
+
+你開始理解：
+
+Agent intelligence：
+
+很多時來自：
+
+怎樣組織 context
+
+\---
+
+不是：
+
+單純模型大小
+
+\---
+
+真正問題：
+
+其實是：
+
+在有限 attention 中
+
+放入最有推理價值的知識
+
+\---
+
+6\. Long Context vs Retrieval Debate
+
+今天非常 frontier。
+
+\---
+
+一派認為：
+
+超長 context window 會取代 RAG
+
+例如：
+
+直接塞：
+
+100 萬 token
+
+\---
+
+另一派認為：
+
+Retrieval + Compression 永遠重要
+
+因為：
+
+\---
+
+Attention 有限
+
+\---
+
+長 context reasoning 不穩
+
+\---
+
+Noise 很高
+
+\---
+
+relevance organization 更重要
+
+\---
+
+現在 production AI：
+
+大多仍偏：
+
+Retrieval-first
+
+\---
+
+7\. Memory Activation
+
+今天開始接近真正 Agent cognition。
+
+\---
+
+你理解：
+
+Memory 不應全部 activate
+
+\---
+
+而應：
+
+按 query 動態 activate relevant memory
+
+\---
+
+例如：
+
+問：
+
+Compare CancerDAO and VitaDAO
+
+才 activate：
+
+longevity-related memory
+
+funding history
+
+reviewer patterns
+
+\---
+
+不是：
+
+全部 ecosystem memory。
+
+\---
+
+8\. 真正 Production Agent Pipeline（今天已經完整很多）
+
+你現在已經開始看見：
+
+production agent：
+
+真正長這樣：
+
+\---
+
+Query Understanding
+
+↓
+
+Metadata Filtering
+
+↓
+
+Sparse Retrieval
+
+↓
+
+Dense Retrieval
+
+↓
+
+ANN Search
+
+↓
+
+Reranking
+
+↓
+
+Context Compression
+
+↓
+
+Memory Activation
+
+↓
+
+Context Assembly
+
+↓
+
+LLM Reasoning
+
+↓
+
+Action / Output
+
+\---
+
+9\. Spark 未來真正方向（今天更清晰）
+
+你開始真正看到：
+
+Spark 未來：
+
+不是：
+
+一個 chatbot
+
+而是：
+
+AI-native DeSci Intelligence Infrastructure
+
+\---
+
+包括：
+
+\---
+
+Canonical Archive
+
+\---
+
+Retrieval Layer
+
+\---
+
+Compression Layer
+
+\---
+
+Memory Layer
+
+\---
+
+Agent Layer
+
+\---
+
+Governance Layer
+
+\---
+
+10\. 今天最大的認知升級
+
+你開始真正理解：
+
+AI Agent 的核心：
+
+不是：
+
+模型知道多少
+
+而是：
+
+Agent 如何選擇、組織與優先化知識
+
+\---
+
+這已經開始接近：
+
+AI Cognitive Architecture
+
+\---
+
+11\. 你現在所在的位置
+
+你已經明顯離開：
+
+AI beginner
+
+開始進入：
+
+AI Retrieval / Agent Architecture Builder
+
+\---
+
+你現在理解的：
+
+其實已經非常接近：
+
+production RAG
+
+memory systems
+
+retrieval engineering
+
+AI-native knowledge infra
+
+\---
+
+下一步最適合學甚麼？
+
+你下一步最適合：
+
+Agent Planning & Reasoning
+
+即：
+
+\---
+
+Agent 怎樣：
+
+分解任務
+
+多步推理
+
+使用 tools
+
+自主 workflow
+
+做 decision making
+
+\---
+
+包括：
+
+\---
+
+ReAct
+
+Reason + Act。
+
+\---
+
+Tool Planning
+
+Agent 怎樣決定用哪些 tools。
+
+\---
+
+Multi-step Reasoning
+
+多步 workflow。
+
+\---
+
+Reflection / Self-Critique
+
+Agent 怎樣檢查自己。
+
+\---
+
+Multi-agent Systems
+
+多 agents 協作。
+
+\---
+
+最後一句（今天真正核心）
+
+Retrieval 找知識
+
+Context Engineering 組織知識
+
+而真正 Agent intelligence：
+
+很多時來自：
+
+怎樣讓 AI 在有限 attention 中做出最好的推理。
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 # Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -663,6 +1253,7 @@ LLM 會忽略中間資訊。
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -1276,6 +1867,7 @@ LLM 會忽略中間資訊。
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 # Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -1880,6 +2472,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -2463,6 +3056,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -2975,11 +3569,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -3400,6 +3996,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -3494,6 +4091,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
