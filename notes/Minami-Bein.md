@@ -14,6 +14,363 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+# AI x Web3 School 第 11 天打卡笔记：Web3 Tool Use 工具权限矩阵设计
+
+**日期：** 2026-05-28
+**天数：** Day 11 / 21
+
+---
+
+## 🔍 目录
+
+- [摘要与问题空间](#1-摘要与问题空间)
+- [系统架构与拓扑](#2-系统架构与拓扑)
+- [理论框架与形式分类](#3-理论框架与形式分类)
+- [状态机与协议演练](#4-状态机与协议演练)
+- [Agent 自主集成与优化](#5-agent-自主集成与优化)
+- [漏洞向量与边界场景验证](#6-漏洞向量与边界场景验证)
+- [学术标签](#7-学术标签)
+
+---
+
+## 1. 摘要与问题空间
+
+### 1.1 问题定义
+
+当 AI Agent 需要与 Web3 生态进行交互时，核心挑战在于如何将 Web3 操作封装为可被大语言模型（LLM）调用的标准化工具（Tools），同时确保每个工具的权限边界清晰、执行条件明确、用户确认机制完善。
+
+**核心技术挑战：**
+
+- 工具粒度设计：过粗则无法精准控制，过细则调用复杂度激增
+- 权限分类体系：需要区分只读操作、需要确认的操作和禁止自动执行的操作
+- 安全边界抽象：如何在不暴露私钥的前提下实现受控的钱包操作
+- 状态一致性：工具调用结果与链上状态保持同步
+
+### 1.2 In-Scope / Out-of-Scope
+
+| 范围 | 描述 |
+|------|------|
+| **In-Scope** | Web3 工具调用设计、工具权限分类、Agent 与钱包的交互模式、MCP 协议在 Web3 场景的应用 |
+| **Out-of-Scope** | 具体智能合约开发、链下数据处理、钱包密钥管理实现、多签钱包实现 |
+
+---
+
+## 2. 系统架构与拓扑
+
+### 2.1 概念脑图：Web3 Tool Use 核心模块
+
+```mermaid
+mindmap
+  root((Web3 Tool Use))
+    Web3 Tools
+      read_balance
+      simulate_transaction
+      estimate_gas
+      request_signature
+      submit_transaction
+    Permission Levels
+      ReadOnly
+      UserConfirmationRequired
+      ForbiddenAutoExecution
+    MCP Protocol
+      Context Bridge
+      Tool Schema
+      Result Serialization
+    Agent Integration
+      Tool Executor
+      State Tracker
+      Verification Layer
+```
+
+### 2.2 组件拓扑图：工具调用数据流
+
+```mermaid
+graph TD
+    subgraph UserLayer["用户层"]
+        U[用户 / User]
+        W[钱包 / Wallet]
+    end
+
+    subgraph AgentLayer["Agent 层"]
+        LLM[大语言模型 / LLM]
+        TE[工具执行器 / Tool Executor]
+        ST[状态追踪器 / State Tracker]
+    end
+
+    subgraph ToolLayer["工具层"]
+        RB[read_balance]
+        STX[simulate_transaction]
+        EG[estimate_gas]
+        RS[request_signature]
+        SUB[submit_transaction]
+    end
+
+    subgraph ChainLayer["链上层"]
+        RPC[RPC 节点 / RPC Node]
+        BC[区块链 / Blockchain]
+    end
+
+    U -->|授权| W
+    LLM -->|调用| TE
+    TE -->|执行| RB
+    TE -->|执行| STX
+    TE -->|执行| EG
+    TE -->|执行| RS
+    TE -->|执行| SUB
+    RB -->|查询| RPC
+    STX -->|模拟| RPC
+    EG -->|估算| RPC
+    RS -->|请求| W
+    SUB -->|提交| RPC
+    RPC -->|状态更新| BC
+    BC -->|返回| RPC
+
+    style UserLayer fill:#f9f,stroke:#333,stroke-width:2px
+    style AgentLayer fill:#bbf,stroke:#333,stroke-width:2px
+    style ToolLayer fill:#dfd,stroke:#333,stroke-width:2px
+    style ChainLayer fill:#ffd,stroke:#333,stroke-width:2px
+```
+
+---
+
+## 3. 理论框架与形式分类
+
+### 3.1 核心工具定义表
+
+| 工具名称 | 功能描述 | 输入类型 | 输出类型 | 权限等级 | 约束条件 |
+|---------|---------|---------|---------|---------|---------|
+| **read_balance** | 读取指定地址的代币余额 | `{ address: string, token?: string }` | `{ balance: string, symbol: string }` | 🔵 ReadOnly | 无需用户确认，仅读取公开链上数据 |
+| **simulate_transaction** | 模拟交易执行（不上链） | `{ from: string, to: string, data: string, value?: string }` | `{ success: boolean, gasUsed?: string, revertReason?: string }` | 🔵 ReadOnly | 无需用户确认，用于预检交易安全性 |
+| **estimate_gas** | 估算交易 Gas 消耗 | `{ from: string, to: string, data: string, value?: string }` | `{ gasEstimate: string, gasPrice?: string, totalCost?: string }` | 🔵 ReadOnly | 无需用户确认，返回估算值可能有误差 |
+| **request_signature** | 请求用户签名消息 | `{ message: string, domain?: string }` | `{ signature: string }` or `null` | 🟡 UserConfirmationRequired | 必须等待用户显式确认，超时拒绝 |
+| **submit_transaction** | 提交交易到链上 | `{ to: string, data: string, value?: string, gasLimit?: string }` | `{ txHash: string, status: 'pending' }` | 🔴 ForbiddenAutoExecution | 禁止 Agent 自动执行，必须通过 request_signature 获取授权 |
+
+### 3.2 权限等级形式化定义
+
+$$
+P_{read\_only} = \{ t \in Tools \mid \forall s \in States, \neg modifiesState(t, s) \}
+$$
+
+$$
+P_{user\_confirm} = \{ t \in Tools \mid requiresConfirmation(t) \land userInput(t) \neq null \}
+$$
+
+$$
+P_{forbidden} = \{ t \in Tools \mid \neg canAutoExecute(t) \}
+$$
+
+**不变量（Invariant）：**
+
+$$
+\forall tool \in Tools, classify(tool) \in \{ P_{read\_only}, P_{user\_confirm}, P_{forbidden} \}
+$$
+
+$$
+\forall t \in P_{forbidden}, autoExecute(t) = false
+$$
+
+### 3.3 工具权限矩阵
+
+| 工具 | 链上写操作 | 需要私钥 | 用户确认 | 自动执行 | 安全等级 |
+|------|----------|---------|---------|---------|---------|
+| read_balance | ❌ 否 | ❌ 否 | ❌ 否 | ✅ 可 | 低 |
+| simulate_transaction | ❌ 否 | ❌ 否 | ❌ 否 | ✅ 可 | 低 |
+| estimate_gas | ❌ 否 | ❌ 否 | ❌ 否 | ✅ 可 | 低 |
+| request_signature | ⚠️ 前置条件 | ⚠️ 不暴露 | ✅ 是 | ❌ 否 | 中 |
+| submit_transaction | ✅ 是 | ✅ 是 | ✅ 是 | ❌ 否 | 高 |
+
+---
+
+## 4. 状态机与协议演练
+
+### 4.1 工具调用时序图：完整交互流程
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Agent as AI Agent
+    participant ToolExec as 工具执行器
+    participant Wallet as 钱包
+    participant RPC as RPC 节点
+    participant Chain as 区块链
+
+    Note over User,Chain: 只读操作流程
+    Agent->>ToolExec: 调用 read_balance
+    ToolExec->>RPC: 请求余额查询
+    RPC->>Chain: 查询链上状态
+    Chain-->>RPC: 返回余额数据
+    RPC-->>ToolExec: 余额结果
+    ToolExec-->>Agent: 返回 {balance, symbol}
+
+    Note over User,Chain: 需要用户确认的流程
+    Agent->>ToolExec: 调用 submit_transaction
+    ToolExec->>ToolExec: 权限检查
+    alt 权限 = ForbiddenAutoExecution
+        ToolExec->>Agent: 返回错误：需授权
+        Agent->>ToolExec: 调用 request_signature
+        ToolExec->>Wallet: 请求用户签名
+        Wallet->>User: 弹出确认框
+        User-->>Wallet: 用户批准/拒绝
+        alt 用户批准
+            Wallet-->>ToolExec: 返回签名
+            ToolExec->>RPC: 提交签名交易
+            RPC->>Chain: 上链
+            Chain-->>RPC: 交易回执
+            RPC-->>ToolExec: txHash
+            ToolExec-->>Agent: 成功
+        else 用户拒绝
+            Wallet-->>ToolExec: null
+            ToolExec-->>Agent: 授权失败
+        end
+    end
+```
+
+### 4.2 状态阶段细化
+
+| 阶段 | 描述 | 进入条件 | 退出条件 | 异常处理 |
+|------|------|---------|---------|---------|
+| **Initiation（初始化）** | Agent 解析任务，决定调用哪个工具 | 用户指令到达 | 工具参数准备完成 | 参数不完整则返回 Prompt 修正 |
+| **Verification（验证）** | 执行权限检查，确认工具可执行 | 参数准备完成 | 权限校验通过 | 权限不足则请求授权或返回错误 |
+| **Commitment（提交/承诺）** | 工具实际执行，返回结果 | 权限验证通过 | 链上确认或模拟完成 | 超时或失败返回错误码 |
+| **Reporting（报告）** | 格式化输出，更新 Agent 上下文 | 执行完成 | 结果写入上下文 | 格式异常记录日志 |
+
+---
+
+## 5. Agent 自主集成与优化
+
+### 5.1 工具选择决策树
+
+```mermaid
+graph TD
+    A[Agent 接收任务] --> B{任务类型}
+    B -->|查询类| C{是否需要签名}
+    B -->|执行类| D{是否改变链上状态}
+    C -->|否| E[调用 read_balance<br/>或 simulate_transaction]
+    C -->|是| F[调用 request_signature]
+    D -->|否| G[调用 estimate_gas<br/>或 read_balance]
+    D -->|是| H[必须走 request_signature<br/>后 submit_transaction]
+
+    E --> I[返回结果]
+    F --> J{用户授权}
+    J -->|通过| K[调用 submit_transaction]
+    J -->|拒绝| L[返回授权失败]
+    K --> I
+    L --> I
+
+    style F fill:#ff6,stroke:#333
+    style H fill:#f96,stroke:#333
+    style K fill:#f96,stroke:#333
+```
+
+### 5.2 MCP 协议集成架构
+
+模型上下文协议（Model Context Protocol，MCP）在 Web3 场景中的核心作用是标准化 Agent 与外部工具的交互方式：
+
+**关键设计点：**
+
+1. **工具 Schema 标准化**
+   ```json
+   {
+     "name": "web3_submit_transaction",
+     "description": "提交已签名的交易到区块链",
+     "inputSchema": {
+       "type": "object",
+       "properties": {
+         "signedTx": { "type": "string" },
+         "waitForConfirmation": { "type": "boolean" }
+       },
+       "required": ["signedTx"]
+     }
+   }
+   ```
+
+2. **上下文桥接**
+   - 链上数据注入：定期同步区块高度、Gas 价格、事件日志
+   - 钱包状态注入：账户余额、授权额度、待处理交易
+
+3. **结果序列化**
+   - 统一返回格式：`{ success: boolean, data: object, error?: string }`
+   - 链上交易回执标准化映射
+
+### 5.3 优化策略
+
+| 优化方向 | 策略 | 预期收益 |
+|---------|------|---------|
+| **调用延迟优化** | 批量只读请求（read_balance x N）合并为单次多查询 | 减少 RPC 调用次数 60%+ |
+| **Gas 估算容错** | 设置 Gas 缓冲系数（1.1x），链上拥堵时自动调整 | 交易成功率提升至 95%+ |
+| **签名请求超时** | 设置 5 分钟超时，Agent 记录 pending 状态后继续其他任务 | 避免 Agent 阻塞，提升并行效率 |
+| **缓存策略** | 余额查询结果缓存 30 秒，模拟交易结果缓存 5 分钟 | 减少不必要的链上查询 |
+
+---
+
+## 6. 漏洞向量与边界场景验证
+
+### 6.1 安全漏洞报告块
+
+#### 漏洞 1：未经授权的自动交易执行
+
+| 字段 | 描述 |
+|------|------|
+| **漏洞类型（Type）** | 权限边界突破（Permission Boundary Violation） |
+| **缺陷源头（Root Cause）** | Agent 在未经 request_signature 确认的情况下直接调用 submit_transaction |
+| **攻击/失效向量（Attack/Failure Vector）** | 恶意 Prompt 注入或 Agent 决策失误导致资产转移 |
+| **防御策略或修复建议（Mitigation/Patch）** | 工具执行器强制权限检查，submit_transaction 必须检测前置 request_signature 授权 |
+
+#### 漏洞 2：只读工具返回值信任过度
+
+| 字段 | 描述 |
+|------|------|
+| **漏洞类型（Type）** | 数据源不可信（Untrusted Data Source） |
+| **缺陷源头（Root Cause）** | read_balance 和 estimate_gas 依赖单一 RPC 节点，可能返回过期或篡改数据 |
+| **攻击/失效向量（Attack/Failure Vector）** | RPC 节点被攻击者控制，导致余额显示错误、Gas 估算失准 |
+| **防御策略或修复建议（Mitigation/Patch）** | 关键操作使用多 RPC 节点交叉验证，设置数据新鲜度阈值 |
+
+#### 漏洞 3：签名请求钓鱼
+
+| 字段 | 描述 |
+|------|------|
+| **漏洞类型（Type）** | 社会工程攻击（Social Engineering Attack） |
+| **缺陷源头（Root Cause）** | request_signature 显示的 message 内容对普通用户不可读 |
+| **攻击/失效向量（Attack/Failure Vector）** | Agent 构造复杂交易数据，用户只看到"确认转账"却实际授权了恶意合约调用 |
+| **防御策略或修复建议（Mitigation/Patch）** | 要求工具执行器提供人类可读的交易摘要，标注 to 地址、金额、调用函数名 |
+
+### 6.2 边界场景验证矩阵
+
+| 场景 | 输入 | 预期行为 | 实际边界 |
+|------|------|---------|---------|
+| read_balance 目标地址无效 | `{ address: "0xInvalid" }` | 返回格式错误，不崩溃 | 返回 `{ error: "Invalid address format" }` |
+| estimate_gas 超长 data | data 字段超过 10KB | 拒绝执行或截断 | 建议设置 100KB 上限 |
+| request_signature 用户无响应 | 10 分钟无响应 | 超时返回 null | Agent 应记录 pending 状态，不阻塞后续任务 |
+| submit_transaction 链上拥堵 | Gas Price 飙升 10x | 原交易可能卡住 | 提供加速/取消机制 |
+| 连续调用 submit_transaction | 1 分钟内调用 5 次 | 需要增量授权 | 设置频率限制（Rate Limit） |
+
+---
+
+## 7. 学术标签
+
+| 标签 | 描述 |
+|------|------|
+| **Web3 Tool Use** | Web3 工具调用设计模式与权限管理 |
+| **MCP Protocol** | 模型上下文协议在去中心化场景的应用 |
+| **Permission Matrix** | 工具权限分类与边界控制 |
+| **Agent Security** | AI Agent 与 Web3 交互的安全架构 |
+| **Smart Contract Interaction** | 智能合约交互的标准化封装 |
+| **Gas Estimation** | 区块链交易成本估算与优化 |
+| **Human-in-the-Loop** | 人在回路确认机制设计 |
+
+---
+
+## 学习心得总结
+
+今天深入理解了 Web3 Tool Use 的核心设计理念：**工具是 Agent 与链上世界交互的唯一通道**。关键收获：
+
+1. **权限分类是安全基石**：read-only、user-confirmation-required、forbidden-auto-execution 三级权限覆盖了所有 Web3 操作场景，强制 Agent 在权限边界内行动。
+
+2. **MCP 协议提供标准化抽象**：将链上操作封装为统一的工具 Schema，使 Agent 无需理解底层 RPC 协议细节，降低
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 # Day 10 技术打卡报告：AI Agent 基础与 Web3 任务执行框架
