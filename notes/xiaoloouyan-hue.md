@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+Across the industry, AI agents are beginning to hold wallets, execute transactions, coordinate with other agents, deploy smart contracts, and operate continuously on blockchain infrastructure. What appears on the surface as a technical evolution is actually a deeper transformation in how the internet itself is imagined: blockchain is gradually becoming the financial and coordination layer for non-human actors. This shift changes the meaning of Web3 entirely. The earlier phase of crypto culture focused on ownership, speculation, and decentralized finance for people, while the emerging phase centers on machine identity, agent reputation, portable memory, and autonomous coordination between intelligences. In this sense, the internet is slowly evolving from a network of users into a network of agents.
+
+At the same time, open-source AI agent ecosystems are developing a strong cultural and political atmosphere reminiscent of early internet counterculture. Communities surrounding autonomous agent swarms and decentralized AI infrastructure increasingly resemble the experimental energy once associated with Linux collectives, cyberpunk networks, tactical media labs, or early crypto-anarchist communities. The significance of this movement lies not only in technological openness, but in the alternative social imaginaries it produces. Closed AI systems are becoming corporate operating systems, while open agent ecosystems are positioning themselves as spaces for distributed intelligence, anonymous collaboration, and autonomous infrastructure. This transition suggests that future creative practices may no longer focus primarily on designing static objects or exhibitions, but instead on constructing behavioral systems, social protocols, memory architectures, and machine-mediated publics. For someone with a background in architecture, curatorial research, publishing, and spatial practice, this moment is particularly important because spatial thinking is becoming relevant again — not only in physical environments, but in the design of social and cognitive infrastructures.
+
+Another critical development is the emergence of decentralized memory systems for AI. A growing number of projects are experimenting with portable memory, on-chain identity persistence, and user-owned cognitive archives. Historically, platforms controlled social graphs, behavioral histories, and algorithmic memory, but AI × Web3 projects are beginning to propose an alternative model in which memory itself becomes an owned and transferable infrastructure. This has profound implications for publishing, research, curatorial work, and digital identity. In the future, cultural practitioners may not simply produce content; they may curate datasets, orchestrate collective memory systems, or train long-term research agents capable of evolving over time. The role of the curator may gradually shift toward that of a mediator between human communities and machine intelligences. Under these conditions, archives are no longer static repositories of the past, but living cognitive environments that continuously generate new interpretations and social relations.
+
+Privacy and sovereignty are also becoming central concerns in this convergence between AI and Web3. As autonomous agents gain access to wallets, contextual memory, communication systems, and behavioral data, questions surrounding surveillance and cognitive control are becoming increasingly urgent. This is leading to a renewed focus on cryptographic infrastructure, especially zero-knowledge systems, encrypted memory, and private inference. The next generation of decentralized AI systems is likely to prioritize sovereign cognition: the ability for individuals and communities to maintain control over how intelligence, memory, and identity are stored and mobilized. The political conflict emerging here is no longer simply centralized finance versus decentralized finance, but centralized cognition versus autonomous cognition. In other words, the struggle concerns who controls the architectures through which thought, memory, and coordination operate.
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 Using “test knowledge” as a lens in today’s AI systems points to a broader shift in how models are evaluated and deployed: what matters is no longer just what is stored in parameters, but what can reliably surface under novel conditions—i.e., at test time, in unseen environments. In current AI research and industry practice, this has converged around ideas like in-context learning, retrieval-augmented generation, and tool-using agents, where “knowledge” is increasingly externalized and dynamically assembled rather than statically memorized. This reframes test knowledge as _situational competence_: whether a model can reconstruct correct behavior when the context changes, rather than recall fixed facts. Recent debates around frontier models increasingly focus on whether improvements are genuine gains in generalization or just better pattern interpolation. Concepts like Overfitting and Generalization are therefore being reinterpreted in agentic systems, where performance depends on how well a model can adapt its “knowledge assembly” process under uncertainty rather than simply score higher on static benchmarks.
 
 In the AI × Web3 intersection, “test knowledge” becomes even more structurally interesting because blockchain environments force models into adversarial, partially observable, and economically constrained settings. Unlike traditional benchmarks, on-chain environments (DeFi protocols, governance systems, smart contract interactions) function as live test suites where actions are irreversible and incentives are explicit. This is why recent experimentation with autonomous agents in Web3 is less about intelligence in the abstract and more about _test-time reliability under economic pressure_: can an agent interpret contract state, reason about incentives, and avoid manipulation in real time. The emerging narrative is that Web3 may act as a persistent evaluation layer for AI—an always-on test environment where agents accumulate reputational signals, financial outcomes, and behavioral traces. This connects closely with ideas like In-context Learning and World Model, but extends them into environments where “knowledge” is no longer just semantic accuracy but actionable correctness under economic consequences. In this framing, Web3 does not just integrate with AI; it potentially operationalizes “test knowledge” as a continuous, adversarial, and value-bearing feedback loop.
@@ -26,6 +38,7 @@ In the AI × Web3 intersection, “test knowledge” becomes even more structura
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 A central development has been the acceleration of “agentic” architectures: autonomous AI systems capable not only of generating language, but of executing economic and operational tasks across decentralized environments. Recent discussions around protocols such as MCP (Model Context Protocol), x402 payment rails, and on-chain agent identity standards suggest that the industry is moving toward a machine-native internet, where AI agents function as economic actors rather than merely interface tools. Simultaneously, decentralized AI ecosystems such as Bittensor, Worldcoin, and emerging agent infrastructures tied to OpenClaw and Coinbase have intensified debates around data sovereignty, distributed compute, and post-platform governance. Particularly significant is the growing emphasis on “proof of personhood” and biometric verification infrastructures, which position Web3 not simply as a financial layer, but as a socio-technical response to the epistemic crisis generated by synthetic media and autonomous agents.  
 
 From a broader cultural and theoretical perspective, these developments indicate a transition from the earlier “tokenization” phase of crypto toward a new paradigm centered on decentralized intelligence coordination. For someone with your background across architecture, curatorial practice, spatial research, and institutional critique, the most relevant shift may not be technological alone, but epistemological: AI × Web3 is increasingly constructing alternative systems for authorship, identity, governance, and collective memory. Recent academic work on prompt ownership, decentralized AI agents, and blockchain-registered machine identities reframes prompts, models, and agent interactions as cultural assets embedded within programmable infrastructures. This parallels earlier transformations in contemporary art and architecture, where institutions evolved from static containers into dynamic protocol systems. In this sense, decentralized AI is beginning to resemble an infrastructural aesthetics: a field where governance mechanisms, incentive structures, and computational identities become forms of spatial and political design. The emerging discourse around “agent economies” therefore should not be read merely as a fintech phenomenon, but as a new mode of organizing labor, cognition, and public participation under conditions of distributed automation.
@@ -33,6 +46,7 @@ From a broader cultural and theoretical perspective, these developments indicate
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -51,6 +65,7 @@ Finally, an important conceptual tendency emerging in both academic literature a
 
 
 
+
 The contemporary convergence of AI and Web3 increasingly suggests a transition from speculative “AI crypto” narratives toward the construction of decentralized machine infrastructures. Over the past months, discourse within both industry and academic circles has shifted toward the notion of an “agent economy,” in which autonomous AI agents are no longer understood merely as interfaces for human interaction, but as semi-sovereign economic actors capable of owning wallets, executing transactions, coordinating labor, and participating in governance structures on-chain. Recent developments from projects such as and the broader ASI ecosystem demonstrate how blockchain architectures are increasingly being designed to support machine-to-machine payments, decentralized identity systems, and agentic coordination layers. Simultaneously, emerging academic frameworks—including “The Agent Economy” and recent Ethereum-based datasets on blockchain-registered AI agents—indicate that researchers are beginning to formalize autonomous agents as infrastructural entities rather than experimental applications. This marks an epistemic shift: Web3 is no longer framed solely as a financial or ownership protocol, but as a computational substrate for distributed cognition and automated governance.  
 
 For someone with your interdisciplinary background in architecture, curatorial practice, and spatial research, one particularly significant implication lies in how AI × Web3 infrastructures increasingly resemble questions traditionally explored within critical spatial theory: coordination, participation, authorship, and the politics of distributed systems. Current discussions around decentralized AI emphasize verifiability, provenance, and collective intelligence rather than centralized optimization alone. Projects exploring prompt ownership, tokenized knowledge production, and decentralized compute networks suggest that prompts, datasets, and even agent behaviors may become new forms of cultural and economic artifacts. In this sense, the emerging AI-Web3 landscape is not only technical but also curatorial and institutional: it asks who governs machine intelligence, how collective trust is spatialized across networks, and how new publics are organized through protocol design. The growing attention to “agentic DAOs,” decentralized reputation systems, and machine-native economies recalls earlier debates in architecture and contemporary art regarding autonomy, commons-based production, and participatory infrastructures. Increasingly, the field appears less concerned with replacing human creativity and more invested in designing environments where human and non-human actors co-produce knowledge, value, and governance across distributed networks.
@@ -58,6 +73,7 @@ For someone with your interdisciplinary background in architecture, curatorial p
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -78,6 +94,7 @@ Reading List：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -117,6 +134,7 @@ Web3 社区的问题是：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
