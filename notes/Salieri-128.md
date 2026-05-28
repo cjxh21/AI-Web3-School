@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+今天依旧继续学习security- review，看[git@github.com](mailto:git@github.com):Salieri-128/security-review.git
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 [https://updraft.cyfrin.io/courses/security/puppy-raffle/exploit-mishandling-of-eth](https://updraft.cyfrin.io/courses/security/puppy-raffle/exploit-mishandling-of-eth)依旧学习cyfrin updraft的security review course
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 今天依旧学习security review，舒服！！！[https://github.com/Salieri-128/security-review](https://github.com/Salieri-128/security-review)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 今天依旧学习security review，知道了弄finding啊什么的格式
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 今天依旧在学cyfrin updraft的课，今天学了Tincho review的方式
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 今天系统学习了 Handbook 中的 Vibe Coding、MCP、Evaluation、Fine-tuning 和 Inference 五个章节。最大的收获是，我开始从工程化视角理解 AI：不仅关注模型能力本身，也开始理解 AI 如何协作开发、连接工具、被评估、被微调，以及如何在真实产品里稳定运行。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -88,6 +100,7 @@ AI x Web3 School
 
 
 
+
 今天我完成了 AI × Web3 School 里一次很关键的“从会用 Agent 到会调 Agent”的练习。内容上，我阅读了 Handbook 的 `LLMPromptContextAgent` 四个部分，也参加了 `AI Agent 入门 —— Hermes 从 0 到 1` 直播，把理论和实际工具使用串了起来。
 
 今天最重要的实践是把微信里的 Hermes Agent 调通，并继续排查它在 WCB 学习任务读取上的问题。我发现它虽然拿到了 WCB 的 API key，但不能稳定读出任务，最后定位并验证了对我这个账号更可靠的读取路径`users.getProfile -> events.listForLearner -> tasks.listForLearnerByIds`，然后把这条路径存进了 memory。
@@ -101,6 +114,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
