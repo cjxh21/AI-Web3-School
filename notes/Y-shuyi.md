@@ -15,8 +15,55 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+本来想要重新再捡起前几天学到一半的RAG，突然想起一个Andrew Ng的通识课。真的非常推荐所有希望能更有效使用AI的人去看，不需要任何代码基础。总时长只有3h。[https://www.deeplearning.ai/courses/ai-prompting-for-everyone](https://www.deeplearning.ai/courses/ai-prompting-for-everyone)
+
+今天主要看了Module 1，主要解答了诸如以下问题：
+
+-   AI会有讨好的倾向，怎么让AI给到我诚实的回答？Ask neutral questions 描述的时候尽量使用客观的措辞而不是I have a great idea blabla（但这个很难做到诶）；使用评估标准（rubrics）for critiques;
+    
+-   Writing：怎么样和AI合作写出我想要的稿子？  
+    start from outline + based on my notes > expand in bullet points 先从框架开始修改，最后再展开。
+    
+-   AI的回复有多可靠，这取决于什么？  
+    取决于它的预训练数据的patterns。比如占比最高的数据是Reddit forum的公共数据库，而部分公司的私有数据库就不会在拍pretrained data当中，英语为语言的数据明显比粤语要多。基于这个数据范式，通用问题的答案会相对准确（而且Typos也不影响答案）。
+    
+-   但由于大模型摄入的Public data包含错误信息、过时信息，怎么进一步提高答案的准确性呢？  
+    ——打开web search功能，并且在提问中限制条件，比如明确时间节点、明确搜索的资料范围。
+    
+-   那么是不是我现在有了chatbot，就把它当搜索引擎用就好了呢？什么时候用大模型对话，什么时候用搜索引擎？  
+    我们需要根据我们的目的去选择合适的工具。搜索引擎适合：quickly scan several resources; search data in original form - 吴恩达举了一个例子是获得一个特定型号的电器，但是我感觉这个通过LLM也可以；去特定的网站 - 比如我已经注册了airbnb需要在上面订房子，在Agent支付还没有代替我的情况下我还是需要登录网站，但是不是agent支付后面普及之后就不需要了？
+    
+-   为什么我们需要鼓励AI给到置信度高的回答？因为大模型会自动pull data from most available info rather than most reliable info.
+    
+-   打开web search，但为什么生成的答案和它调用的resource中有出入？因为有两个模型在工作，一个是user-facing AI model / 另一个Assistant AI model，后者联网审阅材料之后给出总结，而前者并不会再次审阅材料，而是基于总结生成答案。
+    
+-   使用LLM不同的深入方式，以及在什么场景用到对应的方式？  
+    pretrained knowledge / web search / deep research
+    
+
+维度：时间长度 / 生成样式 / 是否需要联网搜索 / 这边我漏了以下例如trigger和对比human answer time  
+
+![Screenshot 2026-05-28 at 18.05.50.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-28-1779976737848-Screenshot_2026-05-28_at_18.05.50.png)
+
+deep research：Impact类型的问题，需要几十上百份资料检索，人类回答时间几分钟到几小时，通常是你点deep search大模型才会花几分钟去生成  
+Andrew举例gemini可以生成不同形式的输出报告，比如html/flashcards等等。
+
+* * *
+
+Co-learning：  
+前端设计的话可以看一下opendesign  
+[https://variant.com/community](https://variant.com/community)  
+[https://stitch.withgoogle.com/](https://stitch.withgoogle.com/)
+
+黑客松会讲故事很重要！  
+能完成、跑通、上测试网。eg. 死了么
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 ![Screenshot 2026-05-27 at 18.38.14.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-27-1779878335614-Screenshot_2026-05-27_at_18.38.14.png)
 
 ## 今日复盘问题（8题）
@@ -110,6 +157,7 @@ allowlist、预算上限、L3人工确认都很关键啊，这个问题提问方
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 我想建立一个question bank的workflow，可以自动化地按照我关于课题的需要、我自己的学习路径+目标+习惯，去定制化question bank，让这个问题集合服务于我建立更好的知识系统。众所周知提问是非常重要的，尤其是现在有AI回答问题的速度会越来越快，但反过来说，也不是所有的问题都需要在当地下得到解答；AI的便利性也要求我们能够不迷失在问题里，让每一个问题之间由点成线，由线成面。基于这个理念我希望建立这样一个小的、可视化的学习工具。
 
@@ -268,6 +316,7 @@ Q: 什么是 Agentic Wallet？它和普通钱包的核心区别是什么？
 
 
 
+
 # 打卡日志 — 2026-05-25
 
 **学习时长**：\_ \_ 小时
@@ -355,11 +404,13 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 
 
+
 ![Screenshot 2026-05-24 at 23.57.18.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-24-1779638290862-Screenshot_2026-05-24_at_23.57.18.png)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -376,6 +427,7 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 
 
+
 ![Screenshot 2026-05-22 at 23.57.21.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-22-1779465443887-Screenshot_2026-05-22_at_23.57.21.png)
 
 今天诚实地请个假，有优先级更高的事情需要做。
@@ -383,6 +435,7 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -440,11 +493,13 @@ Further question/action：
 
 
 
+
 今天主要听了Bruce分享的Web3的运行基础。之前我也听不同的人讲过这个部分，其它部分Bruce老师的解读其实能发现是从技术底层逻辑上去拆解为什么其中某一个环节的存在对于整个系统会有影响——这一点其实我还不够问自己更深。最后的Takeaway是web3不仅是关于技术，技术只是基础设施，而更涉及到社会学、经济学和密码学。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -468,6 +523,7 @@ X博主分享：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
