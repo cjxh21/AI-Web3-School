@@ -15,8 +15,49 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+> 今日核心动作：完成模块 B（Payment/Commerce/Settlement）交付 + 推进 Hackathon 原型。
+
+> 模块 B 交付：
+
+> -   设计了「Agent 帮商户生成社媒内容并收款」的完整 commerce flow
+>     
+
+> -   拆出 7 环节：报价 → 预算授权 → 执行 → 交付 → 验收 → 结算/退款/争议 → 记录证明
+>     
+
+> -   对比 x402（支付层）vs ERC-8183（Commerce/Escrow 层），明确四层 Stack 分工
+>     
+
+> **x402 + Cobo CAW Agent 自主支付闭环**  
+> 项目简介  
+> 这是 Week 2 Module B 的进阶任务——一个最小化的 **x402 paywall + Cobo CAW Agent 自主支付闭环**。  
+> 核心目标不是"自动付款"，而是展示：在明确授权、预算控制和可审计记录下完成自动交易的全流程。  
+> 场景
+> 
+>   
+> **Agent 帮商户生成社交媒体营销内容并自动付款**
+> 
+> -   商户 Alice 授权 Buyer Agent 在 $50 预算内购买营销文案生成服务
+>     
+> -   服务提供方 ContentGen Agent 提供 x402 保护的 AI 推理 API
+>     
+> -   CAW Pact 约束 Agent 的花钱范围、操作范围和时间窗口
+>     
+> -   交易完成后，链上留下可审计的结算记录
+>     
+> -   已提交[https://github.com/NeoWeb3Nova/x402-caw-agent-payment-loop](https://github.com/NeoWeb3Nova/x402-caw-agent-payment-loop)
+>     
+
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-28.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-28.md)
+
+> [#AIWeb3School](#AIWeb3School) [#Week2](#Week2) [#Day11](#Day11) [#AgentCommerce](#AgentCommerce) [#x402](#x402) [#ERC8183](#ERC8183)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 > 今日是周三 Co-learning 日，核心动作是带着昨日方向决策和 5W 拆解去获取反馈，并迭代原型。
 
 > 关键动作：
@@ -67,6 +108,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -87,6 +129,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -125,6 +168,7 @@ AI x Web3 School
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -153,6 +197,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -193,6 +238,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -259,6 +305,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -287,6 +334,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -339,6 +387,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
