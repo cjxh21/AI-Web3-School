@@ -15,8 +15,122 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+### **任务 1：Agent Profile Design**
+
+以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
+
+**核心内容**：
+
+-   Identity：名称、能力描述、DID、托管方
+    
+-   Capability：读取链上数据 / 生成分析报告 / EAS 存证 / USDC 退款
+    
+-   输入：用户任务描述、钱包地址、Pact 配置
+    
+-   输出：分析报告、交易 hash、attestation URL
+    
+-   协作对象：用户（发起方）、EAS（存证）、Safe（签名）、LLM API（推理）
+    
+-   失败点：API 超时 / 预算耗尽 / 超出 Pact 范围 / 链上 revert
+    
+
+**Agent Profile 草图**：
+
+| 字段 | 内容 |
+| --- | --- |
+| 名称 | Web3 Analysis Agent |
+| 托管方 | Cobo / Safe / 自托管 |
+| 核心能力 | 链上分析 + EAS 存证 |
+| 调用方式 | Feishu Bot / API |
+| 收费方式 | 每次任务 0.01 ETH 或订阅制 |
+| 验证方式 | EAS attestation 记录每次交付 |
+| 失败处理 | 预算退回 + 告警 |
+
+**加分：MCP vs A2A 对比**：
+
+-   MCP：Agent ↔ 工具（工具上下文注入，最适合 Agent 调用链上数据 API）
+    
+-   A2A：Agent ↔ Agent（多 Agent 协作协议，适合多角色分工）
+    
+
+**文件**：`tasks/agent-profile-design.md`
+
+* * *
+
+### **任务 2：Agent Wallet 权限策略设计**
+
+以 Web3 Analysis Agent 为场景，设计完整的链上操作权限控制。
+
+**核心内容**：
+
+-   预算：0.05 ETH 单次 / 0.2 ETH 日上限 / 1 ETH 月上限，超出自动暂停
+    
+-   白名单合约：EAS AttestationStation / USDC / Agent Registry
+    
+-   禁止动作：approve 修改 / 合约部署 / 治理投票（永久禁止）
+    
+-   人工确认阈值：单笔 > 0.02 ETH / 白名单外 / 24h 同动作 > 10 次
+    
+-   四种撤销：即时撤销 / Pact 级 / 紧急暂停 / 降级回路
+    
+-   日志：链下加密 + 链上 Merkle root + EAS attestation
+    
+-   失败处理：6 种场景的完整处理方式
+    
+
+**ERC-4337 / Safe / Guard 机制解释**：
+
+-   ERC-4337：Smart Account + Session Key → Agent 可受限签名，无需暴露主私钥
+    
+-   Safe：多签 → 任何单点失控（Agent 被劫持）不足以完成交易
+    
+-   Guard：执行前检查 → "有权签名，但签的内容必须符合规则"
+    
+
+**文件**：`tasks/agent-wallet-permission-strategy.md`
+
+* * *
+
+### **任务 3：Agent Workflow Threat Model**
+
+为 Agent Workflow 设计威胁模型，覆盖 6 大风险维度。
+
+**核心内容**：
+
+-   资产清单：凭证（API Key / Session Key / RPC）/ 数据（DID / 任务历史）/ 权限（Pact）
+    
+-   攻击入口：Prompt Injection / Tool Abuse / 伪造工具返回 / 越权指令 / 会话劫持 / Calldata 伪装
+    
+-   低风险自动执行：链上读取 / 生成报告 / EAS 存证 / USDC 退款
+    
+-   高风险人工确认：单笔 > 0.02 ETH / 白名单外合约 / 24h 同动作 > 10 次 / calldata 与意图不符
+    
+-   触发条件：5 条确认触发条件 + 30 分钟超时
+    
+-   失败后果：6 种场景直接后果 + 止损手段
+    
+
+**攻击模拟与防御验证（5 种）**：
+
+-   Prompt Injection → ✅ 被 Guard + Policy + 人工确认拦截
+    
+-   伪造工具返回 → ⚠️ 交叉验证有限，数据源同时污染则失效
+    
+-   越权指令 → ✅ 被 Policy + Session Key 权限限制拦截
+    
+-   Calldata 伪装 → ✅ 被 Calldata 预检 + 禁止列表拦截
+    
+-   降级回路失效 → ✅ 被链上超时 + 多签暂停拦截
+    
+
+**文件**：`tasks/agent-workflow-threat-model.md`
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -76,6 +190,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 ## **今日完成：AI × Web3 问题地图**
 
@@ -204,6 +319,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 ### **1\. Payment / Commerce**
@@ -471,6 +587,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -546,6 +663,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -600,6 +718,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -714,6 +833,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1136,6 +1256,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1368,6 +1489,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1756,6 +1878,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
