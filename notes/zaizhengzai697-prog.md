@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+今天系统梳理并理解了Web3领域的核心概念：包括payment/commerce、identity/reputation、capability/interoperability、wallet/permission、privacy/security，对链上价值流转、身份系统、互操作性、权限管理与安全隐私等关键维度建立了更清晰的认知框架。
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 今天我系统学习了Anthropic的Claude API官方入门课程、Z.ai的GLM MaaS API开发者文档（包括OpenAI兼容接口的快速上手实践），并了解了Z.ai Coding Plan解锁GLM全系列模型调用的相关内容，完成了对主流大模型API开发工具的入门梳理。
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 今天的学习打卡：我研读了Ethereum Accounts文档，理清了账户与地址的底层逻辑；跟着MetaMask Getting Started教程学习了钱包的使用流程和安全责任；同时也梳理了Ethereum Development Documentation，搭建起了完整的以太坊学习路径框架。
 <!-- DAILY_CHECKIN_2026-05-26_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 今天学习打卡：我研读了Hermes Agent Docs，深入理解了agent、tool calling、skills、记忆和长期执行的核心概念；同时通过Zread.ai解读OpenClaw/Hermes相关内容，梳理并理解了agent进入执行层后带来的架构变化。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 今天完成了AI开发相关的入门学习，内容覆盖官方API基础课程、Z.ai的GLM MaaS API开发者文档（包括OpenAI兼容接口的快速上手与5分钟跑通第一个请求）、Z.ai Coding Plan解锁GLM全系列模型调用、Claude Code 101的AI编程工具入门，以及AI Agent基础概念的视频课程。通过这些内容，我不仅掌握了大模型API调用的基础流程与OpenAI兼容接口的优势，还了解了AI编程工具的高效用法，初步建立了对AI Agent核心要素的认知，为后续的AI开发实践打下了扎实基础。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -68,6 +79,7 @@ AI x Web3 School
 
 
 
+
 理清Prompt、Workflow、Agent的边界：Prompt由人决策，仅单次问答；Workflow是固定预设流程，模型为流程节点；Agent可自主规划、动态调用工具、管理状态，三者失控风险与可调试性差异明显。
 
 了解AI Coding工具价值与局限：Claude Code、Codex CLI、Cursor可快速生成样板代码、解析陌生库、搭建原型，但代码审查、测试设计、架构决策无法被替代。
@@ -77,6 +89,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
