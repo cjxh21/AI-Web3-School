@@ -15,8 +15,64 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+## 今日完成
+
+### 1\. 项目初步 Proposal ✅
+
+-   完成 AI Guard Wallet 项目提案（`hackathon/project-proposal.md`）
+    
+-   三个场景：安全转账（MVP）/ DCA 定投（扩展）/ 紧急冻结（安全）
+    
+-   一句话定位：不只帮你做、还能跟你说清楚——让非技术用户在理解中参与决策
+    
+
+### 2\. 补读 Cobo CAW + ERC-4337 ✅
+
+-   Cobo CAW：Pact 机制（Intent/Plan/Policies/Completion）、MPC 签名、3 阶段策略引擎
+    
+-   ERC-4337：UserOperation / EntryPoint / Bundler / Paymaster / Factory 概念
+    
+-   **决策：** MVP 阶段用 Cobo CAW MPC + Pact 即可，ERC-4337 后续扩展
+    
+
+### 3\. 流程图 ✅
+
+-   Excalidraw 7 步安全弧流程图（已上传可分享）
+    
+
+### 4\. 确认了三个关键认知
+
+-   **风险边界：** Agent 是提议者+执行者，永远不是决策者
+    
+-   **知情同意：** 确认界面不是死板的信息展示，可以追问
+    
+-   **MVP 原则：** 宁可让用户多点一次确认，也不让 Agent 越权
+    
+
+## 问题 / Blocker
+
+-   暂无，今晚三人开会对齐后进入 Week 3 开发排期
+    
+
+## 明日计划
+
+-   三人同步会，对齐方向和分工
+    
+-   确认 Cobo CAW 开发者注册
+    
+-   Week 3 开发排期
+    
+
+## 学习时间
+
+~3h（提案构思 + 文档阅读 + 流程图 + 材料整理）
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -30,6 +86,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 **1.Obsidian = RAG** 的顿悟 — 自己的笔记系统本质上就是检索+生成，打算做个 Obsidian Agentic RAG
 
@@ -48,6 +105,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 \### ✅ 完成：Vibe Coding 架构设计
@@ -90,6 +148,7 @@ AI x Web3 School
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -119,6 +178,7 @@ AI x Web3 School
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -136,6 +196,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -170,6 +231,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -191,6 +253,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
