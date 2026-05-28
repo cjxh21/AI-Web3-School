@@ -15,8 +15,566 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+**\# Day 8 打卡 - Web3 Tool Use & Agent Workflow 实践（进行中）**
+
+  
+
+**\## 📚 今日学习**
+
+  
+
+**\### 理论学习**
+
+\- ✅ 快速阅读 Vibe Coding（30 分钟）
+
+\- ✅ 快速阅读 Evaluation（30 分钟）
+
+\- ✅ 深入学习 Web3 Tool Use（1 小时）
+
+\- ✅ 深入学习 Agent Workflow（1 小时）
+
+  
+
+**\### 核心理解**
+
+  
+
+**Web3 Tool Use**：
+
+\- Web3 Tools 是给 Agent 封装的链上工具
+
+\- 特异性：能够获取链上数据、改变链上数据、交易、签名
+
+\- 核心挑战：比普通 Tools 风险更大，涉及资金安全
+
+\- 工具分类：只读（低风险）、模拟（中风险）、签名（高风险）
+
+  
+
+**Agent Workflow**：
+
+\- 核心：把完整操作拆解为一系列可验证的步骤
+
+\- 关键设计点：
+
+\- 每一步给予多少权限？
+
+\- 哪些步骤需要 Human-in-the-loop？
+
+\- 错误是否需要重试？
+
+\- 需要记录什么信息？
+
+\- Task Graph：清晰的步骤流程图
+
+  
+
+\---
+
+  
+
+**\## 🧪 实践项目**
+
+  
+
+**\### 项目选择：ERC-20 Swap Agent（综合实践）**
+
+  
+
+结合 Web3 Tool Use 和 Agent Workflow 两个 Handbook 实践，设计一个完整的 Swap Agent。
+
+  
+
+**目标**：
+
+\- 设计一组 Web3 Tools（读、写、签名分离）
+
+\- 设计完整的 Agent Workflow（包含 Human-in-the-loop）
+
+\- 实现 5 个 Regression Cases（正常、错误链、滑点、余额不足、用户拒绝）
+
+  
+
+**\### 实践计划**
+
+  
+
+**Day 8 下午（2 小时）**：
+
+\- ✅ 设计 4 个 Web3 Tools（30 分钟）
+
+\- ✅ 设计 7 步 Task Graph（30 分钟）
+
+\- 🔄 实现核心框架（1 小时）
+
+  
+
+**Day 9（2 小时）**：
+
+\- 实现 5 个 Regression Cases（1 小时）
+
+\- 写实验报告和总结（1 小时）
+
+  
+
+\---
+
+  
+
+**\## 💡 核心收获**
+
+  
+
+**\### 1. Web3 Tools 的设计原则**
+
+  
+
+**工具分类**（按风险等级）：
+
+1\. **只读工具**（低风险）：
+
+\- `get_eth_balance(address)` - 查询 ETH 余额
+
+\- `get_erc20_allowance(owner, spender, token)` - 查询授权额度
+
+\- 特点：不改变链上状态，可以频繁调用
+
+  
+
+2\. **模拟工具**（中风险）：
+
+\- `generate_approve_calldata(token, spender, amount)` - 生成交易草稿
+
+\- 特点：生成 calldata 但不发送交易，用于预览
+
+  
+
+3\. **权限检查工具**（低风险）：
+
+\- `check_transaction_permission(token, spender, amount)` - 检查是否符合规则
+
+\- 特点：基于白名单、限额等规则进行检查
+
+  
+
+**设计原则**：
+
+\- **读写分离**：只读工具和写入工具严格分离
+
+\- **权限分级**：不同工具有不同的权限级别
+
+\- **明确输入输出**：每个工具的接口清晰定义
+
+\- **错误处理**：明确的错误类型和处理方式
+
+\- **日志审计**：记录所有工具调用
+
+  
+
+**\### 2. Agent Workflow 的设计原则**
+
+  
+
+**Task Graph 设计**：
+
+\`\`\`
+
+1\. 读取上下文 → 解析用户请求
+
+2\. 查询价格 → 获取当前市场价格
+
+3\. 生成计划 → 计算交易参数
+
+4\. 模拟交易 → 生成 calldata
+
+5\. 【Human-in-the-loop】用户确认 → 展示交易详情，等待用户决策
+
+6\. 执行交易 → 发送交易（本次实践：只记录）
+
+7\. 记录结果 → 完整的操作日志
+
+\`\`\`
+
+  
+
+**Human-in-the-loop 设计**：
+
+\- **触发条件**：涉及资金操作的步骤（Step 5）
+
+\- **展示信息**：
+
+\- 交易详情（token、amount、spender）
+
+\- 风险提示（授权额度、合约地址）
+
+\- 预估成本（Gas 费用）
+
+\- **用户选项**：
+
+\- 批准：继续执行
+
+\- 拒绝：中止并记录原因
+
+\- 修改：调整参数后重新确认
+
+  
+
+**失败处理**：
+
+\- **可重试的错误**：RPC 超时、网络错误
+
+\- **不可重试的错误**：余额不足、用户拒绝、无效参数
+
+\- **错误记录**：所有错误都记录到日志
+
+  
+
+**\### 3. 与之前实践的对比**
+
+  
+
+**Day 5-6: Frameworks 实践**
+
+\- 实现了简单的 `get_eth_balance` 工具
+
+\- 没有权限分级
+
+\- 没有 Human-in-the-loop
+
+  
+
+**Day 7: Chain-aware Context 实践**
+
+\- 实现了链上数据的 Context 管理
+
+\- 标注了数据来源（⛓️ 📚 💭）
+
+\- 但没有涉及交易操作
+
+  
+
+**Day 8: Web3 Tool Use + Agent Workflow**
+
+\- 完整的工具分类（读、写、签名）
+
+\- 完整的 Workflow 设计（Task Graph）
+
+\- Human-in-the-loop 机制
+
+\- Regression Cases 验证
+
+  
+
+**进步**：
+
+\- 从单个工具 → 工具体系
+
+\- 从简单查询 → 完整交易流程
+
+\- 从无权限控制 → 分级权限管理
+
+\- 从无用户确认 → Human-in-the-loop
+
+  
+
+\---
+
+  
+
+**\## 🎯 设计要点**
+
+  
+
+**\### Web3 Tools 设计**
+
+  
+
+**Tool 1: get\_eth\_balance**
+
+\- 分类：只读工具
+
+\- 权限：低风险
+
+\- 输入：address (string)
+
+\- 输出：balance (float)
+
+\- 错误处理：无效地址、RPC 失败
+
+\- 日志：记录查询时间、地址、结果
+
+  
+
+**Tool 2: get\_erc20\_allowance**
+
+\- 分类：只读工具
+
+\- 权限：低风险
+
+\- 输入：owner, spender, token (string)
+
+\- 输出：allowance (float)
+
+\- 错误处理：无效地址、合约不存在
+
+\- 日志：记录查询参数和结果
+
+  
+
+**Tool 3: generate\_approve\_calldata**
+
+\- 分类：模拟工具
+
+\- 权限：中风险（生成 calldata，不发送）
+
+\- 输入：token, spender, amount
+
+\- 输出：calldata (hex string)
+
+\- 错误处理：无效参数、编码失败
+
+\- 日志：记录生成的 calldata
+
+  
+
+**Tool 4: check\_transaction\_permission**
+
+\- 分类：权限检查工具
+
+\- 权限：低风险
+
+\- 输入：token, spender, amount
+
+\- 输出：allowed (boolean), reason (string)
+
+\- 规则：白名单 token、白名单 spender、最大额度
+
+\- 日志：记录检查结果和原因
+
+  
+
+**\### Task Graph 设计**
+
+  
+
+**Step 1: 读取上下文**
+
+\- 输入：用户请求
+
+\- 输出：解析后的参数
+
+\- 工具：无
+
+\- 失败处理：无法解析 → 要求用户澄清
+
+  
+
+**Step 2: 查询价格**
+
+\- 输入：token pair
+
+\- 输出：当前价格
+
+\- 工具：无（mock 数据）
+
+\- 失败处理：价格查询失败 → 中止
+
+  
+
+**Step 3: 生成计划**
+
+\- 输入：amount, price
+
+\- 输出：交易计划
+
+\- 工具：无
+
+\- 失败处理：无
+
+  
+
+**Step 4: 模拟交易**
+
+\- 输入：交易计划
+
+\- 输出：calldata
+
+\- 工具：generate\_approve\_calldata
+
+\- 失败处理：生成失败 → 中止
+
+  
+
+**Step 5: 【Human-in-the-loop】用户确认**
+
+\- 输入：交易计划 + calldata
+
+\- 输出：用户决策
+
+\- 工具：无
+
+\- 失败处理：用户拒绝 → 中止并记录
+
+  
+
+**Step 6: 执行交易**
+
+\- 输入：calldata + 用户批准
+
+\- 输出：交易哈希（mock）
+
+\- 工具：无（本次只记录）
+
+\- 失败处理：无
+
+  
+
+**Step 7: 记录结果**
+
+\- 输入：交易哈希
+
+\- 输出：完整的操作日志
+
+\- 工具：无
+
+\- 失败处理：无
+
+  
+
+**\### Regression Cases 设计**
+
+  
+
+**Case 1: 正常流程**
+
+\- 输入：合法的 Swap 请求（100 USDC → ETH）
+
+\- 预期：成功生成交易草稿，用户批准，记录成功
+
+  
+
+**Case 2: 错误链**
+
+\- 输入：请求在 BSC 上执行
+
+\- 预期：Step 1 拒绝，提示只支持 Ethereum
+
+  
+
+**Case 3: 滑点过大**
+
+\- 输入：价格变化超过 5%
+
+\- 预期：Step 2 警告，要求用户重新确认
+
+  
+
+**Case 4: 余额不足**
+
+\- 输入：用户余额不足
+
+\- 预期：Step 3 拒绝，提示余额不足
+
+  
+
+**Case 5: 用户拒绝**
+
+\- 输入：用户在 Step 5 选择拒绝
+
+\- 预期：中止交易，记录用户拒绝原因
+
+  
+
+\---
+
+  
+
+**\## 📊 学习统计**
+
+  
+
+\- **学习时间**：6 小时（Day 7: 4h + Day 8: 2h）
+
+\- **完成进度**：Day 8 / 42 天
+
+\- **实践产出**：
+
+\- Day 7: Chain-aware Context 实践（手动 + 自动）
+
+\- Day 8: Web3 Tool Use + Agent Workflow 设计（进行中）
+
+\- **GitHub 提交**：2 次 commit
+
+\- **核心理解**：
+
+\- Web3 Tools 的分类和权限管理
+
+\- Agent Workflow 的 Task Graph 设计
+
+\- Human-in-the-loop 的触发时机和交互设计
+
+  
+
+\---
+
+  
+
+**\## 🔗 相关链接**
+
+  
+
+\- **GitHub 仓库**：[https://github.com/XuetaoZhang/ai-web3-school-cohort-0](https://github.com/XuetaoZhang/ai-web3-school-cohort-0)
+
+\- **今日实践**`experiments/web3-swap-agent/`
+
+\- **Handbook 章节**：
+
+\- [https://aiweb3.school/zh/handbook/bridge/web3-tool-use/](https://aiweb3.school/zh/handbook/bridge/web3-tool-use/)
+
+\- [https://aiweb3.school/zh/handbook/bridge/agent-workflow/](https://aiweb3.school/zh/handbook/bridge/agent-workflow/)
+
+  
+
+\---
+
+  
+
+**\## 🚀 下一步计划**
+
+  
+
+**今天剩余时间（1.5 小时）**：
+
+\- 实现 4 个 Web3 Tools（简化版）
+
+\- 实现 Task Graph 主流程
+
+\- 实现 Human-in-the-loop（命令行交互）
+
+  
+
+**明天（Day 9，2 小时）**：
+
+\- 实现 5 个 Regression Cases
+
+\- 写实验报告
+
+\- 总结 Web3 Tools 和 Agent Workflow 的设计原则
+
+  
+
+\---
+
+  
+
+#AIxWeb3School #Day8 #Web3ToolUse #AgentWorkflow #HumanInTheLoop #ERC20Swap
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 **\# Day 5-6 打卡 - Frameworks & MCP 实践**
 
   
@@ -573,11 +1131,13 @@ experiments/mcp-practice/
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 今日有事，先打卡
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 今日完成：
@@ -587,6 +1147,7 @@ experiments/mcp-practice/
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -603,6 +1164,7 @@ experiments/mcp-practice/
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -914,6 +1476,7 @@ Context 不是简单的文本拼接，而是信息治理问题：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1316,6 +1879,7 @@ experiments/web3-ai-assistant/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1853,6 +2417,7 @@ return response.choices\[0\].message.content # 返回最终答案
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
