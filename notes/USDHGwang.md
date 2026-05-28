@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+**\## 今天涵蓋**
+
+1. **Week 2 Module A** —— AI × Web3 問題地圖(六方向),選 **Wallet × Privacy 交集** 當 Week 2 主線。
+
+2. **Week 2 Module B** —— Agent payment / commerce flow 設計,場景: DEX execution agent;比較 x402 vs ERC-8004,結論「兩者 + 執行 integrity 三件套缺一不可」。
+
+**\## 選 Wallet × Privacy 當主線的理由**
+
+承接昨天 NeoCypherPunk 演講萃出的 conviction —— 我自己在做的 AIP 目前只解 integrity(agent 真的執行用戶授權的那筆,中間沒被偷改),**\*\*這條只解一半\*\***。Agent 在鏈上行動,intent 被 mempool 看到會被搶在前面交易,執行歷史被看到會建出行為指紋。**\*\*privacy + integrity 缺一,agent 都不可用\*\***。
+
+→ Week 2 主線從「AIP 是 integrity 工具」改成「integrity + privacy 雙保證 + 支援多 privacy/speed profile 共存的設計」。
+
+**\## 今天寫筆記過程的自我校正**
+
+寫 Module A 時我一度想畫「加 privacy 不能拖慢 interaction speed」當硬紅線。寫到一半發現 —— 這就是我昨天批評 NeoCypherPunk 不畫紅線的鏡像錯誤,只是方向相反:從「隱私要徹底」翻成「速度要徹底」,本質一樣絕對主義。
+
+改成 trade-off framing:privacy 優先序高,但每個 use case speed budget 不同,選技術路線時動態權衡。
+
+這個自我校正比 Module 內容本身更值得記下來。
+
+**\## 開放問題**
+
+\- AIP × privacy 候選技術路線(stealth address / private RPC / TEE / encrypted mempool / ZK / commit-reveal)哪條先做 PoC?需排序。
+
+\- 同一個 AIP framework 支援多 privacy profile 時,module 邊界怎麼設計才不會 explode complexity?
+
+**\## 後續行動**
+
+\- 列 privacy primitive × AIP atomic intra-tx 相容性 matrix(部分已產於 Module A,待補實測數據)
+
+\- Week 2 主線拆解 + proposal 圍繞 Privacy-aware AIP module 設計推進
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 \---
 
 date: 2026-05-27
@@ -79,6 +115,7 @@ NeoCypherPunk 由 Rose O'Leary (Dark5) 起,Paul Allen Ellis 發展。是對 Eric
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 **\## Today's Events**
 
 \- 學院 Week 2 Lesson 2：Cobo 團隊來賓演講介紹 Agentic Wallet (CAW)
@@ -116,6 +153,7 @@ NeoCypherPunk 由 Rose O'Leary (Dark5) 起,Paul Allen Ellis 發展。是對 Eric
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 學院筆記 — Agent Memory
@@ -243,6 +281,7 @@ Agent 架構應由系統的\*\*具體 failure point\*\* 驅動（context anxiety
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -398,6 +437,7 @@ Agent 進 vault 從 top MOC 開始，**不全 grep**。比 pure Zettelkasten「h
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -640,6 +680,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼：
 
 1\. Learning Agent 初始化
@@ -690,6 +731,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼
 
 發布 obsidian-knowledge-vault
@@ -709,6 +751,7 @@ repo 7 個 commit，今天從空目錄推到完整 README + prompt + annotated o
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -794,6 +837,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -814,6 +858,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
