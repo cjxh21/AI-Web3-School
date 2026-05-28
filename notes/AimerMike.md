@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+I learned how account abstraction can make wallet permissions more programmable through smart contract wallets, session keys, spending limits, recovery, gas sponsorship, batching, and custom validation. The AI x Web3 insight is that agents should receive limited, revocable permissions rather than broad authority. I drafted an agent permission policy with allowed chains, contracts, action types, value limits, session duration, simulation requirement, human-confirmation threshold, revocation, and logging.
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 I studied smart contracts as persistent on-chain programs. The core interaction path is frontend -> wallet request -> transaction -> calldata -> contract function -> state change -> event logs -> indexer or block explorer. For AI x Web3, the key is decoded context: chain ID, contract address, ABI or function, parameters, value, token effects, and simulation. If an agent lacks those inputs, it should not confidently explain safety or outcome.
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 I reframed wallets as permission interfaces, not just asset containers. A wallet controls identity and authorization through signatures. I clarified the difference between message signatures, transaction signatures, and token approvals. For AI x Web3, the agent can help explain a wallet prompt and list risks, but the human should remain the final signer. I created a pre-signing checklist covering chain, account, contract, spender, approval amount, affected asset, simulation result, and malicious-case thinking.
 <!-- DAILY_CHECKIN_2026-05-26_END -->
@@ -30,11 +37,13 @@ I reframed wallets as permission interfaces, not just asset containers. A wallet
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 Today I reviewed the basic Web3 objects an AI agent must respect: network, chain ID, account, private key, signature, transaction, gas, block, and finality. The key insight is that an agent can help explain and prepare actions, but the wallet and signature are the authority layer. The model should never access private keys. A safer AI x Web3 flow is: user intent -> transaction preview -> human review -> wallet signature -> network execution -> public state -> agent summary.
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -65,6 +74,7 @@ Build a small wallet transaction risk summary prototype that takes decoded trans
 
 
 
+
 MCP and evaluation.
 
 Today I studied tool interfaces and evaluation as the control layer for agents. The key idea is that tools should have structured inputs, outputs, permissions, and failure modes. In AI x Web3, evaluation should check safety behavior, not only answer quality. A wallet agent should mention chain ID, distinguish transfer vs approval, flag unlimited approvals, use simulation when available, state missing context, and never sign or submit without human confirmation. I created a tool boundary checklist for future agent design.
@@ -72,6 +82,7 @@ Today I studied tool interfaces and evaluation as the control layer for agents. 
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -116,6 +127,7 @@ In Web3, the central risk is permission. A normal software agent might send an e
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -184,6 +196,7 @@ RAG is not magic. It can still fail if retrieval finds the wrong source, misses 
 
 
 
+
 Prompt design is safety design. In Web3, context quality and permission boundaries decide whether an AI agent is just helpful or dangerously overconfident.
 
 ```markdown
@@ -218,6 +231,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 
 
+
 | 角色 | 擅长领域 | 短板 | 使用边界 |
 | --- | --- | --- | --- |
 | LLM 大语言模型 | 解读释义、内容总结、对比分析、方案规划 | 无上下文无法获取实时信息，无法保证内容绝对真实 | 必须主动说明信息不确定点与信息来源局限 |
@@ -236,6 +250,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
