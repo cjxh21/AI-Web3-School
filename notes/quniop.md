@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+阅读
+
+[**去中心化金融（DeFi）**](https://aiweb3.school/zh/handbook/web3/defi/)
+
+[**预言机（Oracle）**](https://aiweb3.school/zh/handbook/web3/oracle/)
+
+[**索引（Indexing）**](https://aiweb3.school/zh/handbook/web3/indexing/)
+
+[**安全（Security）**](https://aiweb3.school/zh/handbook/web3/security/)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 阅读
 
 [**密码学（Cryptography）**](https://aiweb3.school/zh/handbook/web3/cryptography/)
@@ -29,6 +43,7 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 阅读·如下
 
 [**氛围编程（Vibe Coding）**](https://aiweb3.school/zh/handbook/ai/vibe-coding/)
@@ -40,6 +55,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 ```
@@ -60,6 +76,7 @@ AI x Web3 School
 
 
 
+
 -   阅读手册总览，了解四部分地图：AI 基础、Web3 基础、AI x Web3 Bridge、前沿探索。
     
 -   写下自己当前最强和最弱的基础区域。
@@ -74,11 +91,13 @@ AI x Web3 School
 
 
 
+
 补齐学习者画像，阅读第一个选定的 Handbook 章节，并把一个不清楚的概念转化成 feedback 或小实验
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
