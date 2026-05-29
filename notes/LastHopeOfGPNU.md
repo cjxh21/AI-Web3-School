@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+-   ✅ 完成：Week 2 Wallet / Permission — Agent 链上动作权限策略
+    
+-   ✅ 参加：Women Builders in AI × Web3（19:00）
+    
+-   ✅ 参加：Week 2 例会｜优秀笔记分享、答疑（20:00）
+    
+-   学习时长：~3h（任务设计 + 两场活动）
+    
+-   关键收获：Agent 权限策略 = Task-level Pact + ERC-4337 可编程账户 + Safe 多签控制 + Guard/Policy 交易级约束 + 可审计日志
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 今日完成：
 
 -   x402 Paywall + CAW Agent 自主支付闭环（9 文件 Node.js demo）
@@ -28,6 +42,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 今日完成：
 
@@ -44,6 +59,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 今日参加了 AI × Web3 School 的学习：
 
 -   Product manager of Cobo Agentic Wallet
@@ -58,12 +74,14 @@ AI x Web3 School
 
 
 
+
 完成了**AI × Web3 问题地图与主方向选择**  
 [ai-web3-school-cohort-0/tasks/week\_2/ai\_web3\_](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)[map.md](http://map.md) [at master · LastHopeOfGPNU/ai-web3-school-cohort-0](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -317,6 +335,7 @@ Safe 官方文档称其自 2018 年以来经过审计和测试，并已有大量
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -634,6 +653,7 @@ Session Key 可以理解为“临时授权密钥”。
 
 
 
+
 ## OpenZeppelin Contracts 学习笔记
 
 ## 1\. 它是什么
@@ -868,6 +888,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 ### 今日完成
 
 -   \[x\] 参与活动 — AI 下乡计划 | AI 在 Web 3 的应用
@@ -910,6 +931,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 今天参加了 Web3 运行原理课，对于课后提出的四个思考问题：
 
 **1\. 资产自托管的安全 vs 易用** 打破「越安全越难用」的权衡，关键在策略组合：TSS/MPC 分布式存密钥片段 + Social Recovery 信任链恢复 + 抽象 UX（用身份/口令替代裸私钥）。
@@ -925,6 +947,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -954,6 +977,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
