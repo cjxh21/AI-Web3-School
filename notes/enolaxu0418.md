@@ -15,8 +15,81 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+## 一、Cobo 的可信执行链路（四步闭环）
+
+1.  **Agent submit** → 发起请求
+    
+2.  **Human approve** → 人类审批
+    
+3.  **Agent sign** → 获得受限签名能力，执行交易
+    
+4.  **On-chain traceable** → 结果可追溯、可审计
+    
+
+**核心目标**：Agent 无法在可控边界外执行任何操作。
+
+* * *
+
+## 二、三个独特解决方案
+
+### 1\. MPC 用于 Agent 场景
+
+-   Cobo、Agent、Human 各自持有私钥分片
+    
+-   **2-of-2 阈值模式**：
+    
+    -   _Agent + Cobo_：人类批准 Pact 后，Agent 自动执行，Cobo 协同签名
+        
+    -   _Human + Cobo_：人类主动发起大额转账，Cobo 配合签名
+        
+-   任何一方都无法单独挪用资金
+    
+
+### 2\. Pact Authority —— 授权协议执行层
+
+**Pact 本质**：告诉 Agent “能做什么、不能做什么、必须在哪些节点停下来”
+
+Pact 的四个核心要素
+
+| 要素 | 作用 | 示例 |
+| --- | --- | --- |
+| Intent | 用户期望的目标 | “ETH 低于 2000时买入，高于2000时买入，高于2500 时卖出” |
+| Execution Plan | AI 转译的具体执行计划 | 调用哪个合约、多少 ETH、什么 Token Pair |
+| Policy | 风控约束（核心） | 预算、审批规则、白名单、链、Token、合约、ABI 参数级限制 |
+| Completion Condition | 自动失效条件 | 金额上限、时间期限、任务完成后自动 revoke |
+
+Pact 执行流程
+
+1.  用户表达意图（在 Lovable 或其他 Agent 框架中）
+    
+2.  Agent 转译为 Execution Plan，同步组装 Policy + Completion Condition
+    
+3.  封装成 Pact 推送到移动端 App → 人类审阅、修改、批准/拒绝
+    
+4.  批准后，Agent 在可控范围内自动执行交易
+    
+
+### 3\. Recipe Skill Layer —— 让 Agent 知道“怎么把事情做对”
+
+-   **问题**：大模型不天生具备操作链上资金的能力，临时构造交易失败率高、风险大
+    
+-   **Recipe 定义**：一个“知识胶囊”，预加载合约地址、ABI 参数、安全风控边界
+    
+-   **已上线 Recipe**：Aave V3、Uniswap V3【疑似】、Polymarket、Hyperliquid 等
+    
+-   **作用**：Agent 基于已验证的执行路径完成任务，减少幻觉和随意发挥
+    
+
+> Pact 定义**边界**，Recipe 赋予**技能**。
+
+* * *
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 ## Cobo 的可信执行链路（四步闭环）
 
 1.  **Agent submit** → 发起请求
@@ -33,6 +106,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 ## 一、缺少可控边界时已出现的两类风险案例
 
@@ -61,6 +135,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 ### 1\. Agentic commerce 的下一个突破在哪里？
 
 **大型企业的支付场景**（Stripe、Bridge、Visa 等正在布局 AI 驱动的支付与交易）。
@@ -87,6 +162,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -127,6 +203,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -209,6 +286,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 一、实现原理
 
 1.  **Bittensor**：子网定义规则 → 矿工提供服务 → 验证者评分 → 链上结算 → 奖励
@@ -241,6 +319,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 | 方向 | 解决什么问题 | 主案例 | 核心原理 |
 | --- | --- | --- | --- |
 | 1. 去中心化 AI 基础设施 | 算力、存储、模型服务如何组织与激励 | Bittensor | Subnet 定义任务 → Miner 提供服务 → Validator 评估质量 → 链上共识 → Token 奖励优质供给 |
@@ -252,6 +331,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -271,6 +351,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
