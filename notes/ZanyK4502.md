@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+大家加油
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 太忙了今天，在做项目
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 正在做一个 OpenBOX 的项目，欢迎大家关注 [https://x.com/ZanyK559799/status/2058772764740489713?s=20](https://x.com/ZanyK559799/status/2058772764740489713?s=20)
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 ![87967b30cd58c264a76bc13b07f437f2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ZanyK4502/images/2026-05-26-1779809497763-87967b30cd58c264a76bc13b07f437f2.jpg)
@@ -37,6 +45,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -51,11 +60,13 @@ AI x Web3 School
 
 
 
+
 深夜学习打个卡先
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -186,6 +197,7 @@ AI / Agent 主要辅助完成任务理解、合约交互说明生成、资料查
 
 
 
+
 在学习，等下补笔记
 
 好忙好忙，在忙着做项目
@@ -193,6 +205,7 @@ AI / Agent 主要辅助完成任务理解、合约交互说明生成、资料查
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -221,11 +234,13 @@ AI / Agent 主要辅助完成任务理解、合约交互说明生成、资料查
 
 
 
+
 今天偷懒了嘿嘿，其实我已经把任务做完了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -765,6 +780,7 @@ Bug 修复列表
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
