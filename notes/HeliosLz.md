@@ -15,8 +15,174 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+\# 2026-05-29 学习日志
+
+\## 今日主题
+
+\- Handbook 节点：\[Agent Wallet\]([https://aiweb3.school/zh/handbook/bridge/agent-wallet/)（Bridge](https://aiweb3.school/zh/handbook/bridge/agent-wallet/\)（Bridge) 层）
+
+\- 关联 cohort Week：\*\*Week 2 第 4 天\*\*（探索 AI x Web3 交叉）
+
+\- 模式：\*\*边讲边学 + 逐节提问 + Hermes authorization package 设计\*\*
+
+\- 提交入口：[https://intensivecolearn.ing/en（"Check-in](https://intensivecolearn.ing/en（"Check-in)" 按钮）
+
+\## 为什么读它 / 带着什么问题读
+
+过去三天已经把 Hermes staking 的关键层次拆出来：
+
+\- 5.26 Agent Workflow：把 `用户目标 -> 计划 -> 人类确认 -> 执行 -> 记录` 组织成确定性流程。
+
+\- 5.27 Web3 Tool Use：定义 Agent 能调用哪些链上工具，以及每类工具的边界。
+
+\- 5.28 Chain-aware Context：规定 Agent 调工具前后必须携带哪些可验证链上事实。
+
+今天接下一层：\*\*Auditor 审完计划之后，如何把"人类批准"变成一笔有边界、可撤销、不可滥用的链上能力？\*\*
+
+今天带着 5 个问题读：
+
+1\. Agent Wallet 和普通钱包的差别是什么？
+
+2\. Session key / permission / spending limit / expiry / revocation 分别解决什么风险？
+
+3\. 对 32 ETH staking 这种高价值不可逆动作，哪些权限绝对不能交给 Agent？
+
+4\. Auditor 输出的 risk summary 如何进入授权请求？
+
+5\. Hermes 的最小 authorization package 应该包含哪些字段？
+
+\## Agent 整理的精炼摘要（边学后回填）
+
+\> 学完后用 <=200 字总结 Agent Wallet 的核心作用，以及它如何接住 Auditor 的审查结果。
+
+\## 我用自己的话复述（关掉 Handbook 标签页再写）
+
+\-
+
+\-
+
+\## 今日最小实验
+
+\- 选择的实验：为 Hermes staking 设计最小 `authorization_package`。
+
+\- 产物：一份能连接 `risk_summary -> user_confirmation -> session_key_scope -> execution_allowed` 的结构化草图。
+
+\`\`\`yaml
+
+authorization\_package:
+
+request\_id: "auth\_2026-05-29\_hermes\_staking\_01"
+
+user\_intent:
+
+action: "stake\_eth"
+
+amount\_eth: "32"
+
+chain\_id: 1
+
+human\_review:
+
+risk\_summary\_id: "risk\_..."
+
+required\_user\_checks:
+
+\- "deposit\_contract\_verified"
+
+\- "withdrawal\_address\_owned\_by\_user"
+
+\- "deposit\_value\_is\_32\_eth"
+
+\- "no\_conflicting\_pending\_tx"
+
+session\_key\_scope:
+
+allowed\_actions:
+
+\- "submit\_deposit\_tx"
+
+allowed\_contracts:
+
+\- "ethereum\_deposit\_contract"
+
+max\_value\_eth: "32"
+
+max\_transactions: 1
+
+expires\_at: "TODO"
+
+revocable\_by: "user\_owner\_wallet"
+
+stop\_conditions:
+
+\- "chain\_id\_changed"
+
+\- "deposit\_contract\_mismatch"
+
+\- "withdrawal\_credentials\_changed"
+
+\- "simulation\_failed"
+
+\- "user\_confirmation\_missing\_or\_expired"
+
+decision:
+
+can\_unlock\_session\_key: false
+
+can\_submit\_tx: false
+
+\`\`\`
+
+\## 我的卡点
+
+\- \[ \] Agent Wallet 与 Account Abstraction 的边界：Agent Wallet 是产品/能力层，AA 是一种实现路径，不能混成一个概念。
+
+\- \[ \] Session key 不是"小号私钥"，关键是 scope、limit、expiry、revocation 和 escalation。
+
+\- \[ \] 32 ETH staking 场景里，授权不等于安全；只有和 context refresh / simulation / human review 组合起来才安全。
+
+\## Follow-up
+
+\- \[ \] **hackathon/**[**ideation.md**](http://ideation.md) **首条**：Auditor 用 cohort 5 问写下来（注意"谁付钱"最易卡）
+
+\- \[ \] **Q11 架构决定**：FSM 实现路径（自研 / LangGraph / LangGraph+SDK）——Week 2 内定
+
+\- \[ \] **Hermes context package**：升级成 JSON Schema，并接到 Web3 tool specs 之前
+
+\- \[ \] **代码实验补做**（5.22 "裸 API vs 框架" 对比）
+
+\- \[ \] **ERC-4337 + ERC-7562 原文阅读**
+
+\- \[ \] **handbook-feedback 整理**：累计反馈落进 `handbook-feedback/`
+
+\## Handbook / 课程反馈
+
+\- \[ \]
+
+\## 打卡草稿（预提交版，粘到 [intensivecolearn.ing](http://intensivecolearn.ing) Check-in 表单的 Markdown）
+
+\`\`\`markdown
+
+**Day 11 · Agent Wallet —— 把人类批准变成有边界的链上能力**
+
+今天计划读 Bridge 层的 Agent Wallet。前几天已经把 Hermes staking 的链条拆到三层：Agent Workflow 负责确定性流程，Web3 Tool Use 负责工具边界，Chain-aware Context 负责可验证链上事实。今天要接的是授权层：Auditor 审完计划之后，怎样把"用户同意这一次操作"变成一笔有 scope、limit、expiry、revocation 的链上能力。
+
+我会用 32 ETH staking 作为固定场景，不泛读钱包概念，而是重点看 session key / permission / spending limit / expiry / revocation 分别防什么风险。今天的最小实验是写一份 Hermes `authorization_package`，把 `risk_summary -> user_confirmation -> session_key_scope -> execution_allowed` 串起来，明确哪些字段变化必须 STOP，哪些情况必须 escalation 回到用户。
+
+今天的目标不是让 Agent 钱包"更自动"，而是让自动化被边界约束住：Agent 可以执行的能力必须小于用户真正拥有的能力，并且只在当前这一次经过审查的计划里生效。
+
+\`\`\`
+
+\- 提交入口：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School → 左侧 "Check-in"
+
+\- 提交后回填提交时间 / 截图：
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 \# 2026-05-28 学习日志
 
 \## 今日主题
@@ -421,6 +587,7 @@ can\_send\_deposit\_tx: false
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 \# 2026-05-27 学习日志
 
 \## 今日主题
@@ -600,6 +767,7 @@ staking 里除了 `deposit_contract`，最容易被忽略的高危字段是 `wit
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 \# 2026-05-26 学习日志
 
 \## 今日主题
@@ -729,6 +897,7 @@ Week 1 我是在脑子里想这条缝，今天它落成了一张能跑 regressio
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -863,6 +1032,7 @@ cohort Week 1 的官方目标是跑通一条最小链`user intent → AI plannin
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -1179,6 +1349,7 @@ Handbook 推荐的 "裸 API vs 框架" 对比（5.22 留的）+ 今天的 Golden
 
 
 
+
 \# 2026-05-22 学习日志
 
 \## 今日主题
@@ -1472,6 +1643,7 @@ DSPy / Hermes / Learning Agent / AI×Web3 分工 / 最小实践——只在 "Age
 
 
 
+
 \# 2026-05-21 学习日志
 
 \## 今日主题
@@ -1686,6 +1858,7 @@ cohort Week 1 / Web3 侧。AA 是 Agent Wallet 的前置——昨天读完 Smart
 
 
 
+
 \# 2026-05-20 学习日志
 
 \## 今日主题
@@ -1851,6 +2024,7 @@ cohort Week 1 / Web3 侧打基础。
 
 
 
+
 \# 2026-05-19 学习日志
 
 \## 留给自己的作业
@@ -1998,6 +2172,7 @@ cohort Week 1 / Web3 侧打基础。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
