@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+2026-05-29
+
+Dev3pack Builder 成长路径分享
+
+参加了 Dev3pack 分享会 — 关于如何进入 Web3 生态的 Builder 成长路径
+
+核心认知："Learning and building is not enough. Network is everything."
+
+学习了 Builder Journey 五阶段：Learner → Contributor → Builder → Founder → Senior
+
+掌握了 12 条实操建议：学英语、运营 X、融入社区、开源贡献、成为 Speaker、回馈社区等
+
+了解了 Dev3pack（Global AI & Web3 Fellowship）的四步流程：Learn → Build → Accelerate → Connect
+
+随堂笔记
+
+We bet on people first, not on projects.
+
+Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
+
+下一步工作
+
+继续 Handbook Web3 基础学习 — 下一站 智能合约（Smart Contract）
+
+实践 Dev3pack 建议：优化 X 账号、参与开源贡献
+
+关注 Dev3pack 的 Fellowship 和 Hackathon 机会
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 ### **Handbook — 钱包（Wallet）**
 
 1.  自学了 Handbook「钱包（Wallet）」章节
@@ -51,6 +83,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 ### **Co-Learning — 021 学习以太坊**
 
@@ -97,6 +130,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -133,6 +167,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -193,6 +228,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -284,6 +320,7 @@ AI x Web3 School
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -306,6 +343,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -361,6 +399,7 @@ AI x Web3 School
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -376,6 +415,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -448,11 +488,13 @@ AI x Web3 School
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
