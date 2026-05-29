@@ -15,8 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
+
+模块 C 交付：
+
+-   以 Module C 的 ProposalGuard Agent 为对象，写了完整的 Agent Profile 草图
+    
+-   覆盖：身份声明、能力矩阵、Negative Capability、输入输出接口、协作对象、失败模式、调用方式、收费模型、验证机制
+    
+-   完成可选加分：MCP vs A2A 协议对比（接口标准化 vs 协作标准化）
+    
+
+Week 2 整体交付：
+
+-   Module A: AI × Web3 问题地图（tasks/[week2-module-a-ai-web3-problem-map.md](http://week2-module-a-ai-web3-problem-map.md)）
+    
+-   Module B: Payment/Commerce/Settlement Flow + x402/CAW 原型（tasks/[week2-module-b-payment-commerce-flow.md](http://week2-module-b-payment-commerce-flow.md) + experiments/x402-caw-agent-payment-loop/）
+    
+-   Module C: Agent Identity 草图（submissions/[week2-module-c-agent-identity.md](http://week2-module-c-agent-identity.md)）
+    
+
+学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-29.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-29.md)
+
+[#AIWeb3School](#AIWeb3School) [#Week2](#Week2) [#Day12](#Day12) [#AgentIdentity](#AgentIdentity) [#MCP](#MCP) [#A2A](#A2A) [#ProposalGuard](#ProposalGuard)
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 > 今日核心动作：完成模块 B（Payment/Commerce/Settlement）交付 + 推进 Hackathon 原型。
 
 > 模块 B 交付：
@@ -58,6 +86,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 > 今日是周三 Co-learning 日，核心动作是带着昨日方向决策和 5W 拆解去获取反馈，并迭代原型。
@@ -112,6 +141,7 @@ AI x Web3 School
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -132,6 +162,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -174,6 +205,7 @@ AI x Web3 School
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -202,6 +234,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -244,6 +277,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -314,6 +348,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -342,6 +377,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -396,6 +432,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
