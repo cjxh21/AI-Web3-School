@@ -14,6 +14,233 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+# AI x Web3 School 第 12 天打卡笔记
+
+## 学术级技术报告：智能体钱包（Agent Wallet）架构与权限边界的系统化梳理
+
+---
+
+### 1. 执行摘要与问题空间
+
+#### 摘要
+
+本报告围绕 **Day 12 学习主题：Agent Wallet（智能体钱包）** 进行系统性技术梳理。核心问题定义为：**当 AI Agent 被授权代表用户执行 Web3 操作时，钱包架构应如何设计以实现「可控授权」与「安全边界」的双重目标？** 本报告通过对比分析普通钱包（EOA）、智能账户（Smart Account）、会话密钥（Session Key）、策略（Policy）和守卫（Guard）五种权限模型，明确各组件的功能边界、输入输出类型与约束条件，并构建一套可验证的权限等级体系。
+
+#### 系统边界定义
+
+**In-Scope：**
+
+- 普通钱包（EOA）与智能账户的技术差异
+- 会话密钥的临时授权机制
+- 策略与守卫的权限控制语义
+- Agent Wallet 的权限矩阵设计
+
+**Out-of-Scope：**
+
+- 跨链桥接与多链部署细节
+- MPC（多方计算）钱包的底层密码学实现
+- 具体的合约代码实现与安全审计
+
+---
+
+### 2. 核心概念形式化分类
+
+#### 术语定义表
+
+| 组件 | 功能描述 | 输入类型 | 输出类型 | 约束条件 |
+|------|----------|----------|----------|----------|
+| **EOA（Externally Owned Account）** | 用户直接控制的外部账户，基于私钥签名 | 交易请求 + 私钥签名 | 链上交易广播 | 无内置逻辑，单签机制 |
+| **Smart Account（智能账户）** | 由合约控制的账户，支持自定义逻辑 | 交易请求 + 验证逻辑 | 条件执行或拒绝 | 依赖合约代码安全性 |
+| **Session Key（会话密钥）** | 临时生成的受限密钥，在预设时间窗口内有效 | 时间戳 + 权限范围 | 限定操作授权 | 仅在会话期间有效，到期自动失效 |
+| **Policy（策略）** | 一组规则定义，描述允许/禁止的操作模式 | 操作上下文 + 规则集合 | 允许/拒绝决策 | 需预先定义，静态或可更新 |
+| **Guard（守卫）** | 执行时的实时检查点，在交易提交前触发验证 | 交易参数 + 检查函数 | 通过/拦截决策 | 必须轻量高效，避免 gas 浪费 |
+
+---
+
+### 3. 系统架构拓扑
+
+#### 概念脑图
+
+```mermaid
+mindmap
+  root((Agent Wallet))
+    身份层
+      EOA
+      Smart Account
+    授权层
+      Session Key
+      Policy
+    执行层
+      Guard
+      Tool Call
+    验证层
+      Signature
+      Gas Estimation
+```
+
+#### 组件关系图
+
+```mermaid
+graph TD
+    User[用户身份] -->|私钥/助记词| Wallet[普通钱包 EOA]
+    Wallet -->|升级路径| SmartAccount[智能账户]
+    SmartAccount -->|会话密钥| SessionKey[会话密钥]
+    SessionKey -->|策略控制| Policy[策略引擎]
+    Policy -->|实时守卫| Guard[守卫模块]
+    Guard -->|执行决策| ToolCall[工具调用]
+    ToolCall -->|链上交易| Blockchain[区块链]
+    
+    subgraph 权限层级
+    SessionKey
+    Policy
+    Guard
+    end
+```
+
+---
+
+### 4. Agent Wallet 权限矩阵
+
+#### 权限等级定义
+
+| 权限等级 | 名称 | 可执行操作 | 需要用户确认 | 风险等级 |
+|----------|------|------------|--------------|----------|
+| **L0** | 只读模式 | 读取余额、查询历史、读取合约状态 | 否 | 极低 |
+| **L1** | 模拟交易 | 交易模拟、gas 估算、参数预览 | 是 | 低 |
+| **L2** | 会话授权 | 在时间窗口内执行预设操作 | 是 | 中 |
+| **L3** | 策略托管 | 按预定义策略执行，无需逐笔确认 | 是（首次） | 中高 |
+| **L4** | 守卫托管 | 守卫验证通过即可执行，高频操作 | 是（策略层面） | 高 |
+| **L5** | 完全托管 | 无限制执行，危险操作 | 否（不推荐） | 极高 |
+
+#### 权限控制不变量
+
+$$\forall \text{tx} \in \text{TransactionPool}, \text{AgentWallet}(\text{tx}) \rightarrow \text{Verify}(\text{Policy}(\text{tx})) \land \text{Execute}(\text{Guard}(\text{tx}))$$
+
+**语义约束：** 任意交易在被 Agent Wallet 执行前，必须同时通过策略引擎验证和守卫模块的实时检查。
+
+---
+
+### 5. 状态机与协议流程
+
+#### 工具调用时序图
+
+```mermaid
+sequenceDiagram
+    participant U as 用户
+    participant Agent as AI Agent
+    participant Wallet as Agent Wallet
+    participant Policy as 策略引擎
+    participant Guard as 守卫模块
+    participant Chain as 区块链
+
+    U->>Agent: 发起任务请求
+    Agent->>Agent: 分解任务为工具调用
+    
+    alt 只读操作 (L0)
+        Agent->>Wallet: read_balance()
+        Wallet->>Chain: 查询链上状态
+        Chain-->>Wallet: 返回余额数据
+        Wallet-->>Agent: 返回结果
+    else 写入操作
+        Agent->>Wallet: request_signature()
+        Wallet->>U: 请求用户确认
+        U-->>Wallet: 授权签名
+        Wallet->>Policy: 验证操作符合策略
+        Policy-->>Wallet: 策略验证通过
+        Wallet->>Guard: 执行守卫检查
+        Guard-->>Wallet: 守卫检查通过
+        Wallet->>Chain: 提交交易
+        Chain-->>Wallet: 交易回执
+        Wallet-->>Agent: 交易成功
+    end
+    
+    Agent-->>U: 任务完成报告
+```
+
+---
+
+### 6. 安全漏洞向量与边界场景
+
+#### 漏洞报告
+
+**漏洞类型：** 权限升级攻击（Privilege Escalation）
+
+**缺陷源头：** Session Key 未设置有效期的下限检查，导致会话密钥可能被滥用。
+
+**攻击向量：** 攻击者通过钓鱼诱导用户生成 Session Key 后，利用时间窗口进行未授权操作。
+
+**防御策略：**
+
+- 强制 Session Key 必须设置最大有效期（如 ≤ 24 小时）
+- 实现作用域限制（scope limiting），仅允许调用特定合约函数
+- 添加时间衰减授权机制（time-decay authorization），越晚操作越需要额外确认
+
+**漏洞类型：** 策略冲突（Policy Conflict）
+
+**缺陷源头：** 多策略共存时缺乏优先级定义，执行结果不确定。
+
+**失效向量：** Agent 同时加载用户策略和系统默认策略时，可能因规则冲突导致意外行为。
+
+**防御策略：**
+
+- 定义策略优先级：用户自定义策略 > 系统策略
+- 引入策略冲突检测机制，冲突时拒绝执行并提示用户
+
+---
+
+### 7. 核心观点提炼：Agent Wallet 不是把私钥交给 AI
+
+**关键认知：** Agent Wallet 的设计哲学是**「解耦所有权与执行权」**。
+
+| 维度 | 传统方案（私钥托管） | Agent Wallet 方案 |
+|------|---------------------|-------------------|
+| 私钥管理 | Agent 持有完整私钥 | 用户持有私钥，Agent 无权访问 |
+| 执行授权 | 无条件信任 Agent | 通过 Policy + Guard 精确控制 |
+| 风险暴露 | 私钥泄露 = 完全失去资产控制 | 即使 Agent 被攻陷，仍有策略兜底 |
+| 用户自主性 | 低（委托后失去控制） | 高（可随时撤销/调整策略） |
+
+**结论：** 将私钥交给 AI 是危险的反模式。正确的 Agent Wallet 架构应通过**策略层（Policy）定义允许操作**，通过**守卫层（Guard）实时拦截风险操作**，在保障用户资产安全的前提下实现 Agent 的自动化能力。
+
+---
+
+### 8. 关键术语（中英对照）
+
+- **Agent Wallet（智能体钱包）**：授权 AI Agent 执行链上操作的钱包架构，需配合策略与守卫实现安全可控的自动化
+- **Smart Account（智能账户）**：由合约控制的账户，支持自定义验证逻辑和多签机制
+- **Session Key（会话密钥）**：临时生成的受限密钥，仅在预设时间窗口和作用域内有效
+- **Policy（策略）**：一组规则定义，描述 Agent 允许/禁止的操作模式
+- **Guard（守卫）**：执行时的实时检查点，在交易提交前触发验证
+- **EOA（Externally Owned Account）**：外部所有者账户，即普通钱包，由私钥直接控制
+- **Privilege Escalation（权限升级攻击）**：通过漏洞或诱导逐步获取更高权限的攻击方式
+
+---
+
+### 9. 学术标签
+
+`#AgentWallet` `#智能体钱包` `#权限控制` `#Web3安全` `#AI-Agent` `#SessionKey` `#SmartAccount` `#PolicyEngine`
+
+---
+
+### 10. 今日输出清单
+
+| 输出类型 | 文件路径/位置 | 状态 |
+|----------|--------------|------|
+| 权限矩阵定义 | 本笔记 Section 4 | ✅ 完成 |
+| 核心术语表 | 本笔记 Section 8 | ✅ 完成 |
+| 内容草稿 | 《Agent Wallet 不是把私钥交给 AI》| ✅ 完成 |
+| 权限等级 Task Note | 本笔记 Section 4.1 | ✅ 完成 |
+
+---
+
+### 11. 下一步行动
+
+1. **深入实践：** 设计一个 mock 实现，演示 Policy + Guard 的协同工作流程
+2. **安全复审：** 从私钥保护、授权撤销、异常检测三个角度完善 Agent Wallet 安全边界
+3. **原型推进：** 将 Agent Wallet 权限矩阵整合至 Day 11 的 Web3 Tool Use 工具定义中，形成完整工具调用框架
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 # AI x Web3 School 第 11 天打卡笔记：Web3 Tool Use 工具权限矩阵设计
