@@ -15,8 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+基于最小MVP考虑实现Agent API支付，大致规划以下几个模块：
+
+-   Provider（API 服务方）
+    
+-   Agent Runtime（Agent 执行模块）
+    
+-   Wallet（支付模块）
+    
+-   Budget / Receipt（状态管理模块）
+    
+
+（1）API服务方，指的是API付费服务提供方，具有API服务报价、确认支付、执行API调用以及返回服务凭证等；
+
+（2）Agent执行模块，是整个的核心模块，负责把多个模块串起来，是一个工作流编排引擎。如请求报价、余额检查、调用支付、调用API服务、保存支付凭证等。
+
+（3）Wallet模块，是Agent的支付模块，提供钱包余额管理、执行支付、返回交易ID等功能；
+
+（4）Budget 模块，是Agent状态管理模块，提消费策略，如限制每日消费、记录已消费金额、是否能够消费、更新消费状态等。
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 带着昨天的疑问，今天阅读到这篇文章：[https://github.com/datawhalechina/happy-llm/blob/main/docs/chapter7/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8.md](https://github.com/datawhalechina/happy-llm/blob/main/docs/chapter7/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8.md)。仔细学习后，解答了我昨天的疑问。然后说下我的理解：LLM是Agent的大脑，我们在实际实践中，一般是使用外部已有的LLM API接口来做我们实现的Agent的LLM，不会自实现LLM。可以理解，Agent=LLM+Tool System+Memory+Planner+Runtime+State+Policy+Action Executor.
 
   
@@ -39,11 +62,13 @@ AI x Web3 School
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 在考虑智能体商业（Agentic Commerce）方向时，考虑实现后面的实践，即Agent API支付。我在结合AI工具在学习过程中，发现针对AI设计相关的内容，我这边还是缺少深入的理解。Agent需要做什么，应该要做什么，如何做等，还不是很明白。后续还需要补充AI相关的知识。
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 今天大部分时间还是在工作上了。关于学习营，主要参加了线上会议，以及思考一些方向。
@@ -53,6 +78,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -87,6 +113,7 @@ x402有4个核心角色：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -141,6 +168,7 @@ contract EvidenceRepository {
 
 
 
+
 今天任务：  
 ①在[https://aiweb3.school/zh/handbook/ai/](https://aiweb3.school/zh/handbook/ai) 网站上复习AI的概念
 
@@ -153,6 +181,7 @@ contract EvidenceRepository {
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -316,6 +345,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 
 
+
 主要在自己本地部署hermes。但是遇到一些问题，现在卡在网络上，下载hermes到约99%就会失败，目前正在排查（放弃使用http clone，改为使用ssh了，不知道会不会成功）。后面也会把整个部署过程记录，上传到打卡点。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sl-tech-design/images/2026-05-19-1779196495368-image.png)
@@ -323,6 +353,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
