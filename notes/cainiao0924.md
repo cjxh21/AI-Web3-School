@@ -15,13 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+![IMG_2934.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/cainiao0924/images/2026-05-29-1780061537566-IMG_2934.png)
+
+今天主要是讲women builder
+
+就听听
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 昨天忘打卡了，最近太忙，今天看了coLearning，其他都是回放为主
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 今天回看了课程，AI Agent 能力越强（能转账、支付、交互合约），风险也越大：权限失控、资金丢失、恶意调用、不可追溯等。
 
@@ -34,6 +45,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -57,11 +69,13 @@ AI x Web3 School
 
 
 
+
 今天主要是休息，还要回放周六上午的**Open Agentic**
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -74,6 +88,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -100,6 +115,7 @@ AI x Web3 School
 
 
 
+
 学完了Hermes的从0到1，自己也成功安装了Hermes，而且是在云服务器安装的。以前安装小龙虾开电脑麻烦。现在准备进一步连上飞书。希望能长期使用Hermes。
 
 ![207f68c0-8876-4247-b613-c36d7c27e41e.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/cainiao0924/images/2026-05-20-1779291495586-207f68c0-8876-4247-b613-c36d7c27e41e.png)
@@ -116,11 +132,13 @@ AI x Web3 School
 
 
 
+
 昨天学习了Web3的内容，老师说Web2其实很重要。钱包重要性也说了，我有meta mask，准备在自己的chrome里浏览器扩展。老师讲了抢特朗普儿子币的案例，永远都得注意安全，自己交易安全和链上DAPP的安全。关于栈等其他内容还需要深入学习。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
