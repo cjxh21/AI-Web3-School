@@ -15,8 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+# 2026-05-29 每日学习笔记
+
+## 学习内容
+
+### Women Builders in AI × Web3
+
+-   了解女性在 AI + Web3 社区的发展前景和现状
+    
+-   全球视角下的 AI × Web3 共建机会
+    
+
+### Week 2 例会
+
+-   了解大家当前的学习进展
+    
+-   阅读优秀笔记，参考不同学员的学习方法和思考角度
+    
+
+## 明日计划
+
+1.  确定 Week 2 主方向，开始画 AI × Web3 问题地图
+    
+2.  分析竞品优缺点，完成方向选择说明
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 # 2026-05-28 每日学习笔记
 
 ## 学习内容
@@ -85,6 +113,7 @@ AI x Web3 School
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 **第一部分：学习总结**
 
 > 今天完成了 AI × Web3 Bridge 剩余 8 个章节的全面速览：
@@ -112,6 +141,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 **第一部分：今日学习总结**
 
 > 今天重点完成了 Week 1 收尾任务和 Week 2 预热：
@@ -132,6 +162,7 @@ AI x Web3 School
 
 
 
+
 **第一部分：Web3 基础学习总结**
 
 > 今天完成了 Web3 基础 Phase 1 的全部剩余 6 个章节学习：Network（区块/共识/PoS/L2/Rollup）、Account Abstraction（ERC-4337/Smart Account/Bundler/Paymaster/Session Key）、DeFi（Token/AMM/滑点/无常损失/Lending/Stablecoin/Liquidity）、Oracle（Price Feed/Oracle Risk/AI Oracle）、Indexing（Event Indexing/Subgraph/Data Pipeline）、Security（Reentrancy/Access Control/Audit/Simulation/Monitoring）。共产出 7 份结构化学习笔记沉淀到 GitHub 仓库。
@@ -149,11 +180,13 @@ AI x Web3 School
 
 
 
+
 今天主要学习和了解web3的相关文档和知识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -207,6 +240,7 @@ AI x Web3 School
 
 
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -246,6 +280,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -314,6 +349,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -430,6 +466,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -456,6 +493,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
