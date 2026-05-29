@@ -15,8 +15,238 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+\# 2026-05-30 学习日志
+
+\## 今日主题
+
+\- Handbook 节点：\[AI Security\]([https://aiweb3.school/zh/handbook/bridge/ai-security/)（Bridge](https://aiweb3.school/zh/handbook/bridge/ai-security/\)（Bridge) 层）
+
+\- 关联 cohort Week：\*\*Week 2 第 5 天\*\*（探索 AI x Web3 交叉 / Week 2 收束）
+
+\- 模式：\*\*边讲边学 + 逐节提问 + Hermes threat model 设计\*\*
+
+\- 提交入口：[https://intensivecolearn.ing/en（"Check-in](https://intensivecolearn.ing/en（"Check-in)" 按钮）
+
+\## 为什么读它 / 带着什么问题读
+
+前几天已经把 Hermes staking 的链条拆到：
+
+\`\`\`text
+
+Agent 生成计划
+
+\-> Auditor 审查
+
+\-> 用户确认
+
+\-> session key 解锁
+
+\-> 发送交易
+
+\`\`\`
+
+今天的问题是：\*\*这条链上哪里可能被攻击、误用、偷换？\*\*
+
+今天重点不泛读安全概念，而是为 Auditor 写出第一版 threat model。核心句子：
+
+\`\`\`text
+
+AI Security = 不允许概率模型的输出直接变成不可逆链上动作。
+
+\`\`\`
+
+\## Agent 整理的精炼摘要（边学后回填）
+
+AI Security 在 Hermes 里不是抽象的"防黑客"，而是保护用户的 32 ETH、提款权、官方合约路由、用户确认完整性、session key 边界，以及 chain-aware context 的新鲜度和来源。Auditor 最怕的不是 Agent 答错一句话，而是用户看到的是安全计划 A，实际执行的是交易 B；或者旧 context / 旧确认 / 旧 session key 被复用到新交易里。
+
+\## 我用自己的话复述（关掉 Handbook 标签页再写）
+
+\- Hermes staking 里最直观要保护的是 `32 ETH 本金withdrawal credentials / 提款权official deposit contract address`。
+
+\- 还要保护更隐蔽的资产`user confirmation 的完整性session key 的使用边界chain-aware context 的新鲜度和来源`。
+
+\- `transaction substitution` = 用户 review / confirmation 的是交易 A，但真正 submit 的是交易 B。
+
+\- `context poisoning` = Agent 用来判断的事实被污染，例如错误 context 让 Agent 以为 attacker 地址是用户提款地址。
+
+\- 防 transaction substitution 的关键不是只看 nonce，而是绑定交易语义字段`chain_iddeposit_contract_addressfunction_selectordeposit_value_weiwithdrawal_credentials_rawdeposit_data_rootcalldata_hashrisk_summary_iduser_confirmation_id`。
+
+\- 如果 `risk_summary_id` 和 `user_confirmation_id` 匹配，但 `calldata_hash` 不匹配，说明确认对象和执行对象不一致，必须重新生成 risk summary，让用户重新确认。
+
+\- `authorization replay` = 旧的 user confirmation / session key / authorization package 被复用到新的执行场景。本来只该用一次的授权，被 Agent 或攻击者重复使用。
+
+\- 只设置 `expires_after_seconds: 900` 不够，因为 15 分钟有效期内仍可能重复提交；还需要 `max_transactions = 1user_confirmation_id single-use`、绑定 `calldata_hash / deposit_data_root / risk_summary_id`，并在执行后 mark used / revoke。
+
+\- `tool misuse` = Agent 把授权能力用到计划外工具或动作。例如用户授权的是 `staking_deposit_submitter -> official deposit contract -> deposit(...)`，但 Agent 调了 `x402_payment` / generic transfer / swap 工具去花 32 ETH。
+
+\- 工具名正确但工具内部准备出的合约地址不是官方 deposit contract，更像 `transaction substitution`：执行对象被替换，同时也会触发 `allowed_contract` policy violation。
+
+\- `stale context execution` = 计划没被偷换，但执行条件过期。例如发送前 gas fee 已经变化，不能继续用旧 `gas_quote`，必须 refresh 后再判断是否仍在用户批准范围内。
+
+\## 今日最小实验
+
+\- 选择的实验：为 Hermes Auditor 写第一版 `threat_model`。
+
+\- 产物：按 asset / threat / detection / response 拆出 AI Security 风险表。
+
+\`\`\`yaml
+
+threat\_model:
+
+assets:
+
+\- "32 ETH principal"
+
+\- "withdrawal\_credentials / withdrawal rights"
+
+\- "official deposit contract address"
+
+\- "user confirmation integrity"
+
+\- "session key scope"
+
+\- "chain-aware context freshness and provenance"
+
+threats:
+
+transaction\_substitution:
+
+description: "用户确认的是交易 A，实际提交的是交易 B。"
+
+example: "risk summary 里 withdrawal address 是用户地址，但 calldata 里 withdrawal\_credentials 被换成 attacker address。"
+
+detection:
+
+\- "calldata\_hash matches confirmed plan"
+
+\- "withdrawal\_credentials\_raw matches confirmed plan"
+
+\- "deposit\_data\_root matches confirmed plan"
+
+\- "risk\_summary\_id and user\_confirmation\_id match"
+
+response: "STOP\_AND\_REVIEW"
+
+context\_poisoning:
+
+description: "Agent 判断所依赖的链上事实或外部来源被污染。"
+
+example: "错误 context 声称 attacker address 是用户控制的 withdrawal address。"
+
+detection:
+
+\- "source provenance required"
+
+\- "ownership proof required for withdrawal address"
+
+\- "cross-check deposit contract sources"
+
+response: "STOP\_OR\_REQUIRE\_PROOF"
+
+authorization\_replay:
+
+description: "旧 user confirmation 或旧 session key 被复用到新交易。"
+
+example: "昨天确认的一次 deposit 被拿来授权今天另一笔 deposit。"
+
+detection:
+
+\- "user\_confirmation\_id is single-use"
+
+\- "session\_key expires quickly"
+
+\- "max\_transactions == 1"
+
+\- "session\_key binds to risk\_summary\_id and calldata\_hash"
+
+\- "authorization package is marked used after submit"
+
+response: "REVIEW\_AGAIN"
+
+tool\_misuse:
+
+description: "Agent 调用了不在计划范围内的工具、合约或函数。"
+
+example: "用户授权 staking deposit，但 Agent 调用 x402 payment / generic transfer / swap 工具去花 32 ETH。"
+
+detection:
+
+\- "allowed\_tools enforced"
+
+\- "allowed\_contracts enforced"
+
+\- "allowed\_functions enforced"
+
+\- "max\_transactions == 1"
+
+response: "STOP"
+
+stale\_context\_execution:
+
+description: "使用旧余额、旧 gas 或旧 nonce 提交交易。"
+
+example: "发送前 gas fee 已经变化，不能继续使用旧 gas\_quote 提交交易。"
+
+detection:
+
+\- "refresh balance\_wei before submit"
+
+\- "refresh gas\_quote before submit"
+
+\- "refresh nonce and pending\_tx\_status before submit"
+
+response: "REFRESH\_THEN\_BLOCK\_IF\_INVALID"
+
+\`\`\`
+
+\## 我的卡点
+
+\- \[ \] `context poisoning` 和 `transaction substitution` 的区别：前者是判断前事实被污染，后者是确认后执行对象被替换。
+
+\- \[ \] `nonce` 重要，但不是证明用户确认的是同一笔交易的核心语义字段；核心是 calldata / withdrawal / deposit data / confirmation 绑定。
+
+\## Follow-up
+
+\- \[x\] **hackathon/**[**ideation.md**](http://ideation.md) **首条**：Auditor 用 cohort 5 问写下来（注意"谁付钱"最易卡）
+
+\- \[ \] **Q11 架构决定**：FSM 实现路径（自研 / LangGraph / LangGraph+SDK）——Week 2 内定
+
+\- \[ \] **Hermes context package**：升级成 JSON Schema，并接到 Web3 tool specs 之前
+
+\- \[ \] **代码实验补做**（5.22 "裸 API vs 框架" 对比）
+
+\- \[ \] **ERC-4337 + ERC-7562 原文阅读**
+
+\- \[ \] **handbook-feedback 整理**：累计反馈落进 `handbook-feedback/`
+
+\## Handbook / 课程反馈
+
+\- \[ \]
+
+\## 打卡草稿（粘到 [intensivecolearn.ing](http://intensivecolearn.ing) Check-in 表单的 Markdown）
+
+\`\`\`markdown
+
+**Day 12 · AI Security —— Auditor 要防的不是"模型笨"，而是"计划被偷换、授权被滥用"**
+
+今天读 Bridge 层的 AI Security，并把它落到 Hermes staking 的 threat model。我的理解是：这里的安全不是泛泛地"防黑客"，而是保护用户的 32 ETH、本金提款权、官方 deposit contract 路由、用户确认完整性、session key 边界，以及 chain-aware context 的新鲜度和来源。
+
+今天最关键的区分是 `context poisoning` 和 `transaction substitution`。前者是 Agent 判断前依赖的事实被污染，比如错误 context 让 Agent 以为 attacker 地址是用户提款地址；后者是用户已经确认了安全计划 A，但真正 submit 的 calldata 变成交易 B。对 Auditor 来说，transaction substitution 必须通过绑定交易语义字段来防`chain_id / deposit_contract_address / function_selector / deposit_value_wei / withdrawal_credentials_raw / deposit_data_root / calldata_hash / risk_summary_id / user_confirmation_id`。
+
+今天的最小实验是写第一版 Hermes `threat_model`，把风险分成 transaction substitution、context poisoning、authorization replay、tool misuse、stale context execution。结论是：AI Security = 不允许概率模型的输出直接变成不可逆链上动作；任何确认对象和执行对象不一致的情况，都必须 STOP\_AND\_REVIEW。
+
+\`\`\`
+
+\- 提交入口：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School → 左侧 "Check-in"
+
+\- 提交后回填提交时间 / 截图：
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 \# 2026-05-29 学习日志
 
 \## 今日主题
@@ -182,6 +412,7 @@ can\_submit\_tx: false
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 \# 2026-05-28 学习日志
 
@@ -588,6 +819,7 @@ can\_send\_deposit\_tx: false
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
 
+
 \# 2026-05-27 学习日志
 
 \## 今日主题
@@ -768,6 +1000,7 @@ staking 里除了 `deposit_contract`，最容易被忽略的高危字段是 `wit
 
 
 
+
 \# 2026-05-26 学习日志
 
 \## 今日主题
@@ -897,6 +1130,7 @@ Week 1 我是在脑子里想这条缝，今天它落成了一张能跑 regressio
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -1032,6 +1266,7 @@ cohort Week 1 的官方目标是跑通一条最小链`user intent → AI plannin
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -1350,6 +1585,7 @@ Handbook 推荐的 "裸 API vs 框架" 对比（5.22 留的）+ 今天的 Golden
 
 
 
+
 \# 2026-05-22 学习日志
 
 \## 今日主题
@@ -1644,6 +1880,7 @@ DSPy / Hermes / Learning Agent / AI×Web3 分工 / 最小实践——只在 "Age
 
 
 
+
 \# 2026-05-21 学习日志
 
 \## 今日主题
@@ -1859,6 +2096,7 @@ cohort Week 1 / Web3 侧。AA 是 Agent Wallet 的前置——昨天读完 Smart
 
 
 
+
 \# 2026-05-20 学习日志
 
 \## 今日主题
@@ -2025,6 +2263,7 @@ cohort Week 1 / Web3 侧打基础。
 
 
 
+
 \# 2026-05-19 学习日志
 
 \## 留给自己的作业
@@ -2172,6 +2411,7 @@ cohort Week 1 / Web3 侧打基础。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
