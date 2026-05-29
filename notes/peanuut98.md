@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+Day 12 · 2026-05-29 · @peanuut98
+
+今日学习：
+
+\- Handbook · DeFi 速览：把五条主线（资产 / 流动性 / 借贷 / 衍生品 / 稳定币）每条一句话讲清，每条标了一个锚点协议（USDC / Uniswap V3 / Aave / dYdX / DAI）。
+
+\- 把 Day 9（Agentic Commerce）+ Day 10（Smart Contract）+ Day 11（AA + Agent Wallet）+ 今天 DeFi 串成一条线，整理出"Agent 在 DeFi 动手"的 4 档分层表（A 只读 / B 限额小写 / C 中风险写 / D 高风险），把 Day 11 的 9 节点护栏对应到每一档。
+
+\- Handbook Feedback Round 2：写了 3 条 feedback（AA 章节"核心不是免 gas"提到节首 / Smart Contract 补 ABI ↔ Agent tool schema 类比 / Agent Wallet 加 9 节点接入清单表），提交到 handbook-feedback/。
+
+\- 用 GitHub CLI 把 Day 11 留下的 3 个疑问开成 issue（Session Key 额度合约实现 / Bundler 不稳定时 Agent 退化 / Simulation 自动调用成本控制），挂在学习仓库跟踪。
+
+最大的认知变化：
+
+\- DeFi 的关键词不是"去中介"，是"可组合" — Agent 不和"DeFi 公司"集成，它面对的是一组开放接口（ABI ≈ 链上版的 tool schema）。
+
+\- 稳定币不是"链上美元"，是一组抵押假设（USDC = 法币储备 / DAI = 加密超额抵押 / 算法稳定币 = 博弈假设）；Agent 的"金额"不能写"X 美元"，必须落到具体稳定币 + 它的抵押假设。
+
+\- "Agent + DeFi" 不是单一动作，是按风险分档的动作集合 — A/B 自动可以，C 强制人工，D 我不放进 Agent 边界。
+
+卡点：
+
+\- 仍然没动手部署过合约，也没碰主网资产 — 今天严格守 learning-plan 的"DeFi 只看概念"约束。Day 13 / Day 14 周末把 Counter 部署练习补上。
+
+明日 / 下一步：
+
+\- Day 13：读 Indexing + Oracle 一览（The Graph / Chainlink），把今天 DeFi 那条"价格是 Oracle 视角"的直觉具体化。
+
+\- Day 14：Week 2 周复盘 + Counter 合约 Base Sepolia 部署练习。
+
+🔗 [https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-29.md](https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-29.md)
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 Day 11 · 2026-05-28 · @peanuut98
 
 今日学习：
@@ -53,6 +89,7 @@ Day 11 · 2026-05-28 · @peanuut98
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 Day 10 · 2026-05-27 · @peanuut98
 
 今日学习：
@@ -84,6 +121,7 @@ Day 10 · 2026-05-27 · @peanuut98
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 # **Day 9 打卡**
@@ -335,6 +373,7 @@ Day 10 · 2026-05-27 · @peanuut98
 
 
 
+
 Day 7 · 2026-05-24 · @peanuut98
 
 今日学习：
@@ -366,6 +405,7 @@ Day 7 · 2026-05-24 · @peanuut98
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -408,6 +448,7 @@ Day 6 · 2026-05-23 · @peanuut98
 
 
 
+
 Day 3 · 2026-05-20 · @peanuut98
 
 今日学习：
@@ -445,6 +486,7 @@ Day 3 · 2026-05-20 · @peanuut98
 
 
 
+
 Day 2 · 2026-05-19 · @peanuut98
 
 今日学习：
@@ -470,6 +512,7 @@ Day 2 · 2026-05-19 · @peanuut98
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
