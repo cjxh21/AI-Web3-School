@@ -1033,7 +1033,7 @@ more information
 | [zw2512671014-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zw2512671014-cpu.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dodinhanhquyen-ui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dodinhanhquyen-ui.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | |
 | [weleuther900-arch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/weleuther900-arch.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | |
-| [YC-Indis](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YC-Indis.md) | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | |
+| [YC-Indis](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YC-Indis.md) | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | |
 | [taylorlearns](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/taylorlearns.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | [swen-chan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/swen-chan.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | |
 | [majiao2](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/majiao2.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
