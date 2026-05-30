@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+[https://app.notion.com/p/ZK-36fe1810ba17817caf8ce83075948e8d](https://app.notion.com/p/ZK-36fe1810ba17817caf8ce83075948e8d)
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 [https://app.notion.com/p/P-vs-NP-36fe1810ba17812a86fbed1f5b260f65](https://app.notion.com/p/P-vs-NP-36fe1810ba17812a86fbed1f5b260f65)
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 [https://app.notion.com/p/R1CS-36de1810ba178025a861c6afc61a870e](https://app.notion.com/p/R1CS-36de1810ba178025a861c6afc61a870e)
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 [https://www.notion.so/R1CS-36de1810ba178069b2fdc089b8bbc946](https://www.notion.so/R1CS-36de1810ba178069b2fdc089b8bbc946)
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 [https://www.notion.so/365e1810ba1780ceab6efaaa23dbdcf3](https://www.notion.so/365e1810ba1780ceab6efaaa23dbdcf3)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -59,11 +69,13 @@ AI x Web3 School
 
 
 
+
 [https://www.notion.so/Session-365e1810ba17809d80f5f8f28f5ad05e](https://www.notion.so/Session-365e1810ba17809d80f5f8f28f5ad05e)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -86,11 +98,13 @@ AI x Web3 School
 
 
 
+
 [https://www.notion.so/365e1810ba17800ab31fe6f4dee38d00](https://www.notion.so/365e1810ba17800ab31fe6f4dee38d00)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -120,11 +134,13 @@ AI x Web3 School
 
 
 
+
 [https://www.notion.so/Hermes-Agent-Loop-365e1810ba1781b1a7c6d105eaf41d11](https://www.notion.so/Hermes-Agent-Loop-365e1810ba1781b1a7c6d105eaf41d11)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
