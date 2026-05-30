@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+今天就vb一会
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 今天学习了一些基础知识
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 今天学习了一些AI基础知识，听了学习会
 <!-- DAILY_CHECKIN_2026-05-28_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
 
+
 今天随便看了几页官方文档，有太多不会的了
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -93,6 +102,7 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -156,6 +166,7 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天翻译了一篇文档，没有补训练营的知识
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
@@ -167,11 +178,13 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天学习了一些基础知识
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -195,11 +208,13 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天没有学习，出去吃了好吃的，明天补上
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -230,11 +245,13 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天学习了draken的分享，了解了一些AI工具的使用
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
