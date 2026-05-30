@@ -15,8 +15,35 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+## **LXDAO 治理流程 AI 辅助方案**
+
+任务：选一个 DAO / 社区流程，拆出 AI 可以辅助的步骤，以及必须由人或治理流程确认的步骤。
+
+选了 LXDAO，用 Firecrawl 实际采集数据（Forum / Snapshot / Notion / Fairsharing / LIP13 / Budget Framework）。
+
+产出：[https://github.com/chxii/ai-web3-school-cohort-0/blob/master/tasks/LXDAO-Governance-AI-Assistant-Draft.md](https://github.com/chxii/ai-web3-school-cohort-0/blob/master/tasks/LXDAO-Governance-AI-Assistant-Draft.md)
+
+5 个部分：
+
+1.  核心治理架构 — 工具链 + Season 周期 + 组织结构
+    
+2.  提案生命周期 — 6 步（Pre-season → Ideation → Draft → Review → Vote → Execution），每步标 \[AI\] / \[HUMAN\]
+    
+3.  周会 → Action Items 工作流 — 会前/会中/会后 AI vs 人工分工
+    
+4.  贡献记录 & 激励执行 — Fairsharing 数据结构 + 月度 Budget Checklist
+    
+5.  关键治理边界 — 8 个场景，AI 能做 vs 不能做的
+    
+
+核心结论：AI 做整理/检测/提醒，所有批准/决策/不可逆动作必须人工或治理流程。
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 ## **ETHGlobal OpenAgents Hackathon 项目扫描**
 
 来源：[https://ethglobal.com/showcase?events=openagents，共](https://ethglobal.com/showcase?events=openagents%EF%BC%8C%E5%85%B1) 33 个项目，按方向分类：
@@ -143,6 +170,7 @@ Agent GET /analyze → 402 (payment info)
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 ### **任务 1：Agent Profile Design**
 
 以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
@@ -258,6 +286,7 @@ Agent GET /analyze → 402 (payment info)
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
 
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -317,6 +346,7 @@ Agent GET /analyze → 402 (payment info)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -447,6 +477,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -718,6 +749,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -795,6 +827,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -849,6 +882,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -965,6 +999,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1391,6 +1426,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1623,6 +1659,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -2013,6 +2050,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
