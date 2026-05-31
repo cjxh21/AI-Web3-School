@@ -15,8 +15,155 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+今天阶段三的核心开发基本完成了，已经不只是计划层面，而是把主要代码骨架和评分能力都接上了。
+
+**今天已完成**
+
+1.  阶段三计划文档和 API 需求清单。
+    
+2.  Dune 分析从脚本抽到正式 orchestration 模块。
+    
+3.  DuneQuerySet 标准化。
+    
+4.  DuneQueryCache 独立模块。
+    
+5.  Dune 清洗层 dune\_cleaners.py。
+    
+6.  处理 Dune 负余额 / 负 remaining\_ratio 问题。
+    
+7.  DexScreener client 骨架。
+    
+8.  GoPlus client 骨架。
+    
+9.  BNB RPC readonly client 骨架。
+    
+10.  API 映射到 market / security / contract / holders。
+     
+11.  API 接入 analyze\_dune\_token 编排，失败不中断。
+     
+12.  TokenSnapshot 正式支持 holders / contract。
+     
+13.  Entity Cluster Score v0.1。
+     
+14.  Security Evidence / security\_score。
+     
+15.  全量测试通过：51 passed in 0.27s。
+     
+
+**还没做 / 明天做**
+
+1.  配置真实 .env  
+    你明天需要补：
+    
+    `DUNE_API_KEY DUNE_QUERY_TOKEN_TRADING_ACTIVITY DUNE_QUERY_FIVE_MINUTE_FLOW DUNE_QUERY_EARLY_BUYERS DUNE_QUERY_EARLY_BUYER_FUNDING BNB_RPC_URL GOPLUS_API_KEY（如果需要）`
+    
+2.  跑真实 API smoke test  
+    用一个真实 token 跑：
+    
+    `python scripts/analyze_dune_token.py 0x... --json --save-snapshot runtime/snapshots/xxx.json`
+    
+3.  根据真实响应修 mapper  
+    特别是 GoPlus 字段名、税率口径、DexScreener 主池选择、RPC 税率函数是否存在。
+    
+4.  CLI 文本输出增强  
+    现在 JSON 输出已经完整，但普通文本输出还可以补：
+    
+    `Security Score Entity Cluster Score API warnings Security Evidence Entity Evidence`
+    
+5.  .env.example  
+    还没创建，建议明天和真实配置一起补。
+    
+6.  阶段三检查报告  
+    你说报告等 API 完善后再写，这个合理，暂缓。
+    
+
+**结论**  
+今天阶段三的“离线开发部分”已经完成得很充分了。  
+还没完成的是“真实 API 联调 + 输出打磨 + 阶段报告”。
+
+所以可以这样判断：
+
+`阶段三代码骨架：基本完成 阶段三真实验证：明天开始 阶段三最终完成：等真实 API 跑通并写检查报告后`
+
+23:08
+
+好的，请总结我们今天做的内容，我要进行今天的学习打卡
+
+23:08
+
+今天 ChainMind 阶段三主要完成了从“Dune 脚本验证”到“正式深度分析模块”的升级。
+
+我们先统一了阶段三方向：阶段三不再只是单独做 Entity Cluster，也不只是 Dune 查询，而是定义为：
+
+`Dune 深度分析产品化 + 真实 API 接入 + Entity Cluster v0.1 + Security Evidence`
+
+然后完成了几块核心工程化工作：
+
+1.  **Dune 分析模块化**  
+    把原来集中在 scripts/analyze\_dune\_token.py 里的逻辑，抽到了正式 orchestration 模块。  
+    脚本现在只负责命令行入口，核心分析逻辑可以被测试和复用。
+    
+2.  **Dune QuerySet 标准化**  
+    固定了当前 4 个核心 Dune 查询：
+    
+    `token_trading_activity five_minute_flow early_buyers early_buyer_funding`
+    
+    后续不会再靠散落字符串管理查询。
+    
+3.  **Dune 缓存独立化**  
+    新增 Query Cache 模块，支持：
+    
+    `Dune rows cache execution_id recovery refresh cache 失败后恢复`
+    
+    这样可以减少重复消耗 Dune credits。
+    
+4.  **Dune 清洗层**  
+    新增统一清洗模块，处理：
+    
+    `地址大小写 空字符串 NaN / Infinity int / float 转换 时间字符串`
+    
+    还专门处理了 Dune 中可能出现的负余额问题：  
+    remaining\_ratio 会被钳到非负，避免污染评分；current\_balance 负数保留，并进入数据质量 warning。
+    
+5.  **真实 API 接入骨架**  
+    新增了三个外部数据 client：
+    
+    `DexScreener: market / liquidity / volume / pair GoPlus: honeypot / tax / owner / blacklist / holder 风险 BNB RPC: owner / totalSupply / buyTaxRate / sellTaxRate`
+    
+    目前支持 API 失败不中断，只记录 api\_warnings。
+    
+6.  **TokenSnapshot 扩展**  
+    TokenSnapshot 正式支持：
+    
+    `holders contract`
+    
+    为明天真实 API 写入 holder 分布和合约权限数据做好了结构准备。
+    
+7.  **Entity Cluster Score v0.1**  
+    新增实体集群评分，识别：
+    
+    `同 funder 新钱包比例高 买入时间集中 低历史交易数钱包比例高`
+    
+    它先独立输出，不直接改写总 grade。
+    
+8.  **Security Evidence 独立化**  
+    新增安全证据评分，识别：
+    
+    `honeypot cannot sell all blacklist high buy/sell tax owner not renounced mintable hidden owner`
+    
+    现在结果里会有 security\_score 和 security\_evidence。
+    
+9.  **测试覆盖**  
+    今天新增和扩展了大量单元测试，最终全量通过：
+    
+    `51 passed`
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 快考试了，今天继续复习，再请假一天，明天全部补上；
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
@@ -24,11 +171,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
 
+
 这两天快考试了，明天会继续补上学习内容
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -401,6 +550,7 @@ ORDER BY 1;
 
 
 
+
 ## 继续学习AI+链上数据分析
 
 ## **如何 像数据分析师一样处理链上数据**
@@ -486,6 +636,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 
 
+
 **今天手动打卡，总结一下最近学习的内容和研究的方向**
 
 对于meme币，我一直都是充满幻想和喜欢的，但是市场上太多的币种是没有然后对成长价值，就连最基本的安全和信任也没有，找到一个短期或是是长期潜力比较大的一个币是比较不容易的，我们不仅要去详细了解代币的安全性和代币的分配，还要去看链上的数据，是否是真实玩家买入，狗庄的格局，是否存在大量的机器人刷单，叙事和用户情绪怎么样，判断当前是否值得去投资，什么时候该撤退；所以现在我在做一个链上数据分析（识别bot，是否大量代币来至同一个钱包，是否大量钱包时最近在进行创建，是否是左手倒右手等等），通过接入各家相应平台的API来进行相应的筛选BNB链上的meme，筛选出值得研究的，在进行下一步的数据补充和分析，然后AI进行相应的报告的产生，这期间AI是可以对我们处理的数据结果根据相应的规则进行解释和分析建议和需要数据的补充进行下一步的分析；然后因为meme的短暂性，所以我们推荐值得研究的4个等级的meme会进行相应的AI复盘，AI可以参与到我们规则的相应的调整；
@@ -493,6 +644,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -645,6 +797,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1211,6 +1364,7 @@ AI 的输出应该回答：
 
 
 
+
 ### 1\. 基本概念概述
 
 -   **EOA（Externally Owned Account，外部拥有账户）** 传统钱包账户，由私钥直接控制。最常见的 MetaMask 默认账户。
@@ -1304,6 +1458,7 @@ AI 的输出应该回答：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1696,6 +1851,7 @@ Holder 汇总中观察到：
 
 
 
+
 几天继续了链上数据分析，AI+Defi投研报告自动项目的学习详细链接[链接](https://github.com/may-tonk/ai-web3-school-cohort-0/tree/codex/chainmind-foundation)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -1712,11 +1868,13 @@ Holder 汇总中观察到：
 
 
 
+
 **今天和AI探讨了链上数据分析，AI+Defi的想法，简单的建立了一个工作项目计划，内容太多了，上传到了AI x Web3school的GitHub了；详细请查看**[**链接**](https://github.com/may-tonk/ai-web3-school-cohort-0/blob/master/daily/2026-05-19/AI_DeFi_Meme_Workflow_%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.md)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
