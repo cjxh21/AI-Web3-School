@@ -15,8 +15,78 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+Agentic Wallet的权限签名与安全执行如何让AI Agent在可控边界内操作链上资产
+
+\- **1\. 主题介绍**
+
+\- 分享会主题：agent tech wallet的权限签名与安全执行
+
+\- 目标：探讨如何在可控边界内操作链上资产
+
+\- 嘉宾：cobo engine take body的PM
+
+\- **2\. AI在加密经济中的演变**
+
+\- 2023年：chatbot进入大众视野，主要回答问题
+
+\- 2024年：copilot概念涌现，AI提出建议和行动计划
+
+\- 2025年：agent概念成为主流，AI后台解决复杂工作流
+
+\- 2026年：AI执行工作流并进行自主探索
+
+\- **3\. 当前面临的安全问题**
+
+\- Silent Override：agent修改交易金额未告知
+
+\- Shadow Custody：agent创建独立地址转移资金
+
+\- 失控风险：prompt injection、shadow operations、unscoped authority、zombie permissions
+
+\- **4\. 解决方案**
+
+\- MPC钱包：解决底层安全性问题，多方共管资金
+
+\- Pack Authority：定义agent执行边界和权限
+
+\- Recipe Skill Layer：预加载知识库，指导复杂合约调用
+
+\- **5\. 产品架构与功能**
+
+\- 多agent共管资产：用户可创建多个钱包，分配给不同agent
+
+\- 小额免密支付：支持小额支付协议和gas list场景
+
+\- 链上交易自动化：基于pack的审批和授权机制
+
+\- **6\. 未来展望**
+
+\- Human in the Loop：短期内不可或缺
+
+\- Agent自发支付网络：长远目标，需基础设施建设
+
+\- 链上与链下支付并存：各领域需求不同，共存发展
+
+\- **7\. 技术细节**
+
+\- 中间意图传递防护：recipe和AI助手双重校验
+
+\- 多跳交易安全：控制root合约和参数，确保资金安全
+
+\- **8\. 用户体验与反馈**
+
+\- APP操作流程：接收pack请求，审阅并授权
+
+\- 风险监控：AI辅助识别高风险行为
+
+\- 用户反馈：鼓励提出宝贵意见，持续迭代产品
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 🤖 **AI下乡计划实操笔记：用Mac mini搭建24小时AI工作流**
 
 这份笔记基于周报中 Sunny 分享的理念，结合社区教程整理而成。
@@ -117,6 +187,7 @@ Node.js **版本必须 ≥22.x**，否则会报错。
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 \### Long term Memory for AI Agents
 
 \- **引言**
@@ -194,6 +265,7 @@ Node.js **版本必须 ≥22.x**，否则会报错。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 AI x Web3 School 例会 #1
@@ -291,6 +363,7 @@ AI x Web3 School 例会 #1
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -595,6 +668,7 @@ ZK 验证 zkML, TEE 背书记录，链上验证注册表
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1093,6 +1167,7 @@ ERC-8183 解決：
 
 
 
+
 \- **一、AI入门与课程介绍**
 
 \- 课程目的：科普AI名词，帮助小白理解AI技术
@@ -1208,6 +1283,7 @@ API密钥应用与AI在量化交易中的角色讨论
 
 
 
+
 ### Web3 核心要点笔记
 
 **1\. 核心演变：从“平台拥有”到“用户拥有”**
@@ -1242,6 +1318,7 @@ API密钥应用与AI在量化交易中的角色讨论
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1330,6 +1407,7 @@ API密钥应用与AI在量化交易中的角色讨论
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
