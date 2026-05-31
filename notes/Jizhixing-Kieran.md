@@ -15,13 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+# MCP原理简单总结
+
+今天总算在一天天的了解、理解下，终于理解了MCP到底内部走了一个什么形式：
+
+MCP Client（客户端）和MCP Server（服务端）连接成功——Server向Client暴露出Server提供的可用工具和传参格式——用户发送消息——Runtime启动——Client把用户消息和Server提供的工具列表、描述、传参格式全都交给LLM——然后LLM收到思考选择是否使用工具使用什么工具，返回格式准确的JSON格式内容——Client把返回内容交给Server请求Server执行——Server这边拿到使用什么工具和工具对应的参数，执行，返回结果——Client把Server返回结果和之前的工具列表、用户提示词再次打包传给LLM——LLM再次选择，是完成任务，停止调用工具，还是输出JSON格式内容再调用一个工具——任务完成
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 今天跑通了一个基于MCP的天气查询Demo，可以通过对话框的形式，让AI获取到MCP Server的工具列表并获取某地的当前的气温、天气等信息。
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 今天更加深入的了解了MCP这个协议
 
@@ -32,6 +43,7 @@ MCP Server：MCP 的服务端，为Agent提供工具
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 今天注意到MCP在各个文档中出现，一次两次出现可能是特定术语，几乎动不动就出现或许就是行业共识了，必须得了解一下。
@@ -45,6 +57,7 @@ MCP Server：MCP 的服务端，为Agent提供工具
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -1327,6 +1340,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 # claude code项目结构分析
 
 文件夹 PATH 列表
@@ -1440,6 +1454,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 今天几乎完整写完了我的Agent的顶层设计文档，参考了当前各种主流Agent的范式，做了很多关于个性化的调整和认为更合理的处理，也希望经过去敏感处理后开源出来有更多人看到，提提意见，一起完成技术实现。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
@@ -1451,11 +1466,13 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 今天继续写项目文件，同时做了少量关于日历日程的Debug
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1476,6 +1493,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 ## 今日成果：
 
 1.  思考科研方向，已经有了初步的想法
@@ -1487,6 +1505,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1604,6 +1623,7 @@ EOA (私钥控制)
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
