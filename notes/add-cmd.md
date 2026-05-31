@@ -15,13 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+# Go 垃圾收集器（GC）核心原理
+
+* * *
+
+## 一、传统标记清除算法：一次性关门大扫除
+
+最基础的 GC 算法，核心分为**标记**和**清除**两个阶段，但存在致命的**长时间 STW（Stop The World）**问题。
+
+### 算法流程
+
+| 阶段 | 场景类比 | 核心操作 |
+| --- | --- | --- |
+| 标记阶段 | 管理员从员工手里的书（根对象：栈变量、全局变量）出发，把所有能被引用的书标记为「正在使用」 | 递归遍历对象引用链，标记所有存活对象 |
+| 清除阶段 | 遍历整个图书馆，把没被标记的旧书（垃圾对象）清理掉，空出的位置整理成空闲书架 | 回收未标记对象，将内存加入空闲链表，供分配器复用 |
+
+### 致命缺陷：必须「关门营业」
+
+整个过程中，图书馆必须**完全关门**——员工不能借书、还书、修改引用。
+
+| 问题 | 原因 |
+| --- | --- |
+| 误回收（悬挂指针） | 营业时修改引用，管理员以为书没人用，实际员工还在用 |
+| 长时间 STW | 用户程序卡顿，无法响应 |
+
+> 现代 GC 的所有优化，本质上都是在解决 STW 问题。
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 占位
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 Day — Agent 链上足迹实验：Agentic Ping
 
@@ -78,6 +109,7 @@ pm\_sponsorUserOperation → Gas Manager 代付签名 → eth\_sendUserOperation
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 \> 日期： 2026-05-28
@@ -152,6 +184,7 @@ Foundry 部署脚本，从 .env 读取私钥和 RPC URL，部署 AccountFactory 
 
 
 
+
 **Day 6（续）：Week 2 方向选择完成 — 整理交付物与后续规划**
 
 ### **今日路径**
@@ -171,6 +204,7 @@ Foundry 部署脚本，从 .env 读取私钥和 RPC URL，部署 AccountFactory 
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -252,6 +286,7 @@ USDC，每天不超过 $500"。LLM 是把权限系统从工程师专属降到普
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -390,6 +425,7 @@ NaN.  WCB 打卡流程还没完全熟悉，这是第一次提交
 
 
 
+
 Day 5 — 智能体（Agent）打卡笔记
 
 📖 学了什么
@@ -494,6 +530,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-22
 
 
 
+
 Day 4 — RAG（检索增强生成）打卡笔记
 
 📖 学了什么
@@ -569,6 +606,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-21
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -671,6 +709,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-20
 
 
 
+
 Day 2 完成总览
 
 📘 Prompt 章节核心要点：
@@ -706,6 +745,7 @@ Day 2 完成总览
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
