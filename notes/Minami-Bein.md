@@ -14,6 +14,219 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+# AI Agent 工具调用评估框架：Evaluation 与可验证性研究
+
+**Day 13 | 2026-05-31 | AI x Web3 School**
+
+---
+
+## 摘要
+
+本报告聚焦于 AI Agent 执行 Web3 工具调用时的评估（Evaluation）与可验证性（Verifiable AI）机制设计。研究的核心问题是：**如何在工具调用全链路中构建可追溯、可审计、可复现的执行凭证**。通过对 Agent 工具调用生命周期的建模，本报告提出了一套基于事件日志（Event Log）的 Evaluation Checklist，并设计了面向失败场景的 Replay Checklist。预期贡献是为 Web3 Agent 系统提供一套可验证的执行框架，确保在链上操作中保留完整的 human-in-the-loop 确认节点。
+
+---
+
+## In-Scope / Out-of-Scope
+
+| 范围 | 定义 |
+|------|------|
+| **In-Scope** | 单次工具调用前后记录、Evaluation Checklist 设计、Replay 故障排查流程 |
+| **Out-of-Scope** | 多 Agent 并发场景、大规模交易批处理、链上预言机数据验证 |
+
+---
+
+## 核心概念术语表
+
+| 字段 | 组件 | 功能 | 输入类型 | 输出类型 | 约束条件 |
+|------|------|------|----------|----------|----------|
+| Evaluation | 评估器 | 验证工具调用正确性 | 事件日志（Event Log） | 评分报告（Score Report） | 必须可追溯 |
+| Verifiable AI | 可验证AI | 提供执行证明 | 操作记录（Action Record） | 证据链（Proof Chain） | 需保留原始数据 |
+| Event Log | 事件日志 | 记录操作全流程 | 工具调用请求 | 结构化日志条目 | 不可篡改 |
+| Replay | 重放 | 复现失败操作 | 错误快照（Error Snapshot） | 诊断报告（Diagnostic Report） | 需保留上下文 |
+
+---
+
+## 系统可验证性不变量
+
+$$
+\forall agent \in AgentSystem, \forall toolcall \in ToolCalls:
+$$
+
+$$
+verifiable(toolcall) \Rightarrow 
+\begin{cases}
+init\_state \neq null \\
+event\_log \neq null \\
+verification\_proof \neq null \\
+final\_state \neq null \\
+\end{cases}
+$$
+
+**解释**：对于 Agent 系统中的任意工具调用，可验证性当且仅当满足以下条件：存在初始状态、存在事件日志、存在验证证明、存在最终状态。
+
+---
+
+## 工具调用生命周期状态机
+
+```mermaid
+stateDiagram-v2
+    [*] --> Initiation: 接收任务
+    Initiation --> ContextBuilding: 构建上下文
+    ContextBuilding --> DecisionPoint: 决策节点
+    DecisionPoint --> HumanApproval: 请求用户确认
+    DecisionPoint --> AutoExecution: 自动执行权限
+    HumanApproval --> ToolInvocation: 授权通过
+    HumanApproval --> Abort: 拒绝/超时
+    AutoExecution --> ToolInvocation: 权限校验通过
+    ToolInvocation --> Verification: 提交前验证
+    Verification --> TransactionSubmission: 验证通过
+    Verification --> Rollback: 验证失败
+    TransactionSubmission --> StateUpdate: 链上确认
+    StateUpdate --> Logging: 记录事件
+    Logging --> ReportGeneration: 生成报告
+    ReportGeneration --> [*]: 任务完成
+    Abort --> [*]: 任务终止
+    Rollback --> [*]: 状态回滚
+```
+
+---
+
+## Agent 工具调用时序图
+
+```mermaid
+sequenceDiagram
+    participant U as 用户 (User)
+    participant A as AI Agent
+    participant C as 上下文管理器 (Context Manager)
+    participant T as 工具集 (Tool Set)
+    participant V as 验证器 (Verifier)
+    participant BC as 区块链 (Blockchain)
+    participant L as 日志系统 (Event Logger)
+
+    U->>A: 发送Web3任务请求
+    A->>C: 请求构建执行上下文
+    C-->>A: 返回上下文 (链上状态、用户权限等)
+    A->>A: 决策: 是否需要用户确认
+    
+    alt 需要用户授权
+        A->>U: 请求签名授权
+        U-->>A: 确认/拒绝
+    end
+    
+    A->>T: 调用工具 (read_balance/simulate_tx等)
+    T-->>A: 返回执行结果
+    A->>V: 提交验证请求
+    V-->>A: 验证通过/失败
+    
+    alt 验证通过
+        A->>BC: 提交链上交易
+        BC-->>A: 交易哈希 (tx hash)
+    end
+    
+    A->>L: 记录完整事件日志
+    L-->>A: 写入确认
+    A->>U: 返回执行报告
+```
+
+---
+
+## Evaluation Checklist
+
+| 阶段 | 检查项 | 状态码 | 说明 |
+|------|--------|--------|------|
+| **Initiation** | 任务描述完整性 | `[ ]` | 输入是否包含目标、约束、边界 |
+| **Initiation** | 上下文来源可信度 | `[ ]` | 数据是否来自可信 RPC/索引器 |
+| **Initiation** | 权限预检查 | `[ ]` | Agent 是否具备当前操作权限 |
+| **Context** | 链上状态同步性 | `[ ]` | 区块高度与当前状态是否一致 |
+| **Context** | 钱包连接状态 | `[ ]` | 钱包是否已连接且授权 |
+| **Decision** | 确认节点判断 | `[ ]` | 是否正确识别 human-in-the-loop 节点 |
+| **Decision** | 风险等级评估 | `[ ]` | 是否标注了风险等级（低/中/高） |
+| **Action** | 工具参数校验 | `[ ]` | 参数格式、范围是否正确 |
+| **Action** | Gas 估算准确性 | `[ ]` | Gas 估算是否在合理范围内 |
+| **Action** | 交易模拟验证 | `[ ]] | 是否执行过 transaction simulation |
+| **Verification** | 签名请求合规性 | `[ ]` | 签名请求是否明确展示目标地址、金额 |
+| **Verification** | 回滚机制就绪 | `[ ]` | 失败时是否能正确回滚状态 |
+| **Verification** | 交易哈希记录 | `[ ]` | 是否记录了 tx hash |
+| **Logging** | 事件日志完整性 | `[ ]` | 全链路是否记录了可追溯日志 |
+| **Logging** | 原始请求保留 | `[ ]] | 是否保留了原始输入数据 |
+| **Reporting** | 结果可解释性 | `[ ]` | 输出是否包含中文说明 |
+| **Reporting** | 下一步建议 | `[ ]` | 是否提供了后续行动建议 |
+
+---
+
+## 失败操作 Replay Checklist
+
+| 序号 | 检查项 | 诊断维度 | 修复建议 |
+|------|--------|----------|----------|
+| 1 | 错误发生的精确时间戳 | 时间同步性 | 校验 NTP 服务、记录 UTC 时间 |
+| 2 | 触发错误的原始输入 | 输入校验 | 保留完整输入快照、设计容错解析 |
+| 3 | 错误发生前的状态快照 | 状态追溯 | 设计 State Snapshot 机制 |
+| 4 | 工具调用的参数传递 | 参数校验 | 增加参数类型检查、边界校验 |
+| 5 | 链上交易是否已提交 | 事务状态 | 查询 tx hash、确认区块确认数 |
+| 6 | Gas 估算偏差分析 | Gas 估算 | 引入动态 Gas 调整因子 |
+| 7 | RPC 响应异常 | 网络层 | 配置多 RPC 源、自动切换 |
+| 8 | 签名拒绝/超时 | 用户交互 | 优化 UI 提示、增加超时重试 |
+| 9 | 智能合约 revert 原因 | 合约层 | 解析 revert reason、记录 ABI |
+| 10 | 上下文过期时间点 | 缓存管理 | 设计 TTL 机制、定期刷新 |
+
+---
+
+## 漏洞向量与边界场景验证
+
+### 漏洞类型 01：上下文过期导致决策错误
+
+| 字段 | 描述 |
+|------|------|
+| **Type** | Temporal Context Staleness |
+| **Root Cause** | 链上状态在两次调用之间发生变化，但 Agent 仍使用旧上下文 |
+| **Attack/Failure Vector** | 攻击者通过 MEV/三明治攻击在 Agent 读取余额后、执行交易前操纵状态，导致执行失败或资金损失 |
+| **Mitigation / Patch** | 引入 State Freshness Check：在每次工具调用前重新获取链上状态，并在日志中记录 `block_number` 和 `state_hash` |
+
+### 漏洞类型 02：签名请求无目标地址展示
+
+| 字段 | 描述 |
+|------|------|
+| **Type** | Blind Signature Vulnerability |
+| **Root Cause** | DApp 发起签名请求时未向用户展示目标地址、金额等关键信息 |
+| **Attack/Failure Vector** | 恶意 DApp 诱导用户签署恶意交易，可能导致资产转移 |
+| **Mitigation / Patch** | 强制要求签名请求包含：目标地址（to_address）、金额（value）、Gas 估算（gas_estimate）、操作类型（action_type）。在 UI 层增加红框警告 |
+
+### 漏洞类型 03：Replay 机制缺失导致故障难追溯
+
+| 字段 | 描述 |
+|------|------|
+| **Type** | Insufficient Replay Capability |
+| **Root Cause** | 系统未设计事件日志持久化机制，故障时无法复现 |
+| **Attack/Failure Vector** | 故障发生后无法定位根因，影响系统可靠性 |
+| **Mitigation / Patch** | 设计 Event Log Schema，包含：`timestamp`, `agent_id`, `tool_name`, `input_params`, `output_result`, `error_message`。日志写入持久化存储（如 IPFS 或去中心化存储） |
+
+---
+
+## 学术标签
+
+```
+#AI-Agent #Evaluation #Verifiable-AI #Web3-Tool-Use #Human-in-the-Loop 
+#Smart-Contract #Event-Log #Replay #Security #Agent-Wallet
+```
+
+---
+
+## Handbook Feedback 条目
+
+**Feedback #01**：当前 Handbook 中 Evaluation 章节缺少具体的 Event Log Schema 定义。建议补充标准化的日志格式，包括必要字段（timestamp、agent_id、tool_name、input、output、error）和可选字段（metadata），便于开发者实现统一的日志系统。
+
+---
+
+## 公开 Proof-of-Work
+
+- 今日完成 Evaluation Checklist 设计
+- 完成失败操作 Replay Checklist（10 项）
+- 输出本篇技术报告作为公开学习记录
+- 沉淀 3 条漏洞向量分析
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 # AI x Web3 School Day 13 技术报告：Evaluation & Replay 机制
