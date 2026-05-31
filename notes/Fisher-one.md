@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+今日主要完成week2的作业
+
+✅ AI × Web3 问题地图与主方向选择（20 pts）— 覆盖 5 个方向，深入分析 Wallet/Permission 和 Payment/Commerce，选定主方向。核心洞察：Payment 边界是 Permission 边界的子集，两条线可以一起推进。
+
+✅ Agent 链上动作权限策略（20 pts）— 设计 Session Key 四维限制策略，画出完整执行流程图，标出自动执行和人工确认节点。补充了 Guard Simulation 的具体检查项（re-entrancy、delegatecall、selfdestruct）和撤销后 in-flight 交易的处理取舍。
+
+✅ 最小支付与商业流程拆解（20 pts）— 场景：Agent 通过 x402 自主购买 Dune Analytics 数据。覆盖报价→预算授权→执行→数据签名验证→交付→人工验收→争议处理全链路。Bonus：对比 x402 / MPP / ERC-8004 / ERC-8183 在支付链路中的分工。
+
+✅ Agent Profile 与能力声明草图（20 pts）— 为 Chain Research Agent 写正式 Profile：身份（ERC-8004）、能力清单、输入输出、协作图、验证机制、失败处理、Profile 更新方式。Bonus：MCP vs A2A 分工对比。
+
+✅ Agent Workflow Threat Model（20 pts）— 覆盖 8 类攻击面，设计低/高风险分级确认策略，逐项记录哪些攻击被 Policy/Guard 拦截、哪些防不住及原因。
+
+✅ x402 Paywall + CAW Agent 自主支付闭环架构设计（40 pts）— 完整架构图 + 13 步交互流程 + 关键接口伪代码（x402 服务端、CAW Pact 配置、Agent 支付调用、审计日志）。核心结论：Pact 是任务级授权，Session Key 是账户级长期通行证，两者定位不同。
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 **今天重读了 Machine Payment 章节（~2500 字，8 个节点），用 explain-back 挖了一遍。** 之前读第一遍的时候 8 个节点当独立概念看，这次跟 Agent 过了 6 道题，把 Budget/Policy 分工、Payment Intent 生命周期、MPP 托管模型、x402 协议本质都重新捋了一遍。  
   
 2\. **修正了 Guard 在支付链路里的位置。** 第一遍理解是 Budget → Quote → Payment Intent → Guard（Guard 当最后一道闸）。这次理清楚应该是 Quote → Guard → Payment Intent——Guard 在用户签字之前就拦截不该看的报价，保护的不只是钱，还有注意力。
@@ -24,6 +42,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 **今天进行了最小支付流程拆解**
 
@@ -43,6 +62,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 今日学习的时间少点，所以看的不是很多，主要还是看看了方向问题。
@@ -84,6 +104,7 @@ AI x Web3 School
 
 
 
+
 **今日学习总结**
 
 **Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
@@ -117,6 +138,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 **今日学习内容**
 
 **AA Wallet / Smart Account**（基础层） 之前 Week 1 读 AA 的时候只觉得「很厉害」，现在理解了它的具体价值：传统 EOA 是一把私钥控制一切，AA 让账户本身能写规则——谁能操作、能操作什么、什么时候失效。Smart Account 就是带规则的钱包账户。对 Agent 来说，AA 的关键不是「钱包更高级」，而是账户终于能表达规则了。
@@ -145,11 +167,13 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -195,6 +219,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -227,6 +252,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -250,6 +276,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -391,6 +418,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -448,6 +476,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -480,6 +509,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
