@@ -15,8 +15,28 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+今天主要在做黑客松材料整理和 demo 核心规划。
+
+我把和 Hackathon 相关的材料重新收拢了一次，重点是把任务、例会笔记和本地方向草稿拼成一套可执行的 demo 输入。今天的判断还是一样：`AI Wallet Clear Intent Guard` 最适合做成 pre-signing review layer，而不是完整钱包。真正要做透的不是系统规模，而是一个 review surface 的 story、边界和判断。
+
+这一周我会先把 demo 的核心做清楚，再决定是从 `x402 payment request review`、`ERC-20 approve mismatch` 还是 `authority package review` 切入。无论选哪一个，demo 都要能讲明白用户意图、确定性事实、钱包策略和人工确认点。
+
+今日记录：
+
+[https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-31.md](https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-31.md)
+
+Today I spent most of the day organizing hackathon materials and planning the demo core for the week.
+
+I pulled the hackathon-related materials back into one line and treated them as input for a single demo story. My current judgment is still the same: `AI Wallet Clear Intent Guard` fits best as a pre-signing review layer, not a full wallet. What matters now is not system size, but the clarity of one review surface: the story, the boundary, and the decision.
+
+This week I will first make the demo core concrete, then decide whether the entry point should be `x402 payment request review`, `ERC-20 approve mismatch`, or `authority package review`. Whatever I choose, the demo needs to explain user intent, deterministic facts, wallet policy, and the human-confirmation point.
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 今天主要完成了昨天课程和例会内容的整理与部署。
 
 我把 2026-05-29 的 Women Builders in AI x Web3 活动笔记整理成公开笔记，重点记录 open source、GitHub proof of work、community building、personal branding 和 AI + Web3 职业路径。它提醒我，Web3 builder 的成长不只是学概念，而是通过持续贡献、公开记录和帮助别人来建立信任。
@@ -41,6 +61,7 @@ For the hackathon direction, I kept AI Wallet Clear Intent Guard small: review o
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 今天我把 Week 2 的最后一段收束完成了。
 
 Task 018 把 wallet permission 变成了明确策略：预算、allowlist、人工确认阈值、撤销和审计都必须写出来。Task 019 把安全边界从钱包扩展到 workflow，确认 prompt 不是边界，系统才是边界。Task 020 把 AI 和治理的角色分开，AI 负责整理信息，治理负责最终判断。Task 021 则把整个 Week 2 方向收成一份完整 proposal，明确 AI Wallet Clear Intent Guard 是一个 pre-signing review layer，不是一个自动签名器。
@@ -60,6 +81,7 @@ The biggest change today was not adding another idea. It was making the idea sma
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 今天完成了三条主线的整理和提交。
@@ -89,6 +111,7 @@ Together, these pushed my AI Wallet Clear Intent Guard direction toward a smalle
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -123,6 +146,7 @@ This connects directly to my AI Wallet Clear Intent Guard direction. Pre-signing
 
 
 
+
 今天正式进入 Week 2 的方向研究主线。我完成并提交了 AI × Web3 问题地图与主方向选择，把 7 个方向重新梳理了一遍，最后选择 Wallet / Permission / Safe Execution 作为接下来最值得深挖的主线。
 
 这条线和我的黑客松方向 AI Wallet Clear Intent Guard 越来越接近：它不是要做一个完整钱包，也不是让 AI 自动签名，而是在签名前把用户意图、确定性的交易事实、权限策略、授权边界和支付路径放在同一个 review surface 里，让人能更清楚地决定是否继续。
@@ -146,6 +170,7 @@ I also completed the Payment / Commerce minimal flow task using an AI Wallet Tra
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -184,6 +209,7 @@ My AI Wallet Clear Intent Guard direction moved one step forward: it should even
 
 
 
+
 今天我继续整理 AI x Web3 School 第一周后半段的学习成果，完成了 AI 基础概念卡片、Web3 基础概念卡片，并围绕自己的黑客松方向拆解了两个 AI 钱包相关项目：Cobo Agentic Wallet 和 Coinbase AgentKit / Agentic Wallet / x402。
 
 这次最大的收获是，AI 钱包方向不能简单理解成“让 AI 帮我操作钱包”。更安全、更适合黑客松的切口是签名前 review layer：先把用户自然语言意图、确定性的交易事实、权限策略和支付路径放在一起检查，再由人决定是否签名。
@@ -210,6 +236,7 @@ Cobo taught me to think in terms of task-scoped, policy-enforced, reviewable, an
 
 
 
+
 今天是 Week 1 的集中收尾日。我把前几天分散完成的 AI、Web3、AI x Web3 综合任务整理成一组更完整的 public proof：测试网交易、只读智能合约调用、EOA / 智能账户 / 多签权限比较、AI x Web3 最小交叉流程图、Week 1 Proof-of-Work Pack，以及一个受限 Web3 助手 workflow。
 
 这次最大的收获是，AI x Web3 的安全边界不能停留在一句“人工确认”。它需要被拆成具体流程：AI 可以解释和准备，工具可以验证公开事实，钱包负责展示待签名动作，人负责确认或拒绝，链上系统负责执行并留下可验证记录，public repo 负责保存脱敏后的 proof。
@@ -229,6 +256,7 @@ I also organized Sophia's guest talk on Open Agile Economy / AI Agent Economy. A
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -269,6 +297,7 @@ I also reported a platform-review issue today. In a Web3 operating-principles ta
 
 
 
+
 今天我整理了 2026-05-21 AI 与 Web3 结合方向分享会笔记。最大的收获是，AI x Web3 不是单向叠加，而是双向关系：Web3 可以为 AI 提供更开放的算力、数据和激励网络，AI 也可以帮助 Web3 在钱包安全、链上数据理解和语义化交互上变得更可用。
 
 另外，我也记录了一个自己主动寻找和分析外部参考后形成的黑客松候选方向：围绕 AI 钱包签名安全，探索 AI 如何在用户确认前帮助理解风险。这个方向和课程主题有关联，但不是课程直接给出的题目。考虑到 idea 还在早期，我只保留低信息量公开版本，不展开具体产品细节。public repo 是学习证明，不等于把所有想法都公开。
@@ -284,6 +313,7 @@ I also recorded a Hackathon candidate direction formed through my own external r
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -321,6 +351,7 @@ The biggest takeaway is that Web3 is not a set of isolated concepts. It is a ful
 
 
 
+
 今天我继续维护 AI x Web3 School Cohort 0 学习仓库，并整理部署了两份学习资料：ZK trading system fireside chat 笔记，以及 2026-05-19 晚间课程《AI 工具科普 + Hermes Agent 安装与配置分享会》的课程笔记。
 
 ZK 笔记让我看到，zk 交易系统的难点不只是证明速度，而是证明生成、见证数据传输、排序、预言机、数据可用性、成本结构和用户生态之间的系统协同。
@@ -344,6 +375,7 @@ Another important takeaway is that the direction of Qy Knowledge Hub became clea
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
