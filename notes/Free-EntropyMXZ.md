@@ -15,8 +15,28 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+### 前沿项目拆解与黑客松思考
+
+-   **明星项目拆解：**
+    
+    -   **Bittensor (TAO)：** 去中心化的 AI 算法网络，通过竞争机制选拔出最强的子网（数据、语音、图像等）。
+        
+    -   **Starknet / Solana 上的 AI 尝试：** 利用高性能公链或 ZK 架构，降低 AI Agent 频繁交互链上的 Gas Cost。
+        
+-   **黑客松/项目 Idea 灵感：**
+    
+    -   _方向一：_ 一个基于特定游戏策略训练的 AI Agent，在链上全自动参与全链游戏（Fully On-chain Game）并赚取收益。
+        
+    -   _方向二：_ 利用 ZK 技术为个人身份/隐私数据建模的去中心化 ID（DID）系统。
+        
+-   **今日心得：** Bootcamp 结束只是开始。AI+Web3 的爆发点在于创造出“只有在链上才能生存、传统 Web2 无法实现”的原生 AI 应用。
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 ### 前沿项目拆解与黑客松思考
 
 -   **明星项目拆解：**
@@ -37,6 +57,7 @@ AI x Web3 School
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 ### Day 4：AI + Web3 的代币经济学（Tokenomics）
 
 -   **核心概念：** 如何用 Token 驱动 AI 生态的飞轮？Web3 为 AI 引入了全新的数据贡献与标注激励机制。
@@ -54,6 +75,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 ### zkML（零知识机器学习）—— 解决信任问题
@@ -76,11 +98,13 @@ AI x Web3 School
 
 
 
+
 学习agent eco治理
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -95,11 +119,13 @@ AI x Web3 School
 
 
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -197,11 +223,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
