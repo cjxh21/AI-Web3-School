@@ -167,7 +167,7 @@ more information
 | [resurrection-i](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/resurrection-i.md) | ⭕️ | ✅ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [hellolukeding](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hellolukeding.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [20031012qsl-web](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/20031012qsl-web.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [kyooo1232](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kyooo1232.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | |
+| [kyooo1232](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/kyooo1232.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | |
 | [yangyuwen-bri](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yangyuwen-bri.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | |
 | [ywan6541](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ywan6541.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LiCheng-Li](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LiCheng-Li.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
