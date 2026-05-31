@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+今日在思考黑客松的方向
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 ````markdown
 方向     ：Identity / Reputation / Capability
 场景     ：AI 学习 Agent 分析学生行为 → 生成能力报告 → 链上存证 → 第三方可验证
@@ -366,11 +372,13 @@ Week 3 Hackathon 要验证的 3 件事：
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 [https://github.com/ivychan504-cyber/ai-web3-school-cohort-0/commit/c57acbef933963007b4720b85a3074c4739e177f](https://github.com/ivychan504-cyber/ai-web3-school-cohort-0/commit/c57acbef933963007b4720b85a3074c4739e177f)
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -411,11 +419,13 @@ D模块
 
 
 
+
 今天搭建了钱包模拟器
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -436,6 +446,7 @@ D模块
 
 
 
+
 今天，主要是把我剩下的会议没看完的看完了，我蛮遗憾没能参加直播的，可以提出一些问题
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
@@ -448,11 +459,13 @@ D模块
 
 
 
+
 今天休息了，但是我看了KPI调用
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -475,6 +488,7 @@ D模块
 
 
 
+
 对了还有老师关于产品的一些概念，我还是满认同的，产品研发和产品运营这是两个领域，虽然鼓吹一人公司，但是现在不存在酒香不怕巷子深这个理念，产品运营也是很关键的一环，这个想法我也很早就有，好像是从那个马克扎前几年收购的数据标注公司创始人露西郭来的，还是要学会和人合作，要不然就要两者都精通，其实这是很难的
 
 随着AI技术的发展，最好还是以始为终，产品设计还是要放在最前沿，我觉得产品经理这条路还是满宽阔的
@@ -482,6 +496,7 @@ D模块
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -553,6 +568,7 @@ D模块
 
 
 
+
 1.  学习LLM、以及AI相关基础概念
     
 2.  LLM 即大语言模型，四个控制层面指的是：上下文窗口、系统指令、提示词（决策在人)、工具调用
@@ -583,6 +599,7 @@ D模块
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
