@@ -15,8 +15,75 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+### **任务产出**
+
+Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
+
+### **交付物**
+
+`tasks/Week2-Deep-Dive.md`（新生成）
+
+7 个部分，均标注来源文件：
+
+1.  **问题地图**（来源：Day 9 `tasks/Week2-Problem-Map-and-Direction.md`）
+    
+    -   6 个方向，每个方向 AI 作用 + Web3 机制 + 关键标准 + 未解决问题
+        
+    -   主方向：**Payment / Commerce**（Hackathon 扫描发现"操作可见性"方向空白）
+        
+2.  **方向说明**（来源：同上）
+    
+    -   为什么不是纯 AI 问题：信任/结算/验证需要 Web3
+        
+    -   为什么不是纯 Web3 问题：动态决策需要 AI
+        
+    -   为什么现在切入：33 个 ETHGlobal Hackathon 项目，几乎没人做"让人类看清 Agent 干了什么"
+        
+3.  **问题拆解**（来源：Day 10-12 多文件）
+    
+    -   参与方 / 流程 / AI 作用 / Web3 机制
+        
+    -   自动化边界 + 人工确认点（来源：`agent-wallet-permission-strategy.md`）
+        
+    -   验证方式 + 主要风险
+        
+4.  **Proposal 框架**（初步，待 Week 3 完善）
+    
+    -   目标用户：DeFi 仓位管理用户 / 小型 DAO / 开发者
+        
+    -   MVP：地址监控 + 自然语言日志 + 异常告警 + 分级响应
+        
+    -   可能赛道：ETHGlobal / Base 生态
+        
+5.  **参考资料清单**（7 条，均标注来源）
+    
+    -   x402 / ERC-8183 / ERC-8004 / Safe+EIP-7702 / Cobo CAW / ETHGlobal Hackathon / Threat Model
+        
+6.  **主方向深挖包**
+    
+    -   典型场景：Agent x402 支付 10 步完整流程
+        
+    -   反例：Prompt Injection 三层拦截
+        
+    -   风险组：6 项风险 + 防御手段
+        
+    -   验证计划：Hackathon Demo 5 步
+        
+7.  **方向 Backlog**
+    
+    -   Wallet / Identity / Privacy 三个未选方向及原因
+        
+
+`diagrams/week2-problem-map.excalidraw`（新生成） 6 方向色块图，Payment 用红框标出为主方向 Excalidraw 链接：[https://excalidraw.com/#json=zLfc1Csd0ZjlmnyMrvsjA,CnIBngfxUpdVD9rcUXcXxA](https://excalidraw.com/#json=zLfc1Csd0ZjlmnyMrvsjA,CnIBngfxUpdVD9rcUXcXxA)
+
+`diagrams/week2-payment-flow.excalidraw`（新生成） Payment 方向典型场景：10 步流程图（用户→Pact→Agent→x402 Server→BudgetGuard→CAW→链上→审计日志） Excalidraw 链接：[https://excalidraw.com/#json=rrFimAYdOovEuhIGByyd3,IT9oE2VXwUR11EfJcfQ7ow](https://excalidraw.com/#json=rrFimAYdOovEuhIGByyd3,IT9oE2VXwUR11EfJcfQ7ow)
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 ## **LXDAO 治理流程 AI 辅助方案**
 
 任务：选一个 DAO / 社区流程，拆出 AI 可以辅助的步骤，以及必须由人或治理流程确认的步骤。
@@ -43,6 +110,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 ## **ETHGlobal OpenAgents Hackathon 项目扫描**
 
@@ -171,6 +239,7 @@ Agent GET /analyze → 402 (payment info)
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 ### **任务 1：Agent Profile Design**
 
 以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
@@ -287,6 +356,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -346,6 +416,7 @@ Agent GET /analyze → 402 (payment info)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -477,6 +548,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -750,6 +822,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -828,6 +901,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -882,6 +956,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -999,6 +1074,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1427,6 +1503,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1659,6 +1736,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -2050,6 +2128,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
