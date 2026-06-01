@@ -15,8 +15,56 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+### Q1：如果现在开始职业生涯，选 AI、Web3 还是 AI+Web3？
+
+**A**：优先 **Web3**（更开放，可构建自己的项目，不依赖闭源平台），AI 作为**加速工具**。  
+未来十年是 **Agentic Economy**：agent 会使用 Web3 进行支付和交互，可能比人类使用得更频繁。
+
+### Q2：早期 builder 如何建立个人品牌？实际步骤？
+
+**A**：
+
+1.  加入有 structured program 的社区（学习路径 + 合作伙伴）
+    
+2.  完成项目 → 代码出现在 GitHub → 被看到
+    
+3.  贡献开源 → 参与黑客松 → 成为大使
+    
+4.  在社区中做 mentor 或 speaker
+    
+
+### Q3：如何 cold message 陌生人（mentor / 合作方）？
+
+**A**：
+
+-   通过**共同社区**或**共同联系人**介绍，回复率远高
+    
+-   确保你的 X / LinkedIn 档案显示共同联系，让对方知道你不是 scammer
+    
+-   也可尝试项目 Discord 开 ticket
+    
+
+### Q4：艺术背景，缺乏工程直觉，如何 build 出“有 taste”的产品？
+
+**A**：
+
+-   使用 **Vibe coding** 工具（Cursor + 设计类 skill）
+    
+-   发挥你的**设计优势**（Figma 等），套用到项目前端
+    
+-   可选用已有框架（如 Solana 上的 **Noa**），快速搭建全栈
+    
+-   具体问题可私下联系（分享人愿意帮忙）
+    
+
+* * *
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 # Web3与AI发展策略会
 
 | 行动 | 说明 |
@@ -35,6 +83,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 ### 1\. 小额免密支付场景
 
@@ -86,6 +135,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 ## 一、Cobo 的可信执行链路（四步闭环）
@@ -163,6 +213,7 @@ Pact 执行流程
 
 
 
+
 ## Cobo 的可信执行链路（四步闭环）
 
 1.  **Agent submit** → 发起请求
@@ -179,6 +230,7 @@ Pact 执行流程
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -213,6 +265,7 @@ Pact 执行流程
 
 
 
+
 ### 1\. Agentic commerce 的下一个突破在哪里？
 
 **大型企业的支付场景**（Stripe、Bridge、Visa 等正在布局 AI 驱动的支付与交易）。
@@ -239,6 +292,7 @@ Pact 执行流程
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -282,6 +336,7 @@ Pact 执行流程
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -370,6 +425,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 一、实现原理
 
 1.  **Bittensor**：子网定义规则 → 矿工提供服务 → 验证者评分 → 链上结算 → 奖励
@@ -405,6 +461,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 | 方向 | 解决什么问题 | 主案例 | 核心原理 |
 | --- | --- | --- | --- |
 | 1. 去中心化 AI 基础设施 | 算力、存储、模型服务如何组织与激励 | Bittensor | Subnet 定义任务 → Miner 提供服务 → Validator 评估质量 → 链上共识 → Token 奖励优质供给 |
@@ -416,6 +473,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -438,6 +496,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
