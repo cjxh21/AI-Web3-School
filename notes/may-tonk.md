@@ -15,8 +15,221 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+# **Phase 3 Real Token Batch 1**
+
+Date: 2026-06-01
+
+Purpose: record the first real BNB token batch after Phase 3 API integration, and use the results to calibrate risk rules.
+
+## **Current Pipeline**
+
+The real analysis flow now combines:
+
+-   Dune: trading activity, five-minute flow, early buyers, early buyer funding.
+    
+-   DexScreener: market, liquidity, price, pair, and transaction windows.
+    
+-   GoPlus: token security, owner, holder count, contract metadata.
+    
+-   [Honeypot.is](http://Honeypot.is): buy/sell simulation, honeypot status, buy tax, sell tax.
+    
+-   Nansen: smart money holdings and token holder intelligence when credits are available.
+    
+-   BNB RPC: direct chain reads such as owner and totalSupply.
+    
+
+Etherscan V2 is configured, but the free API plan does not support BNB Chain full coverage.
+
+## **Batch Results**
+
+| Token | Symbol | Grade | Action | Risk | Security | Entity | Liquidity USD | 24h Volume USD | 24h Change | Honeypot | Buy Tax | Sell Tax | Holders | Nansen Signal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0xf500d904b07ac6214be407b69fe817a82eac7777 | 世界杯纪念币 | D | filter | 100 | 0 | 50 | 27,518.41 | 14,002.91 | 7.05% | false | 3.99% | 3.98% | 2,520 | false |
+| 0x90166915b98d24d284c56de3b9f4ed59338f7777 | 꽈따 | C | store_only | 65 | 0 | 50 | 30,454.50 | 15,960.13 | -27.75% | false | 4.00% | 3.98% | 880 | unavailable |
+| 0x3d96b30ba2c08724b70efff1ad16d005db1c7777 | 野马 | D | filter | 100 | 0 | 40 | 19,302.30 | 10,923.22 | -30.93% | false | 4.00% | 3.97% | 1,459 | false |
+| 0x90507254e9c594e728172b9d217f4ab1a2ee7777 | 美蛙 | D | filter | 95 | 0 | 50 | 30,088.99 | 486.44 | -5.03% | false | 4.99% | 4.97% | 1,498 | unavailable |
+
+## **Token Notes**
+
+### **0xf500d904b07ac6214be407b69fe817a82eac7777**
+
+Symbol: 世界杯纪念币
+
+Result: D / filter
+
+Main risk rules:
+
+-   negative\_latest\_net\_buy
+    
+-   sell\_pressure\_dominates
+    
+-   repeated\_negative\_net\_buy
+    
+-   early\_buyer\_exit\_ratio\_high
+    
+-   shared\_funder\_cluster
+    
+
+Security layer:
+
+-   Honeypot: false
+    
+-   Owner renounced: true
+    
+-   Buy tax around 4%
+    
+-   Sell tax around 4%
+    
+-   Security score: 0
+    
+
+Observation: the token is filtered mainly because of trading behavior and early-buyer structure, not because of direct contract security flags.
+
+### **0x90166915b98d24d284c56de3b9f4ed59338f7777**
+
+Symbol: 꽈따
+
+Result: C / store\_only
+
+Main risk rules:
+
+-   early\_buyer\_exit\_ratio\_high
+    
+-   shared\_funder\_cluster
+    
+
+Security layer:
+
+-   Honeypot: false
+    
+-   Owner renounced: true
+    
+-   Buy tax around 4%
+    
+-   Sell tax around 4%
+    
+-   Security score: 0
+    
+
+Observation: this token is the least severe in the batch. It still has early-buyer exit and shared-funder risk, so it is suitable for storage/monitoring rather than priority research.
+
+### **0x3d96b30ba2c08724b70efff1ad16d005db1c7777**
+
+Symbol: 野马
+
+Result: D / filter
+
+Main risk rules:
+
+-   low\_liquidity
+    
+-   negative\_latest\_net\_buy
+    
+-   sell\_pressure\_dominates
+    
+-   repeated\_negative\_net\_buy
+    
+-   early\_buyer\_exit\_ratio\_high
+    
+-   shared\_funder\_cluster
+    
+
+Security layer:
+
+-   Honeypot: false
+    
+-   Owner renounced: true
+    
+-   Buy tax around 4%
+    
+-   Sell tax around 4%
+    
+-   Security score: 0
+    
+
+Observation: this token combines low liquidity, strong recent sell pressure, early-buyer exit, and shared-funder risk. It is a clear filter result under the current rules.
+
+### **0x90507254e9c594e728172b9d217f4ab1a2ee7777**
+
+Symbol: 美蛙
+
+Result: D / filter
+
+Main risk rules:
+
+-   negative\_latest\_net\_buy
+    
+-   sell\_pressure\_dominates
+    
+-   early\_buyer\_exit\_ratio\_high
+    
+-   shared\_funder\_cluster
+    
+
+Security layer:
+
+-   Honeypot: false
+    
+-   Owner renounced: true
+    
+-   Buy tax around 5%
+    
+-   Sell tax around 5%
+    
+-   Security score: 0
+    
+
+Observation: liquidity is not the weakest in the batch, but 24h volume is low and the token still triggers sell-pressure, early-exit, and entity-cluster risks.
+
+## **Cross-Batch Observations**
+
+1.  Contract security did not drive the filter decisions in this batch.
+    
+    All four tokens had security\_score = 0, [Honeypot.is](http://Honeypot.is) returned false, and owner renounced was true.
+    
+2.  Behavioral risk drove most decisions.
+    
+    The most common triggers were:
+    
+    -   early\_buyer\_exit\_ratio\_high
+        
+    -   shared\_funder\_cluster
+        
+    -   negative\_latest\_net\_buy
+        
+    -   sell\_pressure\_dominates
+        
+3.  Entity clustering is consistently active.
+    
+    Every token triggered shared-funder evidence. This may be a strong signal for BNB meme-token launches, but it needs calibration against more baseline samples.
+    
+4.  Nansen credits are a current limitation.
+    
+    Nansen returned valid results in earlier smoke tests, but this batch hit insufficient credits for some calls. The pipeline handles this as an API warning and continues.
+    
+5.  Etherscan V2 is not part of the active signal set.
+    
+    The key is configured, but free BNB Chain coverage is unavailable. This does not block the current workflow because BNB RPC, Dune, and GoPlus cover the core needs.
+    
+
+## **Calibration Questions**
+
+-   Is early\_buyer\_exit\_ratio\_high too strict for fast-moving BNB meme tokens?
+    
+-   Should shared\_funder\_cluster be softened when cluster size is small but common in launch behavior?
+    
+-   Should recent net-buy pressure be weighted by liquidity and 24h volume?
+    
+-   Should tokens with clean contract security but bad behavior always receive D/filter?
+    
+-   Do we need a separate monitor\_only category between store\_only and filter?
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 今天阶段三的核心开发基本完成了，已经不只是计划层面，而是把主要代码骨架和评分能力都接上了。
 
 **今天已完成**
@@ -164,6 +377,7 @@ AI x Web3 School
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
+
 快考试了，今天继续复习，再请假一天，明天全部补上；
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
@@ -172,11 +386,13 @@ AI x Web3 School
 
 
 
+
 这两天快考试了，明天会继续补上学习内容
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -551,6 +767,7 @@ ORDER BY 1;
 
 
 
+
 ## 继续学习AI+链上数据分析
 
 ## **如何 像数据分析师一样处理链上数据**
@@ -637,6 +854,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 
 
+
 **今天手动打卡，总结一下最近学习的内容和研究的方向**
 
 对于meme币，我一直都是充满幻想和喜欢的，但是市场上太多的币种是没有然后对成长价值，就连最基本的安全和信任也没有，找到一个短期或是是长期潜力比较大的一个币是比较不容易的，我们不仅要去详细了解代币的安全性和代币的分配，还要去看链上的数据，是否是真实玩家买入，狗庄的格局，是否存在大量的机器人刷单，叙事和用户情绪怎么样，判断当前是否值得去投资，什么时候该撤退；所以现在我在做一个链上数据分析（识别bot，是否大量代币来至同一个钱包，是否大量钱包时最近在进行创建，是否是左手倒右手等等），通过接入各家相应平台的API来进行相应的筛选BNB链上的meme，筛选出值得研究的，在进行下一步的数据补充和分析，然后AI进行相应的报告的产生，这期间AI是可以对我们处理的数据结果根据相应的规则进行解释和分析建议和需要数据的补充进行下一步的分析；然后因为meme的短暂性，所以我们推荐值得研究的4个等级的meme会进行相应的AI复盘，AI可以参与到我们规则的相应的调整；
@@ -644,6 +862,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -797,6 +1016,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1365,6 +1585,7 @@ AI 的输出应该回答：
 
 
 
+
 ### 1\. 基本概念概述
 
 -   **EOA（Externally Owned Account，外部拥有账户）** 传统钱包账户，由私钥直接控制。最常见的 MetaMask 默认账户。
@@ -1458,6 +1679,7 @@ AI 的输出应该回答：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1852,6 +2074,7 @@ Holder 汇总中观察到：
 
 
 
+
 几天继续了链上数据分析，AI+Defi投研报告自动项目的学习详细链接[链接](https://github.com/may-tonk/ai-web3-school-cohort-0/tree/codex/chainmind-foundation)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -1869,11 +2092,13 @@ Holder 汇总中观察到：
 
 
 
+
 **今天和AI探讨了链上数据分析，AI+Defi的想法，简单的建立了一个工作项目计划，内容太多了，上传到了AI x Web3school的GitHub了；详细请查看**[**链接**](https://github.com/may-tonk/ai-web3-school-cohort-0/blob/master/daily/2026-05-19/AI_DeFi_Meme_Workflow_%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.md)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
