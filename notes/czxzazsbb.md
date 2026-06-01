@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+补前几天的学习视频
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 ### **一、核心概念**
 
 1.  **长期记忆（Long-term Memory, LTM）**
@@ -132,6 +138,7 @@ AI x Web3 School
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 ### 1\. **Account（账户）**
 
 -   **一句话解释**：区块链上的身份，可以用来接收、发送资产或调用智能合约。
@@ -222,6 +229,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
 
+
 1\. agent是智能体或者代理。
 
 2\. LLM（大语言模型）：输入--LLM--输出(无法自己调用工具)
@@ -264,6 +272,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
