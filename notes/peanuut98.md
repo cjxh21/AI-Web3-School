@@ -15,8 +15,46 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+Day 15 · 2026-06-01 · @peanuut98 · Week 3 / Day 1 — Vibe Coding 武装周开篇
+
+今日学习：
+
+\- Handbook · Vibe Coding：核心不是"AI 写代码"，是"人和 AI 共同维护一个可演进的项目"；3 个常见误读（"AI 写代码 = 扔需求等结果" / "Vibe Coding = prompt engineering" / "用 AI = 不用懂代码"）；3 个落地硬动作（每个项目写 README + [CLAUDE.md](http://CLAUDE.md) / 一开始让 AI 看到所有约束 / 改动切到一次能验证完）。
+
+\- 关键直觉：Vibe Coding ≈ 给 AI 配一份"项目使用说明书"，对偶 Day 10 / 13 那条 ABI ≈ tool schema 的认知 — 链上合约用 ABI 告诉外面怎么调它，项目用 README + [CLAUDE.md](http://CLAUDE.md) + 文件结构告诉 AI 怎么改它。
+
+\- 装 Cursor + 在 ~/vibe-sandbox 跑通 Hello World；Cursor vs Claude Code 初步分工：Cursor 适合 UI / 单文件 / 看 diff 决策，Claude Code 适合跨文件 / 跑命令 / 整理仓库。
+
+\- 给 Day 16–21 排出每天一个能验证的产出（MCP / Frameworks / ethers.js 读 Sepolia / Round 3 feedback / 周末 WCB 任务）。
+
+\- 补开 Day 11 留下的 3 个 GitHub issue（Session Key 额度合约实现 / Bundler fallback / Simulation 自动调用成本控制）。
+
+最大的认知变化：
+
+\- Vibe Coding 的关键不是 prompt，是"项目本身可读" — 大部分"AI 用不顺"的根因是项目状态，不是 prompt 写得不好；这是我能改的事，且改一次受益整个项目生命周期。
+
+\- 非传统开发者用 Vibe Coding 的杠杆点在判断力（读 / 测 / 接受 diff / 抓 AI 胡说），不在手速；目标不是让自己变成会裸写代码的人，是让自己变成能让 AI 写出能跑代码的人。
+
+卡点：
+
+\- Cursor / Claude Code 的分工今天只是初步印象，要 Day 17–18 跑真实任务（ethers.js 读 Sepolia）后再校准。
+
+\- 3 个 GitHub issue 命令准备好了，跑出 URL 回填本文。
+
+明日 / 下一步：
+
+\- Day 16：Handbook · MCP + 给 Claude Code 接最小 filesystem MCP，体感"MCP = 给项目说明书加动手能力"。
+
+\- Day 18：让 Claude Code 帮我跑一段 ethers.js 读 Sepolia 余额，作为 Week 3 真正的硬验证点。
+
+🔗 [https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-06-01.md](https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-06-01.md)
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 Day 14 · 2026-05-31 · @peanuut98
 
 今日学习：
@@ -57,6 +95,7 @@ Day 14 · 2026-05-31 · @peanuut98
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
+
 Day 13 · 2026-05-30 · @peanuut98
 
 今日学习：
@@ -96,6 +135,7 @@ Day 13 · 2026-05-30 · @peanuut98
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
 
+
 Day 12 · 2026-05-29 · @peanuut98
 
 今日学习：
@@ -131,6 +171,7 @@ Day 12 · 2026-05-29 · @peanuut98
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -173,6 +214,7 @@ Day 11 · 2026-05-28 · @peanuut98
 
 
 
+
 Day 10 · 2026-05-27 · @peanuut98
 
 今日学习：
@@ -204,6 +246,7 @@ Day 10 · 2026-05-27 · @peanuut98
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -461,6 +504,7 @@ Day 10 · 2026-05-27 · @peanuut98
 
 
 
+
 Day 7 · 2026-05-24 · @peanuut98
 
 今日学习：
@@ -492,6 +536,7 @@ Day 7 · 2026-05-24 · @peanuut98
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -540,6 +585,7 @@ Day 6 · 2026-05-23 · @peanuut98
 
 
 
+
 Day 3 · 2026-05-20 · @peanuut98
 
 今日学习：
@@ -580,6 +626,7 @@ Day 3 · 2026-05-20 · @peanuut98
 
 
 
+
 Day 2 · 2026-05-19 · @peanuut98
 
 今日学习：
@@ -605,6 +652,7 @@ Day 2 · 2026-05-19 · @peanuut98
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
