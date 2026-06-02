@@ -15,8 +15,146 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+## **一、SafePay Guard Wallet Hackathon 完整套件**
+
+今天把 SafePay Guard Wallet 项目从方向卡到范围控制全部整理成文档，共 9 份：
+
+| # | 文档 | 要点 |
+| --- | --- | --- |
+| 01 | 方向卡 | 模拟钱包/权限/安全执行，单行，问题定义 |
+| 02 | 提案备忘录 | 项目提案，目标用户，为什么现在 |
+| 03 | 仓库骨架 | 仓库结构+模块拆分计划 |
+| 04 | 冲刺计划 | 开发期排 |
+| 05 | 风险备忘录 | 技术风险、团队风险、市场风险 |
+| 06 | 赞助人/导师问题 | 给导师和赞助商的问题清单 |
+| 07 | Cobo Track Fit | 与 Cobo Agentic Wallet 的匹配分析 |
+| 08 | 假设与备选方案 | 假设条件、失败模式、第4周降级方案 |
+| 09 | 范围控制与非目标 | 第 4 周 范围控制 + 明确不做的事 |
+
+核心方向：
+
+```
+User intent → Agent proposal → SafePay normalize → Policy check
+→ allow / deny / confirm → Safe/CAW enforce → audit log
+```
+
+* * *
+
+## **二、第3周深度阅读：安全钱包主方向**
+
+精读三个核心标准/SDK：
+
+### **ERC-4337 账户摘要**
+
+-   让账户变成即时执行环境（不仅仅是一个私钥）
+    
+-   用户操作 → 入口点 → 打包器 → 付款人流程
+    
+-   对SafePay价值：会话密钥、消费限额、政策可放账户层
+    
+-   **边界**：不直接解决AI代理安全，需要上层守卫/策略
+    
+
+### **安全智能账户 + 防护/模块**
+
+-   安全多签架构+模块系统（AllowanceModule、Zodiac等）
+    
+-   守卫模式：交易执行前做安全检查
+    
+-   会话密钥四约束全部有链上对应
+    
+
+### **LI.FI 代理集成**
+
+-   Agent如何获得真实执行的跨链交易请求
+    
+-   x402 → LI.FI → 安全的完整仓库
+    
+
+→ 阅读摘要见`references/week3-safe-wallet-reading-summary.md`
+
+* * *
+
+## **三、SafePay最小化解决方案**
+
+设计了SafePay的最小闭环：
+
+```
+用户意图 → Agent 准备动作 → 工具/SDK 返回交易请求
+→ SafePay 标准化事实 → Policy 判断（allow/deny/confirm）
+→ Wallet/Safe/CAW 执行 → 结果 + 审计证据记录
+```
+
+→ 设计文档见`references/week3-safepay-minimal-loop.md`
+
+* * *
+
+## **四、迭代匹配：Cobo Agentic Wallet**
+
+确认SafePay与Cobo Agentic Wallet高度匹配：
+
+-   Cobo 的 MPC + 策略引擎 + 代理 SDK
+    
+-   SafePay的把守+政策+审计的互补
+    
+-   提交了正式赛道选择
+    
+
+→ 分析见`hackathon/safepay-guard-wallet/07-cobo-track-fit.md`
+
+* * *
+
+## **五、风险与降级**
+
+### **关键假设**
+
+-   有稳定的 RPC 和捆绑器
+    
+-   目标链安全合约部署已
+    
+-   代理输出可解析为构造交易
+    
+
+### **第4周降级方案**
+
+若核心集成受阻→先做策略模拟+演示原型，不要求链上全流程
+
+* * *
+
+## **进展**
+
+-   ✅ SafePay Guard Wallet 黑客马拉松套餐（9 份文档）
+    
+-   ✅ 第三周安全钱包深度阅读（ERC-4337 / Safe / LI.FI）
+    
+-   ✅ SafePay最小闭环设计
+    
+-   ✅ Cobo 轨迹近期匹配确认
+    
+-   ✅ 假设、失败模式和降级方案
+    
+-   ✅ 第 4 周范围控制+非目标
+    
+-   🔜 第四周：进入代码实现阶段
+    
+
+* * *
+
+## **累积文件**
+
+| 文件 | 说明 |
+| --- | --- |
+| hackathon/safepay-guard-wallet/ | 黑客马拉松完整套件（9文档） |
+| references/week3-safe-wallet-reading-summary.md | 第三周阅读摘要 |
+| references/week3-safepay-minimal-loop.md | SafePay最小循环设计 |
+| submissions/ | 各阶段提交物（提案/赛道选择/等） |
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 Cobo 赛道的核心要求是：项目必须围绕 **Agent 与资金操作场景** 展开，并且资金相关操作需要通过 **Cobo Agentic Wallet (CAW)** 完成。
 
 根据今天的判断，当前项目状态如下：
@@ -64,6 +202,7 @@ Cobo 赛道的核心要求是：项目必须围绕 **Agent 与资金操作场景
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 AI Agent Server Wallet 与 [LI.FI](http://LI.FI) Agent Integration 学习
 
@@ -114,6 +253,7 @@ Audit records.
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 Week 2 总结：AI x Web3 Bridge 深挖 - 安全钱包方向
@@ -182,6 +322,7 @@ Week 3 下一步：
 
 
 
+
 ```
 传统以太坊的痛点：
 
@@ -206,6 +347,7 @@ Week 3 下一步：
 
 
 
+
 ```
 线 1：Agent 怎么做事？
   ├── MCP  → Agent ↔ 工具（发现 + 调用）
@@ -222,6 +364,7 @@ Week 3 下一步：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -259,6 +402,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 ## **提示工程（让Agent从“靠运气”到“稳定可控”）**
 
 ### **1\. 系统提示符与用户提示符**
@@ -288,6 +432,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -352,11 +497,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -396,6 +543,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -409,6 +557,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -441,6 +590,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -459,11 +609,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
