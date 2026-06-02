@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-06-02-1780405191050-__.PNG)
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-06-01-1780286579414-__.PNG)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
+
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-05-30-1780148175396-__.PNG)
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-05-29-1780049128848-__.PNG)
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-05-28-1779957994245-__.PNG)
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-05-25-1779716116281-__.PNG)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -80,11 +92,13 @@ AI x Web3 School
 
 
 
+
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-05-21-1779376700258-__.PNG)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -107,11 +121,13 @@ AI x Web3 School
 
 
 
+
 ![捕获.PNG](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Sofia16/images/2026-05-19-1779202620680-__.PNG)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
