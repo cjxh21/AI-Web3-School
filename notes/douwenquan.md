@@ -15,8 +15,58 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+# Daily: 2026-06-03
+
+> 黑客松赛道实战 + Co-learning + Repo Skeleton
+
+* * *
+
+## 今日活动
+
+### 1\. Co-learning — 赛道选择交流
+
+了解了大家当前的赛道选择情况和 idea 创意。
+
+### 2\. 🔴 黑客松赛道实战 — Cobo 专场
+
+Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
+
+* * *
+
+## 今日完成
+
+| 任务 | 积分 | 状态 |
+| --- | --- | --- |
+| Week 3｜线上活动｜实时参加 6.03｜黑客松赛道实战 | 20 | ✅ 已提交 |
+| 🛡️ Repo Skeleton（DCA Agent 项目仓库） | 20 | ✅ 已提交 |
+| 🛡️ Week 4 Sprint Plan | 20 | ✅ 已提交 |
+| 🛡️ 项目一句话说明 | 10 | ✅ 已提交 |
+| 今日小计 | 70 |   |
+
+## 本地产出
+
+| 文件 | 说明 |
+| --- | --- |
+| daily/2026-06-03.md | 今日学习记录 |
+| hackathon/repo-skeleton-draft.md | Repo Skeleton 草稿 |
+| ~/DCA Agent/ | 实际项目仓库（已 push 到 GitHub） |
+
+* * *
+
+## 明日计划（6/4）
+
+| 时间 | 任务 | 积分 |
+| --- | --- | --- |
+| 12:00 | 🔴 支付场景的探索和思考 | 20 |
+| 会后 | 项目架构设计 |   |
+|   |   |   |
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 # Daily: 2026-06-02
 
 > Hackathon OpenDay + Week 3 项目启动
@@ -74,6 +124,7 @@ AI x Web3 School
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 # Daily: 2026-06-01
 
@@ -148,6 +199,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 # Daily: 2026-05-31
@@ -264,6 +316,7 @@ AI x Web3 School
 
 
 
+
 # 2026-05-30 每日学习笔记
 
 ## 学习内容
@@ -333,6 +386,7 @@ AI x Web3 School
 
 
 
+
 # 2026-05-29 每日学习笔记
 
 ## 学习内容
@@ -360,6 +414,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -438,6 +493,7 @@ AI x Web3 School
 
 
 
+
 **第一部分：学习总结**
 
 > 今天完成了 AI × Web3 Bridge 剩余 8 个章节的全面速览：
@@ -470,6 +526,7 @@ AI x Web3 School
 
 
 
+
 **第一部分：今日学习总结**
 
 > 今天重点完成了 Week 1 收尾任务和 Week 2 预热：
@@ -487,6 +544,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -517,11 +575,13 @@ AI x Web3 School
 
 
 
+
 今天主要学习和了解web3的相关文档和知识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -585,6 +645,7 @@ AI x Web3 School
 
 
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -624,6 +685,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -697,6 +759,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -823,6 +886,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -849,6 +913,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
