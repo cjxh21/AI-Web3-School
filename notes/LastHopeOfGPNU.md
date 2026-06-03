@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+1.  参加 Co-learning｜任务推进与答疑（19:00–20:00），学习任务拆解与 PoW 整理方法论
+    
+2.  参加黑客松赛道实战（20:00–21:00，嘉宾 Moon），学习赛道拆解、MVP 识别、冲刺节奏规划
+    
+3.  阅读 Cobo WaaS 2.0 Developer Hub 文档：Overview、Get Started、钱包类型（Custodial / MPC / Smart Contract）、交易流程、Webhooks
+    
+4.  建立钱包基础设施认知：三种钱包模式的适用场景与技术选型思考
+    
+5.  初步构想 Hackathon 技术架构中 WaaS 的定位
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 1.  完成 Week 1 Proof-of-Work Pack 整理：AI/Web3 概念卡片、权限对比、AI × Web3 workflow × 2、项目拆解、学习总结，共 6 份结构化文档
     
 2.  3 个动手实验回顾（Sepolia Chainlink 只读调用、AI 合约阅读教练、Agent Paywall 闭环）
@@ -31,6 +45,7 @@ AI x Web3 School
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 1.  完成 Week 1 Web3 实践：在 Sepolia 测试网通过 JSON-RPC eth\_call 调用了 Chainlink ETH/USD Price Feed 合约
     
 2.  手动实现了 ABI 编码/解码（函数选择器、uint256、int256、string、tuple），零依赖
@@ -44,6 +59,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
 
+
 1\. 完成了 AI 6 大概念（LLM / Prompt / Context Window / Workflow / Agent / Tool Use）梳理
 
 2\. 完成了 Web3 8 大概念（Account / Address / Wallet / Seed Phrase / Private Key / Signature / Transaction / Gas）梳理
@@ -55,6 +71,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -75,6 +92,7 @@ AI x Web3 School
 
 
 
+
 今日完成：
 
 -   x402 Paywall + CAW Agent 自主支付闭环（9 文件 Node.js demo）
@@ -86,6 +104,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -110,6 +129,7 @@ AI x Web3 School
 
 
 
+
 今日参加了 AI × Web3 School 的学习：
 
 -   Product manager of Cobo Agentic Wallet
@@ -128,12 +148,14 @@ AI x Web3 School
 
 
 
+
 完成了**AI × Web3 问题地图与主方向选择**  
 [ai-web3-school-cohort-0/tasks/week\_2/ai\_web3\_](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)[map.md](http://map.md) [at master · LastHopeOfGPNU/ai-web3-school-cohort-0](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -391,6 +413,7 @@ Safe 官方文档称其自 2018 年以来经过审计和测试，并已有大量
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -716,6 +739,7 @@ Session Key 可以理解为“临时授权密钥”。
 
 
 
+
 ## OpenZeppelin Contracts 学习笔记
 
 ## 1\. 它是什么
@@ -954,6 +978,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 ### 今日完成
 
 -   \[x\] 参与活动 — AI 下乡计划 | AI 在 Web 3 的应用
@@ -1000,6 +1025,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 今天参加了 Web3 运行原理课，对于课后提出的四个思考问题：
 
 **1\. 资产自托管的安全 vs 易用** 打破「越安全越难用」的权衡，关键在策略组合：TSS/MPC 分布式存密钥片段 + Social Recovery 信任链恢复 + 抽象 UX（用身份/口令替代裸私钥）。
@@ -1015,6 +1041,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1048,6 +1075,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
