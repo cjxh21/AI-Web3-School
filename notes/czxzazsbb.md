@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+1.intent的识别是怎么做的？靠大模型还是规则？然后policy的策略如何 维护，手动还是自动？
+
+由agent创建，agent根据用户意图完成，用户在确认的时候看释放的权限和意图是否一致。
+
+2.Pact 只负责约束 agent 能不能在授权范围内付款，比如指定合约、token、金额和有效期；但订阅状态、到期失效、访问控制，应该由平台后端或订阅合约判断，而不是 Pact 本身负责。
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-03-1780490873247-image.png)![屏幕截图 2026-06-03 204010.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-03-1780492430372-_____2026-06-03_204010.png)
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 了解黑客松相关信息比如赛道、规则 奖金
 
 -   时间安排6.13提交截止
@@ -43,11 +55,13 @@ AI x Web3 School
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 补前几天的学习视频
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 ### **一、核心概念**
@@ -167,6 +181,7 @@ AI x Web3 School
 
 
 
+
 ### 1\. **Account（账户）**
 
 -   **一句话解释**：区块链上的身份，可以用来接收、发送资产或调用智能合约。
@@ -259,6 +274,7 @@ AI x Web3 School
 
 
 
+
 1\. agent是智能体或者代理。
 
 2\. LLM（大语言模型）：输入--LLM--输出(无法自己调用工具)
@@ -301,6 +317,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
