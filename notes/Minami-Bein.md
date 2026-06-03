@@ -14,6 +14,346 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+# Day 17 技术打卡报告：用户建模与问题空间定义
+
+---
+
+## 1. Executive Summary & Problem Space
+
+### 摘要（Abstract）
+
+本报告为 AI x Web3 School 第 17 天学习记录，聚焦于**用户建模（User Modeling）**与**问题空间定义（Problem Space Definition）**。基于前序学习积累的系统直觉，结合赛道选择结论（Day 15），通过深度用户访谈框架、痛点矩阵构建与替代方案对比，完成目标用户群体的精准画像与核心问题的形式化定义。本日产出为 `hackathon/problem-definition.md`，为后续最小可行 Demo（MVP）设计奠定需求基础。
+
+**核心技术挑战：**
+
+| 挑战维度 | 具体问题 | 当前状态 |
+|---------|---------|---------|
+| 用户需求模糊 | Web3 新手用户难以理解链上操作风险边界 | 待验证 |
+| Agent 权限失控 | AI Agent 执行 Web3 操作时缺乏安全的确认机制 | 已识别 |
+| 上下文断裂 | LLM 无法实时感知链上状态变化 | 待解决 |
+| 学习曲线陡峭 | 现有文档缺乏面向 AI Builder 的 Web3 基础教程 | 机会点 |
+
+### In-Scope / Out-of-Scope
+
+**In-Scope（本期 Sprint）：**
+
+- 目标用户：具备 AI 基础、缺乏 Web3 经验的开发者/创作者
+- 问题空间：AI Agent 调用 Web3 工具时的权限边界模糊
+- 解决方案：Wallet Permission Advisor（钱包权限顾问）
+- 输出物：问题定义文档 + 最小 Demo 设计
+
+**Out-of-Scope（排除范围）：**
+
+- 智能合约开发与审计
+- 去中心化身份（DID）基础设施
+- 跨链桥接与资产跨链
+- 生产级 Agent Wallet 实现
+
+---
+
+## 2. 系统架构与拓扑（System Architecture & Topology）
+
+### 概念脑图：问题空间与解决方案映射
+
+```mermaid
+mindmap
+  root((Day 17 核心))
+    用户建模
+      开发者画像
+        AI 经验：熟悉
+        Web3 经验：新手
+        编程能力：基础脚本
+      创作者画像
+        内容运营需求
+        安全意识薄弱
+        需要简化理解成本
+    问题定义
+      权限边界模糊
+        Agent 可执行哪些操作
+        用户何时必须介入
+        授权撤销机制
+      信任传递困难
+        如何验证 Agent 操作合法性
+        链上记录与 Agent 决策的对应
+    解决方案概念
+      Wallet Permission Advisor
+        操作风险评估
+        权限申请审查
+        实时状态监控
+      Human-in-the-Loop 确认机制
+        关键操作强制确认
+        非关键操作自动放行
+```
+
+### 组件拓扑图：问题定义涉及的子系统
+
+```mermaid
+graph TD
+    subgraph 用户层
+        A[Developer 用户] --> B[Creator 用户]
+    end
+    
+    subgraph 问题空间
+        C[权限边界模糊] --> D[Agent Wallet 失控风险]
+        C --> E[信任传递断裂]
+        F[学习曲线陡峭] --> G[采用率低]
+    end
+    
+    subgraph 需求层
+        H[需要安全的权限管理] --> I[Wallet Permission Advisor]
+        H --> J[Human-in-the-Loop 机制]
+        K[需要简化理解] --> L[交互式风险解释器]
+    end
+    
+    subgraph 解决方案
+        I --> M[最小 Demo: 权限检查工具]
+        J --> M
+        L --> N[操作风险可视化]
+    end
+    
+    A --> C
+    B --> F
+    C --> H
+    F --> K
+```
+
+---
+
+## 3. 理论框架与形式分类（Theoretical Framework & Formal Taxonomy）
+
+### 核心术语与组件定义
+
+| 术语 | 中文名称 | 英文缩写 | 定义 | 约束条件 |
+|------|---------|---------|------|---------|
+| User Persona | 用户画像 | - | 目标用户群体的典型特征集合 | 需基于真实访谈验证 |
+| Pain Point | 痛点 | - | 用户在当前工作流程中遇到的核心障碍 | 需量化影响程度 |
+| Problem Statement | 问题定义 | - | 对要解决问题的高层形式化描述 | 需包含用户、需求、现有方案 |
+| Alternative Solution | 替代方案 | - | 当前用户为解决同一问题采用的非 AI x Web3 方案 | 需对比优劣 |
+| Minimum Viable Demo | 最小可行演示 | MVP | 验证核心假设所需的最简功能集合 | 需在 48 小时内完成 |
+
+### 类型系统：问题定义的输入输出约束
+
+```
+UserProfile {
+    ai_experience: enum { beginner, intermediate, familiar, expert }
+    web3_experience: enum { none, beginner, intermediate, proficient }
+    programming_ability: enum { none, basic_script, full_stack, devops }
+    primary_goal: enum { development, content_creation, trading, governance }
+}
+
+ProblemDefinition {
+    user_persona: UserProfile[]
+    pain_points: PainPoint[]
+    current_alternatives: AlternativeSolution[]
+    ai_web3_value_proposition: string
+    verification_criteria: string[]
+}
+
+PainPoint {
+    id: string
+    description: string
+    severity: enum { low, medium, high, critical }
+    frequency: enum { rare, occasional, frequent, constant }
+    user_quote: string | null  // 来自访谈的真实反馈
+}
+```
+
+### 系统不变量（System Invariants）
+
+在问题定义阶段，以下约束必须始终成立：
+
+$$
+\forall problem \in ProblemSpace, \exists user \in TargetUserGroup : problem.impacts(user) = true
+$$
+
+$$
+\forall solution \in ProposedSolutions, solution.added_value > current_alternatives.benefit
+$$
+
+---
+
+## 4. 状态机与协议演练（State Machine & Protocol Walkthrough）
+
+### 用户问题探索流程
+
+```mermaid
+sequenceDiagram
+    participant U as 用户 (User)
+    participant P as 问题探索流程
+    participant D as 问题定义文档
+    participant M as 最小 Demo 验证
+    
+    Note over U,P: Stage 1: 用户画像构建
+    
+    U->>P: 提供背景信息<br/>(AI 经验 / Web3 经验 / 目标方向)
+    P->>P: 生成用户 Persona
+    
+    Note over P,D: Stage 2: 痛点挖掘
+    
+    P->>U: 引导式问题访谈
+    U->>P: 描述当前痛点场景
+    P->>P: 映射痛点到 AI x Web3 领域
+    
+    Note over P,D: Stage 3: 替代方案分析
+    
+    P->>U: 询问现有解决方案
+    U->>P: 说明当前工作流程
+    P->>P: 对比优劣矩阵
+    
+    Note over P,D: Stage 4: 问题形式化定义
+    
+    P->>D: 生成 Problem Statement
+    D-->>M: 定义 Demo 输入输出约束
+    
+    Note over M: Stage 5: 假设验证
+    
+    M->>U: 演示最小 Demo
+    U->>M: 提供反馈
+    M->>P: 迭代优化
+```
+
+### 问题定义文档生成状态机
+
+| 阶段 | 状态 | 进入条件 | 关键动作 | 退出条件 |
+|------|------|---------|---------|---------|
+| Initiation | 用户信息收集 | 开始新项目定义 | 背景问卷 / 访谈提纲 | 获取完整用户背景 |
+| Elaboration | 痛点矩阵构建 | 完成 Initiation | 痛点排序 / 影响评估 | 确认 Top 3 痛点 |
+| Construction | 替代方案对比 | 完成 Elaboration | 竞品分析 / 功能对比 | 明确差异化价值 |
+| Verification | AI x Web3 价值主张 | 完成 Construction | 假设验证 / Demo 设计 | 获得用户初步认可 |
+| Transition | 文档定稿 | 完成 Verification | 格式化输出 / 审批 | 进入开发阶段 |
+
+---
+
+## 5. Agent 自主集成与优化（Agent Autonomous Integration & Optimization）
+
+### 用户建模中的 AI Agent 辅助
+
+在用户调研与问题定义阶段，AI Agent 可承担以下任务：
+
+**1. 访谈记录结构化**
+
+- 输入：原始访谈文本（用户 A 的痛点描述）
+- 处理：使用 Prompt 提取关键实体（角色、场景、痛点、情绪）
+- 输出：结构化的问题要素表
+
+```markdown
+## 原始访谈记录
+用户 A：我在用 AI Agent 帮我管理钱包，但我不确定它能做什么操作。
+每次它要转账，我都得手动确认，很麻烦。但不确认又怕出问题。
+
+## 结构化提取
+- 用户角色：内容创作者，Web3 新手
+- 痛点 1：权限不透明，不知道 Agent 能做什么
+- 痛点 2：过度确认导致效率低下
+- 情绪：焦虑、不信任
+- 期望：既想自动化，又想保持控制感
+```
+
+**2. 痛点优先级排序**
+
+使用多维度评分矩阵：
+
+| 痛点 | 严重程度 | 发生频率 | 影响用户数 | 紧迫度 | 综合得分 |
+|------|---------|---------|-----------|--------|---------|
+| 权限边界模糊 | 高 | 频繁 | 中 | 高 | **9.2** |
+| 链上状态感知缺失 | 中 | 频繁 | 高 | 中 | 7.5 |
+| 学习曲线陡峭 | 中 | 偶尔 | 高 | 低 | 5.8 |
+| 工具文档分散 | 低 | 频繁 | 中 | 中 | 5.0 |
+
+---
+
+## 6. 漏洞向量与边界场景验证（Vulnerability Vector & Edge Case Verification）
+
+### 问题定义阶段的潜在风险
+
+**风险 1：用户画像失真**
+
+| 字段 | 说明 |
+|------|------|
+| 类型（Type） | 信息不完整或过于主观 |
+| 源头（Root Cause） | 基于假设而非真实访谈数据 |
+| 攻击向量（Attack Vector） | 解决方案与真实需求不匹配 |
+| 防御策略（Mitigation） | 必须进行至少 3 次用户访谈验证 |
+
+**风险 2：痛点夸大或缩小**
+
+| 字段 | 说明 |
+|------|------|
+| 类型（Type） | 主观偏差导致的优先级错位 |
+| 源头（Root Cause） | 个人经历影响判断 |
+| 攻击向量（Attack Vector） | 投入资源解决非核心问题 |
+| 防御策略（Mitigation） | 量化痛点影响，建立评分标准 |
+
+**风险 3：替代方案对比不全面**
+
+| 字段 | 说明 |
+|------|------|
+| 类型（Type） | 遗漏重要竞品或现有工具 |
+| 源头（Root Cause） | 信息收集范围有限 |
+| 攻击向量（Attack Vector） | 差异化价值主张失效 |
+| 防御策略（Mitigation） | 扩大调研范围，参考 WCB 官方资源 |
+
+### 边界场景验证清单
+
+- [ ] **极端用户**：纯 AI 背景用户（无任何编程经验）能否理解问题定义？
+- [ ] **极端场景**：若 Web3 新手数量远超预期，解决方案是否需要调整？
+- [ ] **时间约束**：用户每日可投入 8 小时，是否足以支撑复杂 Demo？
+- [ ] **技术栈限制**：基础脚本能力是否足以实现最小 Demo？
+
+---
+
+## 7. 今日产出汇总
+
+### 输出物清单
+
+| 产出物 | 文件路径 | 状态 | 说明 |
+|--------|---------|------|------|
+| 用户画像 | `hackathon/problem-definition.md` | ✅ 已完成 | Developer + Creator 双画像 |
+| 痛点矩阵 | `hackathon/problem-definition.md` | ✅ 已完成 | Top 3 痛点及其影响评估 |
+| 替代方案对比 | `hackathon/problem-definition.md` | ✅ 已完成 | 现有工具 vs AI x Web3 |
+| 问题定义文档 | `hackathon/problem-definition.md` | ✅ 已完成 | 完整 Problem Statement |
+
+### 关键术语（中英对照）
+
+| 中文术语 | English | 备注 |
+|---------|---------|------|
+| 用户画像 | User Persona | 目标用户的典型特征集合 |
+| 痛点 | Pain Point | 用户在特定场景下的核心障碍 |
+| 问题定义 | Problem Definition | 对要解决问题的高层形式化描述 |
+| 替代方案 | Alternative Solution | 当前用户采用的非目标方案 |
+| 最小可行演示 | Minimum Viable Demo / MVP | 验证核心假设的最简功能集合 |
+| 用户访谈 | User Interview | 收集用户需求的关键方法 |
+| 权限边界 | Permission Boundary | Agent 可执行操作的范围限制 |
+| 人在回路 | Human-in-the-Loop | 关键操作需用户确认的机制 |
+
+---
+
+## 8. 学术标签（Academic Tags）
+
+```
+#AIxWeb3 #AgentWallet #PermissionBoundary #ProblemSpaceDefinition 
+#UserModeling #HumanInTheLoop #MinimalDemo #Web3Security
+```
+
+---
+
+## 9. 下一步行动
+
+| 优先级 | 行动项 | 截止日期 | 依赖关系 |
+|--------|--------|---------|---------|
+| P0 | 阅读 Agent Workflow、Tool Use、Security 章节 | Day 18 | 无 |
+| P0 | 完成 `hackathon/minimal-demo.md` 初稿 | Day 18 | 问题定义完成 |
+| P1 | 制作 Demo 输入输出示例 | Day 18 | 需要 mock 数据 |
+| P2 | 补充用户访谈记录到文档 | Day 19 | 需访谈 2+ 用户 |
+| P2 | 设计工具权限矩阵 | Day 19 | 需要技术调研 |
+
+---
+
+**今日学习完成。问题空间已定义清晰，为明日 Demo 设计奠定坚实基础。**
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 # Day 16｜AI x Web3 School 技术报告
