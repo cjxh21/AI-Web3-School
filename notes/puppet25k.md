@@ -15,8 +15,46 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+# **2026-06-03 周三**
+
+## **Co-Learning：**
+
+-   助教分享Joye Huang的Agent Engineer 成长路径（墨尔本大学/Tezign AIGC/[atypica.ai](http://atypica.ai)）
+    
+    -   Agent 入行重项目深度 > 八股文
+        
+
+## **黑客松赛道实战-Cobo**
+
+-   Moon Cobo Agentic Wallet 开发者教程（Skills/CLI/API/Pact 权限系统）：
+    
+    -   CAW 是黑客松 Cobo 赛道基础设施（3500U）。
+        
+    -   Pact 系统让 Agent 在规则内自主交易 + 人类审批兜底。
+        
+        -   参考资料：minimind-notes（⭐122）、Learn-Open-Harness、cobo-agentic-wallet-dev Skills。
+            
+
+## **随堂笔记**
+
+> Agent 面试考察优先级：个人项目深度 > 系统理解（Agent Loop/Tool Registry/Permission）> 基础知识（RAG/Prompt Engineering）> 八股文背诵。
+
+> Harness = Tools + Knowledge + Observation + Action + Permissions。从 OpenHarness 12 章足以理解 Claude Code / Cursor 架构。
+
+> CAW 四层接入：Skills（推荐）→ MCP → CLI → API。Pact 策略 = 链白名单 + 合约白名单 + 频率限制 + always\_review。每个 Pact 独立 API Key，最小权限原则。
+
+## **下一步工作**
+
+1.  继续 Handbook Web3 基础学习 — 下一站 Account Abstraction（AA）
+    
+2.  头脑风暴黑客松赛道2的选题
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 ### **Week 3 分享会 —** [**Z.ai**](http://Z.ai) **GLM-5.1: 8 Hour Autonomy**
 
 1.  参加了 [Z.ai](http://Z.ai)（智谱 AI）Cara 的分享会
@@ -71,6 +109,7 @@ AI x Web3 School
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -106,6 +145,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 ### **Handbook — 开发栈（Dev Stack）**
@@ -150,6 +190,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -199,6 +240,7 @@ AI x Web3 School
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -230,6 +272,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -269,6 +312,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -325,6 +369,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -361,6 +406,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -426,6 +472,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -527,6 +574,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -549,6 +597,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -614,6 +663,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -629,6 +679,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -711,11 +762,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
