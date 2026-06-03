@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+### 今日完成
+
+1.  **代码可运行化开发**：让 PactGuard 在无 Server 环境下自包含运行 — 模拟 x402 402 响应、CAW Pact 检查、支付签名、服务返回全链路。
+    
+2.  **v2 Pact 安全增强合并**：将原本只存在于威胁模型模拟器的 v2 `check_pact()` 合并到客户端主代码，支持 `--pact-version v1/v2` 切换。
+    
+3.  **字段标准化**：统一所有 pact-config 和代码中的字段为 snake\_case，避免格式不一致导致的隐患 bug。
+    
+4.  **A6 修复**：整合 pact-level 和 payment-level 双重过期检查，威胁模型模拟器输出与预期完全一致。
+    
+
+### 今日收获
+
+-   **Mock 模式 = 快速反馈循环**：在无法接入真实链上环境时，Mock Server 是验证架构正确性的最佳工具。
+    
+-   **状态管理是安全的核心**：v1 和 v2 的差距不在单次检查速度，而在状态追踪深度 — 这与网络安全中 "stateful firewall vs stateless firewall" 的区别一致。
+    
+-   **评审标准就是 Sprint Plan**：每一行黑客松评审标准，都对应一个需要代码证明的功能。
+    
+
+### 链接
+
+-   Mock Client: `experiments/x402-caw-agent-payment-loop/pseudo-agent-client.py`
+    
+-   Threat Model: `experiments/x402-caw-agent-payment-loop/threat-model-simulator.py`
+    
+-   Pact Config: `experiments/x402-caw-agent-payment-loop/pact-config.json`
+    
+-   Hackathon Proposal: `submissions/hackathon-proposal-cobo-agentic-payment.md`
+    
+-   Daily Log: `daily/2026-06-03.md` 本文件
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 ### 今日完成
 
 1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
@@ -48,6 +84,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -68,6 +105,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -114,6 +152,7 @@ AI x Web3 School
 
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -141,6 +180,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -188,6 +228,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -254,6 +295,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -274,6 +316,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -328,6 +371,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -356,6 +400,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -404,6 +449,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -486,6 +532,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -514,6 +561,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -574,6 +622,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
