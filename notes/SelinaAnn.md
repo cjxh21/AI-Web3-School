@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-03-1780501911963-image.png)
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 # **如何更好打磨项目**
 
 ## TOP 1 : 人
@@ -126,6 +132,7 @@ VC投资的是未来。
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-01-1780278788327-image.png)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
@@ -133,11 +140,13 @@ VC投资的是未来。
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-31-1780207428353-image.png)
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -228,6 +237,7 @@ VC投资的是未来。
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -348,6 +358,7 @@ VC投资的是未来。
 
 
 
+
 # **Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders**
 
 ## Cypherpunk
@@ -383,6 +394,7 @@ VC投资的是未来。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -433,6 +445,7 @@ VC投资的是未来。
 
 
 
+
 # MetaMask
 
 -   metamask is a app tht allows you to manage ethereum,solana,bitcoin and private keys.
@@ -462,6 +475,7 @@ VC投资的是未来。
 
 
 
+
 # **Long-term Memory for AI Agents**
 
 ## restart VS resume
@@ -477,6 +491,7 @@ VC投资的是未来。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -580,6 +595,7 @@ VC投资的是未来。
 
 
 
+
 # **Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path**
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-23-1779524951056-image.png)
@@ -602,6 +618,7 @@ VC投资的是未来。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -643,6 +660,7 @@ AI驱动链上分析工具
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -739,6 +757,7 @@ AI驱动链上分析工具
 
 
 
+
 Hermes Agent学习
 
 ```
@@ -793,6 +812,7 @@ API 文档：https://web3career.build/llms.txt
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
