@@ -15,8 +15,48 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+\### ✅ 今天做了什么
+
+**1\. 参加 Cobo Agentic Wallet 专项 Workshop** 🎯
+
+\- 昨天 kickoff 提到的那场（6/3 晚 8 点），5050/Mu 老师主讲
+
+\- 逐字稿已分析，MPC 钱包原理、Pact 审批流程、CLI/API/SDK 全套
+
+\- 关键收获：\*\*Pact 机制\*\*是 Cobo 赛道评审最看重的亮点
+
+**2\. 复试 Hackathon 启动会信息**
+
+\- 看过昨天的逐字稿后确认：AGW 天然对齐 Cobo 赛道
+
+\- Demo Day 要求（5min MVP 演示，纯 PPT 不行）
+
+\- 提交截止 6/13 中午 12:00
+
+**3\. AGW 项目全量体检 + 会议准备**
+
+\- 三层代码全读了（Vue3 / Spring Boot / FastAPI）
+
+\- Mock 闭环已完整可跑，状态机全通
+
+\- 整理出 [**agw-meeting-prep.md**](http://agw-meeting-prep.md)（已有）
+
+\- 明确下一层业务代码就 3 件事：OpenAI parse / RPC 余额 / Cobo 执行
+
+\### 📝 还没做的（打卡流程下一步）
+
+1\. **写 daily/**[**2026-06-03.md**](http://2026-06-03.md)（上面这些内容往里填就行）
+
+2\. **Commit & push** 到 GitHub repo
+
+3\. **WCB 平台打卡**
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 **Today's Focus**
 
 \- \[x\] 参加 AI Web3 Agentic Builders Hackathon 启动会 ✅
@@ -95,6 +135,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 **今日完成：**
 
 **1\. AGW MVP 技术规格书（609行）✅**
@@ -138,6 +179,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
 
+
 **1\. Week 3 开发排期确认 ✅**
 
 \- 完整 7 天开发排期已落地`hackathon/week3-dev-plan.md`）
@@ -179,6 +221,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -477,6 +520,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 ## 今日完成
 
 ### 1\. 项目初步 Proposal ✅
@@ -537,6 +581,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -550,6 +595,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -573,6 +619,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -625,6 +672,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -659,6 +707,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -676,6 +725,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -720,6 +770,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -741,6 +792,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
