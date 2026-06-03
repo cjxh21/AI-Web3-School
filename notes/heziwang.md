@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-06-03.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-06-03.md)
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-06-03-1780498404274-image.png)
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-06-02.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-06-02.md)
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-06-02-1780399536007-image.png)
@@ -25,11 +33,13 @@ AI x Web3 School
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
+
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-31.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-31.md)
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 今天实际测试了使用钱包进行一笔交易
@@ -44,6 +54,7 @@ AI x Web3 School
 
 
 
+
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-29.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-29.md)
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-29-1780022650589-image.png)
@@ -51,6 +62,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -66,6 +78,7 @@ git笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/da
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -96,6 +109,7 @@ git笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/da
 
 
 
+
 学习笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-25.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-25.md)  
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-25-1779718908732-image.png)
@@ -105,6 +119,7 @@ git笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/da
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -131,6 +146,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 
 
+
 学习笔记：  
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md)  
   
@@ -141,6 +157,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -171,6 +188,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 
 
+
 [https://github.com/heziwang/ai-web3-school-cohort-wang](https://github.com/heziwang/ai-web3-school-cohort-wang)
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-21-1779372183332-image.png)
@@ -184,6 +202,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -220,6 +239,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
