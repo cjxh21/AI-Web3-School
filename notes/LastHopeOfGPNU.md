@@ -15,8 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+1.  参加 Co-learning｜任务推进与答疑（19:00–20:00），将 Week 3 支付任务拆解为「文档阅读 → 场景分析 → MVP 构思」三步，每步可产出独立 PoW
+    
+2.  参加支付场景的探索和思考（20:00–21:00），掌握支付场景分析框架：用户角色 → 支付痛点 → 链上 vs 传统方案 → MVP 边界
+    
+3.  建立 AI Agent 支付认知：Agent 支付的核心差异在「授权机制」和「信任边界」—— Agent 需在无人干预下完成支付决策
+    
+4.  对接 Cobo WaaS 2.0 到支付场景：Custodial 适合平台支付、MPC 适合 Agent 支付、Smart Contract Wallet 适合可编程支付流
+    
+5.  Hackathon 支付 MVP 思路：跑通一个最小支付场景并验证用户价值，而非做完整支付链路
+    
+
+💡 问题 & 解决：
+
+-   Agent 支付的授权阈值设定（金额上限 / 频率限制 / 白名单）需按场景权衡，后续结合 Cobo MPC 方案深入调研
+    
+-   Cobo MPC User-Controlled 对纯后端 Agent 集成有复杂度，Hackathon 阶段优先考虑 MPC Organization-Controlled 方案
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 1.  参加 Co-learning｜任务推进与答疑（19:00–20:00），学习任务拆解与 PoW 整理方法论
     
 2.  参加黑客松赛道实战（20:00–21:00，嘉宾 Moon），学习赛道拆解、MVP 识别、冲刺节奏规划
@@ -30,6 +51,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 1.  完成 Week 1 Proof-of-Work Pack 整理：AI/Web3 概念卡片、权限对比、AI × Web3 workflow × 2、项目拆解、学习总结，共 6 份结构化文档
     
@@ -46,6 +68,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 1.  完成 Week 1 Web3 实践：在 Sepolia 测试网通过 JSON-RPC eth\_call 调用了 Chainlink ETH/USD Price Feed 合约
     
 2.  手动实现了 ABI 编码/解码（函数选择器、uint256、int256、string、tuple），零依赖
@@ -60,6 +83,7 @@ AI x Web3 School
 
 
 
+
 1\. 完成了 AI 6 大概念（LLM / Prompt / Context Window / Workflow / Agent / Tool Use）梳理
 
 2\. 完成了 Web3 8 大概念（Account / Address / Wallet / Seed Phrase / Private Key / Signature / Transaction / Gas）梳理
@@ -71,6 +95,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -93,6 +118,7 @@ AI x Web3 School
 
 
 
+
 今日完成：
 
 -   x402 Paywall + CAW Agent 自主支付闭环（9 文件 Node.js demo）
@@ -104,6 +130,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -130,6 +157,7 @@ AI x Web3 School
 
 
 
+
 今日参加了 AI × Web3 School 的学习：
 
 -   Product manager of Cobo Agentic Wallet
@@ -149,12 +177,14 @@ AI x Web3 School
 
 
 
+
 完成了**AI × Web3 问题地图与主方向选择**  
 [ai-web3-school-cohort-0/tasks/week\_2/ai\_web3\_](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)[map.md](http://map.md) [at master · LastHopeOfGPNU/ai-web3-school-cohort-0](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -413,6 +443,7 @@ Safe 官方文档称其自 2018 年以来经过审计和测试，并已有大量
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -740,6 +771,7 @@ Session Key 可以理解为“临时授权密钥”。
 
 
 
+
 ## OpenZeppelin Contracts 学习笔记
 
 ## 1\. 它是什么
@@ -979,6 +1011,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 ### 今日完成
 
 -   \[x\] 参与活动 — AI 下乡计划 | AI 在 Web 3 的应用
@@ -1026,6 +1059,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 今天参加了 Web3 运行原理课，对于课后提出的四个思考问题：
 
 **1\. 资产自托管的安全 vs 易用** 打破「越安全越难用」的权衡，关键在策略组合：TSS/MPC 分布式存密钥片段 + Social Recovery 信任链恢复 + 抽象 UX（用身份/口令替代裸私钥）。
@@ -1041,6 +1075,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1075,6 +1110,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
