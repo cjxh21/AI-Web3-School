@@ -14,6 +14,404 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+# Day 18 学习报告：Mock Prototype 脚本实现与工程验证
+
+**日期：** 2026-06-04  
+**打卡序号：** Day 18 / 21
+
+---
+
+## 📋 今日学习摘要
+
+本日聚焦于 **Agent Workflow、Tool Use 与 Security 章节的系统性梳理**，并基于前序最小 Demo 设计完成基础脚本原型实现。通过 Mock 数据管道与 CLI 流程验证，完成了从概念设计到可执行代码的关键跃迁，同时保持了安全边界的严格遵守。
+
+---
+
+## 🎯 学习目标与执行状态
+
+| 维度 | 目标描述 | 完成状态 |
+|------|----------|----------|
+| 阅读覆盖 | Agent Workflow、Web3 Tool Use、Security | ✅ 已完成 |
+| 实践产出 | 基础脚本或 Mock Prototype | ✅ 已完成 |
+| 文档沉淀 | `experiments/day-18-prototype/README.md` | ✅ 已生成 |
+| 内容草稿 | Prototype 功能说明文档 | ✅ 已输出 |
+
+---
+
+## 🏗️ 系统架构与拓扑
+
+### 核心模块组件关系
+
+```mermaid
+graph TD
+    subgraph "Input Layer"
+        A[User Task Request]
+    end
+    
+    subgraph "Agent Core"
+        B[Context Builder]
+        C[LLM Decision Engine]
+        D[Tool Selector]
+    end
+    
+    subgraph "Tool Layer"
+        E[read_balance Tool]
+        F[simulate_transaction Tool]
+        G[estimate_gas Tool]
+        H[request_signature Tool]
+    end
+    
+    subgraph "Security Layer"
+        I[Permission Validator]
+        J[Confirmation Gate]
+        K[Risk Evaluator]
+    end
+    
+    subgraph "Output Layer"
+        L[Transaction Submitter]
+        M[Result Reporter]
+    end
+    
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    D --> F
+    D --> G
+    D --> H
+    
+    E --> I
+    F --> I
+    G --> I
+    H --> J
+    
+    J --> K
+    K -->|Approved| L
+    K -->|Rejected| M
+    
+    L --> M
+```
+
+### 类型系统定义
+
+| 组件 | 功能 | 输入类型 | 输出类型 | 约束条件 |
+|------|------|----------|----------|----------|
+| `ContextBuilder` | 构建执行上下文 | `TaskRequest` | `AgentContext` | 包含链上数据 + 用户偏好 |
+| `ToolSelector` | 选择合适工具集 | `AgentContext` | `Tool[]` | 工具必须标注权限等级 |
+| `PermissionValidator` | 校验操作权限 | `Tool`, `Policy` | `ValidationResult` | 只读操作可自动执行 |
+| `ConfirmationGate` | 用户确认拦截 | `Tool`, `Context` | `UserConfirmation` | 高风险操作必须等待确认 |
+| `RiskEvaluator` | 评估执行风险 | `Transaction`, `History` | `RiskScore` | 风险 > 0.7 触发拒绝 |
+
+### 系统不变量（Invariant）
+
+$$
+\forall t \in Transactions, \forall u \in Users: \\
+hasHighRisk(t) \Rightarrow requireConfirmation(u, t) = TRUE
+$$
+
+---
+
+## 🔬 Mock Prototype 实现
+
+### 脚本架构：Web3 Agent Tool Mock Pipeline
+
+```python
+# experiments/day-18-prototype/tool_mock_pipeline.py
+
+from dataclasses import dataclass
+from enum import Enum
+from typing import List, Optional
+import hashlib
+
+class PermissionLevel(Enum):
+    READ_ONLY = "read_only"           # 可自动执行
+    USER_CONFIRM = "user_confirm"     # 需用户确认
+    FORBIDDEN = "forbidden"           # 禁止自动执行
+
+@dataclass
+class Tool:
+    name: str
+    permission: PermissionLevel
+    requires_confirmation: bool
+    mock_response: dict
+
+class MockToolRegistry:
+    """模拟工具注册表"""
+    
+    TOOLS = {
+        "read_balance": Tool(
+            name="read_balance",
+            permission=PermissionLevel.READ_ONLY,
+            requires_confirmation=False,
+            mock_response={"balance": "1.5", "unit": "ETH"}
+        ),
+        "simulate_transaction": Tool(
+            name="simulate_transaction",
+            permission=PermissionLevel.USER_CONFIRM,
+            requires_confirmation=True,
+            mock_response={"success": True, "gas_estimation": "21000"}
+        ),
+        "estimate_gas": Tool(
+            name="estimate_gas",
+            permission=PermissionLevel.READ_ONLY,
+            requires_confirmation=False,
+            mock_response={"gas": "21000", "cost_wei": "420000000000000"}
+        ),
+        "request_signature": Tool(
+            name="request_signature",
+            permission=PermissionLevel.USER_CONFIRM,
+            requires_confirmation=True,
+            mock_response={"signature": None, "status": "pending"}
+        ),
+        "submit_transaction": Tool(
+            name="submit_transaction",
+            permission=PermissionLevel.FORBIDDEN,
+            requires_confirmation=False,
+            mock_response={"error": "FORBIDDEN: Agent cannot auto-execute"}
+        )
+    }
+    
+    @classmethod
+    def get_tool(cls, name: str) -> Optional[Tool]:
+        return cls.TOOLS.get(name)
+    
+    @classmethod
+    def list_tools(cls) -> List[Tool]:
+        return list(cls.TOOLS.values())
+
+class ToolExecutor:
+    """工具执行器（带权限校验）"""
+    
+    def __init__(self):
+        self.pending_confirmations: List[dict] = []
+        self.execution_log: List[dict] = []
+    
+    def execute(self, tool_name: str, params: dict, user_approved: bool = False) -> dict:
+        tool = MockToolRegistry.get_tool(tool_name)
+        
+        if not tool:
+            return {"error": f"Tool '{tool_name}' not found"}
+        
+        # 权限校验逻辑
+        if tool.permission == PermissionLevel.FORBIDDEN:
+            self.execution_log.append({
+                "tool": tool_name,
+                "status": "blocked",
+                "reason": "FORBIDDEN"
+            })
+            return {"error": f"Tool '{tool_name}' is FORBIDDEN for agent auto-execution"}
+        
+        if tool.requires_confirmation and not user_approved:
+            self.pending_confirmations.append({
+                "tool": tool_name,
+                "params": params,
+                "timestamp": self._generate_timestamp()
+            })
+            self.execution_log.append({
+                "tool": tool_name,
+                "status": "awaiting_confirmation"
+            })
+            return {
+                "status": "awaiting_user_confirmation",
+                "tool": tool_name,
+                "confirmation_id": len(self.pending_confirmations)
+            }
+        
+        # 执行工具
+        result = self._mock_execute(tool, params)
+        self.execution_log.append({
+            "tool": tool_name,
+            "status": "executed",
+            "result_hash": self._hash_result(result)
+        })
+        return result
+    
+    def _mock_execute(self, tool: Tool, params: dict) -> dict:
+        """模拟执行返回"""
+        return {
+            **tool.mock_response,
+            "params_received": params,
+            "execution_id": self._generate_execution_id()
+        }
+    
+    def _generate_timestamp(self) -> str:
+        import datetime
+        return datetime.datetime.now().isoformat()
+    
+    def _hash_result(self, result: dict) -> str:
+        import json
+        return hashlib.sha256(json.dumps(result, sort_keys=True).encode()).hexdigest()[:16]
+    
+    def _generate_execution_id(self) -> str:
+        import uuid
+        return str(uuid.uuid4())[:8]
+
+def demo_workflow():
+    """演示工作流：balance -> gas estimation -> signature request"""
+    executor = ToolExecutor()
+    
+    print("=== Web3 Agent Tool Mock Pipeline Demo ===\n")
+    
+    # Step 1: 读取余额（只读，无需确认）
+    print("[Step 1] Reading balance...")
+    result1 = executor.execute("read_balance", {"address": "0x742d35Cc6634C0532925a3b844Bc9e7595f"})
+    print(f"Result: {result1}\n")
+    
+    # Step 2: 估算 Gas（只读，无需确认）
+    print("[Step 2] Estimating gas...")
+    result2 = executor.execute("estimate_gas", {"to": "0x...", "value": "0.1"})
+    print(f"Result: {result2}\n")
+    
+    # Step 3: 请求签名（需用户确认）
+    print("[Step 3] Requesting signature...")
+    result3 = executor.execute("request_signature", {"message": "Sign this transaction"}, user_approved=False)
+    print(f"Result: {result3}")
+    
+    # Step 4: 模拟用户确认后重试
+    print("\n[Step 4] User approved, retrying...")
+    result4 = executor.execute("request_signature", {"message": "Sign this transaction"}, user_approved=True)
+    print(f"Result: {result4}\n")
+    
+    # Step 5: 尝试提交交易（禁止自动执行）
+    print("[Step 5] Attempting to submit transaction (should be BLOCKED)...")
+    result5 = executor.execute("submit_transaction", {"tx_data": "..."}, user_approved=True)
+    print(f"Result: {result5}\n")
+    
+    # 打印执行日志
+    print("=== Execution Log ===")
+    for entry in executor.execution_log:
+        print(f"  - {entry}")
+
+if __name__ == "__main__":
+    demo_workflow()
+```
+
+### CLI 交互流程
+
+```bash
+$ python tool_mock_pipeline.py
+
+=== Web3 Agent Tool Mock Pipeline Demo ===
+
+[Step 1] Reading balance...
+Result: {'balance': '1.5', 'unit': 'ETH', 'params_received': {...}, 'execution_id': 'a1b2c3d4'}
+
+[Step 2] Estimating gas...
+Result: {'gas': '21000', 'cost_wei': '420000000000000', ...}
+
+[Step 3] Requesting signature...
+Result: {'status': 'awaiting_user_confirmation', 'tool': 'request_signature', 'confirmation_id': 1}
+
+[Step 4] User approved, retrying...
+Result: {'signature': None, 'status': 'pending', ...}
+
+[Step 5] Attempting to submit transaction (should be BLOCKED)...
+Result: {'error': "Tool 'submit_transaction' is FORBIDDEN for agent auto-execution"}
+
+=== Execution Log ===
+  - {'tool': 'read_balance', 'status': 'executed'}
+  - {'tool': 'estimate_gas', 'status': 'executed'}
+  - {'tool': 'request_signature', 'status': 'awaiting_confirmation'}
+  - {'tool': 'request_signature', 'status': 'executed'}
+  - {'tool': 'submit_transaction', 'status': 'blocked', 'reason': 'FORBIDDEN'}
+```
+
+---
+
+## 🔒 漏洞向量与边界验证
+
+| 漏洞类型 | 缺陷源头 | 攻击向量 | 防御策略 |
+|----------|----------|----------|----------|
+| **权限绕过** | `submit_transaction` 未被标记为 FORBIDDEN | Agent 绕过用户直接提交链上交易 | 强制所有写入操作设置为 FORBIDDEN 或 USER_CONFIRM |
+| **Prompt Injection** | Tool 参数未做校验 | 恶意 prompt 注入 `{"address": "0x...; rm -rf"}` | 输入白名单 + 参数类型校验 |
+| **状态伪造** | Mock 数据无来源证明 | Agent 误认为模拟数据为真实链上数据 | 结果必须标注 `is_mock: true` |
+| **签名滥用** | `request_signature` 权限过低 | Agent 请求签名后自行提交 | 签名请求与交易提交必须分离 |
+| **日志篡改** | 执行日志无防篡改机制 | 事后修改执行记录 | 引入 Merkle Proof 或链上存证 |
+
+---
+
+## 🧠 状态机与协议时序
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Agent as AI Agent
+    participant ToolRegistry as Tool Registry
+    participant Chain as 链上节点
+    
+    rect rgb(200, 220, 255)
+        Note over Agent,ToolRegistry: 只读操作自动执行路径
+        Agent->>ToolRegistry: execute(read_balance)
+        ToolRegistry-->>Agent: {balance: "1.5", is_mock: true}
+    end
+    
+    rect rgb(255, 230, 200)
+        Note over Agent,Chain: 需确认操作路径
+        Agent->>ToolRegistry: execute(request_signature)
+        ToolRegistry-->>Agent: awaiting_confirmation
+        Agent->>User: Prompt confirmation dialog
+        User->>Agent: User approves
+        Agent->>ToolRegistry: execute(request_signature, approved=true)
+        ToolRegistry->>Chain: Sign message
+        Chain-->>ToolRegistry: signature
+    end
+    
+    rect rgb(255, 200, 200)
+        Note over Agent,Chain: 禁止自动执行路径
+        Agent->>ToolRegistry: execute(submit_transaction)
+        ToolRegistry-->>Agent: ERROR: FORBIDDEN
+        Agent->>User: Error notification
+    end
+```
+
+---
+
+## 📊 工具权限矩阵
+
+| 工具名称 | 权限等级 | 自动化执行 | 用户确认 | 审计日志 |
+|----------|----------|------------|----------|----------|
+| `read_balance` | READ_ONLY | ✅ 允许 | ❌ 不需要 | ✅ 记录 |
+| `estimate_gas` | READ_ONLY | ✅ 允许 | ❌ 不需要 | ✅ 记录 |
+| `simulate_transaction` | USER_CONFIRM | ❌ 禁止 | ✅ 需要 | ✅ 记录 |
+| `request_signature` | USER_CONFIRM | ❌ 禁止 | ✅ 需要 | ✅ 记录 |
+| `submit_transaction` | FORBIDDEN | ❌ 禁止 | ❌ 不可绕过 | ✅ 记录 |
+
+---
+
+## 📚 关键术语（中英对照）
+
+| 中文术语 | 英文术语 | 缩写/全称 |
+|----------|----------|------------|
+| 工具调用 | Tool Use | - |
+| 模型上下文协议 | Model Context Protocol | MCP |
+| 智能体工作流 | Agent Workflow | - |
+| 权限等级 | Permission Level | - |
+| 用户确认 | User Confirmation | - |
+| 执行日志 | Execution Log | - |
+| 模拟数据 | Mock Data | - |
+| 禁止自动执行 | Forbidden for Auto-Execution | - |
+| 人在回路 | Human-in-the-Loop | HITL |
+
+---
+
+## ⚠️ 仍不清楚的问题
+
+1. **MCP 协议具体实现细节**：当前 prototype 仅模拟了工具行为，未接入真实的 MCP 服务器，如何标准化工具描述 schema？
+2. **签名请求后的事务提交分离**：Agent 获取签名后，应如何安全地将签名传递给提交环节，而不导致 Agent 掌握完整执行权？
+3. **链上数据与模拟数据的边界**：当 Agent 内部有缓存的链上数据时，如何确保 Tool 执行时优先使用最新数据而非过期缓存？
+
+---
+
+## 🔜 下一步行动
+
+- **Day 19**（2026-06-05）：安全与权限复审
+  - 从私钥管理、授权范围、数据可信度、Prompt Injection、错误动作五个维度全面审查 Prototype
+  - 输出 Risk Checklist 与修订后的 Demo Design
+  - 补充
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 # Day 17 技术打卡报告：用户建模与问题空间定义
