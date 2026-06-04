@@ -15,8 +15,50 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+## **分享会 - Harness Engineering for Financial Intelligence**
+
+-   主讲人 Skyl，FluxA 的 AI 原生支付基础设施
+    
+    -   前阿里巴巴 & 蚂蚁集团高管创立
+        
+-   核心问题：Agent 需要钱包，但现有金融基础设施并未为 AI Agent 设计
+    
+-   **Financial Harness** = Intent-based Constraints + Spending Validation Loop
+    
+    -   Intent：用户授权的是任务本身，而非逐笔支付
+        
+    -   编程反馈闭环（Write→Build→Test→Fix）在金融领域因"结算后不可撤回"而失效
+        
+    -   Spending Validation 必须在结算前完成
+        
+-   规则过滤：黑名单类目、偏离授权范围、重复交易检测
+    
+
+## **FluxA - AI 原生支付基础设施**
+
+-   四大场景：Agent-to-Agent / Agent-to-Merchant / Agent-to-Tool / Transfers & Tipping
+    
+-   与百度智能云合作 DAO（Daily Active Agents）经济
+    
+    -   90K+ Agent 钱包，10K+ 资源已货币化
+        
+    -   闭环管道：百度市场 → 资产发行 → FluxA 全球分发 & A2A 支付 → 交易 → 自动结算 → 跨境
+        
+
+## **随堂笔记**
+
+> Intent = user-authorized task or goal that every downstream transaction must adhere to. The authorization object is the task itself, not any individual payment.
+
+> In finance, the "mistake" may have already settled. A wire transfer cannot be rescinded. The financial harness needs validation that operates before settlement.
+
+> AI agents as first-class economic citizens.
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 # **2026-06-03 周三**
 
 ## **Co-Learning：**
@@ -54,6 +96,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 ### **Week 3 分享会 —** [**Z.ai**](http://Z.ai) **GLM-5.1: 8 Hour Autonomy**
 
@@ -110,6 +153,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -145,6 +189,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -190,6 +235,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -241,6 +287,7 @@ AI x Web3 School
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -272,6 +319,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -312,6 +360,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -370,6 +419,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -406,6 +456,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -472,6 +523,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -575,6 +627,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -597,6 +650,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -664,6 +718,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -679,6 +734,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -763,11 +819,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
