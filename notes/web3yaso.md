@@ -15,8 +15,38 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+今日总结
+
+-   回看了Cobo wallet的技术分享
+    
+    -   了老师三个关于 Pact 的问题,
+        
+        1\. 动态 payTo / 收款人能不能不写死
+        
+        老师确认：policy 默认只校验 target\_in 命中的合约，不会自动约束 calldata 里的 payTo。也就是说我们把固定结算合约放进白名单就行，每笔实际收款人动态变、不用在 policy 里枚举。我们这套"按内容动态分账给作者"的设计在 Pact 上是跑得通的。
+        
+        附带一个有用信息：如果反过来我们想限制收款人（比如只许付给白名单作者），有个 params\_match 字段可以传 ABI、约束 calldata 里的具体参数。但老师提醒这功能还不完善，复杂的数组/结构体 ABI 解析支持得不好，单层简单参数才稳。所以我们 demo 先走不限制收款人的默认路径最稳。
+        
+    -   2\. 月度订阅
+        
+        老师明确：Pact 只约束合约/转账层面（能不能付、付给谁、多少钱、几笔）订阅状态、到期失效、访问控制 Pact 一概不负责,那是平台后端/订阅合约的事。他原话是平台方没办法判断这笔转账是不是给某个订阅方的。
+        
+        关于自动续费：老师推荐设一个带金额+时间限制的长期 Pact（比如每月可向某地址转一笔、金额上限多少）而不是每月重新批一次。原因是每次新建 Pact 都要人在手机上审批，续费场景反复审批体验很差。Pact 创建后不可修改，要改只能作废旧的、建新的。
+        
+        3\. 累计金额预算上限 —— 转账支持,合约调用还不行
+        
+        usage\_limits 的 rolling window(24h/7d/30d)支持按累计金额设上限——但只对普通转账(transfer)成熟。对合约调用(contract\_call)目前做不到:因为合约调用的真实金额从 calldata 和目标地址上看不出来,得做一次模拟执行才知道,这块 Cobo 还没做。
+        
+        这条对我们影响最大,得讨论: 如果我们的 x402 付费是走合约调用形态,那"给 agent 设累计 USDC 预算上限"这个安全边界暂时落不了地。
+        
+-   基于Cobo SDK和Vercel吗开发了自己的Agent
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 今日任务总结
 
 -   完成了week2遗留任务，设计了agent的安全地区；复盘了AI如何帮助AAVE DAO更好的应对生存危机
@@ -27,6 +57,7 @@ AI x Web3 School
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
+
 -   确定了黑客松主题和框架 [https://web3yaso.github.io/x402write/](https://web3yaso.github.io/x402write/)
     
 -   完成了week2的遗留任务： agent access control研究
@@ -34,6 +65,7 @@ AI x Web3 School
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 今日工作
@@ -48,6 +80,7 @@ AI x Web3 School
 
 
 
+
 今日完成
 
 -   Agent支付商业流程拆解
@@ -59,6 +92,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -93,6 +127,7 @@ AI x Web3 School
 
 
 
+
 今天完成了 AI × Web3 School 的两项补充任务，主要围绕 Week 1 学习总结和行业案例拆解做复盘。
 
 1.  发布了一份 AI × Web3 学习总结，整理了这一阶段对 agent memory、长期上下文、AI 工具协作、Web3 权限边界和可验证记录的理解。  
@@ -112,6 +147,7 @@ AI x Web3 School
 
 
 
+
 -   完成了week 1 的任务：设计AI & Web3的最小边界
     
 -   观看了Neo-Cypherpunk / Privacy分享的回放
@@ -121,6 +157,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -145,11 +182,13 @@ AI x Web3 School
 
 
 
+
 回看《**Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**》
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -178,6 +217,7 @@ AI x Web3 School
 
 
 
+
 观看了英文分享：这次分享的主题围绕 Open Agentic Economy，也就是在 AI Agent 逐渐成为互联网新参与者之后，Ethereum 如何为人类和 Agent 共同参与的开放经济提供基础设施。
 
 [https://x.com/i/broadcasts/1qxvvkQkVXQxB](https://x.com/i/broadcasts/1qxvvkQkVXQxB)
@@ -196,6 +236,7 @@ AI x Web3 School
 
 
 
+
 观看老师的分享：**AI 下乡计划｜AI 在 Web3 的应用**
 
 [https://x.com/AgentEconCN/status/2057711778466083149](https://x.com/AgentEconCN/status/2057711778466083149)
@@ -203,6 +244,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -237,11 +279,13 @@ AI x Web3 School
 
 
 
+
 今天主要观看了Hermes Agent分享，收获满满
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -273,6 +317,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
