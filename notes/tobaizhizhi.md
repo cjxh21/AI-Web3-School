@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+开发项目。
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 做项目
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
+
 看openday
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 思考了黑客松思路。
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 继续学习了langchain
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 学习了提示词工程
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -368,11 +380,13 @@ MCP 的核心可以这样记：
 
 
 
+
 学习了rag有关知识
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -395,11 +409,13 @@ MCP 的核心可以这样记：
 
 
 
+
 去了趟医院休息一天
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -426,11 +442,13 @@ MCP 的核心可以这样记：
 
 
 
+
 学习了agent有关知识。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
