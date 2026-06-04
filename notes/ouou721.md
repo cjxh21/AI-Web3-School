@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+[https://github.com/ouou721/ai-web3-school.git](https://github.com/ouou721/ai-web3-school.git)
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 今日成果已发布在公开库[https://github.com/ouou721/ai-web3-school.git](https://github.com/ouou721/ai-web3-school.git)
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 今日打卡已发布在[https://github.com/ouou721/ai-web3-school.git](https://github.com/ouou721/ai-web3-school.git)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 完成了对钱包的测试
@@ -37,6 +45,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -51,11 +60,13 @@ AI x Web3 School
 
 
 
+
 今日打卡内容已发布在github库[https://github.com/ouou721/ai-web3-school.git](https://github.com/ouou721/ai-web3-school.git)
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -73,6 +84,7 @@ AI x Web3 School
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ouou721/images/2026-05-25-1779680628144-image.png)
 
 准备做下周的AIdemo了
@@ -80,6 +92,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -110,11 +123,13 @@ AI 输出：初学者解释、类比、风险提醒、一个真实场景
 
 
 
+
 今天有点忙，只听了课没有干别的～
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -143,12 +158,14 @@ AI 输出：初学者解释、类比、风险提醒、一个真实场景
 
 
 
+
 今天參考任務詳情，在ChatGpt和Gemini搭建了agent。並且已經能幫我完成任務。  
 其中一個實例：[https://chatgpt.com/share/6a0ac7a5-2ec0-83ec-85df-be13928cf643](https://chatgpt.com/share/6a0ac7a5-2ec0-83ec-85df-be13928cf643)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
