@@ -15,8 +15,60 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+今日完成
+
+确定了黑客松项目方向Agent 遇到 402 → CAW 自动付款
+
+已经画好了流程图：
+
+① 用户配置 Pact（一次性）→ CAW
+
+② 用户发自然语言任务 → Agent
+
+③ Agent 调 fetch\_data 工具
+
+④ fetch\_data → GET /data → x402 Server
+
+⑤ x402 Server → 402 + 付款要求
+
+⑥ fetch\_data → CAW 发 USDC（Pact 范围内）→ Sepolia
+
+⑦ Sepolia → 返回 tx hash
+
+⑧ fetch\_data → 带 Payment-Proof 重发请求
+
+⑨ x402 Server → 200 + 数据 + 签名
+
+⑩ fetch\_data → 生成报告
+
+⑪ 报告返回用户
+
+**Demo初步样子：**
+
+用户输入: 查 Uniswap 7天交易量
+
+↓
+
+Agent: 需要购买 Dune 数据，5 USDC，在预算内，自动支付...
+
+↓
+
+CAW: 支付完成，tx hash: 0xabc...
+
+↓
+
+Agent: 数据已验证，正在生成报告...
+
+↓
+
+\[输出 Markdown 报告 + 执行日志\]
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 ### **今天产出**
 
 1.  **确定了单人参赛** — 组队找了一圈没合适的，Cobo 赛道单人能做，直接定。
@@ -42,6 +94,7 @@ AI x Web3 School
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 今日学习前两周的内容
 
 8 种攻击，两句话总结规律：
@@ -55,6 +108,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 今日主要完成week2的作业
@@ -77,6 +131,7 @@ AI x Web3 School
 
 
 
+
 **今天重读了 Machine Payment 章节（~2500 字，8 个节点），用 explain-back 挖了一遍。** 之前读第一遍的时候 8 个节点当独立概念看，这次跟 Agent 过了 6 道题，把 Budget/Policy 分工、Payment Intent 生命周期、MPP 托管模型、x402 协议本质都重新捋了一遍。  
   
 2\. **修正了 Guard 在支付链路里的位置。** 第一遍理解是 Budget → Quote → Payment Intent → Guard（Guard 当最后一道闸）。这次理清楚应该是 Quote → Guard → Payment Intent——Guard 在用户签字之前就拦截不该看的报价，保护的不只是钱，还有注意力。
@@ -84,6 +139,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -106,6 +162,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -153,6 +210,7 @@ AI x Web3 School
 
 
 
+
 **今日学习总结**
 
 **Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
@@ -182,6 +240,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -220,11 +279,13 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -276,6 +337,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -311,6 +373,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -334,6 +397,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -481,6 +545,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -541,6 +606,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -573,6 +639,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
