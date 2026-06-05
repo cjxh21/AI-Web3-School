@@ -15,14 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+[https://x.com/SwenChan/status/2062579295344881868?s=20](https://x.com/SwenChan/status/2062579295344881868?s=20)
+
+试了下本地模型，qwen 3.5 27b，太卡了，每回答一个问题都要风扇转半天
+
+9b也一样，小模型也很难用。我定义为极端情况，比如飞机高铁断网时的应急方案，平时还是要用云模型
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 写了一篇文章，分析黑客松模型未来的革命：  
 [https://x.com/SwenChan/status/2062044439057768863?s=20](https://x.com/SwenChan/status/2062044439057768863?s=20)
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 分享了下这次去大理参加 hacker house 的体验思考～
@@ -35,12 +46,14 @@ AI x Web3 School
 
 
 
+
 写了份hermes喂饭搭建指南，虽然大家还在学的应该都会了，但是这个技能值得更大的价值：  
 [https://x.com/SwenChan/status/2061019216338460768?s=20](https://x.com/SwenChan/status/2061019216338460768?s=20)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -55,11 +68,13 @@ AI x Web3 School
 
 
 
+
 我正在打造自己的独一无二的 Hermes Agent，非常期待
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -88,6 +103,7 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 
 
+
 今日笔记：EOA、智能账户和多签账户的权限差异  
 [https://x.com/SwenChan/status/2058823951531593904?s=20](https://x.com/SwenChan/status/2058823951531593904?s=20)
 
@@ -97,6 +113,7 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -121,11 +138,13 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 
 
+
 帮大家审批任务中！！
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -154,6 +173,7 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 
 
+
 写了篇文章，用于整理最近很多新学员关于 API key的共同问题，快速入门 AI 开发：
 
 [https://x.com/SwenChan/status/2057349592296075285?s=20](https://x.com/SwenChan/status/2057349592296075285?s=20)
@@ -169,6 +189,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -238,6 +259,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 
 
+
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
 
 然后跟着做做任务 收集问题
@@ -245,6 +267,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
