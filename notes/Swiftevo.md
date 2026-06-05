@@ -15,8 +15,696 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+這是一個非常好的問題。
+
+而且其實：
+
+# 沒有人真正知道 GLM-5.1 內部全部細節
+
+因為 [Z.AI](http://Z.AI) 沒有公開完整訓練 recipe。
+
+但從：
+
+-   技術報告
+    
+-   公開 benchmark
+    
+-   Agent 表現
+    
+-   當前 Agent 研究方向
+    
+
+我們大概可以推測它在做什麼。
+
+* * *
+
+# 先說結論
+
+很多人誤解：
+
+```text
+Long Horizon = Context Window 很大
+```
+
+其實不是。
+
+* * *
+
+很多模型都有：
+
+-   128K
+    
+-   200K
+    
+-   1M
+    
+
+context。
+
+但：
+
+仍然：
+
+```text
+做到第 20 步開始亂跑
+```
+
+* * *
+
+所以：
+
+# Long Horizon ≠ Long Context
+
+* * *
+
+# 真正問題
+
+假設給 Agent：
+
+```text
+建立一個 Spark Reviewer Agent
+```
+
+* * *
+
+這任務可能：
+
+```text
+Step 1
+分析需求
+
+Step 2
+設計資料庫
+
+Step 3
+建立 RAG
+
+Step 4
+建立 Tool
+
+Step 5
+測試
+
+Step 6
+修正
+
+Step 7
+再測試
+```
+
+* * *
+
+可能：
+
+50步
+
+100步
+
+200步
+
+* * *
+
+大部分模型會出現：
+
+# Goal Drift
+
+* * *
+
+即：
+
+一開始：
+
+```text
+我要做 Reviewer Agent
+```
+
+* * *
+
+20步後：
+
+開始：
+
+```text
+我在修一個不重要的 bug
+```
+
+* * *
+
+40步後：
+
+```text
+忘記原本目標
+```
+
+* * *
+
+這就是：
+
+# Long Horizon Failure
+
+* * *
+
+# GLM 想解決的是這問題
+
+官方一直提：
+
+```text
+保持目標
+持續迭代
+反覆修正
+```
+
+([Z.AI](http://Z.AI))
+
+* * *
+
+# 怎樣做到？
+
+目前業界主要有五個方向。
+
+* * *
+
+# 1\. Agent Trajectory Training
+
+這最有可能。
+
+* * *
+
+傳統模型：
+
+訓練資料：
+
+```text
+Question
+↓
+Answer
+```
+
+* * *
+
+但 Long Horizon Agent：
+
+訓練資料：
+
+變成：
+
+```text
+Goal
+↓
+Thought
+↓
+Action
+↓
+Observation
+↓
+Thought
+↓
+Action
+↓
+...
+↓
+Success
+```
+
+* * *
+
+即：
+
+模型學的不是：
+
+```text
+回答問題
+```
+
+而是：
+
+```text
+完成任務
+```
+
+* * *
+
+這很像：
+
+你教一個人：
+
+* * *
+
+不是：
+
+```text
+怎樣回答數學題
+```
+
+* * *
+
+而是：
+
+```text
+怎樣完成一個研究專案
+```
+
+* * *
+
+# 2\. Reinforcement Learning
+
+這個很重要。
+
+* * *
+
+以前：
+
+模型獎勵：
+
+```text
+答案正確
+```
+
+* * *
+
+現在：
+
+Agent 模型獎勵：
+
+```text
+最終任務完成
+```
+
+* * *
+
+例如：
+
+* * *
+
+成功 deploy
+
++1
+
+* * *
+
+成功修 bug
+
++1
+
+* * *
+
+測試通過
+
++1
+
+* * *
+
+最後：
+
+模型開始學：
+
+```text
+長期策略
+```
+
+而不是：
+
+```text
+短期回答
+```
+
+* * *
+
+# 3\. Better Tool Use
+
+這跟我們最近學的東西有關。
+
+* * *
+
+很多模型失敗：
+
+不是因為不聰明。
+
+而是：
+
+```text
+不知道什麼時候該查資料
+```
+
+* * *
+
+例如：
+
+* * *
+
+GPT：
+
+亂猜。
+
+* * *
+
+Long Horizon Agent：
+
+```text
+先查
+再決定
+```
+
+* * *
+
+這就是：
+
+# ReAct
+
+* * *
+
+Reason
+
+↓
+
+Act
+
+↓
+
+Observe
+
+↓
+
+Reason
+
+* * *
+
+GLM 很可能特別針對：
+
+Tool Use Trajectory
+
+做訓練。
+
+* * *
+
+# 4\. Self-Correction
+
+這是 Agent 世界超重要方向。
+
+* * *
+
+傳統模型：
+
+```text
+錯了
+就錯了
+```
+
+* * *
+
+Long Horizon Agent：
+
+```text
+執行
+↓
+發現失敗
+↓
+重新規劃
+↓
+再執行
+```
+
+* * *
+
+例如：
+
+```text
+Test Failed
+```
+
+↓
+
+```text
+讀 Error
+```
+
+↓
+
+```text
+修改
+```
+
+↓
+
+```text
+重新測試
+```
+
+* * *
+
+這就是：
+
+# Iterative Refinement
+
+* * *
+
+也是 [Z.AI](http://Z.AI) 一直強調的。
+
+* * *
+
+# 5\. Planning-first Architecture
+
+這是目前最前沿。
+
+* * *
+
+很多 Agent：
+
+已經不是：
+
+```text
+想到一步做一步
+```
+
+* * *
+
+而是：
+
+先：
+
+```text
+產生任務樹
+```
+
+* * *
+
+例如：
+
+```text
+Goal:
+Review Proposal
+```
+
+↓
+
+```text
+Subtask 1
+Understand Proposal
+
+Subtask 2
+Verify Evidence
+
+Subtask 3
+Check Literature
+
+Subtask 4
+Compare History
+
+Subtask 5
+Generate Report
+```
+
+* * *
+
+然後：
+
+逐步完成。
+
+* * *
+
+# 對 Spark Agent 的意義
+
+其實非常大。
+
+* * *
+
+因為：
+
+普通 AI Reviewer：
+
+是：
+
+```text
+Proposal
+↓
+Summary
+```
+
+* * *
+
+但 Long Horizon Agent：
+
+是：
+
+```text
+Proposal
+↓
+Plan
+↓
+Evidence Search
+↓
+AMiner Search
+↓
+Funding History
+↓
+Risk Analysis
+↓
+Missing Evidence
+↓
+Reviewer Report
+```
+
+* * *
+
+這才符合：
+
+[Z.AI](http://Z.AI) 想看的。
+
+* * *
+
+# 真正專家爭論在哪？
+
+這很有趣。
+
+* * *
+
+## 第一派
+
+模型派
+
+認為：
+
+```text
+只要模型夠強
+Long Horizon 自然出現
+```
+
+* * *
+
+## 第二派
+
+Agent 系統派
+
+認為：
+
+```text
+Long Horizon
+=
+Memory
++
+Planning
++
+Tool Use
++
+Reflection
+```
+
+* * *
+
+不是模型本身。
+
+* * *
+
+我比較站第二派。
+
+因為：
+
+如果把：
+
+* * *
+
+Claude
+
+GLM
+
+GPT
+
+Gemini
+
+* * *
+
+全部放進：
+
+```text
+好的 Planning
+好的 Memory
+好的 Tool Layer
+```
+
+差距其實會縮小很多。
+
+* * *
+
+# 對你現在最重要的理解
+
+你參加 [Z.AI](http://Z.AI) 比賽時：
+
+評審其實不會在乎：
+
+```text
+GLM-5.1 幫我寫了一個 Summary
+```
+
+* * *
+
+評審想看的是：
+
+```text
+GLM-5.1 自己決定：
+
+1. 要查什麼
+2. 用什麼 Tool
+3. 怎樣驗證
+4. 發現問題怎樣修正
+5. 最後怎樣交付結果
+```
+
+* * *
+
+這才是：
+
+# Long Horizon Agent
+
+* * *
+
+而這也剛好是我們下一步要學的東西：
+
+# Planning Agent
+
+因為：
+
+ReAct 只是：
+
+```text
+邊想邊做
+```
+
+* * *
+
+真正大型 Agent：
+
+通常是：
+
+# Planning + ReAct + Memory + Tool Use
+
+一起運作。
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 很好。
 
 如果說前幾天你學的是：
@@ -629,6 +1317,7 @@ AI 怎樣決定下一步做甚麼
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -1170,6 +1859,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 很好。
@@ -1786,6 +2476,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -2310,6 +3001,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -2349,6 +3041,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -2963,6 +3656,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -3552,6 +4246,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -4212,6 +4907,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -4832,6 +5528,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 # Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -5443,6 +6140,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -6033,6 +6731,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -6552,11 +7251,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -6991,6 +7692,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -7085,6 +7787,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
