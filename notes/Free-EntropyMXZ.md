@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+### Intent-centric（意图导向）与机器原生钱包
+
+-   **核心概念：** 传统的 Web3 交互需要用户理解“签名、授权、跨链”。但对 AI 来说，直接编写并执行底层的 EVM 字节码太容易出错。因此，**Intent-centric（意图导向）** 架构成为主流。AI 只需要声明“终点意图”，剩下的路径寻找由链下的 Solver（寻找者）去竞争完成。
+    
+-   **关键标准：**
+    
+    -   **ERC-7521：** 专门针对智能合约钱包的意图表达标准。Agent 签署一个“我愿意用 X 换取最高收益的 Y 资产”的意图，剩下的路由全自动解决。
+        
+    -   **EIP-7702 / Session Keys：** 允许给 Agent 的临时子钱包（Session Keys）赋予限时、限额的权限，Agent 可以高频自动交易，但永远接触不到用户的核心私钥本身。
+        
+-   **今日心得：** AI 不用去学怎么跨链，Web3 基础设施正在反向适配 AI 的逻辑。意图导向加上账户抽象（AA），让 Agent 真正获得了安全的“财务自主权”。
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 ### Agentic GDP（智能体经济）与 A2A 通信
 
 -   **核心概念：** AI Agent 不再是孤立的聊天框，它们已经开始相互买卖数据、协同完成任务，形成了 **A2A (Agent-to-Agent) 商务**。由此诞生了一个新指标：**aGDP（智能体国内生产总值）**，用来衡量链上 AI 实体创造的总经济产值。
@@ -32,6 +48,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 ### Agentic GDP（智能体经济）与 A2A 通信
 
@@ -50,6 +67,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
 
+
 ### 全同态加密（FHE）—— 密文状态下的 AI 训练
 
 -   **核心概念：** zkML 解决了“证明 AI 计算正确”的问题，而 **FHE (Fully Homomorphic Encryption, 全同态加密)** 解决的是“计算过程中数据绝不泄露”的问题。它允许 AI 直接在加密的数据（密文）上进行数学运算和推理，且输出的结果解密后与直接在明文上运算完全一致。
@@ -65,6 +83,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -87,6 +106,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -115,6 +135,7 @@ AI x Web3 School
 
 
 
+
 ### Day 4：AI + Web3 的代币经济学（Tokenomics）
 
 -   **核心概念：** 如何用 Token 驱动 AI 生态的飞轮？Web3 为 AI 引入了全新的数据贡献与标注激励机制。
@@ -132,6 +153,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -162,11 +184,13 @@ AI x Web3 School
 
 
 
+
 学习agent eco治理
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -189,11 +213,13 @@ AI x Web3 School
 
 
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -299,11 +325,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
