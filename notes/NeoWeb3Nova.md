@@ -15,8 +15,54 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+**训练营**：AI × Web3 School Cohort-0  
+**日期**：2026-06-06 (周六)  
+**类型**：项目冲刺 + 文档整理 + 规则对照
+
+### 今日完成
+
+1.  **PactGuard 项目中心初始化**：创建 `hackathon/project/` 标准五目录结构（src / tests / docs / demo / submission），将 experiments 代码正式迁移为可交付项目骨架。
+    
+2.  **Cobo 赛道规则硬约束对照**：逐条检查 5 项硬约束 + 5 个评审维度 + 6 项必备提交物，产出 `08-rules-gap-analysis.md`。结论：架构/代码/威胁模型全部就绪，最大 Gap 为测试网交易证据和 Demo 视频。
+    
+3.  **Open Day 启动会洞察整理**：提取评审真实偏好（先看 Demo 再看文档）、提交物补充要求（任务看板 + 开发痕迹）、社群支持资源（助教名单、Workshop 时间）。
+    
+4.  **VC 视角 + 奖项/评审指南整理**：明确评委 5 分钟印象法则、得分关键点、542 赛道策略。
+    
+5.  **提交物核对清单**：创建 `01-checklist.md`，标记 6 项必备提交物当前状态，设定 6/7–6/11 补完时间表。
+    
+
+### 今日收获
+
+-   **评审视角就是导航图**：启动会暴露的真实评审流程（Demo → 文档）彻底改变了我的优先级排序——视频录制从"nice to have"变为"must have"。
+    
+-   **规则对照是防漏网器**：不写 `08-rules-gap-analysis.md` 之前，我以为项目已经完成了 80%；写完才发现缺测试网交易证据这个硬性要求，及时止损。
+    
+-   **项目骨架是留给评委的第一印象**：一个清晰的目录结构和 README 能让评委在 10 秒内相信"这个人是认真参赛的"。
+    
+
+### 链接
+
+-   项目推进中心：`hackathon/README.md`
+    
+-   项目 README：`hackathon/project/README.md`
+    
+-   规则对照表：`hackathon/project/docs/08-rules-gap-analysis.md`
+    
+-   Sprint Tracker：`hackathon/project/docs/02-sprint-tracker.md`
+    
+-   提交清单：`hackathon/project/submission/01-checklist.md`
+    
+-   Open Day 洞察：`hackathon/project/docs/09-open-day-insights.md`
+    
+-   VC 视角：`hackathon/project/docs/10-vc-perspective.md`
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 ### 6/5 今日完成 ✅
 
 -   **Fallback Mock 方案固化**：确认 `x402_client.py` 中 `CoboCAWWallet` 类为模拟实现，已添加类文档字符串说明 `"实际生产环境中将是 Cobo 提供的 SDK 客户端"`
@@ -30,6 +76,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 ## 今日代码交付
 
@@ -57,6 +104,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 ### 今日完成
@@ -97,6 +145,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
@@ -131,6 +180,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -151,6 +201,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -203,6 +254,7 @@ AI x Web3 School
 
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -230,6 +282,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -280,6 +333,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -352,6 +406,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -372,6 +427,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -432,6 +488,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -460,6 +517,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -511,6 +569,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -599,6 +658,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -627,6 +687,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -690,6 +751,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
