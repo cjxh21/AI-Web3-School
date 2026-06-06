@@ -15,8 +15,46 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+### **今日完成**
+
+**架构升级：从单 Agent 到多 Worker 服务发现**
+
+1.  加了限速层（429 触发 CAW 付款升级）
+    
+2.  加了结构化报告输出（LLM 输出格式化分析报告 + 支付摘要页脚）
+    
+3.  实现了真实服务发现机制：
+    
+    -   `agent/registry.py`：动态 HTTP 探测，不读静态字典
+        
+    -   `agent/tools.py`：新增 `list_data_workers()` + `hire_worker()`
+        
+    -   三个真实 Worker，调用不同 API：
+        
+        -   8081: DefiLlama Protocols（TVL + DEX 交易量）← 0.001 SETH
+            
+        -   8082: DefiLlama Yields（APY/收益率）← 0.0015 SETH
+            
+        -   8083: CoinGecko（代币价格 + 市值）← 0.002 SETH
+            
+    -   每个 Worker 暴露 `/catalog` 接口自我描述
+        
+
+**当前项目架构（方向 01 + 03 同时满足）**
+
+```
+发现  ✅  list_data_workers() → GET /catalog（真实 HTTP 探测）
+比价  ✅  LLM 自己推理选哪个 Worker（过程可见）
+采购  ✅  hire_worker() → CAW Pact + 链上支付
+交付  ✅  x402 验证 + 真实 API 数据返回
+```
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 今日完成
 
 确定了黑客松项目方向Agent 遇到 402 → CAW 自动付款
@@ -69,6 +107,7 @@ Agent: 数据已验证，正在生成报告...
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
+
 ### **今天产出**
 
 1.  **确定了单人参赛** — 组队找了一圈没合适的，Cobo 赛道单人能做，直接定。
@@ -95,6 +134,7 @@ Agent: 数据已验证，正在生成报告...
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 今日学习前两周的内容
 
 8 种攻击，两句话总结规律：
@@ -108,6 +148,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -132,6 +173,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 **今天重读了 Machine Payment 章节（~2500 字，8 个节点），用 explain-back 挖了一遍。** 之前读第一遍的时候 8 个节点当独立概念看，这次跟 Agent 过了 6 道题，把 Budget/Policy 分工、Payment Intent 生命周期、MPP 托管模型、x402 协议本质都重新捋了一遍。  
   
 2\. **修正了 Guard 在支付链路里的位置。** 第一遍理解是 Budget → Quote → Payment Intent → Guard（Guard 当最后一道闸）。这次理清楚应该是 Quote → Guard → Payment Intent——Guard 在用户签字之前就拦截不该看的报价，保护的不只是钱，还有注意力。
@@ -139,6 +181,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -162,6 +205,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -211,6 +255,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 **今日学习总结**
 
 **Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
@@ -240,6 +285,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -280,11 +326,13 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -338,6 +386,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -374,6 +423,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -397,6 +447,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -546,6 +597,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -607,6 +659,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -639,6 +692,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
