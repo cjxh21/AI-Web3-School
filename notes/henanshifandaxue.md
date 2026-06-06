@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+今天没有学习
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 今天听了老师的分享和例会
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
@@ -24,11 +30,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 
 
+
 今天学了一些基础知识
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -41,11 +49,13 @@ AI x Web3 School
 
 
 
+
 今天学习了黑客松的注意事项，希望我能完成黑客松
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -62,11 +72,13 @@ AI x Web3 School
 
 
 
+
 今天学着写软件
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -87,11 +99,13 @@ AI x Web3 School
 
 
 
+
 今天学习了一些基础知识
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -116,11 +130,13 @@ AI x Web3 School
 
 
 
+
 今天随便看了几页官方文档，有太多不会的了
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -187,6 +203,7 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -266,6 +283,7 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天翻译了一篇文档，没有补训练营的知识
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
@@ -285,11 +303,13 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天学习了一些基础知识
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -329,11 +349,13 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天没有学习，出去吃了好吃的，明天补上
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -380,11 +402,13 @@ An [Ethereum](https://ethereum.org/) account is an entity with an ether (ETH) ba
 
 
 
+
 今天学习了draken的分享，了解了一些AI工具的使用
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
