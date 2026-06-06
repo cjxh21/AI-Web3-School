@@ -14,6 +14,271 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+# AI x Web3 School | Day 20 技术报告：公开学习总结与 Proof-of-Work 归档
+
+> **报告日期：** 2026-06-06  
+> **学习周期：** Day 20 / 21  
+> **主题：** 公开总结——从问题定义到系统边界的完整复盘  
+> **报告等级：** 学术级技术复盘（Technical Report）  
+> **输出状态：** 草稿 → 待提交 WCB 打卡平台
+
+---
+
+## 1. 摘要（Abstract）
+
+本报告为 AI x Web3 School 21 天学习计划的第 20 天总结，旨在系统归档以下内容：所选择的核心问题方向、20 天内习得的 Web3 与 Agent 技术栈、通过原型验证的关键设计决策，以及当前仍存在的风险与不确定性。
+
+报告覆盖三大维度：**问题空间与动机（Problem Space）**、**技术学习轨迹（Technical Learning Arc）**、**原型设计与安全边界（Prototype & Security Boundary）**。所有产出均以可公开展示的 Markdown 文件为载体，具备 Proof-of-Work 可验证性。
+
+---
+
+## 2. 系统架构与拓扑（System Architecture & Topology）
+
+### 2.1 学习架构概念图
+
+```mermaid
+mindmap
+  root((AI x Web3 School))
+    Week 1
+      Web3 基础直觉
+        钱包 Wallet
+        签名 Signature
+        交易 Transaction
+        智能合约 Smart Contract
+        安全 Security
+    Week 2
+      Agent Workflow
+        LLM / Prompt
+        Context 管理
+        RAG 来源可信度
+        Web3 Tool Use
+        Agent Wallet
+        Evaluation 评估
+    Week 3
+      项目方向落地
+        问题定义 Problem Definition
+        最小 Demo 设计
+        原型脚本 Prototype
+        安全复审 Security Review
+        公开总结 Public Writeup
+```
+
+### 2.2 每日学习循环拓扑
+
+```mermaid
+graph TD
+    A[打开 WCB Learning<br/>确认当日任务] --> B[阅读 Handbook<br/>对应章节]
+    B --> C[写 daily/YYYY-MM-DD.md]
+    C --> D[产出内容草稿<br/>Content Draft]
+    D --> E[执行小型实践<br/>Experiment / Script]
+    E --> F[记录 Handbook Feedback]
+    F --> G[生成打卡草稿<br/>手动提交 WCB]
+    G --> H[链接回写 daily note<br/>完成闭环]
+```
+
+---
+
+## 3. 问题空间定义（Problem Space & Motivation）
+
+### 3.1 学员画像与动机
+
+| 维度 | 定位 |
+|---|---|
+| AI 基础 | 熟悉大语言模型与 Agent 概念 |
+| Web3 基础 | 新手，需系统性建立直觉 |
+| 编程能力 | 会基础脚本，可实现小型实验 |
+| 目标方向 | 开发（Dev）+ 内容运营（Content）双轨 |
+| 每日可投入时间 | 8 小时 |
+| 输出语言 | 中文为主 + 英文术语双语标注 |
+
+### 3.2 核心问题陈述
+
+**核心问题：** AI Agent 在执行 Web3 操作时，如何在保持自主性的同时明确权限边界、保持用户确认（human-in-the-loop），并形成可验证的操作记录？
+
+这不是一个纯技术问题，而是涉及：
+- **身份层**：Agent wallet 与用户钱包的权限关系
+- **执行层**：Tool Use 的只读 / 确认 / 禁止自动执行分类
+- **验证层**：链上状态确认与操作 replay 的评估机制
+
+### 3.3 In-Scope / Out-of-Scope 边界
+
+**In-Scope（本计划覆盖）：**
+- Web3 基础直觉：钱包、签名、交易、智能合约
+- Agent Workflow 与 Web3 Tool Use 的桥接
+- Agent Wallet 的权限分层设计
+- 安全边界检查清单（私钥、授权、数据源、Prompt Injection、错误动作）
+
+**Out-of-Scope（本计划未深入）：**
+- 智能合约的完整开发与部署
+- 特定链（L1/L2）的底层共识机制
+- 大规模生产级 Agent 系统架构
+- 经济模型与 tokenomics 设计
+
+---
+
+## 4. 技术学习轨迹（Technical Learning Arc）
+
+### 4.1 术语表：Week 1 — Web3 基础直觉
+
+| 中文术语 | 英文术语 | 核心理解 |
+|---|---|---|
+| 钱包 | Wallet | 不只是登录按钮，而是身份与权限边界 |
+| 签名 | Signature | 对消息的密码学承诺，不可伪造 |
+| 交易 | Transaction | 状态变更请求，需网络共识确认 |
+| 智能合约 | Smart Contract | 链上规则代码，状态（state）、函数（function）、事件（event） |
+| 气体费 | Gas | 执行合约计算的资源消耗成本 |
+| 私钥 | Private Key | 完全控制权，泄露即失去所有资产 |
+| 公钥 | Public Key | 可公开，用于验证签名 |
+| 哈希 | Hash | 单向摘要，用于链上数据完整性校验 |
+| 账户抽象 | Account Abstraction | 将 EOА 升级为可编程智能账户，支持更灵活权限逻辑 |
+
+### 4.2 术语表：Week 2 — Agent Workflow 连接 Web3
+
+| 中文术语 | 英文术语 | 核心理解 |
+|---|---|---|
+| 提示词 | Prompt | 目标 + 上下文 + 工具边界 + 确认规则 + 输出格式 |
+| 上下文 | Context | Agent 做决策时的信息环境，决定行动边界 |
+| 检索增强生成 | RAG | 结合可信来源补充 LLM 知识库，减少幻觉 |
+| 智能体 | Agent | 观察（observe）、决策（decide）、行动（act）、验证（verify）、报告（report） |
+| 模型上下文协议 | MCP | 模型与外部工具/数据源交互的标准化协议 |
+| 链感知上下文 | Chain-aware Context | 实时读取链上状态作为 Agent 决策依据 |
+| 可验证 AI | Verifiable AI | 操作留痕、可 replay、可审计的 AI 执行记录 |
+
+### 4.3 术语表：Week 3 — 项目方向与安全
+
+| 中文术语 | 英文术语 | 核心理解 |
+|---|---|---|
+| 人在回路 | Human-in-the-loop | Agent 无法绕过用户确认的关键控制机制 |
+| 工具权限矩阵 | Tool Permission Matrix | 工具按只读 / 需确认 / 禁止自动执行三级分类 |
+| 会话密钥 | Session Key | 限时限权限的临时授权，不是完整私钥 |
+| 策略 | Policy | 守卫规则，定义允许和禁止的操作边界 |
+| Prompt 注入 | Prompt Injection | 通过恶意输入覆盖 Agent 原有指令的安全攻击向量 |
+
+---
+
+## 5. 原型设计与验证（Prototype Design & Verification）
+
+### 5.1 工具权限矩阵
+
+| 工具名称 | 类型 | 权限级别 | 执行条件 |
+|---|---|---|---|
+| 读取余额 read balance | 只读 | L0 — 无需确认 | 任意时刻可执行 |
+| 模拟交易 simulate transaction | 只读 | L0 — 无需确认 | 任意时刻可执行 |
+| 估算 Gas estimate gas | 只读 | L0 — 无需确认 | 任意时刻可执行 |
+| 请求签名 request signature | 需用户确认 | L1 — 必须用户授权 | 展示完整交易信息，等待用户确认 |
+| 提交交易 submit transaction | 禁止自动执行 | L2 — 严格禁止自动 | 除非有显式会话密钥策略，否则必须人工审批 |
+
+### 5.2 安全漏洞向量与边界场景
+
+| 漏洞类型 | 缺陷源头 | 攻击 / 失效向量 | 防御策略 |
+|---|---|---|---|
+| 私钥泄露 | 密钥管理不当 | Agent 持有私钥被恶意调用 | 使用智能账户（Smart Account）+ 会话密钥（Session Key），限制权限范围和时间 |
+| 恶意授权 | Token Approval 过度 | 钓鱼或错误交互导致资产无限授权 | 实现授权检查清单，每次授权前展示剩余限额，提示用户撤销过期授权 |
+| 数据源不可信 | 使用未经校验的 RPC 或外部 API | 提供错误的链上状态信息导致错误决策 | RAG 校验来源优先级：链上数据 > WCB 内容 > Handbook > 第三方 API |
+| Prompt Injection | 用户输入包含恶意指令 | 通过对话注入覆盖 Agent 原有关键约束 | 输入层添加指令隔离，敏感操作不依赖用户直接输入 |
+| 错误动作执行 | 模拟交易通过但实际执行失败 | Gas 估算错误、nonce 冲突、网络拥堵 | 执行前强制经过 simulate + estimate gas 双重检查，失败时自动触发 replay checklist |
+| 合约漏洞 | 交互合约未审计 | 交互未知合约导致资产损失 | 仅与已知审计合约交互，未审计合约需要用户明确声明风险等级 |
+
+---
+
+## 6. Week 3 项目方向：问题定义与 Demo 设计
+
+### 6.1 选择的问题方向
+
+**主方向：** AI Agent Web3 操作权限顾问（Agent Wallet Permission Advisor）
+
+**问题陈述：** 大多数用户在授权 AI Agent 操作链上资产时，缺乏对权限边界的认知工具，导致要么过度授权（资产风险），要么完全禁止（失去 AI 辅助价值）。需要一个界面帮助用户理解、配置和监控 AI Agent 的链上操作权限。
+
+**备选方向：** 交易解释器（Transaction Explainer）—— 帮助非技术用户理解链上交易内容与风险。
+
+### 6.2 最小 Demo 设计
+
+| Demo 组件 | 说明 |
+|---|---|
+| 输入 | 用户描述一个 Web3 操作意图（如"把我的 USDT 换成 ETH"） |
+| 输出 | 权限需求分析 + 风险等级评估 + 用户确认流程 |
+| 工具 | 余额读取、Gas 估算、签名请求（均走 L1 确认） |
+| 确认点 | 执行前展示：操作类型、目标地址、金额上限、有效期 |
+| 失败场景 | Gas 不足、地址格式错误、合约拒绝交易、用户拒绝签名 |
+
+### 6.3 原型验证路径
+
+```mermaid
+graph LR
+    A[用户意图输入] --> B[意图解析<br/>LLM 分析操作类型]
+    B --> C[权限需求推断<br/>映射到 Tool Permission Matrix]
+    C --> D{风险等级评估}
+    D -->|低风险| E[模拟执行<br/>estimate gas + simulate]
+    D -->|高风险| F[强制用户确认<br/>展示完整操作信息]
+    E --> G[结果展示 + 日志记录]
+    F --> H[用户确认后执行]
+    H --> G
+    G --> I[生成 Evaluation Checklist<br/>可验证操作记录]
+```
+
+---
+
+## 7. 学习产出总览（Proof-of-Work Summary）
+
+### 7.1 产出清单
+
+| 类型 | 文件路径 | 状态 |
+|---|---|---|
+| 每日笔记 | `daily/YYYY-MM-DD.md` × 20 | ✅ 持续更新 |
+| 实验记录 | `experiments/day-06-web3-baseline/README.md` | ✅ 已完成 |
+| 原型脚本 | `experiments/day-18-prototype/README.md` | ✅ 已完成 |
+| 问题定义 | `hackathon/problem-definition.md` | ✅ 已完成 |
+| 最小 Demo | `hackathon/minimal-demo.md` | ✅ 已完成 |
+| Week 1 复盘 | `weekly-review/week-1.md` | ✅ 已完成 |
+| Week 2 复盘 | `weekly-review/week-2.md` | ✅ 已完成 |
+| Week 3 公开总结 | `submissions/week-3-public-writeup.md` | 🔄 本次输出 |
+
+### 7.2 Handbook Feedback 汇总
+
+| 编号 | 问题描述 | 建议 |
+|---|---|---|
+| FB-01 | "签名" 术语在 Wallet 与 Cryptography 两个章节中解释不一致 | 建议统一为：签名（Signature）= 对消息内容的密码学承诺 |
+| FB-02 | 安全章节缺少 AI Agent 特有的攻击向量示例 | 建议补充 Prompt Injection 与 Agent 误操作的场景描述 |
+| FB-03 | Tool Use 示例缺少 mock tools 的实际代码参考 | 建议提供 Python/TypeScript 伪代码模板 |
+
+---
+
+## 8. 仍然不清楚的问题（Open Questions）
+
+1. **会话密钥（Session Key）的实际生命周期管理**：如何设计一个同时满足"有限时效"和"有限金额"双重约束的会话密钥策略，并在链上可验证？
+
+2. **多 Agent 协作场景下的权限继承**：当一个 Agent 委托另一个 Agent 执行操作时，权限边界如何传递和隔离？
+
+3. **链上数据来源优先级机制**：当 Handbook、WCB 课程、链上实时数据三者出现不一致时，Agent 应遵循怎样的决策优先级？
+
+4. **Account Abstraction 的 gas 抽象机制**：智能账户（Smart Account）如何处理批量交易的 gas 预付，对 Agent 执行策略有何影响？
+
+---
+
+## 9. 下一步计划（Next Steps）
+
+| 优先级 | 行动 | 目标 |
+|---|---|---|
+| P0 | 完成 `submissions/week-3-public-writeup.md` 并提交 | 公开学习总结，打卡完成 |
+| P1 | 完善 Session Key 权限验证的原型脚本 | 实现可演示的最小 Demo |
+| P2 | 整理所有 Handbook Feedback 并提交 Issue | 改善后续学员体验 |
+| P3 | 规划下一轮 7 天 Sprint | 方向：Web3 开发深入 或 Agent Workflow 细化 |
+
+---
+
+## 10. 学术标签（Academic Tags）
+
+`#Web3` `#Agent-Wallet` `#Human-in-the-loop` `#Tool-Use` `#Security-Boundary` `#Smart-Account` `#Prompt-Injection` `#Verifiable-AI` `#Proof-of-Work` `#Agent-Workflow`
+
+---
+
+**报告生成时间：** 2026-06-06  
+**学习进度：** Day 20 / 21（93.3%）  
+**下一步：** 撰写 `submissions/week-3-public-writeup.md` 并提交 WCB 打卡。
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 # 技术报告：AI x Web3 智能体安全与权限边界深度复审
