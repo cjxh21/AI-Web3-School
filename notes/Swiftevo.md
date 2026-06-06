@@ -15,8 +15,685 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+非常好。
+
+其實你現在已經來到：
+
+# Agent Architecture 的分水嶺
+
+因為：
+
+前面學的：
+
+-   RAG
+    
+-   Memory
+    
+-   Retrieval
+    
+-   Context
+    
+
+都是：
+
+```text
+AI 怎樣獲得知識
+```
+
+* * *
+
+而 Planning 開始回答：
+
+```text
+AI 怎樣決定做事
+```
+
+* * *
+
+# 為甚麼 Planning 會出現？
+
+先看最早期 Agent。
+
+* * *
+
+# ReAct
+
+```text
+Thought
+↓
+Action
+↓
+Observation
+↓
+Thought
+↓
+Action
+```
+
+* * *
+
+好處：
+
+很靈活。
+
+* * *
+
+壞處：
+
+很像：
+
+```text
+走一步算一步
+```
+
+* * *
+
+例如：
+
+User：
+
+```text
+幫我分析一個 DeSci Project
+```
+
+* * *
+
+Agent：
+
+```text
+查 GitHub
+```
+
+↓
+
+```text
+查 Website
+```
+
+↓
+
+```text
+查 Publication
+```
+
+↓
+
+```text
+查 Funding
+```
+
+* * *
+
+看似合理。
+
+但：
+
+# 沒有全局策略
+
+* * *
+
+# 問題在哪？
+
+很容易：
+
+* * *
+
+## 忘記原目標
+
+* * *
+
+## 重複查同樣東西
+
+* * *
+
+## 做不重要工作
+
+* * *
+
+## 陷入循環
+
+* * *
+
+這叫：
+
+# Local Optimization
+
+* * *
+
+# Planning-first 的想法
+
+先：
+
+```text
+想完整策略
+```
+
+再：
+
+```text
+執行
+```
+
+* * *
+
+# 最簡單例子
+
+User：
+
+```text
+評估 CancerDAO 是否值得進 shortlist
+```
+
+* * *
+
+ReAct：
+
+```text
+想到什麼查什麼
+```
+
+* * *
+
+Planning Agent：
+
+先產生：
+
+```text
+Plan
+
+1. 理解 Proposal
+2. 驗證 Evidence
+3. 查 GitHub
+4. 查 Funding History
+5. 查 Academic Context
+6. 分析風險
+7. 產生報告
+```
+
+* * *
+
+然後：
+
+再開始做。
+
+* * *
+
+# 為甚麼這重要？
+
+因為：
+
+Agent：
+
+開始有：
+
+# Global Objective
+
+* * *
+
+而不是：
+
+```text
+每一步自己亂決定
+```
+
+* * *
+
+# Agent 世界常見架構
+
+其實有三代。
+
+* * *
+
+# 第一代
+
+Chatbot
+
+* * *
+
+```text
+Question
+↓
+Answer
+```
+
+* * *
+
+# 第二代
+
+ReAct
+
+* * *
+
+```text
+Thought
+↓
+Action
+↓
+Observation
+```
+
+* * *
+
+# 第三代
+
+Planner + Executor
+
+* * *
+
+```text
+Goal
+↓
+Planning
+↓
+Execution
+↓
+Review
+```
+
+* * *
+
+這也是目前：
+
+Claude Code
+
+Gemini CLI
+
+Codex
+
+都開始走的方向。([Anthropic](https://www.anthropic.com/product/claude-code?utm_source=chatgpt.com))
+
+* * *
+
+# Planning 的核心概念
+
+其實來自：
+
+# Task Decomposition
+
+* * *
+
+即：
+
+大任務拆小任務。
+
+* * *
+
+例如：
+
+你的 Spark Agent。
+
+User：
+
+```text
+Review Project X
+```
+
+* * *
+
+Planner：
+
+拆：
+
+```text
+Task A
+Proposal Understanding
+
+Task B
+Evidence Verification
+
+Task C
+AMiner Search
+
+Task D
+Funding History
+
+Task E
+Reviewer Report
+```
+
+* * *
+
+然後：
+
+每個 task：
+
+再交給 Agent。
+
+* * *
+
+# Hierarchical Planning
+
+這是高級版。
+
+* * *
+
+不是：
+
+只有一層。
+
+* * *
+
+例如：
+
+```text
+Goal
+```
+
+↓
+
+```text
+Research
+```
+
+↓
+
+```text
+Literature Search
+```
+
+↓
+
+```text
+Keyword Extraction
+```
+
+↓
+
+```text
+Citation Analysis
+```
+
+* * *
+
+像樹狀結構。
+
+* * *
+
+很多 Agent Framework：
+
+都是這樣。
+
+* * *
+
+# Planner 與 Executor 分離
+
+這很重要。
+
+* * *
+
+很多現代 Agent：
+
+其實有：
+
+## Planner
+
+負責：
+
+```text
+想
+```
+
+* * *
+
+## Executor
+
+負責：
+
+```text
+做
+```
+
+* * *
+
+例如：
+
+Spark Agent。
+
+* * *
+
+Planner：
+
+```text
+需要 AMiner
+需要 GitHub
+需要 Spark DB
+```
+
+* * *
+
+Executor：
+
+真的去查。
+
+* * *
+
+# Reflection Layer
+
+這是第四代 Agent 開始出現的。
+
+* * *
+
+即：
+
+Agent 做完後：
+
+自己問：
+
+```text
+我完成了嗎？
+```
+
+* * *
+
+例如：
+
+```text
+GitHub Evidence 不夠
+```
+
+↓
+
+```text
+重新搜尋
+```
+
+↓
+
+```text
+更新結果
+```
+
+* * *
+
+這叫：
+
+# Self-Reflection
+
+* * *
+
+也是 GLM 很強調的能力。
+
+* * *
+
+# 對 Spark 最重要的應用
+
+你其實已經有天然 Planner。
+
+因為：
+
+人類 Reviewer 本身就在做 Planning。
+
+* * *
+
+例如：
+
+評審一個項目。
+
+你通常：
+
+```text
+先看 Proposal
+```
+
+↓
+
+```text
+再看 Evidence
+```
+
+↓
+
+```text
+再看 GitHub
+```
+
+↓
+
+```text
+再看歷史
+```
+
+↓
+
+```text
+最後寫評語
+```
+
+* * *
+
+其實：
+
+這就是：
+
+# Human Planning Workflow
+
+* * *
+
+你的 Agent：
+
+不是憑空創造。
+
+而是：
+
+# 把 Human Reviewer Workflow Agent 化
+
+* * *
+
+# 專家最大爭論
+
+很值得知道。
+
+* * *
+
+## ReAct 派
+
+認為：
+
+世界太複雜。
+
+不要規劃太多。
+
+* * *
+
+```text
+邊做邊學
+```
+
+* * *
+
+## Planner 派
+
+認為：
+
+沒有計劃：
+
+一定失敗。
+
+* * *
+
+```text
+先規劃
+再執行
+```
+
+* * *
+
+現在主流共識：
+
+其實是：
+
+# Planner + ReAct
+
+* * *
+
+即：
+
+先：
+
+```text
+制定計劃
+```
+
+* * *
+
+再：
+
+```text
+動態調整
+```
+
+* * *
+
+# 用一句話總結今天
+
+前面學的：
+
+```text
+RAG
+=
+AI 怎樣找到知識
+```
+
+* * *
+
+今天學的：
+
+```text
+Planning
+=
+AI 怎樣把大目標拆成可執行任務
+```
+
+* * *
+
+而真正的 Long-Horizon Agent：
+
+通常是：
+
+```text
+Memory
++
+RAG
++
+Planning
++
+ReAct
++
+Reflection
++
+Tool Use
+```
+
+一起運作。
+
+這其實已經非常接近你要做的 Spark DeSci Funding Intelligence Agent 的核心架構了。
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 這是一個非常好的問題。
 
 而且其實：
@@ -705,6 +1382,7 @@ ReAct 只是：
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -1318,6 +1996,7 @@ AI 怎樣決定下一步做甚麼
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -1859,6 +2538,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -2477,6 +3157,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -3002,6 +3683,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -3041,6 +3723,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -3657,6 +4340,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -4246,6 +4930,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -4908,6 +5593,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -5519,6 +6205,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -6141,6 +6828,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -6732,6 +7420,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -7252,11 +7941,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -7693,6 +8384,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -7787,6 +8479,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
