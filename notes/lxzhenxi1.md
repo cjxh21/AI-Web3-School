@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+Review week 3 notes and setup meetings for stablecoin agentic payment next week
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 Contacted Cobo team about their agentic wallet on EURQ for Hackathon.
 
 [https://www.cobo.com/assets/quantoz-eurq-agentic-wallet](https://www.cobo.com/assets/quantoz-eurq-agentic-wallet)
@@ -25,6 +31,7 @@ Contacted Cobo team about their agentic wallet on EURQ for Hackathon.
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
+
 Brainstorm AI agent flow and hackathon ideas
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
@@ -32,11 +39,13 @@ Brainstorm AI agent flow and hackathon ideas
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 Studied the concept of: Chain-aware Context, Web3 tool use, Agent workflow, Agent wallet, Machine payment, Settlement & Escrow, Agent identity, Agent Trust & Reputation, AI Oracle & Verifiable AI form handbook to recap week 2 knowledges.
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -51,11 +60,13 @@ Studied the concept of: Chain-aware Context, Web3 tool use, Agent workflow, Agen
 
 
 
+
 学习Women in AI以及第二周优秀笔记
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -74,6 +85,7 @@ The movement: from I to We. For all level, joyful with MEMEs, and no need to ful
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -100,6 +112,7 @@ The movement: from I to We. For all level, joyful with MEMEs, and no need to ful
 
 
 
+
 ![截屏2026-05-25 下午8.06.15.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lxzhenxi1/images/2026-05-25-1779713908494-__2026-05-25___8.06.15.png)
 
 ChatGPT Saved memory/ChatHistory Claude Project
@@ -109,6 +122,7 @@ ChatGPT Saved memory/ChatHistory Claude Project
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -145,6 +159,7 @@ Example: Deep funding. Allocate funding to github repos.
 
 
 
+
 练习用AI生成定期行业简报，流程图以及行业研究
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
@@ -160,11 +175,13 @@ Example: Deep funding. Allocate funding to github repos.
 
 
 
+
 学习优秀笔记
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -205,6 +222,7 @@ web3 核心：密码学 经济学 社会学
 
 
 
+
 成功设置hermes agent Telegram channel 并创建GitHub Repo
 
 [https://github.com/lxzhenxi1/ai-web3-school-cohort-0](https://github.com/lxzhenxi1/ai-web3-school-cohort-0)
@@ -225,11 +243,13 @@ web3 核心：密码学 经济学 社会学
 
 
 
+
 成功安装Hermes Agent
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
