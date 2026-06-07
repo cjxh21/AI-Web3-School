@@ -15,8 +15,100 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-07
+<!-- DAILY_CHECKIN_2026-06-07_START -->
+\# 2026-06-07 開發日記
+
+\## 今日進展
+
+\### M1: Agent Core 完成
+
+\- 建立了 `run-agent-review.ps1` — GLM-5.1 function calling agent loop
+
+\- GLM-5.1 自主決策工具呼叫順序，無需腳本寫死流程
+
+\- 測試結果：4 回合、7 次工具呼叫，成功產出結構化 review
+
+\- Agent 自主行為：先取專案 → 搜尋同領域 → 跨專案比較 → 學術上下文 → 綜合分析
+
+\- 這正是 [Z.AI](http://Z.AI) 賽道要求的 Long-Horizon Task 能力展示
+
+\### 工具定義
+
+| Tool | 用途 |
+
+|------|------|
+
+| `search_projects` | 關鍵字搜尋 49 專案資料集 |
+
+| `get_project_detail` | 取得專案完整資料 |
+
+| `compare_projects` | 跨專案比較 |
+
+| `search_academic_context` | 學術文獻搜尋（目前 dummy） |
+
+\### M2: Batch Review 腳本完成
+
+\- 建立了 `run-batch-review.ps1` — 隨機挑 5 個專案逐一 review
+
+\- 含進度顯示、錯誤處理、API 間隔、彙整 summary
+
+\- 尚未實際執行（待跑）
+
+\### Token 優化（三項，全部通過測試）
+
+| 優化 | 做法 | 效果 |
+
+|------|------|------|
+
+| 壓縮工具回傳 | 移除空欄位、raw\_text 截斷至 1200 字元 | ~34% 每次工具回傳 |
+
+| MaxTurns 上限 | 12 → 6 | 防止無限循環浪費 |
+
+| 精簡 system prompt | JSON 範例值改為列表式欄位定義 | ~70% prompt token |
+
+\### Codex 改善
+
+\- `compare_projects` 回傳改為 `target_domain` + `dominant_comparison_domain` + `comparison_note`，避免誤導評審
+
+\- RawTextLimit 從 600 調整為 1200，保留更多提案原文
+
+\- System prompt schema 格式改為逐行列舉，更清晰不易漏欄位
+
+\### 文件更新
+
+\- [README.md](http://README.md)、project\_[context.md](http://context.md)、[todo.md](http://todo.md) 已建立
+
+\- 本日開發日記
+
+\## 重要注意
+
+\- **Academic context adapter 目前是 dummy/placeholder**，demo 時必須誠實說明
+
+\- GLM-5.1 基於 dummy adapter 做的學術分析不等同真實文獻支撐
+
+\- 下一步：接 Semantic Scholar 或 AMiner API 替換
+
+\## 下一步
+
+\- \[ \] M2: 實際跑 batch review（5 隨機專案）
+
+\- \[ \] M3: Prompt 品質提升 & 跨專案比較
+
+\- \[ \] M4: Demo 準備 & 提交文件
+
+\## 風險
+
+\- [Z.AI](http://Z.AI) API 額度需注意消耗
+
+\- AMiner API 申請中
+
+\- 距離截止 2026-06-13 剩約 6 天
+<!-- DAILY_CHECKIN_2026-06-07_END -->
+
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 非常好。
 
 其實你現在已經來到：
@@ -693,6 +785,7 @@ Tool Use
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 這是一個非常好的問題。
 
@@ -1383,6 +1476,7 @@ ReAct 只是：
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -1997,6 +2091,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -2538,6 +2633,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -3158,6 +3254,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -3684,6 +3781,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -3723,6 +3821,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -4341,6 +4440,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -4930,6 +5030,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -5594,6 +5695,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -6205,6 +6307,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -6829,6 +6932,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -7421,6 +7525,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -7942,11 +8047,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -8385,6 +8492,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -8479,6 +8587,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
