@@ -15,8 +15,42 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_START -->
+### 今日完成
+
+1.  **Cobo CAW 真实 SDK 集成**：创建 `caw_factory.py` 工厂模式，实现 `CAW_MODE=mock/real` 一键切换。Mock 模式零依赖启动（评委友好），Real 模式一行切换对接真实链上资金。封装 `real_caw_client.py` 完整支持 create\_card / approve\_card / transfer\_tokens / list\_transactions。
+    
+2.  **FastAPI Backend 搭建**：新建 `backend/main.py` + `models.py`，提供 Health / Config / Cards / Payments / Audit / Attack 等 REST API，CORS 已配置对接前端开发服务器。
+    
+3.  **i18next 国际化**：安装 i18next + react-i18next，创建 en/zh 双语翻译文件（222 条 key），全部页面硬编码文本替换为 `t()` 调用，Layout 新增语言切换按钮。
+    
+4.  **中文排版专业化**：引入 Noto Sans SC，Tailwind fontFamily 增加 CJK 回退栈（PingFang SC / Hiragino Sans GB / Microsoft YaHei），CSS 新增 `:lang(zh)` 排版规则（行高 1.75、标题字重 500-600、字距 0.01em、暗色模式补偿）。`<html lang>` 与 i18n 实时同步，语言切换时排版自动适配。
+    
+5.  **Cooldown 模式 UI 补齐**：Cards 页面支持 `cooldown_hours` 显示（与 `time_window` 互斥），完善时间风控的两种表达方式。
+    
+6.  **CAW 真实模式 SOP 文档**：撰写 `CAW-REAL-MODE-SOP.md`，覆盖 Credentials 获取 → .env 配置 → Python 依赖安装 → 测试网交易全流程。
+    
+
+### 今日收获
+
+-   **工厂模式 = 可评审性**：Hackathon 评审不会配置你的环境。Mock/Real 工厂让项目在任何环境下 3 秒启动，这是"可被评分"的前提。
+    
+-   **国际化是评审视角的扩展**：中英文切换不是炫技，而是让不同背景的评委都能用自己的语言理解产品。222 条翻译看似繁重，但完成后代码的文本可维护性大幅提升。
+    
+-   **中文排版是隐性专业度**：CJK 排版规则（行高、字重、字距）不会被人主动称赞，但会让评委 subconsciously 觉得"这个项目很 complete"。
+    
+-   **html lang 同步是 i18n 的隐藏关卡**：只做翻译不做排版联动，等于只做了半套国际化。`languageChanged` 事件同步 `<html lang>` 让 CSS 选择器自动生效，是语言层和视觉层的正确连接方式。
+    
+
+### 链接
+
+[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/master/daily/2026-06-08.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/master/daily/2026-06-08.md)
+<!-- DAILY_CHECKIN_2026-06-08_END -->
+
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 **训练营**：AI × Web3 School Cohort-0  
 **日期**：2026-06-06 (周六)  
 **类型**：项目冲刺 + 文档整理 + 规则对照
@@ -63,6 +97,7 @@ AI x Web3 School
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 
+
 ### 6/5 今日完成 ✅
 
 -   **Fallback Mock 方案固化**：确认 `x402_client.py` 中 `CoboCAWWallet` 类为模拟实现，已添加类文档字符串说明 `"实际生产环境中将是 Cobo 提供的 SDK 客户端"`
@@ -76,6 +111,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 ## 今日代码交付
@@ -104,6 +140,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -146,6 +183,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
@@ -181,6 +219,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -201,6 +240,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -255,6 +295,7 @@ AI x Web3 School
 
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -282,6 +323,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -333,6 +375,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -407,6 +450,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -427,6 +471,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -489,6 +534,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -517,6 +563,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -569,6 +616,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -659,6 +707,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -687,6 +736,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -751,6 +801,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
